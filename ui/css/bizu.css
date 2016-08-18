@@ -1,101 +1,228 @@
-/*.glyphicon span {
-	display: none;
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inconsolata/inconsolata.eot');
+  src: local('Inconsolata'), url(../fonts/inconsolata/inconsolata.woff) format('woff'), url('../fonts/inconsolata/inconsolata.ttf') format('truetype'), url('../fonts/inconsolata/inconsolata.svg') format('svg');
 }
-.btn-toolbar > .btn, .btn-toolbar > .btn + .btn {
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inconsolata/inconsolata.eot');
+  src: local('Inconsolata Bold'), url(../fonts/inconsolata/inconsolata-bold.woff) format('woff'), url('../fonts/inconsolata/inconsolata-bold.ttf') format('truetype'), url('../fonts/inconsolata/inconsolata-bold.svg') format('svg');
+}
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inconsolata/inconsolata.eot');
+  src: local('Inconsolata'), url(../fonts/inconsolata/inconsolata.woff) format('woff'), url('../fonts/inconsolata/inconsolata.ttf') format('truetype'), url('../fonts/inconsolata/inconsolata.svg') format('svg');
+}
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inconsolata/inconsolata.eot');
+  src: local('Inconsolata Bold'), url(../fonts/inconsolata/inconsolata-bold.woff) format('woff'), url('../fonts/inconsolata/inconsolata-bold.ttf') format('truetype'), url('../fonts/inconsolata/inconsolata-bold.svg') format('svg');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ubuntumono/r/UbuntuMono-R.eot');
+  src: local('Ubuntu Mono'), url(../fonts/ubuntumono/r/UbuntuMono-R.woff) format('woff'), url('../fonts/ubuntumono/r/UbuntuMono-R.ttf') format('truetype'), url('../fonts/ubuntumono/r/UbuntuMono-R.svg') format('svg');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/ubuntumono/b/UbuntuMono-B.eot');
+  src: local('Ubuntu Mono Bold'), url(../fonts/ubuntumono/b/UbuntuMono-B.woff) format('woff'), url('../fonts/ubuntumono/b/UbuntuMono-B.ttf') format('truetype'), url('../fonts/ubuntumono/b/UbuntuMono-B.svg') format('svg');
+}
+.navbar {
+	margin-bottom: 0px;
+}
+.navbar-default {
+	border: none;
+}
+.btn-lg {
+	padding: 5px 7px 7px;
+	font-size: 26px;
+	line-height: 26px;
+	height: auto;
+	border-radius: 3px;
+}
+.btn {
+	cursor: default;
+}
+.btn-toolbar {
+	padding-left: 10px;
+}
+.btn-toolbar {
+	background: whiteSmoke;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 7px 0px;
+}
+.btn-toolbar {
+	padding-left: 12px;
+}
+@media (min-width: 768px) {
+.navbar {
+	min-height: 33px;
+}
+.navbar-default {
+	background: #fff;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #000;
+	font-size: 13px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #000;
+  background-color: #eee;
+}
+.navbar-collapse {
+	padding-left: 29px;
+}
+.navbar-nav > li > a {
+	padding: 3px 7px;
+}
+.btn-toolbar {
+	padding-left: 43px;
+}
+.btn-toolbar > .btn + .btn {
 	margin-left: 0px;
 }
 .btn {
-	padding: 0px;
-	font-size: 16px;
-	position: relative;
-	width: 18px;
-	height: 18px;
-	border-radius: 1px;
+	display: block;
+	float: left;
+	background: transparent;
+	border-color: transparent;
 }
 .btn-lg {
-	font-size: 30px;
-	line-height: 1;
-	line-height: 30px;
-	padding: 0px;
+	padding: 0px 2px 2px;
+	font-size: 26px;
+	line-height: 26px;
+	height: auto;
 	border-radius: 2px;
-	width: 32px;
-	height: 32px;
+}
+.btn:hover {
+	border-color: #000;
+	background: transparent;
+}
+.btn:hover .glyphicon {
+	opacity: 1;
 }
 .glyphicon {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	line-height: 16px;
+	opacity: .5;
 }
-.btn-lg .glyphicon {
-	line-height: 30px;
 }
-
-
-.btn {
-	border: 1px solid #000;
-	padding: 0px;
-	line-height: 22px;
-	margin: 0px;
-	display: block;
-	float: left;
-	height: 25px;
+code, kbd, pre, samp {
+	font-family: 'Ubuntu Mono', 'Inconsolata', monospace, serif;
+	/*font-family: 'Inconsolata', 'Ubuntu Mono', monospace, serif;*/
+	font-size: 1em;
 }
-.glyphicon {
-	font-size: 22px;
+pre {
+	white-space: pre-wrap;
 }
 .glyphicon span {
-	font-size: 16px;
-	line-height: 22px;
-	vertical-align: top;
-}
-*/
-nav {
 	display: none;
 }
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-}
-@font-face {
-  font-family: 'Bootstrap';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bootstrap.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-}
-.glyphicon {
-  font-family: 'Glyphicons Halflings';
-  font-family: 'Bootstrap';
-}
-.glyphicon-plus-sign:before {
-  content: "\e081";
-}
-.glyphicon-cloud-upload:before {
-  content: "\e198";
-}
-.glyphicon-download-alt:before {
-  content: "\e025";
-}
-.glyphicon-play:before {
-  content: "\e072";
-}
-.glyphicon-stop:before {
-  content: "\e074";
-}
-.glyphicon-plane:before {
-  content: "\e108";
-}
-.glyphicon-print:before {
-  content: "\e045";
-}
-.btn {
-	display: block;
-	margin: 0px;
-	float: left;
-	background: white;
-	border: 1px solid black;
+.textarea pre {
 	padding: 0px;
+	margin: 0px;
+	font-size: 13px;
+	line-height: 1.428571429;
+	color: #333333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: transparent;
+	border: none;
+	border-radius: 0px;
+	font-size: 14px;
+	line-height: 15px;
 }
-.btn-lg .glyphicon,  .btn-lg span {
-	font-size: 25.3px;
+.lines {
+	width: 33px;
+	border-right: 1px solid #ccc;
+	padding-right: 4px;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	background-color: #eaeaea;
+	padding-top: 10px;
+	float: left;
+}
+.lines pre {
+	text-align: right;
+	color: #888;
+	padding-right: 4px;
+}
+.code {
+	margin-left: 100px;
+	padding-top: 10px;
+	padding-left: 6px;
+	margin-left: 38px;
+}
+.keyword {
+	font-weight: bold;
+}
+.modal.fade .modal-dialog {
+	-webkit-transform: none;
+}
+.modal.in .modal-dialog {
+	-webkit-transform: none;
+}
+.modal-content {
+	border-radius: 0px;
+	background-color: #000;
+	border: none;
+}
+.modal-header {
+	padding: 4px 15px;
+	border: none;
+	background-color: #6d6d6d;
+}
+.modal-header .close {
+	color: #6d6d6d;
+	text-shadow: none;
+	cursor: default;
+}
+.modal-title {
+	font-size: 12px;
+	color: #6d6d6d;
+}
+.modal-body {
+	border-color: #6d6d6d;
+	border-style: solid;
+	border-width: 0px 6px 6px;
+}
+#running {
+}
+#running .modal-body {
+	padding: 2px;
+}
+#running pre.screen {
+	font-size: 16px;
+	line-height: 16px;
+	padding: 0px;
+	margin: 0px;
+	background-color: transparent;
+	border: none;
+	line-height: normal;
+	border-radius: 0px;
+	color: #e0e0e0;
+}
+@media screen and (min-width: 768px) {
+	.modal-dialog {
+		width: 676px;
+	}
+	.modal-body {
+		height: 410px;
+	}
 }
