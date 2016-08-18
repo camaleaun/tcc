@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="gradient" gradientUnits="userSpaceOnUse" cx="64" cy="64" r="49">
+      <stop style="stop-color:#4585f4" offset="0" />
+      <stop style="stop-color:#4683ea" offset="1" />
+    </radialGradient>
+  </defs>
+  <g>
+    <path d="m 28,10 c -4.418,0 -8,3.582 -8,8 v 92 c 0,4.418 3.582,8 8,8 h 72 c 4.418,0 8,-3.582 8,-8 V 36 L 82,10 H 28 z" style="fill:url(#gradient)" />
+    <polygon points="82,36 108,36 82,10 " style="opacity:0.4;fill:#ffffff" />
+    <polygon points="108,36 82,36 108,62 " style="opacity:0.4;fill:#231f20" />
+    <polygon points="56,96 82,70 56,44 56,60 20,60 20,80 56,80 " style="fill:#ffffff" />
+  </g>
+</svg>
