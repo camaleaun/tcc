@@ -1,0 +1,101 @@
+/*.glyphicon span {
+	display: none;
+}
+.btn-toolbar > .btn, .btn-toolbar > .btn + .btn {
+	margin-left: 0px;
+}
+.btn {
+	padding: 0px;
+	font-size: 16px;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	border-radius: 1px;
+}
+.btn-lg {
+	font-size: 30px;
+	line-height: 1;
+	line-height: 30px;
+	padding: 0px;
+	border-radius: 2px;
+	width: 32px;
+	height: 32px;
+}
+.glyphicon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	line-height: 16px;
+}
+.btn-lg .glyphicon {
+	line-height: 30px;
+}
+
+
+.btn {
+	border: 1px solid #000;
+	padding: 0px;
+	line-height: 22px;
+	margin: 0px;
+	display: block;
+	float: left;
+	height: 25px;
+}
+.glyphicon {
+	font-size: 22px;
+}
+.glyphicon span {
+	font-size: 16px;
+	line-height: 22px;
+	vertical-align: top;
+}
+*/
+nav {
+	display: none;
+}
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+@font-face {
+  font-family: 'Bootstrap';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bootstrap.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+.glyphicon {
+  font-family: 'Glyphicons Halflings';
+  font-family: 'Bootstrap';
+}
+.glyphicon-plus-sign:before {
+  content: "\e081";
+}
+.glyphicon-cloud-upload:before {
+  content: "\e198";
+}
+.glyphicon-download-alt:before {
+  content: "\e025";
+}
+.glyphicon-play:before {
+  content: "\e072";
+}
+.glyphicon-stop:before {
+  content: "\e074";
+}
+.glyphicon-plane:before {
+  content: "\e108";
+}
+.glyphicon-print:before {
+  content: "\e045";
+}
+.btn {
+	display: block;
+	margin: 0px;
+	float: left;
+	background: white;
+	border: 1px solid black;
+	padding: 0px;
+}
+.btn-lg .glyphicon,  .btn-lg span {
+	font-size: 25.3px;
+}
