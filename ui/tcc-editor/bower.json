@@ -1,0 +1,19 @@
+{
+  "name": "Editor for TCC",
+  "version": "1.0.0",
+  "authors": [
+    "Gilberto Tavares"
+  ],
+  "dependencies": {
+    "jquery": "~2.1",
+    "bootstrap": "~3.3",
+    "less": "~2.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

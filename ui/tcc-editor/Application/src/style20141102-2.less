@@ -1,0 +1,97 @@
+// Core variables and mixins
+@import "less/variables.less";
+@import "less/mixins.less";
+
+// Reset and dependencies
+@import "less/normalize.less";
+@import "less/print.less";
+@import "less/glyphicons.less";
+
+// Core CSS
+@import "less/scaffolding.less";
+@import "less/type.less";
+@import "less/code.less";
+@import "less/grid.less";
+@import "less/tables.less";
+@import "less/forms.less";
+@import "less/buttons.less";
+
+// Components
+@import "less/component-animations.less";
+@import "less/dropdowns.less";
+@import "less/button-groups.less";
+@import "less/input-groups.less";
+@import "less/navs.less";
+@import "less/navbar.less";
+@import "less/breadcrumbs.less";
+@import "less/pagination.less";
+@import "less/pager.less";
+@import "less/labels.less";
+@import "less/badges.less";
+@import "less/jumbotron.less";
+@import "less/thumbnails.less";
+@import "less/alerts.less";
+@import "less/progress-bars.less";
+@import "less/media.less";
+@import "less/list-group.less";
+@import "less/panels.less";
+@import "less/responsive-embed.less";
+@import "less/wells.less";
+@import "less/close.less";
+
+// Components w/ JavaScript
+@import "less/modals.less";
+@import "less/tooltip.less";
+@import "less/popovers.less";
+@import "less/carousel.less";
+
+// Utility classes
+@import "less/utilities.less";
+@import "less/responsive-utilities.less";
+
+
+body {
+  background-image: url('fundo.png');
+  background-repeat: no-repeat;
+  background-position: center -20px;
+}
+
+body {
+  font-family: 'Lucida Grande', 'Segoe UI', sans-serif;
+}
+
+.tab-bar {
+	padding: 5px 0 0 10px;
+	border-bottom: 0;
+	> li {
+		min-width: 200px;
+		margin-bottom: 0;
+		> a {
+      font-size: 11px;
+			line-height: 1.36363636;
+			padding: 6px 18px;
+			border: 0;
+      border-radius: 0;
+		}
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+      	//background-color: #222222;
+      	//background-image: -webkit-linear-gradient(top, #343434, #222222);
+      	background-color: #f00;
+      	background-image: none;
+        border: 0;
+      }
+    }
+  }
+  &:after {
+    border-top: 1px solid  #0f0;
+    background-color: #222;
+    border-bottom: 1px solid  #0f0;
+    height: 5px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+}

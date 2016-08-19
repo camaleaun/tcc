@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Editor</title>
+<!--     <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <script src="js/less.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="dark">
+    <div class="workspace">
+      <ul class="tab-bar nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#tab-00" role="tab" data-toggle="tab">
+            <span class="title">untitled</span>
+            <button type="button" class="close-icon hidden"><span class="sr-only">Fechar</span></button>
+          </a>
+        </li>
+<!--         <li role="presentation"> -->
+<!--           <a href="#tab-01" role="tab" data-toggle="tab"> -->
+<!--             <span class="title">untitled</span> -->
+<!--             <button type="button" class="close-icon hidden"><span class="sr-only">Fechar</span></button> -->
+<!--           </a> -->
+<!--         </li> -->
+      </ul>
+      <div class="tab-content">
+        <div role="tabpanel" class="text-editor tab-pane in active" id="tab-00">Tab 00</div>
+        <div role="tabpanel" class="text-editor tab-pane fade" id="tab-01">Tab 01</div>
+      </div>
+<!--       <ul class="tab-bar"> -->
+<!--         <li class="tab active"> -->
+<!--           <div class="title">untitled</div> -->
+<!--           <div class="close"></div> -->
+<!--         </li> -->
+<!--       </ul> -->
+<!--       <div class="text-editor"></div> -->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
