@@ -5,9 +5,6 @@ var resize = function (height) {
 };
 $(function () {
   'use strict';
-  $.each($('.glyphicon'), function () {
-    $(this).html('<span>' + $(this).text() + '</span>');
-  });
   if ($(window).width() < 768) {
     $.each($('.dropdown-toggle'), function () {
       $(this).append(' <span class="caret"></span>');

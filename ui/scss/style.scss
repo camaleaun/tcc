@@ -55,7 +55,12 @@
   src: local('Ubuntu Mono Bold'), url(../fonts/ubuntumono/b/UbuntuMono-B.woff) format('woff'), url('../fonts/ubuntumono/b/UbuntuMono-B.ttf') format('truetype'), url('../fonts/ubuntumono/b/UbuntuMono-B.svg') format('svg');
 }
 .navbar {
-  margin-bottom: 0px;
+  margin-bottom: 0;
+
+  .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 .navbar-default {
   border: none;
@@ -107,8 +112,11 @@
 .btn-toolbar {
   padding-left: 43px;
 }
-.btn-toolbar > .btn + .btn {
-  margin-left: 0px;
+.btn-toolbar > .btn {
+  margin-left: 0;
+}
+.btn-toolbar > .btn:first-child {
+  margin-left: 5px;
 }
 .btn {
   display: block;
@@ -131,6 +139,7 @@
   opacity: 1;
 }
 .glyphicon {
+  top: 3px;
   opacity: .5;
 }
 }
