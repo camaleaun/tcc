@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>UML Diagram</title>
+    <link type="text/css" rel="stylesheet" href="css/UDStyle.css" media="screen">
+    <style type="text/css">
+
+    </style>
+    <script src="js/UDCore.js"></script>
+    <script src="js/UDModules.js"></script>
+    <script src="js/UDApplication.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+		var width = window.innerWidth - 250;
+		if(width < 400)  width = 400;
+		if(width > 1000) width = 1000;
+        var app = new Application( { id: 'umldiagram', width: width, height: 580 } );
+      }
+    </script>
+  </head>
+  <body>
+    <div id="umldiagram"></div>
+    <div id="debug"></div>
+  </body>
+</html>
