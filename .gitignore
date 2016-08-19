@@ -5,3 +5,5 @@ jquery*.*
 bootstrap*.*
 glyphicons-halflings-regular*
 twbs/
+js/*.min.js
+css/style.css
