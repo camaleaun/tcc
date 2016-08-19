@@ -1,0 +1,21 @@
+{
+  "name": "tcc",
+  "description": "Trabalho de Conclusão de Curso UDESC Ceplan",
+  "main": "",
+  "authors": [
+    "Gilberto Tavares <camaleaun@gmail.com> (https://camaleaun.github.io/)"
+  ],
+  "license": "ISC",
+  "homepage": "https://camaleaun.github.io/tcc/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bootstrap": "^3.3.7"
+  }
+}
