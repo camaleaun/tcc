@@ -1,3 +1,16 @@
+@font-face {
+  font-family: siconbizu;
+  src: url('../fonts/siconbizu.eot');
+  src: url('../fonts/siconbizu.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/siconbizu.woff2') format('woff2'),
+       url('../fonts/siconbizu.woff') format('woff'),
+       url('../fonts/siconbizu.ttf') format('truetype'),
+       url('../fonts/siconbizu.svg#siconbizu') format('svg');
+}
+
+.btn-toolbar .glyphicon {
+  font-family: siconbizu;
+}
 
 @font-face {
   font-family: 'Inconsolata';

@@ -7,4 +7,4 @@
 # Don't diff or textually merge source maps
 *.map   binary
 *.sfd   binary
-/ui/posicoes.svg binary
+fonts/*.svg  binary
