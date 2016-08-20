@@ -1,0 +1,17 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Iconography
+//
+//## Specify custom location and filename of the included icon font.
+
+//** Load fonts from this directory.
+
+$font-path: "../fonts/" !default;
+$icon-font-path: $font-path;
+
+$screen-sm:             768px !default;
+$screen-sm-min:         $screen-sm !default;
+$grid-float-breakpoint: $screen-sm-min !default;

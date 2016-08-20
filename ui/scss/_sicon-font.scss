@@ -1,0 +1,12 @@
+// bizu font icons
+
+// Import the font
+@font-face {
+  font-family: siconbizu;
+  src: url('#{$icon-font-path}siconbizu.eot');
+  src: url('#{$icon-font-path}siconbizu.eot?#iefix') format('embedded-opentype'),
+       url('#{$icon-font-path}siconbizu.woff2') format('woff2'),
+       url('#{$icon-font-path}siconbizu.woff') format('woff'),
+       url('#{$icon-font-path}siconbizu.ttf') format('truetype'),
+       url('#{$icon-font-path}siconbizu.svg#siconbizu') format('svg');
+}

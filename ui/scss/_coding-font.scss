@@ -1,0 +1,53 @@
+// coding font
+
+@font-face {
+  font-family: Inconsolata;
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$font-path}inconsolata/inconsolata.eot');
+  src: local('Inconsolata'),
+       url('#{$font-path}inconsolata/inconsolata.eot?#iefix') format('embedded-opentype'),
+       //url('#{$font-path}inconsolata/inconsolata.woff2') format('woff2'),
+       url('#{$font-path}inconsolata/inconsolata.woff') format('woff'),
+       url('#{$font-path}inconsolata/inconsolata.ttf') format('truetype'),
+       url('#{$font-path}inconsolata/inconsolata.svg#Inconsolata-Regular') format('svg');
+}
+
+@font-face {
+  font-family: Inconsolata;
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$font-path}inconsolata/inconsolata-bold.eot');
+  src: local('Inconsolata Bold'),
+       url('#{$font-path}inconsolata/inconsolata-bold.eot?#iefix') format('embedded-opentype'),
+       //url('#{$font-path}inconsolata/inconsolata-bold.woff2') format('woff2'),
+       url('#{$font-path}inconsolata/inconsolata-bold.woff') format('woff'),
+       url('#{$font-path}inconsolata/inconsolata-bold.ttf') format('truetype'),
+       url('#{$font-path}inconsolata/inconsolata-bold.svg#Inconsolata-Bold') format('svg');
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$font-path}ubuntumono/r/UbuntuMono-R.eot');
+  src: local('Ubuntu Mono'),
+       url('#{$font-path}ubuntumono/r/UbuntuMono-R.eot?#iefix') format('embedded-opentype'),
+       //url('#{$font-path}ubuntumono/r/UbuntuMono-R.woff2') format('woff2'),
+       url('#{$font-path}ubuntumono/r/UbuntuMono-R.woff') format('woff'),
+       url('#{$font-path}ubuntumono/r/UbuntuMono-R.ttf') format('truetype'),
+       url('#{$font-path}ubuntumono/r/UbuntuMono-R.svg#UbuntuMono-Regular') format('svg');
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$font-path}ubuntumono/b/UbuntuMono-B.eot');
+  src: local('Ubuntu Mono Bold'),
+       url('#{$font-path}ubuntumono/b/UbuntuMono-B.eot?#iefix') format('embedded-opentype'),
+       //url('#{$font-path}ubuntumono/b/UbuntuMono-B.woff2') format('woff2'),
+       url('#{$font-path}ubuntumono/b/UbuntuMono-B.woff') format('woff'),
+       url('#{$font-path}ubuntumono/b/UbuntuMono-B.ttf') format('truetype'),
+       url('#{$font-path}ubuntumono/b/UbuntuMono-B.svg#UbuntuMono-Bold') format('svg');
+}
