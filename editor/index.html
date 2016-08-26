@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>UAL</title>
+    <style>
+      #editor {
+        position: absolute;
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="editor">prog algo011
+	imprima "Aprendendo Algoritmo!!!";
+fimprog
+</div>
+    <script src="ace.js"></script>
+    <script src="mode-ual.js"></script>
+    <script src="theme-ual.js"></script>
+    <script>
+      var editor = ace.edit("editor");
+      editor.renderer.setShowGutter(false);
+      var UalMode = ace.require("ace/mode/ual").Mode;
+      editor.session.setMode(new UalMode());
+      editor.setTheme("ace/theme/ual");
+    </script>
+  </body>
+</html>

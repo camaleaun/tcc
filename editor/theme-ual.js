@@ -1,0 +1,1 @@
+define("ace/theme/ual",["require","exports","module","ace/lib/dom"],function(e,t,n){t.isDark=!1,t.cssClass="ace-ual",t.cssText=".ace-ual {color: #000;}.ace-ual .ace_comment {color: #c0c0c0;}.ace-ual .ace_keyword {color: #000;font-weight: bold;}";var r=e("../lib/dom");r.importCssString(t.cssText,t.cssClass)})
