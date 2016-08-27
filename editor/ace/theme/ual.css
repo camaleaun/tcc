@@ -1,0 +1,12 @@
+.ace-ual {
+  color: #000;
+}
+
+.ace-ual .ace_comment {
+  color: #c0c0c0;
+}
+
+.ace-ual .ace_keyword {
+  color: #000;
+  font-weight: bold;
+}
