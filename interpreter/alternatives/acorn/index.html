@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>acorn orinal interpreter</title>
+    <script>
+    var myInterpreter;
+    function initAlert(interpreter, scope) {
+      var wrapper = function(text) {
+        text = text ? text.toString() : '';
+        return interpreter.createPrimitive(console.log(text));
+      };
+      interpreter.setProperty(scope, 'print',
+          interpreter.createNativeFunction(wrapper));
+    };
+
+    function runButton() {
+      disable('disabled');
+      var code = document.getElementById('code').value
+      myInterpreter = new Interpreter(code, initAlert);
+      myInterpreter.run();
+      disable('');
+    }
+
+    function disable(disabled) {
+      document.getElementById('runButton').disabled = disabled;
+    }
+    </script>
+  </head>
+  <body>
+    <p><!--<textarea id="code">function algo11() {
+	print("Aprendendo Algoritmo!!!");
+}
+</textarea>--><textarea id="code">imprima("Aprendendo Algoritmo!!!");
+</textarea><br>
+  <button onclick="runButton()" id="runButton">Run</button>
+  </p>
+
+  <p><small>
+  </small></p>
+    <script src="acorn.js"></script>
+    <script src="interpreter.js"></script>
+  </body>
+</html>
