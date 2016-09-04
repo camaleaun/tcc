@@ -1,0 +1,18 @@
+prog cpf
+	int prim9,elem[9];
+
+	imprima "Insira os 9 primeiros números de um cpf: ";
+	leia prim9;
+
+	elem[0] <- (prim9 div 100000000);
+	elem[1] <- (prim9-elem[0]*100000000) div 10000000;
+	elem[2] <- ((prim9-elem[0]*100000000)-elem[1]*10000000) div 1000000;
+	elem[3] <- (((prim9-elem[0]*100000000)-elem[1]*10000000)-elem[2]*1000000) div 100000;
+	elem[4] <- ((((prim9-elem[0]*100000000)-elem[1]*10000000)-elem[2]*1000000)-elem[3]*100000) div 10000;
+	elem[5] <- (((((prim9-elem[0]*100000000)-elem[1]*10000000)-elem[2]*1000000)-elem[3]*100000)-elem[4]*10000) div 1000;
+	elem[6] <- ((((((prim9-elem[0]*100000000)-elem[1]*10000000)-elem[2]*1000000)-elem[3]*100000)-elem[4]*10000)-elem[5]*1000) div 100;
+	elem[7] <- (((((((prim9-elem[0]*100000000)-elem[1]*10000000)-elem[2]*1000000)-elem[3]*100000)-elem[4]*10000)-elem[5]*1000)-elem[6]*100) div 10;
+	elem[8] <- ((((((((prim9-elem[0]*100000000)-elem[1]*10000000)-elem[2]*1000000)-elem[3]*100000)-elem[4]*10000)-elem[5]*1000)-elem[6]*100)-elem[7]*10) div 1;
+
+	imprima "O número complero de seu CPF é: ",elem[0],elem[1],elem[2],".",elem[3],elem[4],elem[5],".",elem[6],elem[7],elem[8],"-",(elem[0]*1+elem[1]*2+elem[2]*3+elem[3]*4+elem[4]*5+elem[5]*6+elem[6]*7+elem[7]*8+elem[8]*9) % 11,(elem[1]*1+elem[2]*2+elem[3]*3+elem[4]*4+elem[5]*5+elem[6]*6+elem[7]*7+elem[8]*8+((elem[0]*1+elem[1]*2+elem[2]*3+elem[3]*4+elem[4]*5+elem[5]*6+elem[6]*7+elem[7]*8+elem[8]*9) % 11)*9) % 11,"\n";
+fimprog

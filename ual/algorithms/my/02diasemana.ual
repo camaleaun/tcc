@@ -1,0 +1,39 @@
+prog diadasemana
+
+	int dia, mes, ano, seculo, s;
+	string semana;
+	imprima "Digite dia: ";
+	leia dia;
+	imprima "Digite mes: ";
+	leia mes;
+	imprima "Digite ano: ";
+	leia ano;
+	seculo <- (ano - 1901) * 365 + (ano - 1901) div 4 + dia + (mes - 1) * 31 - ((mes * 4 + 23) div 10) * ((mes + 12) div 15) + ((4 - ano % 4) div 4) * ((mes + 12) div 15);
+	s <- seculo%7;
+	se (s == 0) {
+		semana <- "segunda-feira";
+	} senao {
+		se (s == 1) {
+			semana <- "terca-feira";
+		} senao {
+			se (s == 2) {
+				semana <- "quarta-feira";
+			} senao {
+				se (s == 3) {
+					semana <- "quinta-feira";
+				} senao {
+					se (s == 4) {
+						semana <- "sexta-feira";
+					} senao {
+						se (s == 5) {
+							semana <- "sábado";
+						} senao {
+							semana <- "domingo";
+						}
+					}
+				}
+			}
+		}
+	}
+	imprima semana,"\n";
+fimprog

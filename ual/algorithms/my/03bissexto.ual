@@ -1,0 +1,14 @@
+prog bissexto
+	int ano;
+	logico bissexto;
+	bissexto <- falso;
+	imprima "Digite ano: ";
+	leia ano;
+	se ( ano%400 == 0 || (ano%4 == 0 && ano%100 <> 0) ) {
+		bissexto <- verdadeiro;
+		imprima "É bissexto";
+	} senao {
+		imprima "Não é bissexto";
+	}
+	imprima "\n";
+fimprog

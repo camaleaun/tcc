@@ -1,0 +1,51 @@
+prog carnaval
+	int dia, mes, ano, a, b, c, d, e, f, g, h, i, k, l, m, x, dias;
+	logico bissexto;
+	bissexto <- falso;
+	imprima "Digite ano: ";
+	leia ano;
+	se ( ano%400 == 0 || (ano%4 == 0 && ano%100 <> 0) ) {
+		bissexto <- verdadeiro;
+	}
+	a <- ano%19;
+	b <- ano div 100;
+	c <- ano%100;
+	d <- b div 4;
+	e <- b%4;
+	f <- (b + 8) div 25;
+	g <- (b - f + 1) div 3;
+	h <- (19 * a + b - d - g + 15)%30;
+	i <- c div 4;
+	k <- c%4;
+	l <- (32 + 2 * e + 2 * i - h - k)%7;
+	m <- (a + 11 * h + 22 * l) div 451;
+	mes <- (h + l - 7 * m + 114) div 31;
+	dia <- (h + l - 7 * m + 114)%31 + 1;
+	dias <- dia;
+	para (x <- 0;x < mes;x++) {
+		se (x == 1 || x == 3) {
+			dias <- dias+31;
+		}
+		se (x == 2 && bissexto == verdadeiro) {
+			dias <- dias+29;
+		}
+		se (x == 2 && bissexto == falso) {
+			dias <- dias+28;
+		}
+	}
+	dias <- dias-47;
+	mes <- (dias div 30)+1;
+	para (x <- 0;x < mes;x++) {
+		se (x == 1 || x == 3) {
+			dias <- dias-31;
+		}
+		se (x == 2 && bissexto == verdadeiro) {
+			dias <- dias-29;
+		}
+		se (x == 2 && bissexto == falso) {
+			dias <- dias-28;
+		}
+	}
+	dia <- dias;
+	imprima dia,"/",mes,"/",ano,"\n";
+fimprog

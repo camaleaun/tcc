@@ -1,0 +1,20 @@
+prog pascoa
+	int dia, mes, ano, a, b, c, d, e, f, g, h, i, k, l, m;
+	imprima "Digite ano: ";
+	leia ano;
+	a <- ano%19;
+	b <- ano div 100;
+	c <- ano%100;
+	d <- b div 4;
+	e <- b%4;
+	f <- (b + 8) div 25;
+	g <- (b - f + 1) div 3;
+	h <- (19 * a + b - d - g + 15)%30;
+	i <- c div 4;
+	k <- c%4;
+	l <- (32 + 2 * e + 2 * i - h - k)%7;
+	m <- (a + 11 * h + 22 * l) div 451;
+	mes <- (h + l - 7 * m + 114) div 31;
+	dia <- (h + l - 7 * m + 114)%31 + 1;
+	imprima dia,"/",mes,"/",ano,"\n";
+fimprog
