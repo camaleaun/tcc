@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Interpreter</title>
+  <script src="interpreter.js"></script>
+</head>
+<body>
+  <table width="100%">
+    <tbody>
+      <tr>
+        <td><b>Type JavaScript</b></td>
+        <td>
+          <input type="button" value="Run (Ctrl-m)" id="run"> &nbsp; &nbsp;
+          <b>Output</b> &nbsp; &nbsp;
+          Timing: <span id="JStiming"></span> s
+        </td>
+      </tr>
+      <tr>
+        <td width="50%" style="padding:1px">
+          <textarea id="JSprogram" style="height:5in; width:100%; font-family: monospace; font-size: 16; font-weight: bold;" onkeyup="keyUp(event)">
+imprima "Aprendendo Algoritmo!!!";
+          </textarea>
+        </td>
+        <td width="50%" style="padding:1px">
+          <textarea id="JSoutput" style="height:5in; width:100%; font-family: monospace; font-size: 16; font-weight: bold;"></textarea>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
