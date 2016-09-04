@@ -1,0 +1,16 @@
+{
+    "tabSize": 2,
+    "useTabChar": false,
+    "spaceUnits": 2,
+    "path": {
+        ".brackets.json": {
+            "spaceUnits": 4
+        }
+    },
+    "language": {
+        "javascript": {
+            "linting.prefer": ["JSHint", "JSLint"],
+            "linting.usePreferredOnly": true
+        }
+    }
+}
