@@ -1,0 +1,15 @@
+prog algoritmo238
+int c, num, n;
+real h;
+h <- 0. ;
+imprima "\ndigite numero: ";
+leia num;
+n <- num;
+para( c<- 1; c  <= num; c++)
+{ 
+  h <- h + c / n;
+  n <- n -1;
+}
+imprima "\nsoma: ", h ;
+imprima "\n";
+fimprog

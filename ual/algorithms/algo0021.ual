@@ -1,0 +1,12 @@
+prog algoritmo21
+ imprima "\nTESTANDO HIERARQUIA\n";
+ imprima "\n12 + 5 /2 Ç igual a: ", 12 + 5 / 2;
+ imprima "\nê DIFERENTE DE (12 + 5) /2 que Ç igual a: ", (12 + 5)/2," , logo / tem HIERARQUIA MAIOR do que + ou -";
+ imprima "\n\n64**1/4 Ç igual a: ",64**1/4 ;
+ imprima "\nê DIFERENTE de 64**(1/4)que Ç igual a: ",64**(1/4)," logo ** tem HIERARQUIA MAIOR do que * ou / " ;
+ imprima "\n\n3*7 % 5 Ç igual a: ", 3*7 % 5;
+ imprima "\nê DIFERENTE de (3 * 7) % 5 que Ç igual a: ",(3 * 7) % 5, " logo % tem HIERARQUIA MAIOR do que * " ;
+ imprima "\n\n3 * 7 div 5 Ç igual a: ", 3*7 div 5;
+ imprima "\nê IGUAL a (3 * 7) div 5 : ",(3 * 7) div 5," logo div tem a MESMA HIERARQUIA da * ou / ";
+ imprima "\n";
+fimprog

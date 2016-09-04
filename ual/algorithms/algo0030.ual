@@ -1,0 +1,6 @@
+prog algoritmo30
+ int  produto;
+ produto <- 28 * 43;
+ imprima "\nO produto entre os dois : ", produto;
+ imprima "\n";
+fimprog

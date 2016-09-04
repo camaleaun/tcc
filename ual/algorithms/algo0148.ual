@@ -1,0 +1,48 @@
+prog algoritmo148
+int op, iv;
+imprima "\nDigite 1- Regiao Norte  2- Regiao Nordeste  3- Regiao Centro-Oeste  4- 
+Regiao Sul: ";
+leia op;
+se( op < 1 ||  op > 4)
+{ imprima "\nOpcao Invalida ";}
+senao
+{
+  imprima "\nDigite 1- Ida  2- Ida e Volta: ";leia iv;
+  se( iv < 1 || iv > 2)
+  { imprima "\nOpcao Invalida ";}
+  senao
+  {
+    se(op == 1)
+    {  se(iv == 1)
+          { imprima "\nO valor da passagem de ida para R.Norte R$500.00";}
+          senao
+          { imprima "\nO valor da passagem de ida-volta para R.Norte: R$950.00";}
+    }
+    senao
+    {  se(op == 2)
+         { se(iv == 1)
+           { imprima "\nO valor da passagem de ida para R.Nordeste: R$350.00";}
+         senao
+         { imprima "\nO valor da passagem de ida-volta para R.Nordeste: R$650.00";}
+        }
+       senao
+       { se(op == 3)
+          { se(iv == 1)
+            { imprima "\nO valor da passagem de ida para R.C.Oeste: R$350.00";}
+            senao
+            { imprima "\nO valor da passagem de ida-volta para R.C.Oeste: R$600.00";}
+          }
+         senao
+         { se(op == 4)
+           { se(iv == 1)
+              { imprima "\nO valor da passagem de ida para R.Sul: R$300.00";}
+             senao
+             { imprima "\nO valor da passagem de ida-volta para R.Sul: R$550.00";}
+           }
+         }
+   }
+ }
+    }
+} 
+imprima "\n";
+fimprog

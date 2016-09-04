@@ -1,0 +1,13 @@
+prog algoritmo93
+real numero;
+imprima "\ndigite numero: ";  
+leia numero;
+se ( numero > 0. )
+{  imprima "\nraiz: ", raiz(numero); }
+senao
+{
+    se ( numero < 0. )
+   {   imprima "\nquadrado: ", numero ** 2; }
+ }
+imprima "\n";
+fimprog

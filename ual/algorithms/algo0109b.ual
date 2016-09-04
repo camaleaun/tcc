@@ -1,0 +1,12 @@
+prog algoritmo109b
+string nome1,nome2;
+ imprima "\ndigite 1o nome: ";
+ leia nome1;
+ imprima "\ndigite 2o nome: ";  
+ leia  nome2;
+ se (strcomp(nome1, nome2) == "menor")
+  { imprima  "\n", nome1,"  ", nome2; }
+ senao
+ { imprima "\n", nome2,"  ", nome1; }
+imprima "\n";
+fimprog

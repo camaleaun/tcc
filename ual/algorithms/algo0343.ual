@@ -1,0 +1,62 @@
+prog algoritmo343
+string nome, menor, palavra, op;
+int  x, l, i, cont;
+real ang, rang;
+faca 
+ {
+  imprima "\nMENU";
+  imprima "\nA - Armazena na variavel menor e imprime, o nome que tiver o menor numero de caracteres entre 3 nomes ";
+  imprima "\nB - Brinca com a palavra";
+  imprima "\nC - Calcula e imprime a tangente de um angulo em graus";
+  imprima "\nF - Termina o algoritmo";
+  imprima "\nOPCAO: ";
+  leia op;
+  se(  op == "A" || op == "a"  )
+  {
+    imprima "\n Digite um nome: ";
+    leia nome;
+    menor <- nome;
+    para( x  <- 1 ; x <= 2;  x++)
+    {
+     imprima "\n Digite um nome: ";
+     leia  nome;
+     se(  strtam(nome) < strtam(menor) )
+     {  menor <- nome; }
+     }
+     imprima "\nNome com menor numero de caracteres: ", menor;
+    }
+    senao
+    {
+     se(  op == "B" || op == "b"  )
+     {
+       imprima "\npalavra: ";
+       leia  palavra ;
+       para( i<- strtam(palavra); i>=1; i--)
+       {
+       imprima "\n", strnprim(palavra,i);
+       }
+      }
+      senao
+      {
+        se(  op == "C" || op == "c"  )
+        {
+          imprima "\nangulo com ponto: ";
+          leia ang;
+          rang <-ang * pi / 180;
+          se(cos(rang)<> 0.)
+          { imprima "\n tangente: ", tan(rang) ; }
+          senao
+          {  imprima "\n Tangente tende a infinito: ";}
+         }
+         senao
+         {
+          se(  op == "F" || op == "f"  )
+          {  imprima "\nSaindo: "; }
+          senao
+          { imprima "\nOpcao nao disponivel"; }
+  }}}
+imprima "\n\n\n\n";
+}
+enquanto(op<>"F" && op<>"f"  )
+imprima "\n";
+fimprog

@@ -1,0 +1,11 @@
+prog algoritmo217
+int a;
+string nome;
+para( a <- 1; a <=8; a++)
+{
+  imprima "\ndigite nome: ";
+  leia nome;
+  imprima  "\nnumero de letras: ", strtam( nome) ;
+}
+imprima "\n";
+fimprog

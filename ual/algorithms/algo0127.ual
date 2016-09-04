@@ -1,0 +1,20 @@
+prog algoritmo127
+real nota1, nota2, media;
+string nome;
+imprima "\ndigite nome: ";  
+leia nome;
+imprima "\ndigite 1¦ nota: ";  
+leia nota1;
+imprima "\ndigite 2¦ nota: ";  
+leia nota2;
+media <-  (nota1 + nota2)/ 2;
+se ( media >=7. )
+{  imprima nome,"   ",  media, " AP"; }
+senao
+{ se ( media < 3. )
+   { imprima nome,"   ",  media, " RP"; }
+   senao
+   { imprima  nome,"   ",  media, " PF"; }
+  }
+imprima "\n";
+fimprog

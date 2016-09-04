@@ -1,0 +1,60 @@
+prog algoritmo396
+string nomesi[100], nomeprog[100];
+int vetsi[100]  ,vetprog[100], I, J, OP,  C;
+imprima "\nEntre com os dados dos alunos de Programacao I";
+para( I <- 0; I <= 99; I++)
+{  imprima "\n NOME: ", I+1, ": ";
+   leia nomeprog[I] ;
+   imprima "\nMATRICULA: ";
+   leia vetprog[I] ;
+}
+imprima "\n\nEntre com os dados dos alunos de Sistema de Informacao";
+para( I <- 0; I <= 99; I++)
+{  imprima "\n NOME: ", I+1, ": ";
+   leia nomesi [I] ;
+   imprima "\nMATRICULA: ";
+   leia vetsi[I] ;
+}
+faca
+{
+  imprima "\n\nLISTA";
+  imprima "\n1 - LISTA TODOS DE  PROGRAMACAO I";
+  imprima "\n2 - LISTA TODOS DE SISTEMAS DE INFORMACAO";
+  imprima "\n3 - LISTA TODOS QUE FAZEM AS DUAS ";
+  imprima "\n4 - SAIR ";
+  imprima "\nOPCAO: ";
+  leia OP;
+  se ( OP == 1)
+  {
+    imprima "\n\n RELACAO DOS ALUNOS DE PROGRAMACAO  I\n";
+    para( I <- 0; I <= 99; I++)
+   {    imprima "\n",vetprog[ I] , "-", nomeprog[I] ; }
+  }
+  senao
+  { se ( OP == 2)
+    { imprima "\n\n RELACAOO DOS ALUNOS DE SISTEMA DE INFORMACAO \n";
+      para( I <- 0; I <= 99; I++)
+      {    imprima "\n",vetsi[ I] , "-", nomesi[I] ; }
+    }
+    senao
+    { se ( OP == 3)
+      { imprima "\n\n RELACAO DOS ALUNOS QUE CURSAM SI / PROG. I \n";
+        para( I <- 0; I <= 99; I++)
+        {  J <- 0;
+           enquanto(  J < 99 && vetprog[I] <> vetsi[J] )
+           { J++; }
+           se( vetprog[I] == vetsi[J] )
+           { imprima "\n",vetsi[I] , "-", nomesi[I] ; }
+        }
+      }
+      senao
+      { se ( OP == 4)
+        { imprima "\nFECHANDO";}
+        senao
+       {  imprima "\nOpcao nao disponivel";}
+  } } }
+  imprima "\n\n";
+}
+enquanto(  OP <> 4)
+imprima "\n";
+fimprog

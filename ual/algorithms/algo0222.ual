@@ -1,0 +1,10 @@
+prog algoritmo222
+int c, vf;
+string nome;
+imprima "\ndigite nome: ";
+leia nome;
+vf <- strtam(nome) -  1;
+para( c <- vf; c >= 0; c--)
+{   imprima  strelem(nome, c) ;  }
+imprima "\n";
+fimprog

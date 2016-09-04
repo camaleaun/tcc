@@ -1,0 +1,16 @@
+prog algoritmo280
+int num, p, num1;
+num1 <- 1;
+imprima  "\ndigite numero: ";
+leia num;
+p  <- num1 * (num1+1) * (num1+2);
+ enquanto(p < num )
+ { num1++;
+  p  <- num1 *(num1+1)*(num1+2);
+  }
+ se( p==num )
+ { imprima  "\nE triangular ";}
+ senao
+ { imprima  "\nNao e triangular ";}
+imprima "\n";
+fimprog

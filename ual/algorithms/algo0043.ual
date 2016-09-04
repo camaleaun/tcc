@@ -1,0 +1,8 @@
+prog algoritmo43
+ real num, logaritmo;
+ imprima "\nentre com o logaritmando: "; 
+ leia num;
+ logaritmo <- log(num) / log(10);
+ imprima "\nlogaritmo: ", logaritmo;
+ imprima "\n";
+fimprog

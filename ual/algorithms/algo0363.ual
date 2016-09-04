@@ -1,0 +1,23 @@
+prog algoritmo363
+int cont,L;
+real num, v[10],v1[10];
+cont <-0;
+imprima "\ndigite numero positivo com ponto ou 0. para terminar: ";
+leia num;
+enquanto( cont < 10 && num > 0. )
+{
+   v[cont] <- num;
+    v1[cont] <-  1 / num ;
+    cont++;
+   imprima "\ndigite numero positivo com ponto ou 0. para terminar: ";
+   leia num;
+}
+se( cont == 0 )
+{   imprima "\nVetor nao tem dados"; }
+senao
+{  cont--;
+  para(L <- 0; L <= cont; L++)
+  { imprima "\n", v1[L]; }
+}
+imprima "\n";
+fimprog

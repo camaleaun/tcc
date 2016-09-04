@@ -1,0 +1,60 @@
+prog algoritmo345
+int op, cont, aux;
+string nome, frase, palavra;
+faca
+{
+   imprima "\nMenu";
+   imprima "\n1 - Le dez palavras e exibe a menor delas";
+   imprima "\n2 - Le uma palavra e imprima a letra W em todas as posicoes pares da palavra.";
+   imprima "\n3 - Le uma frase e exibe o numero de palavras  existentes na frase";
+   imprima "\n4 - Sai do algoritmo";
+   imprima "\nDigite sua opcao: ";
+   leia op;
+  se( op == 1)
+  { imprima "\nDigite a palavra: ";
+    leia  palavra ;
+    nome <- palavra;
+    para(cont <- 1; cont <= 9; cont++)
+    { imprima "\nDigite a palavra: ";
+      leia  palavra ;
+      se( strtam( palavra) < strtam( nome))
+      {  nome <- palavra; }
+    }
+    imprima "\nA menor palavra digitada foi: ", nome;
+  }
+  senao
+  { se( op == 2)
+    { imprima "\nDigite uma palavra";
+      leia nome;
+      para( cont <- 0; cont <= strtam(nome) - 1; cont++)
+      { se(cont % 2 == 0)
+        {  imprima "W";  }
+        senao
+        { imprima strelem(nome, cont);}
+      }
+     imprima "\n";
+    }
+    senao
+    { se( op == 3)
+      { imprima "\nDigite uma frase: ";
+        leia frase;
+        aux <- 1;
+        para( cont <- 0; cont <= strtam(frase) - 1; cont++)
+        { se(strelem(frase, cont) == " ")
+          { aux++;  }
+       }
+       imprima "\nA frase lida possui ", aux, " palavras";
+      }
+      senao
+      { se(  op ==4)
+        { imprima "\nEncerrando algoritmo"; }
+        senao
+        { imprima "\nOpcao invalida";}
+       }
+      }
+     }
+     imprima "\n\n";
+}
+enquanto(  op <> 4 )
+imprima "\n";
+fimprog

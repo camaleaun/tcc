@@ -1,0 +1,18 @@
+prog algoritmo318
+string nome;
+int c;
+imprima "\nDigite nome completo ou @ para terminar: ";
+leia nome;
+enquanto(nome <>"@")
+{
+  c <- strtam(nome)-1;
+  enquanto(c >= 0 && strelem(nome,c)<>" ")   
+  {c--;}
+  c++;
+  imprima "\n",strnresto(nome,c);
+  imprima "\nDigite nome completo ou @ para terminar: ";
+  leia nome;
+}
+imprima "\n";
+fimprog
+

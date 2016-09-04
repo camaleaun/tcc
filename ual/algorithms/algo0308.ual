@@ -1,0 +1,23 @@
+prog algoritmo308
+real vel, litros, soma, tempo;
+int tempohora, tempomin;
+soma <- 0.;
+imprima "Digite a velocidade(em Km/H)com ponto ou valor negativo para acabar: ";
+leia vel;
+enquanto(vel >= 0.)
+{
+  imprima "\nEntre com o total de horas da viagem: ";
+  leia tempohora;
+  imprima "\nEntre com o total de minutos da viagem: ";
+  leia tempomin;
+  tempo <-tempohora + (tempomin/60);
+  litros <- (vel * tempohora)/10;
+  soma <- soma + litros;
+  imprima "\nDistancia: ", vel * tempo, " Km";
+  imprima "\nLitros gastos no percurso: ", litros;
+  imprima "\nDigite a velocidade(em Km/H)com ponto valor negativo para acabar: ";
+  leia vel;
+}
+imprima "\nO total de litros gastos na viagem foi: ", soma, " litros";
+imprima "\n";
+fimprog

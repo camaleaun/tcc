@@ -1,0 +1,37 @@
+prog algoritmo246
+int  idade, op, I, opexc, opbom, opregular, idadegot;
+idadegot  <-  0;
+opexc  <-  0;
+opbom  <-  0;
+opregular  <-  0;
+para( I <- 1; I <=15; I++)
+{ imprima "\n Digite idade: ";
+   leia idade;
+  imprima "\n Digite  opiniao: excelente - 3; bom - 2; regular - 1: ";
+  leia op ;
+  se( op == 3 )
+  { opexc++;
+   idadegot  <-  idadegot + idade;}
+  senao
+   {  se( op == 1 )
+    { opregular ++;}
+     senao
+       {  se( op ==2 )
+       { opbom ++;}
+      }
+    }
+}
+se(opexc<>0)
+{imprima "\nMedia de idade das pessoas que responderam excelente: ", idadegot/ opexc;}
+senao
+{imprima "\nNinguem que tenha escolhido excelente";}
+se(opregular<>0)
+{imprima "\nQuantidade de pessoas que responderam regular: ", opregular ;}
+senao
+{imprima "\nNinguem que tenha escolhido regular";}
+se(opbom<>0)
+{imprima "\nA porcentagem das pessoas que respondeu Bom: ",  opbom * 100 /15 ;}
+senao
+{imprima "\nNinguem que tenha escolhido bom";}
+imprima "\n";
+fimprog

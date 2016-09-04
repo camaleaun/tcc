@@ -1,0 +1,21 @@
+prog algoritmo277
+int num,c,p;
+imprima "\nDigite numero maior do que 0: ";
+leia num;
+enquanto(num >0)
+{ 
+  c <- 1;
+  p <- c * c;
+ enquanto( p < num)
+ { c++;
+   p <- c * c;
+ }
+ se(p == num)
+ { imprima "\nQuadrado perfeito";}
+ senao
+ { imprima "\nNao e quadrado perfeito";}
+ imprima "\nDigite numero maior do que 0: ";
+ leia num;
+}
+imprima "\n";
+fimprog

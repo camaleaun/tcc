@@ -1,0 +1,10 @@
+prog algoritmo51
+ real  raio, perimetro, area; 
+ imprima "\ndigite raio: ";  
+ leia raio;
+ perimetro <- 2* pi * raio;
+ area <-pi *raio ** 2;
+ imprima "\nperimetro : " , perimetro;
+ imprima "\narea :  ", area ;
+ imprima "\n";
+fimprog

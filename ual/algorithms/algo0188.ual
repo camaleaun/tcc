@@ -1,0 +1,7 @@
+prog algoritmo188
+int L,c, ca;
+imprima "\nConversao de polegadas para centimetros \n";
+para(L<-1; L<=20; L++)
+{  imprima "\n", L, "'' equivale(m) a ",L*2.54, " cm";  }
+imprima "\n";
+fimprog

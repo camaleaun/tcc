@@ -1,0 +1,16 @@
+prog algoritmo190
+int i, idade;
+string nome,sexo;
+para( i <- 1; i <= 10; i++ )
+{
+  imprima "\ndigite nome: ";
+  leia nome;
+  imprima "\ndigite sexo: ";
+  leia sexo;
+  imprima "\ndigite idade: ";
+  leia idade;
+  se( (strprim(sexo) == "f" || strprim(sexo)=="F") && idade >= 21)
+  {   imprima "\n", nome;   }
+}
+imprima "\n";
+fimprog

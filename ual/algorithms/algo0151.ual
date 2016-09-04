@@ -1,0 +1,28 @@
+prog algoritmo151
+real  peso, altura, imc;
+imprima "\ndigite peso: ";  
+leia peso;
+imprima "\ndigite altura: ";  
+leia altura;
+imc <-  peso / altura **2;
+se ( imc < 20.) 
+{   imprima "\nabaixo do peso";}
+senao
+{
+  se ( imc <=25. )
+  {  imprima "\nnormal";  }
+  senao
+  {
+    se ( imc <=30. )
+    {  imprima "\nexcesso de peso "; }
+    senao
+    {
+       se ( imc <=35. )
+       {  imprima "\nobesidade ";  }
+        senao
+        {   imprima "\no obesidade m¢rbida";   }
+    }
+  }
+}
+imprima "\n";
+fimprog

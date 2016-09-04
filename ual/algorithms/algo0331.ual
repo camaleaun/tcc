@@ -1,0 +1,23 @@
+prog  algoritmo331
+int arv, cont, resp;
+cont <- 0;
+imprima "\nescolha uma arvore de 1 - 100:  ";
+leia arv;
+faca
+{  imprima "\nqual o numero da arvore que o marciano esta escondido?(1 - 100):  ";
+   leia resp;
+    cont++;
+     se(resp == arv)
+     { imprima "\nVoce me acertou! Vou morrer. ";}
+     senao
+     { se(resp > arv)
+        {  imprima "\nHA! HA! HA! Estou mais a esquerda ";}
+        senao
+        {  imprima "\nHA! HA! HA! Estou mais a direita ";}
+     }
+}
+enquanto( resp <> arv && cont <5)
+se(resp <> arv)
+{ imprima "\nCacador, voce vai morrer! ";}
+imprima "\n";
+fimprog

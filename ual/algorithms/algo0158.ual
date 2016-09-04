@@ -1,0 +1,13 @@
+prog algoritmo158
+real x, fx;
+imprima "\ndigite valor de x: ";
+leia x;
+se(x <> 2. )
+{fx <- 8  / (2 - x);
+ imprima "\nf(x)= ",fx;
+}
+senao
+{imprima "\nNAO PODE SER FEITA";}
+imprima "\n";
+fimprog
+

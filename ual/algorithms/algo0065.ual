@@ -1,0 +1,10 @@
+prog algoritmo65
+ real  volume, altura, raio;
+ imprima "\ndigite a altura da lata: ";
+ leia altura;
+ imprima "\ndigite o raio da lata: ";
+ leia raio;
+ volume <-  pi *raio ** 2 *altura;
+ imprima "\n o volume da lata e = ", volume;
+ imprima "\n";
+fimprog

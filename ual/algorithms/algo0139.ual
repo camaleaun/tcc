@@ -1,0 +1,15 @@
+prog algoritmo139
+int ne, votos;
+string nome;
+imprima "\nDigite nome do Municipio: ";
+leia nome;
+imprima "\nnumero de eleitores aptos: ";
+leia ne;
+imprima "\nnumero de votos do candidato mais votado: ";
+leia votos;
+se (ne >20000  &&  votos <= ne div 2)
+{ imprima "\n",nome," ter  segundo turno"; }
+senao
+{ imprima "\n",nome," nao tera  segundo turno"; }
+imprima "\n";
+fimprog

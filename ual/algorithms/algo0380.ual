@@ -1,0 +1,12 @@
+prog algoritmo380
+int L, num[30];
+para(L<-0; L<=29;L++)
+{imprima "\ndigite numero: ";
+leia num[L];
+}
+imprima "\n\n\n";
+imprima "\n Vetor ao Contrario\n";
+para(L<-29; L>=0;L--)
+{imprima "\n",num[L];}
+imprima "\n";
+fimprog

@@ -1,0 +1,23 @@
+prog  algoritmo334
+int iden, maioriden, menoriden;
+real peso, maiorpeso, menorpeso;
+maiorpeso <- 0.;
+menorpeso <- 10000000.;
+imprima "\ndigite identificacao do boi ou, para terminar, 0 ou numero negativo: ";
+leia iden;
+enquanto( iden > 0)
+{  imprima "\ndigite peso do boi com ponto: ";
+   leia peso;
+   se(peso > maiorpeso)
+   {  maiorpeso <- peso; maioriden <- iden;}
+   senao
+   { se(peso < menorpeso)
+     {  menorpeso <- peso; menoriden <- iden;}
+    }
+    imprima "\ndigite identificacao do boi ou, para terminar, 0 ou numero negativo: ";
+    leia iden;
+}
+imprima  "\nmaior peso ", maiorpeso, " e do boi cuja identificacao e: ", maioriden;
+imprima  "\nmenor peso ", menorpeso, " e do boi cuja identificacao e: ", menoriden;
+imprima "\n";
+fimprog

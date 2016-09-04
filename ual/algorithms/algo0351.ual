@@ -1,0 +1,17 @@
+prog algoritmo351
+int L, num ;
+string nomes [5];
+para( L<- 0; L <= 4 ; L++)
+{  imprima "\nnome " , L + 1, ": ";  leia nomes[L] ;}
+#entra com numero para procurar pela posicao 
+imprima "\nDigite o numero da pessoa: ";
+leia num;
+enquanto(num < 1 ||  num > 5)
+{
+ imprima "\n Numero fora do intervalo";
+ imprima "\n Digite o numero da pessoa: ";
+ leia num;
+}
+imprima "\n", nomes[ num -1] ;
+imprima "\n";
+fimprog

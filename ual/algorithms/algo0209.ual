@@ -1,0 +1,26 @@
+prog algoritmo209
+int a1, a2, i, n, termo, soma;
+imprima "\nEntre com 1 termo: ";
+leia a1;
+imprima "\nEntre com 2 termo: ";
+leia a2;
+imprima "\nEntre com n termos: ";
+leia n;
+soma <- a1 + a2;
+se(n >= 3)
+{
+  imprima "\n", a1, "  " ,a2, "  ";
+  para( i <- 1; i <= n - 2; i++)
+  {
+     termo  <- a1 + a2;
+     a1  <- a2;
+     a2  <-  termo;
+     imprima termo, "  ";
+     soma <- soma + termo;
+    }
+    imprima "\nSoma: ", soma;
+}
+ senao
+ {  imprima "\nnao tem serie"; }
+imprima "\n";
+fimprog

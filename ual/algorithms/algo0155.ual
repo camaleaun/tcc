@@ -1,0 +1,15 @@
+prog algoritmo155
+string pal, pal1, pal2, letra;
+int tam;
+imprima "\ndigite palavra: ";
+leia pal;
+letra <- strprim(pal);
+se(  letra =="l" || letra =="L"  || letra  =="d"  || letra =="D"  )
+{pal1 <-strnprim(pal,2);
+ pal2 <-strult(pal);
+ pal1 <-strconcat(pal1,pal2 );}
+senao
+{pal1 <-strresto(pal);}
+imprima "\npalavra: ", pal1;
+imprima "\n";
+fimprog

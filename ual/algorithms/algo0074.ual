@@ -1,0 +1,10 @@
+prog algoritmo74
+ real salmin, salpe, num;
+ imprima "\nentre com o salario minimo: ";
+ leia salmin;
+ imprima "\nentre com o salario da pessoa: ";
+ leia salpe;
+ num <- salpe / salmin;
+ imprima "\na pessoa ganha ", num, " salarios minimos";
+ imprima "\n"; 
+fimprog

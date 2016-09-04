@@ -1,0 +1,19 @@
+prog algoritmo353
+int L;
+string nomes[10];
+# trecho de entrada de 10 nomes
+para( L<- 0; L <= 9 ; L++)
+{
+    imprima "\nDigite ", L + 1, " nome: ";
+    leia nomes[ L ] ;
+}
+# fim do trecho de entrada
+# trecho de saida
+imprima "\nRELACAO DAS PESSOAS\n";
+para( L<- 0; L <= 9 ; L++)
+{
+    imprima "\n", L+1, "- ", nomes[ L];
+ }
+# fim do trecho de sa­da
+imprima "\n";
+fimprog

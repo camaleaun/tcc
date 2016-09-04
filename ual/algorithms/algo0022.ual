@@ -1,0 +1,16 @@
+prog algoritmo22
+ imprima "\nTESTANDO HIERARQUIA";
+ imprima "\n\n18/6 % 2 Ç igual a: ", 18 / 6 % 2;
+ imprima "\nUma operaá∆o de divis∆o fora de parànteses n∆o pode ser um dos operandos de uma express∆o com  %.";
+ imprima "\n\n20 / 4 div 2 Ç igual a: ", 20 / 4 div 2;
+ imprima "\nê IGUAL a (20 / 4) div 2 : ",(20 / 4) div 2," logo div tem a MESMA HIERARQUIA ";
+ imprima " da  /. ";
+ imprima "\n\n30 / 4 div 2 Ç igual a: ", 30/4 div 2;
+ imprima "\nê IGUAL a (30 / 4) div 2 : ",(30 / 4) div 2," logo div tem a MESMA HIERARQUIA ";
+ imprima " da / ";
+ imprima "\n\n7. div 4: ",7. div 4;
+ imprima "\n7  div 4: ",7 div 4;
+ imprima "\n6. div 4: ",6. div 4;
+ imprima "\n6  div 4: ",6 div 4;
+ imprima "\n";
+fimprog

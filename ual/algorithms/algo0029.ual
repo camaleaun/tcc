@@ -1,0 +1,4 @@
+prog algoritmo29
+ imprima "\n <seu nome>";
+ imprima "\n";
+fimprog

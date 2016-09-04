@@ -1,0 +1,5 @@
+prog algoritmo17
+ int x;
+ x <- 10;
+ imprima  "Valor de x = ", x;
+fimprog

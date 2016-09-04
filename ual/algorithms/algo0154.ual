@@ -1,0 +1,47 @@
+prog algoritmo154
+string placa, p;
+imprima "\ndigite placa: ";  
+leia  placa ;
+p <- strult(placa);
+se ( p  == "1" )
+{ imprima "\njaneiro"; }
+senao
+{ se ( p  == "2" )
+   {  imprima "\nfevereiro"; }
+   senao
+   { se ( p  == "3" )
+     { imprima "\nmarco"; }
+     senao
+     { se ( p  == "4" )
+        { imprima "\nabril"; }
+        senao
+        { se ( p  == "5" )
+          { imprima "\nmaio"; }
+          senao
+          { se ( p  == "6" )
+            { imprima "\njunho"; }
+            senao
+            { se ( p  == "7" )
+              { imprima "\njulho";  }
+              senao
+              { se ( p  == "8" )
+                {  imprima "\nagosto"; }
+                senao
+                {  se ( p  == "9" )
+                  {  imprima "\nsetembro";  }
+                  senao
+                  {  se ( p  == "0" )
+                    { imprima "\noutubro"; }
+                    senao
+                    { imprima "\nopcao invalida"; }
+                  }
+                } 
+              }
+            }
+          }
+        }
+     }
+  }
+}
+imprima "\n";  
+fimprog                

@@ -1,0 +1,7 @@
+prog algoritmo241
+int c;
+imprima "\nTABUADA DO 3\n";
+para(c<-1; c<=10; c++)
+{   imprima "\n3", " x ", c, " = ", 3*c;   }
+imprima "\n";
+fimprog

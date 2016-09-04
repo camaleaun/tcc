@@ -1,0 +1,14 @@
+prog algoritmo35
+ string nome, endereco, telefone;
+ imprima "\nentre com nome: ";
+ leia nome;
+ imprima "\nentre com endereco: ";
+ leia endereco;
+ imprima "\nentre com  telefone: ";
+ leia telefone;
+ imprima "\n\n\n";
+ imprima "\nNome:       ",nome;
+ imprima "\nEndereco: ",endereco;
+ imprima "\nTelefone:  ",telefone;
+ imprima "\n";
+fimprog

@@ -1,0 +1,69 @@
+prog algoritmo392
+string nomes[100], auxnome, nomep;
+real notas[100], mediag, auxnota;
+int opcao, c, L;
+faca
+{
+ imprima "\n\n\n\t MENU";
+ imprima "\n 1 - Ler Nomes e Notas";
+ imprima "\n 2 - Media Geral";
+ imprima "\n 3 - Classificacao";
+ imprima "\n 4 - Busca Candidato";
+ imprima "\n 5 - Sair";
+ imprima "\n\t OPCAO: ";
+ leia opcao;
+ se(opcao == 1)
+   { para(c <-0 ;c <= 99; c++)
+     { imprima "\n Digite o nome: "; leia nomes[c];
+       imprima "\n Digite a nota com ponto: "; leia notas[c];
+     }
+   }
+   senao
+    { se(opcao == 2)
+       { mediag <- 0.;
+         para(c <- 0; c <= 99; c++)
+          { mediag <- mediag + notas[c];
+          }
+          imprima "\n Media Geral = ", mediag/100;
+       }
+     senao
+       { se(opcao == 3)
+            { para( L<- 0; L <= 98 ; L++)
+              { para( c<- L + 1; c <= 99 ; c++)
+                 { se(  notas[L] < notas[c] )
+                    { auxnota <- notas[L];
+                       notas[L] <- notas[c];
+                       notas[c] <- auxnota;
+                       auxnome <- nomes[L];
+                       nomes[L] <- nomes[c];
+                       nomes[c] <- auxnome;
+                    }
+                 }
+             }
+           imprima "\n Relacao em ordem decrescente de nota";
+           para( c<- 0; c <= 99 ; c++)
+            { imprima "\n", c+1, " - Nome: ", nomes[c], "\t Nota: ", notas[c];            }
+          }
+          senao
+          { se(opcao == 4)
+             { imprima "\n Digite o nome a ser procurado"; leia nomep;
+                L <- 0;
+                enquanto( L < 99 &&  nomep <> nomes[L]  )
+                { L <-L + 1; }
+                se(nomep ==nomes[L] )
+                { imprima "\n NOME: ", nomes[L], "\nNOTA;", notas[L];  }
+                senao
+                {  imprima "\n Nao encontrei" ;  }
+                imprima "\n";
+            }
+            senao
+            { se(opcao <> 5 )
+              { imprima "\n Opcao Invalida";}
+            }
+          }
+        }
+    }
+}
+enquanto(opcao<>5)
+imprima "\n";
+fimprog

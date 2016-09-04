@@ -1,0 +1,25 @@
+prog algoritmo145
+string livro, tipo;
+int  dia;
+imprima "\ndigite nome do livro: ";  
+leia  livro;
+imprima "\ndigite: professor / aluno: ";  
+leia  tipo;
+se( tipo == "professor" ||  tipo == "Professor" ||  tipo == "PROFESSOR")  
+{  dia <-10 ;}
+senao
+ { se( tipo == "aluno" ||  tipo == "Aluno" ||  tipo == "ALUNO")
+   {  dia <-3 ;}
+   senao
+   { dia <- 0;}
+ }
+se( dia == 0)
+{imprima "\n Tipo de usuario desconhecido";}
+senao
+{ imprima "\nnome do livro: ", livro;
+imprima "\nnome tipo de usurio: ", tipo;
+imprima "\ntotal de dias: ", dia;
+}
+imprima "\n";
+fimprog
+

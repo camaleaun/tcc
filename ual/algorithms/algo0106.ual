@@ -1,0 +1,9 @@
+prog algoritmo106
+string nome, letra;
+imprima "\ndigite nome: ";  
+leia nome;
+letra <- strprim(nome);
+se  ( letra =="A"  || letra =="a" )
+{   imprima "\n",nome; }
+imprima "\n";
+fimprog

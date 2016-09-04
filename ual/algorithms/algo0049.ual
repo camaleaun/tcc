@@ -1,0 +1,15 @@
+prog algoritmo49
+ string nome;
+ int n;
+ imprima "\nentre com nome: ";    
+ leia nome;
+ imprima "\ntodo nome: " , nome;
+ imprima "\nprimeiro caracter: ", strprim(nome);
+ imprima "\nultimo caracter: ", strult(nome);
+ imprima "\nprimeiro ao terceiro caracter: ", strnprim(nome,3);
+ imprima "\nquarto caracter: ", strelem(nome,3);
+ imprima "\ntodos menos o primeiro: ", strresto ( nome);
+ n <- strtam(nome) -2;
+ imprima "\nos dois ultimos: " , strnresto(nome,n);
+ imprima "\n";
+fimprog

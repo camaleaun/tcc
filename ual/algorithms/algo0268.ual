@@ -1,0 +1,18 @@
+prog algoritmo268
+int a;
+string sexo;
+a   <-  0;
+imprima "\ndigite sexo(M/F) ou @ para sair: ";
+ leia sexo;
+ sexo <- strprim(sexo);
+ enquanto(  sexo <>  "@" )
+ {
+  se(sexo == "M" || sexo == "m" )
+  { a++; }
+  imprima "\ndigite sexo(M/F) ou @ para sair: ";
+  leia sexo;
+  sexo <- strprim(sexo);
+}
+imprima "\ntotal de pessoas do sexo masculino: ", a;
+imprima "\n";
+fimprog

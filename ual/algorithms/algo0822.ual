@@ -1,0 +1,11 @@
+prog algoritmo82sol1               
+real numero, met;
+imprima "digite numero: ";
+leia numero;
+se( numero > 20. ) 
+{
+  met <- numero / 2;
+  imprima "\nmetade: ", met ;
+}
+imprima "\n";
+fimprog

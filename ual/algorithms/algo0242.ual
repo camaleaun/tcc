@@ -1,0 +1,14 @@
+prog algoritmo242
+int c, n;
+imprima "\n qual tabuada? ";
+leia n;
+se( n > 0)
+{
+   imprima "\nTABUADA DO ", n,"\n";
+   para(c<-1; c<=10; c++)
+   { imprima "\n",n, " x ", c, " = ", n*c; }
+}
+senao
+{ imprima "\n Nao existe tabuada";  }
+imprima "\n";
+fimprog

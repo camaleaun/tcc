@@ -1,0 +1,26 @@
+prog algoritmo292
+real num, maior, menor, soma;
+int a;
+imprima "\nEntre com um numero com ponto ou 0. para terminar: ";
+leia num;
+a  <- 0;
+soma  <- 0.;
+maior  <- num;
+menor  <- num;
+enquanto(num <> 0.)
+{  a++;
+   soma  <-  soma + num;
+   se(num > maior)
+   {maior  <-  num;}
+   senao
+   { se(num<menor)
+      { menor  <-  num; }
+   }
+ imprima "\nEntre com um numero com ponto ou 0. para terminar: ";
+ leia num;
+}
+imprima "\nMaior: ", maior;
+imprima "\nMenor: ", menor;
+imprima "\nMedia: ", soma/a;
+imprima "\n";
+fimprog

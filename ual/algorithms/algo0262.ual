@@ -1,0 +1,12 @@
+prog algoritmo262
+real num;
+imprima "\ndigite numero com ponto ou -999. para terminar: ";
+leia num;
+enquanto(  num <> -999. )
+{
+   imprima  "\ntriplo: ", num * 3;
+   imprima "\ndigite numero com ponto ou -999. para  terminar:  ";
+   leia num;
+}
+imprima "\n";
+fimprog

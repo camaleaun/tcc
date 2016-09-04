@@ -1,0 +1,16 @@
+prog algoritmo189
+int f1, f2, dec,t;
+real c;
+imprima "\nentre com a temperatura maior em Fahrenheit: ";
+leia f1;
+imprima "\nentre com a temperatura menor em Fahrenheit: ";
+leia f2 ;
+imprima "\nentre com decremento: ";
+leia dec ;
+para( t <- f1; t >= f2; t <- t - dec)
+{ 
+  c <- 5 * (t - 32)/9;
+  imprima "\ntemperatura em graus Celsius: ", c;
+}
+imprima "\n";
+fimprog

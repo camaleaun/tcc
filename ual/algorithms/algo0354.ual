@@ -1,0 +1,22 @@
+prog algoritmo354
+int L , num[15];
+# trecho de entrada de 15 elementos
+para( L<- 0; L <= 14 ; L++)
+{
+  imprima "\ndigite ", L + 1, " numero: ";
+  leia num[ L ] ;
+}
+# fim do trecho de entrada
+# trecho de sa­da
+imprima "\nRELACAO DAS NUMEROS\n";
+para( L<- 0; L <= 14 ; L++)
+{
+   imprima "\n", L+1, "- ", num[L];
+   se(num[L] %2==0)
+    { imprima " e' PAR";  }
+    senao
+     { imprima " e' IMPAR";  }
+}
+# fim do trecho de sa­da
+imprima "\n";
+fimprog

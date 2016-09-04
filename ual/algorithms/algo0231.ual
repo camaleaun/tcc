@@ -1,0 +1,14 @@
+prog algoritmo231
+int c, m30;
+real numero;
+m30 <- 0;
+para( c <- 1; c <=15; c++)
+{
+   imprima "\ndigite numero com ponto: ";
+   leia numero;
+   se( numero > 30. )
+   { m30 ++; }
+}
+imprima "\nMaiores do que 30: ", m30;
+imprima "\n";
+fimprog

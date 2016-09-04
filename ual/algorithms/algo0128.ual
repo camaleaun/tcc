@@ -1,0 +1,29 @@
+prog algoritmo128
+string verbo, letra;
+int  n;
+imprima "\ndigite verbo: ";  
+leia verbo;
+letra <- strult(verbo);
+se ( letra == "R" || letra =="r")
+{
+   n <- strtam(verbo) - 2;
+   letra <- strelem(verbo,n);
+  se  ( letra =="A"  || letra == "a" )
+  { imprima "\n1a conjugacao"; }
+  senao
+  {
+    se ( letra =="E" || letra =="e"  || letra =="o" ||  letra =="O")
+    {  imprima "\n2a conjugacao"; }
+    senao
+    {
+       se  ( letra =="I"  || letra == "i" )
+       { imprima  "\n3a conjugacao"; }
+       senao
+       { imprima "\nnao existe verbo com terminacao ur"; }
+    }
+  }
+}
+senao
+{ imprima "\nnao e  um verbo no infinitivo"; }
+imprima "\n";
+fimprog

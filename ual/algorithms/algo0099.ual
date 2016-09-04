@@ -1,0 +1,11 @@
+prog algoritmo99
+int num, c;
+imprima "\nnumero de 3 algarismos: ";
+leia num;
+c <- num  div  100;
+se( c % 2  == 0 )
+{imprima "\no algarismo das centenas e par: ",c;}
+senao
+{imprima "\no algarismo das centenas e  ímpar: ",c;}
+imprima "\n";
+fimprog

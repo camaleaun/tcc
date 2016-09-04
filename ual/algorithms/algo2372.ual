@@ -1,0 +1,13 @@
+prog algoritmo237sol2
+int c, num;
+real h;
+h <- 0. ; 
+imprima "\ndigite numero: ";
+leia num;
+imprima "\nSegunda Solucao ";
+h <- 0. ;
+para( c<- 1; c  <= num; c++)
+{    h <- h + ( -1**(c+1)) / c; }
+imprima "\n\nsoma: ", h ;
+imprima "\n";
+fimprog

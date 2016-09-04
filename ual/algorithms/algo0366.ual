@@ -1,0 +1,27 @@
+prog algoritmo366
+string nomes[20], prof[20];
+int L, tam, c, dent;
+dent <- 0;
+  para( L<- 0; L < 20 ; L++)
+  { imprima "\nDigite ", L+1,  " nome (com ate 30 caracteres ): " ;
+    leia nomes[L] ;
+    enquanto(strtam(nomes[L] ) > 30)
+    { imprima "\nNome com ate 30 caracteres. Digite ", L+1,  "  nome: ";
+      leia nomes[L];
+    }
+    tam <- strtam(nomes[L]);
+    se(tam < 30)
+    { para(c <- 0;c<=30 - tam; c++)
+      {nomes[L]<-strconcat(nomes[L], "b");}
+    }
+    imprima "\ndigite profissao: " ;
+    leia prof[L] ;
+    se(  prof[L] == "dentista" || prof[L] == "DENTISTA" || prof[L] == "Dentista")
+    { dent++; }
+  }
+ imprima "\nNOME\t\t\t\t\tPROFISSAO\n";
+  para( L <- 0; L < 20 ; L++)
+ { imprima "\n",L + 1, "-", nomes[L], "\t", prof[L]; }
+imprima "\nTotal de Dentistas: ", dent;
+imprima "\n";
+fimprog

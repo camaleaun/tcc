@@ -1,0 +1,11 @@
+prog algoritmo196
+int i, num, soma;
+soma <- 0;
+imprima "\nDigite um numero maior que zero: ";
+leia num;
+num<-num-1;
+para( i <- 5; i < num;  i <- i + 5)
+{   soma <- soma + i; }
+imprima "\nSoma dos multiplos de 5 menores que ", num+1, ": " , soma;
+imprima "\n";
+fimprog

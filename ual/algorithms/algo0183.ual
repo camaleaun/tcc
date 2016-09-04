@@ -1,0 +1,11 @@
+prog algoritmo183
+int a;
+real numero;
+para( a <- 1; a <=10; a++)
+{
+  imprima "\ndigite numero com ponto: ";
+  leia numero;
+  imprima  "quadrado: ", numero ** 2;
+}
+imprima "\n";
+fimprog

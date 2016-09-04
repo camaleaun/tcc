@@ -1,0 +1,38 @@
+prog algoritmo212
+int i,n,num, sfora, totfora, sdentro, totdentro,
+cont;
+sfora <- 0;
+totfora <- 0;
+sdentro <- 0;
+totdentro <- 0;
+imprima "\nEntre com o valor de n: ";
+leia n;
+para( i <- 1; i <= n; i++)
+{
+  imprima "\nEntre com o numero: ";
+  leia num;
+  se(num >0 && num < 16)
+  {
+    imprima num," esta  dentro do intervalo";
+    sdentro <- sdentro + num;
+    totdentro <- totdentro + 1;
+  }
+  senao
+  {
+    imprima num," esta  fora do intervalo";
+    sfora <- sfora + num;
+    totfora <- totfora + 1;
+  }
+}
+se(totdentro<>0)
+{ imprima "\n", totdentro," valore(s) dentro do intervalo";
+  imprima "\nsoma = ", sdentro, " e media= ",sdentro / totdentro;}
+senao
+{ imprima "\nNenhum numero dentro do intervalo";}
+se(totfora<>0)
+{ imprima "\n",totfora," valore(s) fora do intervalo";
+ imprima "\nsoma = ", sfora, " e media = ", sfora/ totfora;}
+senao
+{ imprima "\nNenhum numero fora do intervalo";}
+imprima "\n";
+fimprog

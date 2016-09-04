@@ -1,0 +1,13 @@
+prog algoritmo56
+ string nome;
+ int idade;
+ imprima "\ndigite nome: ";  
+ leia nome;
+ imprima "\ndigite idade: ";  
+ leia idade;
+ # a linha abaixo e para dar uma separa‡Æo entre a entrada e a sa¡da
+ imprima "\n\n";
+ imprima "\nnome = ", nome;
+ imprima "\nidade = ", idade;
+ imprima "\n";
+fimprog

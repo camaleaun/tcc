@@ -1,0 +1,11 @@
+prog algoritmo57
+ real  pr1, pr2, mf;
+ imprima "\ndigite pr1: "; 
+ leia pr1;
+ imprima "\ndigite pr2: "; 
+ leia pr2;
+ mf <- ( pr1 + pr2 ) / 2;
+ imprima "\nmedia truncada = ", realint((mf- 0.5)+0.001); 
+ imprima "\nmedia arredondada = ", realint( mf+0.001);
+ imprima "\n";
+fimprog

@@ -1,0 +1,9 @@
+prog algoritmo191
+int i, limite, incr;
+imprima "\nDigite o numero limite e o incremento pressionando enter apos digitar cada um: ";
+leia limite;
+leia incr;
+para( i <- 0; i <= limite;  i <- i + incr)
+{imprima i, "   ";}
+imprima "\n";
+fimprog

@@ -1,0 +1,12 @@
+prog algoritmo207
+int num1, num2, i, soma ;
+imprima "\nentre com o multiplicando: ";
+leia num1;
+imprima "\nentre com o multiplicador: ";
+leia num2 ;
+soma <-0;
+para( i <- 1; i <= num2; i++)
+{ soma <- soma + num1;}
+imprima "\nProduto: ", soma;
+imprima "\n";
+fimprog

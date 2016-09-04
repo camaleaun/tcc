@@ -1,0 +1,14 @@
+prog   algoritmo294 
+int i, num, cont;
+cont <- 0;
+i <- 1;
+imprima "\ndigite numero positivo ou negativo para terminar: ";
+leia num;
+enquanto(num > 0)
+{  num <- num - i;   i <- i + 2;   cont++;}
+se( num == 0)
+{ imprima "\na raiz quadrada e: ", cont;}
+senao
+{ imprima "\na raiz quadrada aproximada esta entre: ", cont -1, " e ", cont;}
+imprima "\n";
+fimprog

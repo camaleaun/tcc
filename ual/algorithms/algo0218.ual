@@ -1,0 +1,11 @@
+prog algoritmo218
+int a;
+string nome;
+para( a <- 1; a <=12; a++)
+{
+   imprima "\ndigite nome: ";
+   leia nome;
+   imprima  "\n1a letra: ", strprim(nome) ;
+}
+imprima "\n";
+fimprog

@@ -1,0 +1,31 @@
+prog algoritmo293
+real media;
+int totpessoas, masc, fem,sexo, soma, idade;
+soma  <-  0;
+masc  <-  0;
+fem  <-   0;
+totpessoas   <-   0;
+imprima "\nEntre a idade ou 0 para terminar: ";
+leia idade;
+enquanto(idade > 0)
+{
+  totpessoas  ++;
+  soma  <-  soma + idade;
+  imprima "\nEntre sexo(0-masculino e 1- feminino): ";
+  leia sexo;
+   se(sexo == 0)
+   { masc ++; }
+   senao
+   {
+     se(idade >= 30 && idade <= 45)
+       {fem ++;}
+   }
+   imprima "\nEntre a idade ou 0 para terminar: ";
+   leia idade;
+}
+media  <-  soma / totpessoas;
+imprima "\nMasculino: ", masc;
+imprima "\nFeminino de 30 ate 45: ", fem;
+imprima "\nMedia: ", media;
+imprima "\n";
+fimprog

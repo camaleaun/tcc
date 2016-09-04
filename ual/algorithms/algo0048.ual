@@ -1,0 +1,13 @@
+prog algoritmo48
+ real sm, qtdade, preco, vp, vd;
+ imprima "\nentre com o salario minimo: ";
+ leia sm;
+ imprima "\nentre com a quantidade em kilowatt: ";
+ leia qtdade;
+ # divide por 7 para achar o preco de 100 Kw e por 100 para achar de 1 Kw 
+ preco <- sm /700;
+ vp <- preco * qtdade;
+ vd  <- vp * 0.9;
+ imprima "\npreco do kilowatt: ", preco, "\n valor a ser pago: ", vp, "\n valor com desconto: ", vd;
+ imprima "\n";
+fimprog 

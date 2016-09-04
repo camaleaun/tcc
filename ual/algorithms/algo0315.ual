@@ -1,0 +1,30 @@
+prog algoritmo315
+int famt,famf,sf,sm, rs;
+string filhos, fam;
+famt<-0;
+famf<-0;
+sf <-0;
+sm<-0;
+imprima "\nCadastra familia( s ou qualquer caracter) ou @ para terminar: ";
+leia fam;
+enquanto(fam<>"@")
+{ famt++;
+  imprima "\nTem filhos (s/n) ? ";
+  leia filhos;
+  se(filhos =="s" || filhos =="S")
+  { famf++;
+    imprima "\nQuantas do sexo feminino? ";
+    leia rs;
+    sf<-sf + rs;
+    imprima "\nQuantas do sexo masculino? ";
+    leia rs;
+    sm<-sm + rs;
+   }
+   imprima "\nCadastra familia( s ou qualquer caracter) ou @ para terminar: ";
+   leia fam;
+}
+imprima "\nTotal gasto com as  meninas: ", sf * 11.00;
+imprima "\nTotal gasto com meninos: ", sm * 12.00;
+imprima "\nPercentual de fam­lias beneficiadas: ", famf*100/famt;
+imprima "\n";
+fimprog

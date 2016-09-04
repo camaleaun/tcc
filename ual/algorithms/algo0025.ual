@@ -1,0 +1,12 @@
+prog algoritmo25 
+ int data,dia,mes,ano;
+ imprima "\nDigite data no formato ddmmaa: ";
+ leia data;
+ dia<-data div 10000;
+ mes<-data % 10000 div 100;
+ ano<-data %100;
+ imprima "\nDIA: ",dia;
+ imprima "\nMES: ",mes;
+ imprima "\nANO: ",ano;
+ imprima "\n";
+fimprog

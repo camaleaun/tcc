@@ -1,0 +1,21 @@
+prog  algoritmo240
+int c,d, expden, fat;
+real x,seno;
+seno <- 0.;
+expden <- 1;
+imprima "\ndigite valor de x com ponto: ";
+leia x;
+x <- x * pi/180;
+para( c <- 1; c<= 10;c++)
+{ fat <- 1;
+   para( d <- 1; d <= expden; d++)
+  { fat <- fat * d; }
+   se(c % 2 == 0)
+  { seno <- seno- x ** expden / fat;}
+   senao
+  {  seno <- seno + x ** expden / fat;}
+   expden <- expden + 2;
+ }
+imprima  "\nseno: ", formatar(seno,4);
+imprima "\n";
+fimprog

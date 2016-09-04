@@ -1,0 +1,29 @@
+prog  algoritmo256
+string PAL,PALSE, INV, LETRA ;
+int TAM, IND, C, CONT;
+CONT <- 0;
+para(C <- 1; C <= 15 ; C ++)
+{
+    imprima "\nDigite uma Palavra: ";
+    leia  PAL ;
+    TAM <- strtam(PAL)- 1;
+    PALSE <- "";
+    para( IND <- TAM; IND >= 0; IND--)
+    {
+       LETRA<- strelem(PAL, IND);
+       se(LETRA <> " ")
+       {PALSE <- strconcat(PALSE, LETRA);}
+    }
+    TAM <- strtam(PALSE)- 1;
+    INV <- "";
+    para( IND <- TAM; IND >= 0; IND--)
+    {
+       LETRA <- strelem(PALSE, IND);
+       INV <- strconcat(INV, LETRA);
+    }
+    se( PALSE == INV)
+    { CONT++; }
+}
+imprima "\nForam encontradas tantas palavras palindromos: ", CONT;
+imprima "\n";
+fimprog

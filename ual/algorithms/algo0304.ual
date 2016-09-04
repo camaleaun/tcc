@@ -1,0 +1,29 @@
+prog algoritmo304
+int num, cont, tot1, tot2, menor;
+cont  <-  0;
+tot1  <-  0;
+tot2  <-  0;
+imprima "\nDigite numero ou -1 para acabar: ";
+leia num;
+menor  <-  1001;
+enquanto(num > -1)
+{
+ tot2  <-  tot2 + num;
+ se(num>100 && num<1000)
+ {  cont ++;   tot1  <-  tot1 + num;
+    se(num<menor)
+    { menor  <-   num; }
+ }
+ imprima "\nDigite numero ou -1 para acabar: ";
+ leia num;
+}
+se(cont <> 0)
+{ imprima "\nMenor entre 100 e 1000: ", menor;
+ imprima "\nMedia entre 100 e 1000: ", tot1/cont;
+ imprima "\nSoma entre 100 e 1000: ", tot1;
+}
+senao
+{imprima "\nNao foi digitado numero entre 100 e 1000";}
+imprima "\nSoma de todos: ", tot2;
+imprima "\n";
+fimprog

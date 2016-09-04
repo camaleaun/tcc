@@ -1,0 +1,26 @@
+prog  algoritmo141
+int p1, p2, p3, aux;
+string n1,n2,n3,auxn;
+imprima "\ndigite 1 nome: ";
+leia n1;
+imprima "\ndigite pontos: ";
+leia p1;
+imprima "\ndigite 2 nome: ";
+leia n2;
+imprima "\ndigite pontos: ";
+leia p2;
+imprima "\ndigite 3 nome: ";
+leia n3;
+imprima "\ndigite pontos: ";
+leia p3;
+se ( p1  < p2 )
+ {   aux <- p1;    p1 <- p2;     p2 <- aux;    auxn <- n1;   n1 <- n2;   n2 <- auxn;  }
+ se ( p1  < p3 )
+ {  aux <- p1;    p1 <- p3;     p3 <- aux;     auxn <- n1;   n1 <- n3;  n3 <- auxn;  }
+  se ( p2 < p3 )
+ {  aux <- p2;   p2 <- p3;    p3 <- aux;     auxn <- n2;   n2 <- n3;  n3 <- auxn;  }
+imprima "\nVENCEDOR         : ", n1, "  ",p1, " pontos";
+imprima "\nSEGUNDO COLOCADO : ", n2, "  ",p2, " pontos";
+imprima "\nTERCEIRO COLOCADO: ", n3, "  ",p3, " pontos";
+imprima "\n";
+fimprog

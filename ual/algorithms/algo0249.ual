@@ -1,0 +1,19 @@
+prog algoritmo249
+int c, c1, L;
+string nome;
+imprima "\ndigite nome: ";
+leia nome;
+L <- strtam(nome);
+se( L % 2 <>0)
+{
+   para( c <- 1; c <=L ; c<-c+2)
+   {
+      para(c1<-1; c1<=c; c1++)
+      {   imprima nome, " ";   }
+      imprima "\n";
+   }
+  }
+senao
+{  imprima "\nNao faco";}
+imprima "\n";
+fimprog

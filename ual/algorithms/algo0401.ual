@@ -1,0 +1,97 @@
+prog algoritmo401
+int op,c,d, posmenor, posmaior;
+string   dados1[50], dados2[50], dados3[50], nome;
+real    milha[50], milhas;
+para( c<-0;c < 5; c++)
+{milha[c]<-0.;}
+c<-0;
+faca
+{  imprima "\n\n\n   ********************";
+   imprima "\n   *       MENU       *";
+   imprima "\n   ********************";
+   imprima "\n 1 - cadastra dados do cliente   ";
+   imprima "\n 2 - cadastra milhagem do cliente ";
+   imprima "\n 3 - lista milhagem do cliente    ";
+   imprima "\n 4 - imprime os nomes que tem maior e menor milhagem ";
+   imprima "\n 5 - imprime os nomes e as milhagens ";
+   imprima "\n 6 - SAIR           ";
+   imprima "\nOPCAO:";
+   leia op;
+    se(op==1)
+    { se(c<=49)
+      {
+        imprima "\n", c+ 1,"- nome: ";leia dados1[c];
+        imprima "\nendereco: "; leia dados2[c];
+        imprima "\ntelefone:"; leia dados3[c];
+        c++;
+      }
+      senao
+      { imprima "\narquivo cheio";}
+     }
+     senao
+   { se( op ==2)
+     { imprima "\nnome para procura: ";leia nome;
+       d<-0;
+       enquanto( d< c-1  && nome <> dados1[d] )
+       { d++; }
+       se(nome==dados1[d] )
+       {  imprima  "\ndigite milhagem de ", dados1[d],": ";leia milhas;
+            milha[d]<-milha[d]+milhas;
+       }
+       senao
+       { imprima "\nnome nao encontrado";}
+     }
+     senao
+     { se( op == 3)
+       { imprima "\nnome para procura: ";leia nome;
+            d<-0;
+            enquanto( d< c  && nome <> dados1[d] )
+            { d++; }
+            se(nome==dados1[d] )
+            {  imprima  "\nmilhagem  de ",dados1[d],": ",milha[d]; }
+            senao
+            { imprima "\nnao encontrado";}
+      }
+      senao
+      { se(  op == 4)
+        {  d <-1;
+           posmenor<-0;
+           posmaior<-0;
+           enquanto(d < c)
+           { se(milha[d] > milha[posmaior])
+             { posmaior <- d;}
+             senao
+             { se(milha[d]< milha[posmenor])
+               { posmenor <- d; }
+              }
+              d++;
+           }
+           imprima "\nDados da pessoa de maior milhagem";
+           imprima "\nNome: ",dados1[posmaior];
+           imprima "\nEndereco: ",dados2[posmaior];
+           imprima "\nTelefone: ",dados3[posmaior];
+           imprima "\nMilhagem: ",milha[posmaior];
+           imprima "\n\n";
+           imprima "\nDados da pessoa de menor milhagem";
+           imprima "\nNome: ",dados1[posmenor];
+           imprima "\nEndereco: ",dados2[posmenor];
+           imprima "\nTelefone: ",dados3[posmenor];
+           imprima "\nMilhagem: ",milha[posmenor];
+        }
+        senao
+        { se( op == 5) 
+          { imprima "\nListagem";
+                 para( d<-0;d< c; d++)
+                 { imprima "\n", d+1,"- ",dados1[d],": ",milha[d];}
+          }
+          senao
+          { se( op == 6) 
+                  { imprima "\nBOA VIAGEM";}
+               senao
+             { imprima "\nOpcao inexistente ";}
+   } } } } }
+}
+enquanto(  op <>  6)
+imprima "\n";
+fimprog
+

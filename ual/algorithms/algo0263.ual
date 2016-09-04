@@ -1,0 +1,15 @@
+prog algoritmo263
+int a;
+real num;
+a <- 0;
+imprima "\ndigite numero positivo com ponto: ";
+leia num;
+enquanto(  num > 0. )
+{
+  a++;
+   imprima "\nigite numero positivo com ponto: ";
+   leia num;
+}
+imprima "\ntotal: ", a;
+imprima "\n";
+fimprog

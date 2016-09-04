@@ -1,0 +1,16 @@
+prog algoritmo81
+ int conta, inv, digito, d1, d2, d3,soma;
+ imprima "\nDigite conta de tres digitos: ";
+ leia conta;
+ d1 <- conta div 100;
+ d2 <- conta % 100 div 10;
+ d3 <- conta % 100 % 10;
+ inv <- d3 *100 + d2 *10 +d1;
+ soma <- conta + inv;
+ d1 <- (soma div 100) * 1;
+ d2 <- (soma % 100 div 10) * 2;
+ d3 <- (soma % 100 % 10) *3;
+ digito <- (d1 +d2 +d3) % 10;
+ imprima "\ndigito verificador: ", digito;
+ imprima "\n";
+fimprog

@@ -1,0 +1,34 @@
+prog algoritmo328
+int qsde, codcli,p, qs;
+real ps, vp;
+imprima "\nentre com a quantidade de sacos disponiveis em estoque: ";
+leia qsde;
+imprima "\nentre com o preco de cada saco com ponto: ";
+leia ps;
+p <- realint(qsde * 0.1);
+imprima "\nentre com o codigo do cliente ou 0 para terminar: ";
+leia codcli;
+enquanto( codcli <> 0 &&  qsde > 100)
+{  imprima "\nentre com a quantidade de sacos a serem comprados: ";
+   leia qs;
+   vp <- qs * ps;
+   se(qsde >= qs && qs <= p)
+   { imprima "\ncodigo do cliente = ", codcli;
+     imprima "\nquantidade de sacos pedidos = ", qs;
+     imprima "\nvalor do pedido = ", vp;
+      qsde <- qsde - qs;
+   }
+  senao
+  {  se(qsde < qs)
+     { imprima "\nestoque insuficiente"; }
+     senao
+     {  se( qs > p)
+        { imprima "\nultrapassado o maximo permitido"; }
+     }
+  }
+  imprima "\n\nentre com o codigo do cliente ou 0 para terminar: ";
+  leia codcli;
+}
+imprima "\nquantidade de sacos em estoque = ", qsde;
+imprima "\n";
+fimprog

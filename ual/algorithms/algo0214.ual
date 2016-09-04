@@ -1,0 +1,21 @@
+prog algoritmo214
+int c;
+string nome;
+real pr1, pr2, soma, media;
+soma <- 0. ;
+imprima "\nRELACAO DOS ALUNOS";
+para( c <- 1; c <=15; c++)
+{
+   imprima "\n\ndigite nome: ";
+   leia nome;
+   imprima "\ndigite nota 1 com ponto: ";
+   leia pr1;
+   imprima "\ndigite nota 2 com ponto: ";
+   leia pr2;
+   media  <- (pr1 + pr2)/2;
+   soma   <- soma + media;
+   imprima "\n",nome,"   ", pr1,"   ", pr2,"   ", realint(media + 0.0001) ;
+}
+imprima  "\nmedia: ", soma / 15 ;
+imprima "\n";
+fimprog

@@ -1,0 +1,8 @@
+prog algoritmo165
+int a;
+imprima "zona1\n";
+para(a<-1; a<=8;a++)
+{ imprima "\t";}
+imprima "zona9";
+imprima "\n";
+fimprog

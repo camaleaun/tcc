@@ -1,0 +1,31 @@
+prog algoritmo322
+real val, valvista, valprazo, valtotprazo;
+int n, i;
+string op;
+valvista <-  0.;
+valprazo <- 0.;
+valtotprazo <- 0.;
+imprima "\nquantidade de transacoess efetuadas neste dia: ";
+leia n ;
+para( i <-  1; i <= n ; i++)
+{   imprima "\ndigite valor com ponto: ";
+    leia val;
+    imprima "\ndigite codigo: v (a vista)  p ( a prazo ): ";
+    leia op;
+    # trecho de protecao para o codigo
+    enquanto(  op <> "V" &&  op <> "P" && op <> "v" &&  op <> "p")
+    {  imprima "\nTIPO DE CODIGO INVALIDO. Digite codigo (v / p ): ";
+         leia op;
+    }
+    se(op == "V" || op ==  "v" )
+    {  valvista <- valvista + val;}
+    senao
+    {   valprazo <- valprazo + val / 3;
+        valtotprazo <- valtotprazo + val ;}
+}
+imprima "\n total  vista: ", valvista;
+imprima "\n total a prazo: ", valtotprazo;
+imprima "\n valor total de compras: ", valvista + valtotprazo;
+imprima "\n valor total a receber  da 1 parcela: ", valprazo;
+imprima "\n";
+fimprog

@@ -1,0 +1,8 @@
+prog algoritmo64
+ real  f, c;
+ imprima "\ndigite o valor da temperatura em graus centigrados: "; 
+ leia c;
+ f <-  ( 9 * c + 160)/5; 
+ imprima "\no valor da temperatura em graus fahrenheit e =", f;
+ imprima "\n";
+fimprog

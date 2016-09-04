@@ -1,0 +1,15 @@
+prog algoritmo374
+int L,a[50], b[50];
+#trecho de entrada para 50 numeros
+para( L<- 0;L <= 49 ; L++)
+{
+  imprima "\ndigite numero :";
+  leia a[L ];
+  b[L] <- a[L ] ^ 2;
+}
+#trecho de saida
+imprima "\nOriginal\tQuadrado";
+para( L<- 0;L <= 49; L++)
+{ imprima "\n",a[L], "\t\t",b [L ] ;}
+imprima "\n";
+fimprog

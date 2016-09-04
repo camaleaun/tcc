@@ -1,0 +1,23 @@
+prog algoritmo377
+ int L,  a[25], b[25], inter[50];
+ #25 elementos cada
+ para( L<- 0;L <= 24; L++)
+ {
+    imprima "\ndigite ", L+1," elemento do vetor A :";
+    leia a[L ];
+ }
+ para( L<- 0;L <= 24; L++)
+  {
+    imprima "\ndigite ", L+1," elemento do vetor B:";
+    leia b[L ];
+ #Gera o vetor intercalado
+  inter[2 * L] <- a[L ] ;
+  inter[2 * L + 1] <- b[L ] ;
+ }
+imprima "\nVetor Intercalado";
+para( L<- 0;L <= 49; L++)
+  {
+     imprima "\n", inter[L];
+  }
+imprima "\n";
+fimprog

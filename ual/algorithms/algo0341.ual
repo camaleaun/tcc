@@ -1,0 +1,46 @@
+prog algoritmo341
+int op, n;
+real num, soma, prod;
+faca
+{
+     imprima "\nMAQUINA ESPERTA ";
+     imprima "\n1 - Soma varios numeros ";
+     imprima "\n2 - Multiplica varios numeros ";
+     imprima "\n3 - Sai do algoritmo ";
+     imprima "\nOPCAO: ";
+     leia  op;
+     se(op == 1)
+    {   soma <- 0.;
+          imprima "\ndigite numero com ponto ou -0.0001  para finalizar:";
+          leia num;
+          enquanto( num  <> -0.0001 )
+          {  soma <- soma + num;
+             imprima "\ndigite numero com ponto ou -0.0001  para finalizar:";
+             leia num;
+         }
+       imprima "\nsoma: " , soma;
+   }
+  senao
+  { se( op == 2)
+    {   prod <- 1.;
+          imprima "\ndigite numero com ponto ou -0.0001  para finalizar: ";
+          leia num;
+          enquanto( num <> -0.0001 )
+          {  prod <- prod * num;
+             imprima "\ndigite numero com ponto ou -0.0001  para finalizar: ";
+             leia num;
+          }
+          imprima "\nproduto: " , prod;
+   }
+  senao
+  { se( op == 3)
+    { imprima "\nSai do algoritmo";}
+      senao
+   { imprima "\nOpcao nao disponivel" ;}
+  }
+ }
+  imprima "\n\n";
+}
+enquanto( op <> 3)
+imprima "\n";
+fimprog

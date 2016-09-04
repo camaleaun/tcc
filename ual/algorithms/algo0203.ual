@@ -1,0 +1,13 @@
+prog algoritmo203
+int i, num;
+real num1;
+imprima "\nQuantos numeros voce quer digitar? ";
+leia num;
+para( i <- 1 ; i <= num;  i ++ )
+ {
+    imprima "\nDigite o ", i ," numero de ", num, " com ponto: ";
+    leia num1;
+    imprima "\n", num1 * 3;
+}
+imprima "\n";
+fimprog

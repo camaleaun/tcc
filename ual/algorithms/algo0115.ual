@@ -1,0 +1,16 @@
+prog algoritmo115
+real x, y;
+imprima "\ndigite valor de x: ";
+leia x;
+imprima "\ndigite valor de y: ";
+leia y;
+se(x > y)
+{imprima "\n", raiz(x), "\n", y **2;}
+senao
+{ se(y > x)
+  {imprima "\n", raiz(y), "\n", x **2;}
+  senao
+  { imprima "\nnumeros iguais";}
+}
+imprima "\n";
+fimprog

@@ -1,0 +1,24 @@
+prog algoritmo352
+# procura pelo nome
+ int L ;
+  string nome, nomes [5];
+  para( L<- 0; L <= 4 ; L++)
+  { imprima "\nnome: " ; 
+    leia nomes[L] ; 
+  }
+  # entra com nome para procura
+   imprima "\n Digite nome para procura: " ;
+   leia nome;
+   L <-0;
+   enquanto( L<4 &&  nome<>nomes[L]  )
+   { L++;  }
+   se(nome ==nomes[L] )
+  {
+   imprima "\nencontrei na posicao: ", L+1;
+  }
+  senao
+  { 
+    imprima "\nnao encontrei" ;
+  }
+ imprima "\n";
+fimprog

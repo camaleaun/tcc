@@ -1,0 +1,38 @@
+prog algoritmo369
+int mesa[30],i,qtde[30],lugares,codigo, lugmesa;
+para(i  <- 0; i < 30 ;i++)
+{ mesa[i] <- 100 + i;
+  qtde[i] <- 5;
+}
+lugares <- 150;
+imprima "\nentre com codigo (100 - 129) ou 0 para terminar: ";
+leia codigo;
+enquanto(codigo > 0 && lugares <> 0)
+{  i <- 0;
+   enquanto(codigo <> mesa[i]  && i < 29)
+   { i++; }
+   se( codigo == mesa[i] )
+   { imprima "\nquantidade de lugares a reservar: ";
+     leia lugmesa;
+     se( qtde[i] >= lugmesa)
+     { qtde[i] <- qtde[i] - lugmesa; lugares <- lugares - lugmesa; }
+      senao
+      {  imprima "\nnao ha lugares a reservar"; }
+    }
+    senao
+    {  imprima "\ncodigo de mesa invalido"; }
+   imprima "\nentre com codigo (100 - 129) ou 0 para terminar: ";
+   leia codigo;
+}
+se(lugares == 0)
+{imprima "\nLotacao esgotada";}
+senao
+{ imprima "\nLugares vagos\n";
+  para(i  <- 0; i < 30 ;i++)
+  { se(qtde[i]<>0)
+    {imprima "\nmesa: ", mesa[i], " total de lugares: ", qtde[i];
+    }
+   }
+}
+imprima "\n";
+fimprog

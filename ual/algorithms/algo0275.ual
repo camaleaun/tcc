@@ -1,0 +1,14 @@
+prog algoritmo275
+int num, fat, c;
+imprima "\nDigite numero inteiro positivo para calculo do fatorial ou menor do que 1 para terminar: ";
+leia num;
+enquanto(num > 0)
+{ fat <- 1;
+  para(c <-2; c <= num; c++)
+  { fat <- fat * c;}
+  imprima "\nfatorial: ",fat;
+  imprima "\nDigite numero inteiro positivo para calculo do fatorial ou menor do que 1 para terminar: ";
+  leia num;
+}
+imprima "\n";
+fimprog

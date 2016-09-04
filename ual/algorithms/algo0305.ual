@@ -1,0 +1,37 @@
+prog algoritmo305
+int n1, maiorcod;
+real maior,n2,n4,tot;
+string n3;
+tot <-  0.;
+imprima "\nEntre com o codigo do cliente ou codigo menor ou igual a 0 para terminar: ";
+leia n1;
+maior <- -999999999.00;
+enquanto( n1 > 0 )
+{   imprima "\nEntre com o saldo anterior: ";
+    leia n2;
+    imprima "\nEntre com o tipo de movimentacao C(Credito) D(Debito) F(fim das movimentacoes deste cliente): ";
+    leia n3;
+    enquanto( n3 <> "f" && n3 <>"F" )
+    {
+      imprima "\nEntre com o valor da movimentacao com ponto: ";
+      leia n4;
+      se(n3=="c" || n3=="C")
+      { n2 <- n2 + n4;  }
+      senao
+      {  se(n3=="d" || n3=="D")
+          {  n2 <- n2 - n4;  }
+      }
+     imprima "\nEntre com o tipo de movimentacao C(Credito) D(Debito) F(fim das movimentacoes deste cliente): ";
+    leia n3;
+    }
+  imprima "\nseu  codigo e ", n1, "\no saldo atual: " , n2;
+  tot <- tot  +  n2;
+  se(n2 > maior)
+  {  maiorcod <- n1;   maior <- n2;  }
+  imprima "\nEntre com o codigo do cliente ou codigo menor ou igual a 0 para terminar : ";
+  leia n1;
+ }
+imprima "\no total de dinheiro em banco : " , tot;
+imprima "\n",maiorcod, " E o codigo do cliente com maior saldo: ", maior;
+imprima "\n";
+fimprog

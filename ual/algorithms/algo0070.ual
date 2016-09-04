@@ -1,0 +1,8 @@
+prog algoritmo70
+ real cres, cgorj;
+ imprima "\nEntre com o valor da conta: ";
+ leia cres;
+ cgorj <- cres *1.1;
+ imprima "\nO valor da conta com a gorjeta ser : ", formatar(cgorj,2);
+ imprima "\n";
+fimprog   

@@ -1,0 +1,10 @@
+prog algoritmo33
+int num1, num2;
+imprima "\n entre com um numero: "; 
+leia num1;
+imprima "\n entre com outro numero: "; 
+leia num2;
+imprima "\nnumero 1 : ", num1;
+imprima "\nnumero 2 : ", num2;
+imprima "\n";
+fimprog

@@ -1,0 +1,15 @@
+prog algoritmo281
+real num, maior;
+imprima "\ndigite numero com ponto ou - 999. para acabar: " ;
+leia num;
+maior   <-  num;
+enquanto( num <> -999.)
+ {
+   se( num > maior)
+   {  maior   <-  num ;}
+   imprima "\ndigite numero com ponto ou - 999. para acabar: " ;
+   leia num;
+}
+imprima "\nmaior: ", maior ;
+imprima "\n";
+fimprog

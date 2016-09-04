@@ -1,0 +1,22 @@
+prog algoritmo144
+real  saldomedio, credito;
+ imprima "\ndigite saldo medio: ";
+ leia  saldomedio;
+ se( saldomedio < 501. )
+ {  credito <-0.; }
+ senao
+ {  se(saldomedio < 1001.)
+    {  credito <- saldomedio  *  0.3;}
+      senao
+    { se(saldomedio < 3001.)
+      { credito <- saldomedio  *  0.4;}
+        senao
+      { credito <- saldomedio  *  0.5;}
+    }
+  }
+se(credito <> 0.)
+{  imprima "\n Como seu saldo era de: ",saldomedio, " seu credito sera de: ",credito;}
+senao
+{  imprima "\n Como seu saldo era de: ", saldomedio, ",voce nao tera nenhum credito";}
+imprima "\n";
+fimprog

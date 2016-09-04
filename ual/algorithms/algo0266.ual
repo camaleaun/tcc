@@ -1,0 +1,12 @@
+prog algoritmo266
+string nome;
+imprima "\ndigite nome ou FIM para terminar:  ";
+leia nome;
+enquanto(  nome <>  "FIM" && nome <>"fim" && nome <>"Fim"  )
+{
+  imprima "\n",strprim(nome);
+  imprima "\ndigite nome ou FIM para terminar:  ";
+  leia nome;
+}
+imprima "\n";
+fimprog

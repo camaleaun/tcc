@@ -1,0 +1,40 @@
+prog algoritmo324
+int mmat,cont,mat,n;
+real sb,ab,ns,mab,reg;
+mab <- 0.;
+cont <- 0;
+reg <- 0.;
+imprima "\ndigite a matricula ou numero negativo para acabar: ";
+leia mat;
+enquanto(mat >= 0)
+{ imprima "\ndigite o salario base com ponto: ";
+  leia sb;
+  imprima "\ndigite o nivel: 1- excelente  2- bom  3- regular: ";
+  leia n;
+  se(n == 1)
+  { ab <- sb * 0.8;
+    ns <- sb + ab;}
+   senao
+   { se(n == 2)
+     {ab <- sb * 0.5;
+      ns <- sb + ab;}
+     senao
+     { ab <- sb * 0.3;
+       ns <- sb + ab;
+       cont <- cont + 1;
+       reg <- reg + ab;
+     }
+    }
+    se(ab > mab)
+    { mab <- ab; mmat <- mat; }
+    imprima "\no salario a ser pago e ",ns;
+    imprima "\n\ndigite a matricula ou numero negativo para acabar: ";
+    leia mat;
+}
+imprima "\na matricula de maior abono e ",mmat;
+se(cont <>0)
+{imprima "\na media de abono de funcionario regular e ",reg/cont;}
+senao
+{ imprima "\nNenhum funcionario regular e ";}
+imprima "\n";
+fimprog

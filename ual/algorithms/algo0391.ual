@@ -1,0 +1,23 @@
+prog algoritmo391
+int M[30], L, C, Y;
+para( L <- 0;  L <= 29 ; L++ )
+{   imprima "\nDigite o elemento ", L+1,": ";   leia M[L]; }
+Y <- 1; 
+C <- 0;
+para( L <- 0;  L <= 28 ; L++ )
+{
+    se( M[L + 1] > M[L] )
+   {    Y ++;  }
+   senao
+   {  
+     se( Y > C )
+     {  C <-  Y;  }
+       Y <-  1; 
+   }
+}   
+se( C > Y )
+{     imprima "\ntotal: ",  C;}
+senao
+{     imprima "\ntotal: ",  Y;}
+imprima "\n";
+fimprog

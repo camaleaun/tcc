@@ -1,0 +1,12 @@
+prog  algoritmo173
+int L,c,t;
+string r;
+imprima "\nTODOS\n";
+para(L<-0;L<=9;L++)
+{
+  para(c<-0;c<=9;c++)
+   { imprima L, "-",c, "\t" ;  }
+   imprima "\n";
+ }
+imprima "\n";
+fimprog

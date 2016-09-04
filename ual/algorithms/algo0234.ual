@@ -1,0 +1,23 @@
+prog algoritmo234
+int i;
+string nome;
+real salario, ir;
+para( i <- 1; i <= 20; i++ )
+{
+  imprima "\ndigite nome: ";
+  leia nome;
+  imprima "\ndigite salario: ";
+  leia salario;
+  se( salario <600.)
+  {  ir<- 0.;  }
+  senao
+  {
+    se( salario <1500.)
+    {    ir<- salario * 0.1;   }
+    senao
+    {   ir<- salario *0.15;  }
+  }
+  imprima "\n", nome, "  R$ ", formatar(salario,2), "   R$ ", formatar(ir,2);
+}
+imprima "\n";
+fimprog

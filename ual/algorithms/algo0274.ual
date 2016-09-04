@@ -1,0 +1,15 @@
+prog algoritmo274
+real num;
+int a;
+para(a <- 1;a<=10;a++)
+{
+   imprima "\nEntre com ",a, "o numero: ";
+   leia num;
+   enquanto(num <= 0.)
+   {   imprima "\nATENCAO! Entre com ",a, "o numero maior do que 0: ";
+       leia num;
+    }
+    imprima "\nRaiz quadrada: ", raiz(num), "\n";
+}
+imprima "\n";
+fimprog

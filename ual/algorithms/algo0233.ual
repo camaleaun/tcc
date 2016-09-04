@@ -1,0 +1,16 @@
+prog algoritmo233
+int ini, f, aux, i;
+imprima " digite limite inferior: ";
+leia ini;
+imprima "\ndigite limite supeior: ";
+leia f;
+se( ini > f )
+{
+   aux <- ini ;
+   ini <- f ;
+   f <- aux ;
+ }
+para( i <- ini; i <= f; i++ )
+{   imprima i, "   ";}
+imprima "\n";
+fimprog

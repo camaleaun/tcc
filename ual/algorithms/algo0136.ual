@@ -1,0 +1,33 @@
+prog algoritmo136
+ int  idade;
+ string nome;
+ imprima "\nEntre com nome: ";
+ leia  nome;
+ imprima "\nEntre com a idade: ";
+ leia idade;
+ se ( idade <= 10 )
+ {  imprima "\n",nome," pagara R$ 30,00"; }
+ senao
+ {
+   se ( idade <= 29 )
+   { imprima  "\n", nome, "  pagara R$ 60,00"; }
+   senao
+   {
+     se ( idade <= 45 )
+     {  imprima  "\n", nome, "  pagara R$ 120,00"; }
+     senao
+     {
+       se ( idade <= 59 )
+       { imprima  "\n", nome, "  pagara R$ 150,00"; }
+       senao
+       {
+         se ( idade <= 65 )
+         {  imprima  "\n", nome, "  pagara R$ 250,00";  }
+         senao
+         {  imprima  "\n", nome, "  pagara R$ 400,00";  }
+       }
+     }
+   }
+  }
+ imprima "\n";
+fimprog

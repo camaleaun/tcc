@@ -1,0 +1,11 @@
+prog algoritmo236
+int c, num;
+real h;
+h <- 0. ;
+imprima "\ndigite numero: ";
+leia num;
+para( c<- 1; c  <= num; c++)
+{   h <- h + 1 / c; }
+imprima "\n soma: ", h ;
+imprima "\n";
+fimprog

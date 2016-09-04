@@ -1,0 +1,10 @@
+prog algoritmo44
+ real num, base, logaritmo;
+ imprima "\nentre com o logaritmando: "; 
+ leia num;
+ imprima "\nentre com a base: "; 
+ leia base;
+ logaritmo <- log(num) / log(base);
+ imprima "\no logaritmo de ", num, " na base ",base, " e : ", logaritmo;
+ imprima "\n";
+fimprog

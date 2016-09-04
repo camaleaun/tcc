@@ -1,0 +1,18 @@
+prog algoritmo253
+int L,c, ca;
+string msg,letra;
+para(L<-1; L<=10; L++)
+{
+  ca <-0;
+  imprima "\nDigite uma mensagem: ";
+  leia msg;
+  para( c <- 0; c <strtam(msg); c++)
+  {
+     letra<-strelem(msg,c);
+     se(letra=="a" || letra =="A")
+     {ca ++;}
+   }
+   imprima "\n Total de letras A: ", ca;
+}
+imprima "\n";
+fimprog

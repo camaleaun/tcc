@@ -1,0 +1,38 @@
+prog algoritmo323
+string tipo;
+int qtd, qtdsocio, qtdnaosocio, qtdtotal;
+real percsoc, valtotal;
+qtdsocio <- 0;
+qtdnaosocio <- 0;
+qtdtotal <- 0;
+imprima "\nDigite a quantidade ou -999 para terminar: ";
+leia qtd;
+enquanto( qtd <> -999 && qtdtotal < 2000 )
+{  imprima "\n Digite o tipo de ingresso S ou NS: ";
+   leia tipo;
+   se(tipo == "S" || tipo == "s")
+   { qtdsocio <- qtdsocio + qtd;
+     qtdtotal <- qtdtotal + qtd;
+   }
+  senao
+  { se(tipo == "NS" || tipo == "ns")
+    { qtdnaosocio <- qtdnaosocio + qtd;
+      qtdtotal <- qtdtotal + qtd;
+    }
+    senao
+    { imprima "\n Tipo Invalido!";
+    }
+  }
+  imprima "\nDigite a quantidade ou -999 para terminar: ";
+  leia qtd;
+}
+imprima "\nSocio = ", qtdsocio;
+imprima "\nNao Socio = ", qtdnaosocio;
+percsoc <- qtdsocio * 100/ qtdtotal;
+imprima "\nPercentual Socio =", percsoc;
+imprima "\nValor Socio = ",qtdsocio * 10.00;
+imprima "\nValor Nao Socio = ",qtdnaosocio * 20.00;
+valtotal <- qtdsocio * 10.00 + qtdnaosocio * 20.00;
+imprima "\nValor total = ",valtotal;
+imprima "\n";
+fimprog

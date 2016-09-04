@@ -1,0 +1,9 @@
+prog algoritmo54
+ real   a, b;
+ imprima "\nEntre com a base: ";
+ leia a;
+ imprima "\nEntre a altura do um triƒngulo: ";
+ leia b;
+ imprima "\nArea = ", (a * b)/2;
+ imprima "\n";
+fimprog

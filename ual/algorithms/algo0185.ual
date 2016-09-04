@@ -1,0 +1,14 @@
+prog algoritmo185
+int a;
+real numero;
+para( a <- 1; a <=15; a++)
+{
+    imprima "\ndigite numero com ponto: ";
+    leia numero;
+    se(numero >= 0.)
+    { imprima  "\nraiz: ", formatar(raiz(numero),4); }
+    senao
+   {  imprima "\nNao faco raiz de numero negativo";  }
+}
+imprima "\n";
+fimprog

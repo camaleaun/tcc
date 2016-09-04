@@ -1,0 +1,41 @@
+prog algoritmo156
+int ANO, MES, DIA, VD;
+imprima "\ndigite dia: ";
+leia DIA;
+imprima "\ndigite mes: ";
+leia MES;
+imprima "\ndigite ano: ";
+leia ANO; 
+se(ANO>=1)
+{ VD <- 1;
+   se( MES < 1 || MES > 12 || DIA < 1 || DIA > 31)
+   { VD <- 0; }
+   senao
+   {
+     se((MES == 4 || MES == 6 || MES == 9 || MES == 11) && DIA > 30)
+     {VD <- 0;}
+     senao
+     { se(MES == 2)
+       {
+         se((ANO % 4==0 && ANO % 100 <> 0) || ANO % 400==0)
+         {
+           se(DIA > 29)
+           { VD <- 0;}
+         }
+         senao
+         {
+           se( DIA > 28)
+           { VD <- 0;}
+         }
+       }
+     }
+   }
+}
+senao
+{ VD <- 0;}
+se( VD == 0 )
+{ imprima "\nDATA INVALIDA";}
+senao
+{ imprima "\nDATA VALIDA";}
+imprima "\n";
+fimprog

@@ -1,0 +1,19 @@
+prog algoritmo347
+int L ;
+string nomes[10];
+# trecho de entrada
+para( L<- 0; L <= 9 ; L++)
+{  
+   imprima "\ndigite ", L + 1, " nome: ";
+  leia nomes [L] ;
+}
+# fim do trecho de entrada
+# trecho de saida
+imprima "\n\n";
+para( L<- 0; L <= 9 ; L++)
+{  
+  imprima "\n",  nomes[L];
+}
+# fim do trecho de saida
+imprima "\n";
+fimprog

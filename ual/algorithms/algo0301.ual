@@ -1,0 +1,28 @@
+prog algoritmo301
+int n,  cont, cont2;
+real rp, rf, totali, totout;
+n <-0;
+cont <- 0;
+cont2 <- 0;
+imprima "\nDigite sua renda pessoal com ponto ou 0. para acabar: ";
+leia rp;
+enquanto(rp > 0.)
+{ n++;
+  imprima "\nDigite renda familiar fora a sua com ponto: ";
+  leia rf;
+  imprima "\nDigite quanto gasta com alimentacao com ponto: ";
+  leia totali;
+  imprima "\nDigite quanto gasta com outras despesas com ponto: ";
+  leia totout;
+  se(totout >200.)
+  {  cont++;   }
+  se(rp > rf)
+  {  cont2++;   }
+  imprima "\n", formatar(((totali+totout)*100)/(rp+rf),2),"% sao gastos com alimentos + despesas em relacao a renda pessoal e familiar";
+  imprima "\n\nDigite sua renda pessoal com ponto ou 0. para acabar: ";
+  leia rp;
+ }
+imprima"\n", formatar((cont*100)/n,2), "% dos alunos gastam acima de R$ 200,00 com outras despesas";
+imprima "\nNumero de alunos com renda pessoal maior que a familiar :", cont2;
+imprima "\n";
+fimprog

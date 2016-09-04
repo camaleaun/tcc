@@ -1,0 +1,13 @@
+prog algoritmo213
+int a;
+real numero, soma;
+soma <- 0. ;
+para( a <- 1; a <=12; a++)
+{
+  imprima "\ndigite numero com ponto: ";
+  leia numero;
+ soma  <-soma + numero;
+}
+imprima  "\nmedia: ", soma/12 ;
+imprima "\n";
+fimprog

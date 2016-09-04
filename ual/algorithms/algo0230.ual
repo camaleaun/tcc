@@ -1,0 +1,12 @@
+prog algoritmo230
+int a;
+string nome;
+ imprima "\ndigite nome: ";
+ leia nome;
+ para(a <-strtam(nome)-1; a>=0; a--)
+ {
+   se(a % 2 <> 0)
+   {  imprima "\n",strelem(nome,a);   }
+ }
+imprima "\n";
+fimprog

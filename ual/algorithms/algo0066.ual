@@ -1,0 +1,11 @@
+prog algoritmo66
+ real  tempo, vel, dist, litros;
+ imprima "\ndigite o tempo gasto: ";
+ leia tempo;
+ imprima "\ndigite  a velocidade media: "; 
+ leia vel;
+ dist <-  tempo * vel;
+ litros <-  dist / 12;
+ imprima "\nvelocidade = ", vel, "\ntempo = ", tempo, "\ndistancia = ", dist, "\nlitros = ", litros;
+ imprima "\n";
+fimprog

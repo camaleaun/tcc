@@ -1,0 +1,13 @@
+prog algoritmo194
+int i, num, produto;
+produto <- 1;
+imprima "\nDigite um numero: ";
+leia num;
+para( i <- 1; i <= num ;  i ++)
+{
+    produto<- produto * i;
+    imprima i, "   ";
+}
+imprima "\nProduto de 1 a ",num,": ",produto;
+imprima "\n";
+fimprog

@@ -1,0 +1,8 @@
+prog algoritmo46
+ real saldo, nsaldo;
+ imprima "\ndigite saldo: ";  
+ leia saldo;
+ nsaldo <-saldo  * 1.01;
+ imprima "\nnovo saldo: ",nsaldo;
+ imprima "\n";
+fimprog

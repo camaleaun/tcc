@@ -1,0 +1,35 @@
+prog algoritmo325
+real salm, salb, salr, irrf, salq, salmes, vh;
+int he, ht, dep;
+imprima "\nsalario minimo com ponto: ";
+leia salm;
+vh <- salm /10;
+imprima "\nhoras trabalhadas ou -1 para terminar: " ;
+leia ht;
+enquanto(  ht <> -1)
+{ imprima "\nnumero de dependentes: ";
+  leia dep;
+  imprima "\nnumero de horas extras: ";
+  leia he;
+  salmes <- vh * ht;
+  imprima "\nsalario mes: ",salmes;
+  salb <- salmes + 32 * dep + vh * he * 1.5;
+  se( salb > 1500. )
+  {  irrf <- salb * 0.20;}
+  senao
+  {  se(salb > 900.)
+     { irrf <- salb * 0.10;}
+     senao
+   { irrf <- salb * 0.;}
+  }
+  salq <- salb - irrf;
+  se( salq >= 900.)
+  {  salr <- salq + 50;}
+  senao
+  {  salr <- salq + 100;}
+  imprima "\nsalario a receber: ",salr;
+  imprima "\nhoras trabalhadas ou -1 para terminar: " ;
+  leia ht;
+}
+imprima "\n";
+fimprog

@@ -1,0 +1,14 @@
+prog algoritmo125
+int   idade;
+imprima "\ndigite sua idade: ";  
+leia idade;
+se( idade >= 65 )
+{ imprima "\nmaior de 65"; }
+senao
+{  se ( idade >= 18 )
+   { imprima "\nmaior de idade"; }
+   senao
+   {  imprima "\nmenor de idade"; }
+ }
+imprima "\n";
+fimprog

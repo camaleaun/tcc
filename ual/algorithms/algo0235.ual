@@ -1,0 +1,23 @@
+prog algoritmo235
+int i, num;
+real num1, maior, menor;
+imprima "Digite um numero com ponto: ";
+leia num1;
+maior <- num1;
+menor <- num1;
+para( i <- 1; i <=9; i++)
+{
+    imprima "Digite um numero com ponto: ";
+    leia num1;
+    se(num1 > maior)
+    { maior <-num1; }
+    senao
+    {
+       se(num1 < menor)
+       { menor <-num1; }
+     }
+ }
+imprima "\nMaior numero digitado: ", maior;
+imprima "\nMenor numero digitado: ", menor;
+imprima "\n";
+fimprog

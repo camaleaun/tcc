@@ -1,0 +1,19 @@
+prog algoritmo210
+int a1, a2, i, termo;
+imprima "\nEntre com 1 termo: ";
+leia a1;
+imprima "\nEntre com 2 termo: ";
+leia a2;
+ imprima "\n", a1, "  " ,a2, "  ";
+para( i <- 3; i <= 10; i++)
+{
+   se( i % 2 == 0)
+   {   termo <- a2 - a1; }
+   senao
+   {  termo <- a2 + a1; }
+   imprima termo, "  ";
+   a1 <- a2;
+   a2 <- termo;
+}
+imprima "\n";
+fimprog

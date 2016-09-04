@@ -1,0 +1,11 @@
+prog algoritmo166
+int L,c,t;
+imprima "\nTODOS\n";
+para(L<-1;L<=10;L++)
+{
+  para(c<-1;c<=10;c++)
+   { imprima L, "-",c, "\t" ; }
+   imprima "\n";
+ }
+imprima "\n";
+fimprog

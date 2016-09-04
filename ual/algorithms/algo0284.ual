@@ -1,0 +1,17 @@
+prog algoritmo284
+ int num, pos;
+ imprima "\nDigite um numero ou zero para acabar: ";
+   leia num;
+   pos  <-  0;
+   enquanto(num <> 0)
+   {
+      pos++;
+      se(num % pos == 0)
+      {
+           imprima "\n",num;
+       }
+    imprima "\nDigite um numero ou zero para acabar: ";
+   leia num;
+   }
+imprima "\n";
+fimprog

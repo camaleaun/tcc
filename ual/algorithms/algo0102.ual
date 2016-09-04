@@ -1,0 +1,15 @@
+prog algoritmo102
+real numero;
+imprima "\ndigite numero: ";  
+leia numero;
+se ( numero > 20. )
+{  imprima "\nmaior que 20"; }
+senao
+{
+  se ( numero < 20. )
+  {  imprima "\nmenor que 20"; }
+  senao
+  { imprima "\nigual a 20"; }
+ }
+imprima "\n";
+fimprog

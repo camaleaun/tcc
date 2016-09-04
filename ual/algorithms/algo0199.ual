@@ -1,0 +1,14 @@
+prog algoritmo199
+int ini, f, i;
+imprima " digite valor inicial e valor final de um intervalo, pressionando enter apos digitar cada um: ";
+leia ini;
+leia f;
+se( ini % 6 == 0)
+{  ini <- ini  +  6;  }
+senao
+{  ini <- ini  +  (6 - ( ini % 6 )); }
+f--;
+para( i <- ini; i <= f;  i <- i  + 6 )
+{ imprima i, "   "; }
+imprima "\n";
+fimprog

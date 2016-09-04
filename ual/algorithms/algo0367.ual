@@ -1,0 +1,28 @@
+prog algoritmo367
+int  v[100], k, soma,maior,menor, pares;
+para( k <- 0; k <100; k++)
+{ imprima "\ndigite elemento: "; leia  v[k]; }
+maior <- v[0];
+menor <- v[0];
+soma <-  v[0];
+se(v[0] % 2 == 0)
+{ pares <- 1; }
+senao
+{ pares <- 0; }
+para( k <- 1; k < 100; k++)
+{ se(v[k] % 2 == 0)
+  { pares ++; }
+  soma <- soma + v[k];
+  se(v[k] > maior)
+  { maior <-  v[k]; }
+  senao
+  { se(v[k] < menor)
+    { menor <-  v[k]; }
+   }
+}
+imprima "\nMaior: ", maior;
+imprima "\nMenor: ", menor;
+imprima "\nPercentual de pares: ", pares, "%";
+imprima "\nMedia: ", soma / 100;
+imprima "\n";
+fimprog

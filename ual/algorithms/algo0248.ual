@@ -1,0 +1,14 @@
+prog algoritmo248
+int c, c1, L;
+string nome;
+imprima "\ndigite nome: ";
+leia nome;
+L <- strtam(nome);
+para( c <- 1; c <=L ; c++)
+{
+   para(c1<-1; c1<=c; c1++)
+   {   imprima nome, " ";   }
+   imprima "\n";
+ }
+imprima "\n";
+fimprog

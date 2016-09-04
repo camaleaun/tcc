@@ -1,0 +1,19 @@
+prog algoritmo359
+string nome[20], LS[20];
+int i, c;
+c <-0;
+para(i <-0; i <= 19; i++)
+{ imprima "\ndigite ", i + 1, " nome: ";
+  leia nome[i];
+  se(strprim(nome[i] )>= "L" &&  strprim(nome[i] )<= "S" || strprim(nome[i] )>= "l" && strprim(nome[i])<= "s" )
+  { LS[c] <- nome[i]; c++;}
+}
+se(c <> 0)
+{ imprima "\n\nRelacao dos nomes que comecam por letra no intervalo L - S\n";
+  para(i <-0; i <= c -1; i++)
+ { imprima "\n",LS[i];}
+}
+senao
+{  imprima "\n\nNenhum nome encontrado";}
+imprima "\n";
+fimprog

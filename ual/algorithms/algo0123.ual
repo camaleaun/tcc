@@ -1,0 +1,24 @@
+prog algoritmo123
+real a, b, c;
+imprima "\ndigite 1 lado: ";  
+leia a;
+imprima "\ndigite 2 lado: ";  
+leia b;
+imprima "\ndigite 3 lado: ";  
+leia c;
+se ( a < b + c  &&  b < a + c &&  c < a + b )
+{
+   se  ( a == b  &&  a == c)
+   { imprima "\nTriangulo equilatero";  }
+   senao
+   {
+      se ( a == b  ||  a == c ||  b == c)
+        { imprima "\nTriangulo isosceles";  }
+     senao
+     { imprima "\nTriangulo escaleno";  }
+   }
+}
+senao
+{   imprima "\nAs medidas nÆo formam  um triangulo"; }
+imprima "\n";
+fimprog

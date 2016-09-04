@@ -1,0 +1,30 @@
+prog algoritmo283
+int conta, cneg, c;
+real  saldo, soma;
+string nome;
+ c  <-  0;
+ cneg  <-  0;
+soma  <-  0.;
+ imprima "\ndigite conta ou -999 para terminar: ";
+ leia conta;
+ enquanto(  conta > 0 &&  c < 10000)
+ {
+  c ++;
+  imprima "\nnome: ";
+  leia nome;
+  imprima "\nsaldo com ponto: ";
+  leia saldo;
+  soma  <-  soma + saldo;
+  se( saldo < 0. )
+  {  cneg     <-  cneg +1;
+     imprima conta, "  ", saldo," negativo " ;
+  }
+  senao
+  {  imprima conta, " - ",saldo, "- positivo " ;  }
+  imprima "\ndigite conta ou -999 para terminar ";
+   leia conta;
+}
+imprima  "\nTotal de clientes com saldo negativo: ", cneg ;
+imprima  "\nTotal de clientes da agencia: ", c ;
+imprima "\n";
+fimprog 

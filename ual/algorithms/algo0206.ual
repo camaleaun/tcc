@@ -1,0 +1,25 @@
+prog algoritmo206
+int i, quant;
+real num, maior, menor;
+imprima "Quantos numeros voce quer digitar? ";
+leia quant;
+imprima "\nEntre com um numero com ponto: ";
+leia num;
+maior <- num;
+menor <- num;
+para( i <- 1; i < quant; i++)
+{
+   imprima "\nEntre com um numero: ";
+   leia num;
+   se(num > maior)
+   { maior <- num;}
+   senao
+  {
+    se(num < menor)
+    { menor <- num;}
+ }
+}
+imprima "\nMaior: ", maior;
+imprima "\nMenor: ", menor;
+imprima "\n";
+fimprog

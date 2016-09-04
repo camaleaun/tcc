@@ -1,0 +1,25 @@
+prog algoritmo247
+int i, x, id, somaid, totid;
+real peso, totpeso, somapeso;
+totpeso <- 0.;
+totid <- 0;
+para( i <- 1; i <= 30; i++)
+{ somapeso <- 0.;
+   somaid <- 0;
+   para( x <- 1; x <= 12; x++)
+   {  imprima "\nDigite peso com ponto: ";
+     leia peso;
+     imprima "\nDigite idade: ";
+     leia id;
+     somapeso <- somapeso + peso;
+     somaid <- somaid + id;
+   }
+   imprima "\npeso medio do time: ", somapeso/ 12;
+   imprima "\nidade media do time: ", somaid/ 12;
+   totpeso <-  totpeso + somapeso;
+   totid <- totid + somaid;
+}
+imprima "\npeso medio de todos os times: ", totpeso / 360;
+imprima "\nidade media de todos os times: ", totid / 360;
+imprima "\n";
+fimprog

@@ -1,0 +1,20 @@
+prog algoritmo97
+int  numero;
+imprima "\ndigite numero: ";
+leia numero;
+se ( numero % 10 == 0 )
+{ imprima "\nmultiplo de 10"; }
+senao
+{
+  se ( numero % 2 == 0 )
+  {  imprima "\nmultiplo de 2";  }
+  senao
+  {
+    se ( numero % 5 == 0 )
+    {  imprima "\nmultiplo de 5"; }
+    senao
+    {  imprima "\nnao e multiplo de 2 nem de 5"; }
+  }
+}
+imprima "\n";
+fimprog

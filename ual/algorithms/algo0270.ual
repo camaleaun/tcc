@@ -1,0 +1,18 @@
+prog algoritmo270
+int num, a;
+imprima "\ndigite numero ou -999 para acabar: ";
+leia num;
+enquanto(num<>-999)
+{
+  imprima "\n1  ";
+  para (a   <-  2; a <= num div   2; a++ )
+  {
+   se( num  % a == 0 )
+   {  imprima a, "  "; }
+  }
+ imprima num;
+ imprima "\ndigite numero ou -999 para acabar: ";
+ leia num;
+}
+imprima "\n";
+fimprog

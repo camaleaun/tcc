@@ -1,0 +1,13 @@
+prog algoritmo73
+ real num, numfrac;
+ int numi,numa;
+ imprima "\nentre com um numero com parte fracionaria: ";
+ leia num;
+ numi <- realint((num - 0.5));
+ numfrac  <- num - numi;
+ numa <- realint(num + 0.00001);
+ imprima "\nparte inteira: ",numi;
+ imprima "\nparte fracionaria: ",formatar((numfrac + 0.00001),3);
+ imprima "\nnumero arredondado: ", numa;
+ imprima "\n";
+fimprog

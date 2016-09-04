@@ -1,0 +1,22 @@
+prog algoritmo126
+real x;
+imprima "\ndigite valor de X: ";  
+leia  x ;
+se ( x == 5. )
+{ imprima  "\nO numero e o 5"; }
+senao
+{ se ( x ==200. )
+  { imprima  "\nO numero e o 200"; }
+  senao
+  { se ( x == 400. )
+    { imprima  "O numero e o 400"; }
+    senao
+    { se ( x >= 500. &&  x <= 1000.)
+      { imprima "\nIntervalo 500-1000"; }
+      senao
+      { imprima  "\nFora do  escopo"; }
+       }
+  }
+}
+imprima "\n";
+fimprog

@@ -1,0 +1,12 @@
+prog algoritmo103
+int  anon, anoa;
+imprima "\nEntre com ano atual: ";
+leia anoa;
+imprima "\nEntre com ano de nascimento: ";
+leia  anon;
+se ( anon > anoa )
+{  imprima  "\nAno de Nascimento Invalido"; }
+senao
+{  imprima  "\nIdade: " , anoa - anon; }
+imprima "\n";
+fimprog

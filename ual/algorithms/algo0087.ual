@@ -1,0 +1,16 @@
+prog algoritmo87
+string resp;
+imprima "\nQual a capital do Brasil? ";
+leia resp;
+se(resp == "BRASÍLIA" || resp == "Brasília")
+{imprima "\nPARABNS!";}
+senao
+{ se(resp == "BRASILIA" || resp == "brasilia" || resp == "Brasilia" || resp =="brazília" ||
+resp == "BRAZÍLIA" || resp=="Brazília" || resp == "Brazília" || resp=="brazília" ||
+ resp=="brasília")
+  { imprima "\nCERTO! Mas atencao para grafia: Brasília ou BRASÍLIA ";}
+  senao
+    { imprima "\nERRADO! ESTUDE MAIS!";}
+}
+imprima "\n";
+fimprog

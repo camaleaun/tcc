@@ -1,0 +1,10 @@
+prog algoritmo84
+int a;
+imprima "\nDigite numero: ";
+leia a;
+se(a % 2 == 0)
+{imprima "\nPAR";}
+senao
+{imprima "\nIMPAR";}
+imprima "\n";
+fimprog

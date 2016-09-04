@@ -1,0 +1,25 @@
+prog algoritmo389
+int L, maiorM, menorM;
+real temp[12];
+maiorM <- 0;
+menorM <- 0;
+para( L<- 0; L <= 11 ; L++)
+{
+  imprima "\n temperatura do mes ", L+1," com ponto : " ;
+  leia temp[L] ;
+   se (  temp[L] > temp[maiorM] )
+    {   maiorM <- L;   }
+   senao
+   {
+      se (  temp[L] < temp[menorM] )
+        {    menorM <- L;  }
+    }
+   }
+imprima "\n\n\n";
+imprima "\n Relacao  das temperaturas\n " ;
+para( L<- 0; L < 12 ; L++)
+{    imprima "\nmes: ", L +1, " -  temperatura ", temp[L] ;}
+ imprima "\nMAIOR TEMPERATURA -  ", temp[maiorM], "  no mes: ", maiorM +1;
+imprima "\nMENOR TEMPERATURA -  ", temp[menorM], "  no mes: ", menorM +1;
+imprima "\n";
+fimprog

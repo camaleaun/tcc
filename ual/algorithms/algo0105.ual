@@ -1,0 +1,18 @@
+prog algoritmo105
+string sigla;
+imprima "\ndigite sigla: ";  
+leia sigla;
+se ( sigla == "RJ" ||  sigla == "rj") 
+{   imprima "\ncarioca"; }
+senao
+{ se (sigla =="SP" ||  sigla == "sp")
+  {  imprima "\npaulista"; }
+  senao
+  { se ( sigla =="MG" || sigla == "mg")
+    { imprima "\nmineiro";}
+    senao
+    { imprima  "outros estados"; }
+   }
+ }
+imprima "\n";
+fimprog

@@ -1,0 +1,9 @@
+prog algoritmo107
+string nome;
+imprima "\ndigite nome: ";  
+leia nome;
+se  (strnprim(nome, 5) == "JOSÉ " || nome=="JOSÉ" )
+ {  imprima "\n",nome; }
+imprima "\n";
+fimprog
+

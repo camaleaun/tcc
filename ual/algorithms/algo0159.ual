@@ -1,0 +1,13 @@
+prog algoritmo159
+real x, fx;
+imprima "\ndigite valor de x: ";
+leia x;
+se(x > 4. || x < (-4.))
+{fx <- (5 * x + 3 ) / raiz(x**2 -16);
+ imprima "\nf(x)= ",fx;
+}
+senao
+{imprima "\nNAO PODE SER FEITA";}
+imprima "\n";
+fimprog
+

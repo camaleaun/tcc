@@ -1,0 +1,13 @@
+prog algoritmo42
+ real angulo, rang;
+ imprima "\ndigite um angulo em graus: ";
+ leia angulo;
+ rang <- angulo*pi /180;
+ imprima "\nseno: ", sen(rang);
+ imprima "\nco-seno: ", cos(rang);
+ imprima "\ntangente: ", tan(rang);
+ imprima "\nco-secante: ",1/ sen(rang);
+ imprima "\nsecante: ", 1/cos(rang);
+ imprima "\ncotangente: ", 1/ tan(rang);
+ imprima "\n";
+fimprog

@@ -1,0 +1,87 @@
+prog algoritmo394
+int L, c,tam, flag,flag1, flag2;
+real nota1[50], nota2[50], media[50];
+string nomes[50],op;
+flag <-0;
+flag1 <-0;
+flag2 <-0;
+faca
+{imprima "\n\n\n";
+ imprima "\n MENU\n";
+ imprima "\n1 - ENTRAR NOMES";
+ imprima "\n2 - ENTRAR 1 NOTA";
+ imprima "\n3 - ENTRAR 1 NOTA";
+ imprima "\n4 - CALCULAR MEDIA";
+ imprima "\n5 - LISTAR NO DISPLAY";
+ imprima "\n6 - SAIR";
+ imprima "\nOPCAO:";
+ leia op;
+ se(op=="1")
+ {flag<-1;
+  para( L<- 0; L <= 49 ; L++)
+  {
+  imprima "\nDigite ", L+1,  " nome (com ate 30 caracteres e todas as letra maiusculas): " ;
+  leia nomes[L] ;
+  enquanto(strtam(nomes[L]) >30)
+  {imprima "\nNome com ate 30 caracteres. Digite ", L+1,  "  nome (todas as letra maiusculas): ";#  na mesma linha anterior
+   leia nomes[L];}
+   tam <-strtam(nomes[L]);
+   se(tam <30)
+   {para(c<-0;c<=30 - tam; c++)
+    {nomes[L]<-strconcat(nomes[L], " ");}}
+   }
+  }
+  senao
+  { se(op=="2")
+    { se(flag==0)
+      {imprima "\n NAO TEM NOME CADASTRADO";}
+      senao
+      {
+       para( L<- 0; L <= 49 ; L++)
+       { imprima "\nDigite 1 nota com ponto: ";
+         leia nota1[L];
+       }flag1<-1;
+       }
+      }
+      senao
+      { se(op=="3")
+        { se(flag==0)
+          {imprima "\n NAO TEM NOME CADASTRADO";}
+          senao
+          {
+           para( L<- 0; L <= 49 ; L++)
+           { imprima "\nDigite 2 nota com ponto: ";
+             leia nota2[L];
+           }flag2<-1;
+          }
+         }
+       senao
+        {se(op=="4")
+         {   se(flag==0 || flag1==0 || flag2==0)
+             {imprima "\n NEM TODOS OS DADOS ESTAO CADASTRADOS";}
+             senao
+             {  para( L<- 0; L <= 49 ; L++)
+               { media[L]<-(3*nota1[L] + 7*nota2[L])/10;       }
+             }
+          }
+          senao
+           {se(op=="5")
+            { se(flag==0 || flag1==0 || flag2==0)
+              {imprima "\n NEM TODOS OS DADOS ESTAO CADASTRADOS";}
+              senao
+              { imprima "\nNOME\t\t\t\tNOTA1\tNOTA2\tMEDIA\n";
+               para( L<- 0; L <= 49 ; L++)
+               { imprima "\n", nomes[L], "\t", nota1[L],"\t", nota2[L], "\t", media[L];
+               }
+              }
+             }
+             senao
+            {se(op=="6")
+             {saia;}
+             senao
+             {imprima "\nOPCAO NAO DISPONIVEL";
+             } } } } } }
+ }
+ enquanto(op<>"6")
+imprima "\n";
+fimprog

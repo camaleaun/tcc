@@ -1,0 +1,55 @@
+prog algoritmo147
+int op, os, ob, calorias;
+calorias <- 0;
+imprima "\nDigite 1- Vegetariano  2- Peixe  3- Frango  4- Carne: ";
+leia op;
+se(op==1)
+{calorias <- calorias +180;}
+senao
+{ se(op==2)
+  {calorias <- calorias +230;}
+  senao
+  {se(op==3)
+   {calorias <- calorias +250;}
+   senao
+   {se(op==4)
+    {calorias <- calorias +350;}
+   }
+  }
+}
+imprima "\nDigite 1- Abacaxi  2- Sorvete diet  3- Suco melao  4- refrigerante diet: ";
+leia op;
+se(op==1)
+{calorias <- calorias +75;}
+senao
+{ se(op==2)
+  {calorias <- calorias +110;}
+  senao
+  {se(op==3)
+   {calorias <- calorias +170;}
+   senao
+   {se(op==4)
+    {calorias <- calorias +200;}
+   }
+  }
+}
+imprima "\nDigite 1- Cha  2- Suco de laranja  3- Mousse diet  4- Mousse de chocolate: 
+";
+leia op;
+se(op==1)
+{calorias <- calorias +20;}
+senao
+{ se(op==2)
+  {calorias <- calorias +70;}
+  senao
+  {se(op==3)
+   {calorias <- calorias +100;}
+   senao
+   {se(op==4)
+    {calorias <- calorias +65;}
+   }
+  }
+}
+imprima "\n Total de calorias: ", calorias;
+imprima "\n";
+fimprog

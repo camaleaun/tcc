@@ -1,0 +1,55 @@
+prog algoritmo384
+int L, c,tam,p1[5000], p2[5000],p3[5000], pontos[5000], mat[5000],auxn;
+string nomes[5000], auxc;
+para( L<- 0; L <= 4999 ; L++)
+{
+ imprima "\n nome: " ;
+ leia nomes[L] ;
+ enquanto(strtam(nomes[L])>30)
+  {imprima "\nNomes com ate 30 caracteres. Digite nome: ";
+   leia nomes[L];}
+   tam <-strtam(nomes[L]);
+   se(tam<30)
+   {para(c<-0;c<=30 - tam; c++)
+    {nomes[L]<-strconcat(nomes[L], " ");}}
+  imprima "\n matricula: " ;  leia mat[L] ;
+  imprima "\n pontos da 1 prova: " ;  leia p1[L] ;
+  imprima "\n pontos da 2 prova: " ;  leia p2[L] ;
+  imprima "\n pontos da 3 prova: " ;  leia p3[L] ;
+  pontos[L]<-p1[L]+p2[L]+p3[L];
+}
+para( L<- 0; L <= 4998 ; L++)
+{
+  para( c<- L + 1; c <= 4999 ; c++)
+  {
+    se (  pontos[L] < pontos[c] )
+    {
+      auxn <- pontos[L];
+      pontos[L] <- pontos[c ];
+      pontos[c] <- auxn;
+      auxn <- p1[L];
+      p1[L] <- p1[c ];
+      p1[c] <- auxn;
+      auxn <- p2[L];
+      p2[L] <- p2[c ];
+      p2[c] <- auxn;
+      auxn <- p3[L];
+      p3[L] <- p3[c ];
+      p3[c] <- auxn;
+      auxn <- mat[L];
+      mat[L] <- mat[c ];
+      mat[c] <- auxn;
+      auxc <- nomes[L];
+      nomes[L] <- nomes[c ];
+      nomes[c] <- auxc;
+     }
+   }
+ }
+imprima "\n\n\n";
+imprima "\nCLAS.\tMAT\tNOME\t\t\t\tP1\tP2\tP3\tSOMA\n " ;
+para( L<- 0; L <= 99 ; L++)
+{
+  imprima "\n",L +1,"\t",mat[L], "\t",nomes[L],"\t", p1[L], "\t", p2[L], "\t", p3[L], "\t",pontos[L];
+}
+imprima "\n";
+fimprog

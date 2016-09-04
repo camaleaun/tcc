@@ -1,0 +1,10 @@
+prog algoritmo197
+int num,impar,i;
+imprima "\nDigite um numero maior que zero: ";
+leia num;
+impar <-0;
+para( i <- 1; i <= num * 2  ;  i <- i + 2)
+ {   impar <-impar + i; }
+imprima "\nSoma dos ",num, " primeiros impares:", impar;
+imprima "\n";
+fimprog

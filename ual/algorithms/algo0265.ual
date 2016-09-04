@@ -1,0 +1,16 @@
+prog algoritmo265
+int a;
+real num;
+a   <-  0;
+imprima "\ndigite numero com ponto ou 0. para sair: ";
+leia num;
+enquanto(  num <> 0.)
+{
+    se(num>=100. && num <=200.)
+    {   a  ++;     }
+   imprima "digite numero com ponto ou 0. para sair: ";
+   leia num;
+}
+imprima "\ntotal: ",  a;
+imprima "\n";
+fimprog

@@ -1,0 +1,9 @@
+prog algoritmo225
+int a;
+string nome;
+imprima "\ndigite nome: ";
+leia nome;
+para(a <-strtam(nome) - 1; a >= 0 ; a--)
+{  imprima "\n",strnresto(nome,a); }
+imprima "\n";
+fimprog

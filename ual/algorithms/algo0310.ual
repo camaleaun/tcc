@@ -1,0 +1,43 @@
+prog algoritmo310
+int op,num,can4,can5,can7,can12, totent;
+can4 <- 0;
+can5 <- 0;
+can7 <- 0;
+can12 <- 0;
+totent <- 0;
+imprima "\nCanal(4/5/7/12), para terminar 0: ";
+leia op;
+enquanto(op>0)
+{
+  se(op<>4 && op<>5 && op<>7 && op<>12)
+  {imprima "\nopcao invalida";}
+  senao
+  {
+   imprima "\nnumero de pessoas que estavam assistindo: ";
+   leia num;
+   totent <- totent + num;
+   se(op == 4)
+   {can4 <- can4 + num; }
+   senao
+   {
+    se(op == 5)
+    {can5 <- can5 + num; }
+    senao
+    {
+     se(op == 7)
+     {can7 <- can7 + num; }
+      senao
+      {
+       se(op == 12)
+       {can12 <- can12 + num; }
+    }}}}
+
+  imprima "\nCanal(4/5/7/12), para terminar 0: ";
+  leia op;
+}
+imprima  "\nporcentagem de audiencia do canal 4: ", formatar(can4*100/totent,2);
+imprima  "\nporcentagem de audiencia do canal 5: ", formatar(can5*100/totent,2);
+imprima  "\nporcentagem de audiencia do canal 7: ", formatar(can7*100/totent,2);
+imprima  "\nporcentagem de audiencia do canal 12: ",formatar(can12*100/totent,2);
+imprima "\n";
+fimprog

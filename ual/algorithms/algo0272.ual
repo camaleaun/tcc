@@ -1,0 +1,15 @@
+prog algoritmo272
+int anos;
+real c, j;
+c <- 1.5;
+j <- 1.1;
+anos <-  0;
+enquanto(  j <= c  )
+{
+    c <- c + 0.02;
+    j <- j + 0.03;
+    anos++;
+}
+imprima "\nanos: ",anos;
+imprima "\n";
+fimprog

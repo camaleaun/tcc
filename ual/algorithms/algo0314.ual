@@ -1,0 +1,34 @@
+prog algoritmo314
+string op;
+real valor, totlimp, totalim, tothig;
+totlimp <- 0.;
+totalim <- 0.;
+tothig <-0.;
+imprima "\nEntre com valor com ponto ou 0. para terminar: ";
+leia valor;
+enquanto (valor>0.)
+{
+ imprima "\nEntre com H(higiene), A(alimentacao), L(limpeza) terminar: ";
+ leia op;
+ se(op == "L"|| op == "l")
+ { totlimp <- totlimp + valor;}
+ senao
+ {
+   se(op == "A"|| op == "a")
+   { totalim <-totalim + valor;}
+   senao
+   {
+   se(op == "H"|| op == "h")
+   { tothig <-tothig + valor;}
+   senao
+   {imprima "\nopcao invalida";
+}}}
+imprima "\nEntre com valor com ponto ou 0. para terminar: ";
+leia valor;
+}
+imprima "\ntotal geral vendido: ", totlimp + totalim + tothig;
+imprima "\ntotal limpeza: ", totlimp;
+imprima "\ntotal alimentacao: ", totalim;
+imprima "\ntotal higiene: ", tothig;
+imprima "\n";
+fimprog

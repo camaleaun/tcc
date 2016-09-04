@@ -1,0 +1,75 @@
+prog algoritmo261
+string  op,menor,p1,p2,p3,np;
+int n;
+real num;
+faca
+{
+imprima "\n MENU - um pouco de tudo";
+imprima "\n A - Armazena na variavel menor e imprime o nome que tiver o menor numero de caracteres" ;
+imprima "\n B - Gera e imprime uma nova palavra";
+imprima "\n C - Calcula e imprime a raiz a quarta de um numero";
+imprima "\n F - Finalizar";
+imprima "\nOPCAO: ";
+leia op;
+se(op  ==  "A" || op  ==  "a" )
+{
+  imprima "\ndigite 1 palavra: ";
+  leia p1;
+  imprima "\ndigite 2 palavra: ";
+  leia p2;
+  imprima "\ndigite 3 palavra: ";
+  leia p3;
+  se(strtam(p1)< strtam(p2))
+  { menor <- p1; }
+  senao
+  {menor <- p2;}
+  se(strtam(p3)< strtam(menor))
+  { menor <- p3; }
+   imprima "\n",menor;
+ }
+ senao
+{ 
+  se(op  ==  "B" || op  ==  "b" )
+  {imprima "\ndigite uma palavra: ";
+   leia p1;
+   se(strtam(p1) >5)
+   { n <- strtam(p1)-2;
+     p2<-strprim(p1);
+        p3<-strnresto(p1,n);
+       np<-strconcat(p2,p3);
+       imprima "\n",np;
+    }
+    senao
+    {
+      n<- strtam(p1) - 3;
+      np<-strnresto(p1,n);
+      imprima "\n",np;
+     }
+   }
+   senao
+   { 
+    se(op  ==  "C" || op  ==  "c")
+    {
+        imprima "\ndigite um numero com ponto: ";
+        leia num;
+        se(num >= 0.)
+        {
+          imprima "\nraiz a quarta: ",formatar(num ** (1/4),2);
+        }
+        senao
+        {   imprima "\nNAO PODE SER FEITA";     }
+     }
+     senao
+     {
+       se(op  ==  "F" || op  ==  "f")
+       {  imprima "\n\n\n\t\t\t\tFINALIZANDO";  }
+       senao
+       {  imprima "\nopcao invalida";  }
+     }
+   }
+  }
+  imprima "\n\n\n";
+ }
+ enquanto( op  <>  "F" && op  <>  "f")
+ imprima "\n";
+fimprog

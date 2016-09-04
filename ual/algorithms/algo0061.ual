@@ -1,0 +1,10 @@
+prog algoritmo61
+ int  quinto, razao, termo;
+ imprima "\nEntre com o 1o  termo: ";  
+ leia termo;
+ imprima "\nEntre com a razao: ";  
+ leia razao;
+ quinto <- termo * razao ^ 4;
+ imprima "\nO 5o  termo desta P.G. e: ", quinto;
+ imprima "\n";
+fimprog

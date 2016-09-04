@@ -1,0 +1,61 @@
+prog algoritmo342
+ string nome, maiornome, palavra, op;
+ int  x, i;
+ real num;
+faca 
+{
+  imprima "\nMENU";
+  imprima "\nA - Imprime o nome que tiver o maior  numero de caracteres entre 20 nomes";
+  imprima "\nB - Brinca com a palavra";
+  imprima "\nC - Calcula e imprime a raiz  quarta de um numero";
+  imprima "\nF - Termina o algoritmo";
+  imprima "\nOPCAO: ";
+  leia  op;
+  se(  op == "A" || op == "a"  )
+  {
+    imprima "\n Digite um nome: ";
+    leia  nome;
+    maiornome <- nome ;
+    para( x  <- 1 ; x <= 19;  x++)
+    {
+      imprima "\n Digite um nome: ";
+      leia  nome;
+      se(  strtam(nome) > strtam(maiornome) )
+      { maiornome <- nome; }
+    }
+    imprima "\nNome com maior numero de caracteres: ", maiornome;
+ }
+ senao
+ {
+   se(  op == "B" || op == "b"  )
+   {
+     imprima "\npalavra: ";
+     leia  palavra ;
+     para( i<- 1; i <= strtam(palavra); i++)
+     {
+       imprima "\n", strnprim(palavra,i);
+     }
+   }
+   senao
+   {
+     se(  op == "C" || op == "c"  )
+     {
+       imprima "\nnumero com ponto: ";
+       leia  num;
+       se(num > 0.)
+       {  imprima "\nRaiz  quarta: ", num **( 1/4) ;}
+       senao
+       {  imprima "\nNao faco raiz de numero negativo: ";}
+     }
+     senao
+     {
+      se(  op == "F" || op == "f"  )
+      {  imprima "\nSaindo: "; }
+      senao
+      { imprima "\nOpcao nao disponivel"; }
+}}}
+imprima "\n\n\n\n";
+}
+enquanto(op <>"F" && op<>"f"  )
+imprima "\n";
+fimprog

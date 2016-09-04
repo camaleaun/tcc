@@ -1,0 +1,104 @@
+prog algoritmo399
+int tel[1000], ntel, op, cont, i, k, auxtel, total;
+string nome[1000], nnome, auxnome;
+cont <- 0;
+k <- 0;
+total <-0;
+imprima "\nInicializando\n";
+para(i <- 0; i < 1000; i++)
+{  nome[i] <- "Vazio";	  tel[i]<-0;}
+faca
+{
+   imprima "\n Menu Cidade Longe Demais\n";
+   imprima "\n1. Inclusao de novo telefone";
+   imprima "\n2. Alteracao de telefone";
+   imprima "\n3. Exclusao de telefone";
+   imprima "\n4. Impressao dos telefones cadastrados";
+   imprima "\n5. Consulta por nome";
+   imprima "\n6. Sair";
+   imprima "\nOpcao: ";
+   leia op;
+   imprima "\n";
+   se(op==1)
+   { se( k <= 999)
+     {  enquanto(nome[k] <> "Vazio")
+        {k++;}
+        imprima "\nDigite o nome: ";
+        leia nome[k];
+        imprima "\nDigite o telefone: ";
+        leia tel[k];
+        k++;
+      }
+      senao
+      { imprima "\nCentral completa"; }
+   }
+   senao
+   { se(op==2)
+     {  i <- 0;
+        imprima "\nDigite o nome: ";
+        leia nnome;
+        enquanto(nnome <> nome[i] && i < k -1)
+        { i++; }
+          se(nnome == nome[i])
+          {
+            imprima "\nDigite o novo telefone: ";
+            leia ntel;
+            tel[i] <- ntel;
+          }
+          senao
+          {  imprima "\nNome nao cadastrado"; }
+     }
+     senao
+     {  se(op == 3)
+        { k--;
+          i <- 0;
+          imprima "\nDigite o nome: ";
+          leia nnome;
+          enquanto(nnome <> nome[i] && i < k )
+          { i++; }
+          se(nnome == nome[i])
+          { nome[i] <- "Vazio";   tel[i] <- 0;}
+          senao
+          {imprima "\nNome nao cadastrado"; }
+        }
+        senao
+        { se(op==4)
+          { para(i <- 0; i <= k -2; i++)
+            {  para(cont <- i +1 ; cont <= k -1; cont++)
+               { se(nome[i] > nome[cont])
+                 {  auxnome <- nome[i];  nome[i] <- nome[cont];  nome[cont] <- auxnome;
+                    auxtel  <- tel[i];   tel[i]<-tel[cont];  tel[cont] <- auxtel;
+                  }
+               }
+            }
+            imprima "\nRelacao dos telefones";
+            para(i <- 0; i < 1000 ; i++)
+            {   se(nome[i] <> "Vazio")
+                {
+                  imprima "\nNome: ", nome[i];
+                  imprima "\nTel: ", tel[i];
+                  imprima "\n";}
+          }      }
+          senao
+          { se(op == 5)
+            { i <- 0;
+              imprima "\nDigite o nome: ";
+              leia nnome;
+              enquanto(nnome <> nome[i] && i < k)
+              { i++; }
+	      se(nnome == nome[i])
+              { imprima "\nNome: ", nnome;  imprima "\nTel: ", tel[i]; }
+              senao
+              {imprima "\nNome nao cadastrado"; }
+            }
+            senao
+            { se ( op == 6)
+              { imprima "\nSaindo";}
+              senao
+              {  imprima "\nOpcao nao disponivel";}
+            } } } } }
+  imprima "\n\n";
+}
+enquanto(  op <> 6)
+imprima "\n";
+fimprog

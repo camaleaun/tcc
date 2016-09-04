@@ -1,0 +1,8 @@
+prog algoritmo163
+ int voltaLagoa, abdominais;
+ para( voltaLagoa <- 1 ; voltaLagoa <=3 ; voltaLagoa++)
+ {  imprima "\n",voltaLagoa,"a volta na Lagoa";
+    para( abdominais<- 1 ; abdominais <=5; abdominais++)
+    { imprima "\n  ", abdominais, "o abdominal";    }
+  }
+fimprog

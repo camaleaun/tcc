@@ -1,0 +1,13 @@
+prog algoritmo92
+real  num1, num2, soma;
+imprima "\ndigite 1 numero: ";  
+leia num1;
+imprima "\ndigite 2 numero: ";  
+leia num2;
+soma <- num1 + num2;
+se ( soma > 20. )
+{   imprima "\nsoma: ", soma + 8; }
+senao
+{ imprima "\nsoma: ", soma - 5; }
+imprima "\n";
+fimprog

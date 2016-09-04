@@ -1,0 +1,17 @@
+prog  algoritmo119
+real a, b, c, aux;
+imprima "\ndigite 1 numero: ";  
+leia a;
+imprima "\ndigite 2 numero: ";  
+leia b;
+imprima "\ndigite 3 numero: ";  
+leia c;
+se ( a  > b )
+{    aux <- a;      a <- b;      b <- aux; }
+se ( a  > c )
+{     aux <- a;      a <- c;      c <- aux; }
+se ( b > c )
+{     aux <- b;      b <- c;      c <- aux; }
+imprima "\nOrdem Decresecente: ", c, "  ",b, "  ",a ;
+imprima "\n";
+fimprog

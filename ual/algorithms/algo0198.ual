@@ -1,0 +1,9 @@
+prog algoritmo198
+int ini, f, i;
+imprima "\nvalor inicial e final, pressionando enter apos digitar cada um: ";
+leia ini;
+leia f;
+para( i <- ini; i <= f;  i ++)
+{   imprima i, "   "; }
+imprima "\n";
+fimprog

@@ -1,0 +1,53 @@
+prog algoritmo390
+ int L,c,x, conta[100];
+ string nome[100],cpf[100],prof[100],cprof[100];
+ para( L<-0; L <= 99;L++)
+ {
+   imprima "\ndigite nome: ";   leia nome[L];
+   imprima "\ndigite CPF: ";   leia cpf[L];
+   imprima "\ndigite profissao somente no sexo masculino: ";   leia prof[L];
+ }
+/*impressao das profissoes de todas as pessoas so para entendimento*/
+ imprima "\n";
+  para( L<-0;L <= 99;L++)
+ {    imprima "\n",L+1," - ",prof[L]; }
+/*inicializa os vetores */
+ para( L<-0;L <= 99; L++)
+ {   conta[L] <-0; cprof[L]<-""; }
+ cprof[0] <- prof[0];
+ conta[0]++;
+ c <-1;
+para( L <- 1;L <= 99;L++)
+{
+x <-0;
+enquanto(prof[L] <> cprof[x]  &&  x < c)
+{ x++; }
+se( x == c)
+{  cprof[c] <- prof[L];  conta[c]++;  c++;}
+senao
+{conta[x]++;}
+}
+imprima "\n";
+/*impressao das profissoes so para entendimento*/
+ imprima "\nPROFISSOES(AO) ENCONTRADA(S)";
+ para( L <-0;L <= c-1; L++)
+ {
+   imprima "\n",L+1, " - ",cprof[L];
+ }
+/*descobre o maior*/
+imprima "\n";
+x <- 0;
+para(L <- 1;L <= c-1; L++)
+{
+    se( conta[L] > conta[x])
+    { x <- L; }
+ }
+/*imprime os maiores*/
+imprima "\nPROFISSAO(OES)  E QUANTIDADE(S)";
+para( L <- 0;L <= c-1; L++)
+{
+    se(conta[L] == conta[x])
+    {imprima "\n", cprof[L]," - ",conta[L];}
+}
+imprima "\n";
+fimprog

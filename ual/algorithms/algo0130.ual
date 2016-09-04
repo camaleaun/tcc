@@ -1,0 +1,10 @@
+prog algoritmo130
+real valor;
+imprima "\ndigite valor do produto: "; 
+leia valor;   
+se( valor < 20. )
+{  imprima  "\nValor de venda: ", valor * 1.45 ; }
+senao
+{ imprima  "\nValor de venda: " , valor *1.3; }
+imprima "\n";
+fimprog

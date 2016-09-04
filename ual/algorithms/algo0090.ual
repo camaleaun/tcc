@@ -1,0 +1,8 @@
+prog algoritmo90
+real numero;
+imprima "\n\ndigite numero com ponto: ";  
+leia numero;
+se ( numero > 20. )
+{   imprima numero; }
+imprima "\n";
+fimprog

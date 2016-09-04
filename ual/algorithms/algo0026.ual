@@ -1,0 +1,14 @@
+prog algoritmo26
+ int data,dia,mes,ano,ndata;
+ imprima "\nDigite data no formato DDMMAA: ";
+ leia data;
+ dia<-data div 10000;
+ mes<-data % 10000 div 100;
+ ano<-data %100;
+ ndata<-mes *10000 +dia*100+ano;
+ imprima "\nDIA: ",dia;
+ imprima "\nMES: ",mes;
+ imprima "\nANO: ",ano;
+ imprima "\n\nDATA NO FORMATO  MMDDAA: ",ndata;
+ imprima "\n";
+fimprog

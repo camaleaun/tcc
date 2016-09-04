@@ -1,0 +1,18 @@
+prog algoritmo288
+int num, dc, du, q;
+imprima "\nEntre com um numero de 4 algarismos: ";
+leia num;
+enquanto(num >= 1000 && num <=9999)
+{
+  dc  <- num div   100;
+  du  <- num % 100;
+  q <-  (dc + du)^ 2;
+  se(q == num)
+  {imprima "\nPossui a caracteristica";}
+  senao
+   {imprima "\nNao possui a caracteristica";}
+ imprima "\nEntre com um numero de 4 algarismos: ";
+ leia num;
+}
+imprima "\n";
+fimprog

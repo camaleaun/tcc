@@ -1,0 +1,15 @@
+prog algoritmo200
+int ini, f, num, i;
+imprima "\ndigite valor inicial, valor final de um intervalo e o numero que se procura os multiplos, pressionando enter apos digitar cada um: ";
+leia ini;
+leia f;
+leia  num;
+se( ini % num == 0)
+{ ini <- ini  +  num; }
+senao
+{ ini <- ini  + (num - ( ini % num ) );}
+f--;
+para( i <- ini; i <= f; i<- i + num )
+{  imprima i, "   ";}
+imprima "\n";
+fimprog

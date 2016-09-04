@@ -1,0 +1,15 @@
+prog algoritmo239
+int c, fat;
+real x,soma;
+soma <- 1.; # 0! = 1
+fat <- 1; 
+imprima "\ndigite valor de x com ponto: ";
+leia x;
+para( c <- 1; c <= 9; c++)
+{
+   fat <-  fat * c;
+   soma <-  soma + x ** c / fat;
+}
+imprima "\nvalor de e elevado a ", x, ": ", formatar(soma,3);
+imprima "\n";
+fimprog 

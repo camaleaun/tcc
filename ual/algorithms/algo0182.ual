@@ -1,0 +1,10 @@
+prog algoritmo182
+int a;
+real numero;
+para( a <- 1; a <=10; a++)
+{ imprima "\ndigite numero com ponto: ";
+   leia numero;
+   imprima  "metade: ", numero / 2;
+}
+imprima "\n";
+fimprog

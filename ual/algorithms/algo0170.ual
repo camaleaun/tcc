@@ -1,0 +1,11 @@
+prog algoritmo170
+int L,c,t;
+imprima "\nACIMA DA DIAGONAL SECUNDARIA\n";
+para(L<-1;L<=9;L++)
+{
+  para(c<-1;c<11 - L;c++)
+  {  imprima L, "-",c,"\t";  }
+  imprima "\n";
+}
+imprima "\n";
+fimprog

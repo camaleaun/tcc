@@ -1,0 +1,13 @@
+prog algoritmo67
+ real  prest, valor, taxa;
+ int tempo;
+ imprima "\ndigite o valor da prestacao: ";
+ leia valor;
+ imprima "\ndigite  a taxa: ";
+ leia taxa;
+ imprima "\ndigite o tempo (numero de meses) : ";
+ leia tempo;
+ prest <- valor+(valor*(taxa/100)*tempo);
+ imprima "\no valor da prestacaoo em atraso e = ", prest;
+ imprima "\n";
+fimprog    

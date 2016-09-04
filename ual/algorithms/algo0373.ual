@@ -1,0 +1,27 @@
+prog algoritmo373
+ int L, c,t;
+ string  times[5];
+ para( L<- 0;L <= 4; L++)
+ {
+     imprima "\ndigite nome do time:";
+     leia times[L];
+     enquanto( strtam( times[L]) >20)
+     { imprima "\nNomes com ate 20 caracteres";
+       imprima "\n\nDigite ", L + 1, " time: ";
+       leia times[ L ] ;
+     }
+    t<-20-strtam(times[L]);
+    para(c<-1; c <= t; c++)
+    {times[L]<-strconcat(times[L], " ");}
+  }
+  imprima "\n Rodada Dupla";
+  para( L<- 0;L <= 4; L++)
+  {
+   para( c<- 0;c <= 4; c++)
+    {
+       se(L <> c)
+       {   imprima "\n", times[L ],"\t",times[ c ];  }
+   }
+  }
+ imprima "\n";
+ fimprog

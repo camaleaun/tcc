@@ -1,0 +1,10 @@
+prog algoritmo71
+ int hora, tminuto, minuto;
+ imprima "\nentre com hora atual: ";
+ leia hora;
+ imprima "\nentre com minutos: ";
+ leia minuto;
+ tminuto <- hora * 60 + minuto;
+ imprima "\nAt‚ agora se passaram: ", tminuto, " minutos";
+ imprima "\n";
+fimprog   

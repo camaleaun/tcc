@@ -1,0 +1,16 @@
+prog algoritmo204
+int i, num;
+real num1, maior;
+imprima "\nQuantos numeros voce quer digitar? ";
+leia num;
+maior<- -1.;
+para( i <- 1; i <=num; i++)
+{
+  imprima "\nDigite um numero com ponto: ";
+  leia num1;
+  se(num1 > maior)
+  {  maior <-num1; }
+}
+imprima "\nEste  o maior numero que voce digitou: ", maior;
+imprima "\n";
+fimprog

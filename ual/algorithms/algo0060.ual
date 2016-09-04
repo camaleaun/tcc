@@ -1,0 +1,10 @@
+prog algoritmo60
+ int dec, razao, termo;
+ imprima "\nEntrar com o 1o termo: ";  
+ leia termo;
+ imprima "\nEntrar com a razao: ";  
+ leia razao;
+ dec <- termo + 9* razao;
+ imprima "\nO 10 termo desta P.A. e: ", dec;
+ imprima "\n";
+fimprog

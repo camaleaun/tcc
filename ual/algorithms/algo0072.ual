@@ -1,0 +1,11 @@
+prog algoritmo72
+ real deposito, taxa, valor, total;
+ imprima "\nentre com deposito: ";
+ leia deposito;
+ imprima "\nentre coma taxa de juros: ";
+ leia taxa;
+ valor <- deposito*taxa/100;
+ total <- deposito + valor;
+ imprima "\nRendimentos: ", valor, "\nTotal: ", total;
+ imprima "\n";
+fimprog

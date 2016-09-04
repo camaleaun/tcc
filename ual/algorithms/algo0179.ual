@@ -1,0 +1,7 @@
+prog algoritmo179
+int i;
+para( i <- 2; i <= 600; i <- i+2 )
+{   imprima i, "   "; }
+imprima "\n";
+fimprog
+

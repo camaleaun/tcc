@@ -1,0 +1,7 @@
+prog algoritmo76
+ int num;
+ imprima "\ndigite numero: ";
+ leia num;
+ imprima "\nsucessor: ", (num + 1) % 61;
+ imprima "\n";
+fimprog

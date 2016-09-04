@@ -1,0 +1,14 @@
+prog algoritmo41       
+ real a, b, c,d, mp;
+ imprima "\nentre com 1 numero com ponto: "; 
+ leia a;
+ imprima "\nentre com 2 numero com ponto: "; 
+ leia b;
+ imprima "\nentre com 3 numero com ponto: "; 
+ leia c;
+ imprima "\nentre com 4 numero com ponto: "; 
+ leia d;
+ mp <- (a*1 + b*2 + c*3 + d*4)/10;
+ imprima "\nmedia ponderada: ", mp;
+ imprima "\n";
+fimprog

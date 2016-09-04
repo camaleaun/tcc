@@ -1,0 +1,19 @@
+prog algoritmo160
+real x, y;
+imprima "\ndigite valor de x: ";
+leia x;
+se(x <= 1.)
+{y <- 1.;}
+senao
+{ se(x <= 2.)
+  {y <- 2.;}
+  senao
+  { se(x <= 3.)
+    {y <- x **2;}
+    senao
+    {y <- x **3;}
+  }
+}
+imprima "\nvalor de f(x): ",y;
+imprima "\n";
+fimprog

@@ -1,0 +1,17 @@
+prog algoritmo264
+int a;
+real num, soma;
+a <- 0;
+soma <-  0.;
+imprima "\ndigite numero positivo com ponto: ";
+leia num;
+enquanto(  num > 0.)
+{
+   a++;
+   soma  <-  soma + num;
+   imprima "\ndigite numero positivo com ponto: ";
+   leia num;
+}
+imprima "\nmedia: ", soma / a;
+imprima "\n";
+fimprog

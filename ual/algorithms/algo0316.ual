@@ -1,0 +1,52 @@
+prog algoritmo316
+int i, id, tcas, tsol, tdes, tviu, geral;
+real somaviu;
+string op;
+tcas <- 0;
+geral <- 0;
+tsol <- 0;
+tviu <- 0;
+somaviu <- 0.;
+tdes <- 0;
+imprima "\n Digite idade ou 0 para terminar: ";
+leia id;
+enquanto( id > 0)
+{ geral++;
+  imprima "\n estado civil C / S / V / D: ";
+  leia op;
+  se( op == "c" || op=="C" )
+  { tcas++; }
+  senao
+   { se( op == "s" || op=="S" )
+     { tsol++;}
+     senao
+       {  se( op == "d" ||op =="D" )
+          { tdes++;}
+          senao
+          {  se( op == "v" ||op =="V" )
+             { somaviu <- somaviu +id;
+                tviu++;}
+           }
+      }
+    }
+imprima "\n Digite idade ou 0 para terminar: ";
+leia id;
+}
+se(tcas <> 0)
+{imprima "\ntotal de casados: ", tcas;}
+senao
+{ imprima "\nnao existem casados";}
+se(tsol <> 0)
+{ imprima "\ntotal de solteiros: ", tsol;}
+senao
+{ imprima "\nnao existem solteiros";}
+se(tviu <> 0)
+{imprima "\nmdia da idade das viuvos: ", somaviu/tviu;}
+senao
+{ imprima "\nnao existem viuvos";}
+se(tdes<> 0)
+{ imprima "\nporcentagem de pessoas desquitados ou separados: ", tdes * 100/geral;}
+senao
+{ imprima "\nnao existem desquitados ou separados ";}
+imprima "\n";
+fimprog

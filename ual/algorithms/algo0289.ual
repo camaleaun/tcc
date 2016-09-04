@@ -1,0 +1,18 @@
+prog  algoritmo289
+int num, cont, soma;
+soma <- 0;
+cont <- 0;
+imprima "\ndigite numero positivo e para terminar, negativo ou 0: ";
+leia num;
+enquanto(num > 0)
+{  se(num % 3 == 0 )
+   {cont++;   soma <- soma + num; }
+   imprima "\ndigite numero positivo e para terminar, negativo ou 0: ";
+   leia num;
+}
+se(cont<>0)
+{ imprima  "\nmedia dos numeros multiplos de 3: ", soma / cont;}
+senao
+{ imprima  "\nnenhum numero multiplo de 3: "; }
+imprima "\n";
+fimprog

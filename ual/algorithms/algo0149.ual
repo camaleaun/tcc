@@ -1,0 +1,24 @@
+prog algoritmo149
+real  vcompra, vvenda;
+string nomep;
+imprima "\ndigite nome do produto: ";  
+leia  nomep;
+imprima "\ndigite valor da compra: ";  
+leia  vcompra;
+se ( vcompra < 10. )
+{  vvenda <- vcompra * 1.7;}
+senao
+{
+  se ( vcompra < 30. )  
+  {  vvenda <- vcompra * 1.5; }
+  senao
+  {
+    se ( vcompra < 50.)  
+    {  vvenda <- vcompra * 1.4; } 
+    senao 
+    {  vvenda <- vcompra * 1.3;    }
+  }
+}
+imprima "\n", nomep, " sera vendido por R$ ", formatar(vvenda + 0.001,2);
+imprima "\n";
+fimprog

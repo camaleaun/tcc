@@ -1,0 +1,20 @@
+prog algoritmo153
+real  indice;
+imprima "\ndigite ¡ndice de poluicao: ";
+leia  indice;
+se ( indice >= 0.5 )
+{  imprima "\nsuspender atividades as industrias dos grupos 1, 2 e 3";}
+senao
+{
+  se ( indice >= 0.4 )  
+  {  imprima "\nsuspender atividades as industrias dos grupos 1 e 2 ";  }
+  senao
+  {
+    se ( indice >= 0.3 )  
+    {  imprima "\nsuspender atividades as industrias dos grupos 1 "; } 
+    senao 
+    {  imprima "\n¡ndice de poluicao aceitavel para todos os grupos "; }
+  }
+}
+imprima "\n";
+fimprog

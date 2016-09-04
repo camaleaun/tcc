@@ -1,0 +1,65 @@
+prog algoritmo361
+ int L,c,t,op,codigo[30],cod, qtde[30];
+ string nomes[30];
+ real vc[30], vv[30];
+# trecho de entrada de 30 produtos
+  para( L<- 0; L <= 29 ; L++)
+  {
+    imprima "\ndigite ", L + 1, " nome do produto: ";
+    leia nomes[ L ] ;
+   enquanto( strtam(nomes[L]) >20)
+    {imprima "\nNomes com ate 20 caracteres";
+    imprima "\n\nDigite ", L + 1, " nome: ";
+    leia nomes[ L ] ;
+    }
+    t<-20-strtam(nomes[L]);
+    para(c<-1; c <= t; c++)
+    {nomes[L]<-strconcat(nomes[L], " ");}
+    imprima "\ndigite codigo do produto: ";
+    leia codigo[L] ;
+    imprima "\ndigite quantidade: ";
+    leia qtde[L] ;
+    imprima "\ndigite valor de compra com ponto: ";
+    leia vc[L] ;
+    imprima "\ndigite valor de venda com ponto: ";
+    leia vv[L] ;
+    }
+# fim do trecho de entrada
+# trecho de saida
+   faca
+   {
+    imprima "\n\n\nMenu\n";
+    imprima "\n1-Todos os produtos";
+    imprima "\n2-So um produto";
+    imprima "\n3-Sair";
+    imprima "\nOPCAO: ";
+    leia op;
+    se(op==1)
+    { imprima "\nCodigo\tNome\t\t\tQtde\tValor-compra\tValor-venda";
+     para( L<- 0; L <= 29; L++)
+     {
+      imprima "\n", codigo[L], "\t", nomes[L],"\t",qtde[L], "\t",vc[L], "\t\t", vv[L];
+     }
+     }
+     senao
+     {se(op==2)
+      { c<-0;
+       imprima "\nDigite codigo do produto: ";
+       leia cod;
+       enquanto(cod <>codigo[c] && c<29)
+       {c++;}
+       se(cod==codigo[c])
+       {imprima "\n\n", codigo[c], "\t",nomes[c],"\t",qtde[c], "\t", vc[c], "\t", vv[c];}
+       senao
+       { imprima "\n\nCodigo Inexistente";}
+       }
+       senao
+       {se(op==3)
+        {saia;}
+        senao
+        {imprima "\nOpcao Invalida";}}}
+     }
+     enquanto(op<>3)
+  # fim do trecho de saida
+ imprima "\n";
+fimprog

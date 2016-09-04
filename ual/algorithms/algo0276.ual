@@ -1,0 +1,22 @@
+prog algoritmo276
+int idade, c21, c50;
+c21  <-  0;
+c50  <-  0;
+ imprima "\nEntre com uma idade: ";
+ leia idade;
+ enquanto(idade >=0 && idade <= 140)
+ {
+   se(idade < 21)
+   { c21++; }
+   senao
+   {
+    se(idade > 50)
+    { c50++; }
+   }
+  imprima "\nEntre com uma idade: ";
+  leia idade;
+  }
+imprima "\nTotal de idades inferiores a 21: ", c21;
+imprima "\nTotal de idades maiores do que 50: ", c50;
+imprima "\n";
+fimprog

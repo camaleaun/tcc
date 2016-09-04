@@ -1,0 +1,10 @@
+prog algoritmo37
+ int num1, num2, prod;
+ imprima "\n entre com um numero: ";
+ leia num1;
+ imprima "\n entre com outro numero: "; 
+ leia num2;
+ prod <- num1 * num2;
+ imprima "\nproduto: ", prod;
+ imprima "\n";
+fimprog

@@ -1,0 +1,10 @@
+prog algoritmo95
+int  numero;
+imprima "\ndigite numero: ";  
+leia numero;
+se ( numero % 5 == 0 ) 
+{    imprima "\n e divisivel por 5 "; }
+senao
+{    imprima "\nnao e divisivel por 5"; }
+imprima "\n";
+fimprog

@@ -1,0 +1,17 @@
+prog algoritmo237sol1
+int c, num;
+real h;
+h <- 0. ; 
+imprima "\ndigite numero: ";
+leia num;
+imprima "\nPrimeira Solucao ";
+para( c<- 1; c  <= num; c++)
+{
+   se( c % 2 == 1 )
+   {   h <- h + 1 / c;  }
+   senao
+   {   h <- h - 1 / c;  }
+}
+imprima "\nsoma: ", h ;
+imprima "\n";
+fimprog

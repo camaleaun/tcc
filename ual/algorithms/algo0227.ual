@@ -1,0 +1,21 @@
+prog algoritmo227
+int c, c1, L,tam,t1;
+string nome;
+imprima "\ndigite nome: ";
+leia nome;
+L <- strtam(nome);
+se( L % 2 <> 0 )
+{ tam <-strtam(nome);
+   para( c <- 0; c <=tam div 2 ; c++)
+   {
+       imprima strnresto(nome, c), "\n";
+       t1   <- strtam(nome) - 1 ;
+       nome <- strnprim(nome,t1);
+       para(c1 <-1; c1<=c+1; c1++)
+       {imprima " "; }
+    }
+ }
+senao
+{  imprima "\nNAO FACO "; }
+imprima "\n";
+fimprog

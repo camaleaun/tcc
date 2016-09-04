@@ -1,0 +1,18 @@
+prog  algoritmo290
+int num, prod, soma;
+soma <- 0;
+prod <- 1;
+imprima "\ndigite numero positivo, zero ou negativo para terminar: ";
+leia num;
+enquanto(num > 0)
+{  se(num % 2 == 0 )
+   { soma <- soma + num; }
+   senao
+   { prod <- prod * num; }
+   imprima "\ndigite numero positivo, zero  ou negativo para terminar: ";
+ leia num;
+}
+imprima  "\nproduto dos numeros impares: ", prod;
+imprima  "\nsoma dos numeros pares: ", soma;
+imprima "\n";
+fimprog

@@ -1,0 +1,24 @@
+prog algoritmo254
+int L,c, cap;
+real somaa, somat, nota, media;
+somat <- 0.;
+cap <- 0;
+para(L <- 1;L <= 20;L++)
+{
+    somaa  <-  0.;
+    para(c <- 1;c <= 10;c++)
+    {
+      imprima "\nDigite ", c,"a nota do aluno ",L, " com ponto: ";
+      leia nota;
+      somaa <- somaa +nota;
+   }
+  media <- somaa/10;
+  se(media>=5.)
+  {cap++;}
+  imprima "\nMedia do ", L,"o aluno: ",media;
+  somat <- somat+media;
+ }
+ imprima "\nMedia da turma: ", somat/20;
+ imprima "\nPercentual de Aprovados: ", cap*100/20;
+ imprima "\n";
+fimprog

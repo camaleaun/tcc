@@ -1,0 +1,64 @@
+prog algoritmo300
+int x, op, op2, contflu, contbot, contvas, contfla, contout, contflu2, contout2;
+real sal, msal;
+x <-0;
+contflu <- 0;
+contflu2 <- 0;
+contbot <- 0;
+msal <-0.;
+contvas <- 0;
+contfla <- 0;
+contout <- 0;
+contout2 <- 0;
+imprima "\nDigite 1 FLU  2 BOTA 3 VASCO 4 FLA 5 Outros 0 sair: ";
+leia op;
+enquanto(op <> 0)
+{ enquanto(op < 1 || op >5)
+  { imprima "\nDigite 1 FLU  2 BOTA 3 VASCO 4 FLA 5 Outros: ";
+    leia op;
+  }
+  x++;
+  imprima "\nOnde voce mora 1 RJ 2 Niteroi 3 Outros ?";
+  leia op2;
+  imprima "\nQual o seu salario com ponto? ";
+  leia sal;
+  se(op == 1)
+  { contflu++;
+    se(op2==2)
+    { contflu2++; }
+   }
+   senao
+   { se(op == 2)
+     {contbot++; msal <-msal + sal; }
+      senao
+      { se( op == 3)
+        {contvas++; }
+        senao
+        { se( op == 4)
+          { contfla++;}
+          senao
+          { se(op == 5)
+            { contout++;
+              se(op2==1)
+              { contout2++; }
+             }
+          }
+        }
+      }
+   }
+  imprima "\nDigite 1 FLU  2 BOTA 3 VASCO 4 FLA 5 Outros 0 sair: ";
+  leia op;
+}
+imprima "\nTotal de torcedores do Fluminense :", contflu;
+imprima "\nTotal de torcedores do Botafogo :", contbot;
+imprima "\nTotal de torcedores do Vasco :", contvas;
+imprima "\nTotal de torcedores do Flamengo :", contfla;
+imprima "\nTotal de torcedores de outros clubes :", contout;
+se(contbot<>0)
+{ imprima "\nMedia salarial dos torcedores do Botafogo :", msal/contbot;}
+senao
+{ imprima "\nNenhum torcedor do Botafogo";}
+imprima "\nTotal de pessoas do Rio de Janeiro torcedores de outros clubes :",contout2;
+imprima "\nTotal de pessoas de Niteroi torcedores do Fluminense :", contflu2;
+imprima "\n";
+fimprog

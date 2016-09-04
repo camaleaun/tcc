@@ -1,0 +1,13 @@
+prog algoritmo83sol1
+ real numero, inverso, absoluto;
+ imprima "digite numero:"; 
+ leia numero;
+ se( numero > 0. )
+ { inverso <- 1 / numero; 
+   imprima "\ninverso: ", inverso;}
+ senao
+ { absoluto <- numero * -1;
+  # ou absoluto <- abs(numero);
+  imprima "\nabsoluto: ", absoluto;}
+ imprima "\n";
+fimprog

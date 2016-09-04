@@ -1,0 +1,12 @@
+prog algoritmo98
+real sb, vp;
+imprima "\ndigite o salario: ";
+leia sb;
+imprima "\ndigite o valor da prestacao: ";
+leia vp;
+se( vp <= 0.3 * sb )
+{imprima "\nemprestimo concedido ";}
+senao
+{imprima "\nemprestimo negado ";}
+imprima "\n";
+fimprog

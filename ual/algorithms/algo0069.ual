@@ -1,0 +1,9 @@
+prog algoritmo69
+ int num, denom;
+ imprima "\ndigite numerador: ";
+ leia num;
+ imprima "\ndigite denominador: ";
+ leia denom;
+ imprima "\ndecimal: ", num / denom;
+ imprima "\n";
+fimprog

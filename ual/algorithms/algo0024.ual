@@ -1,0 +1,8 @@
+prog algoritmo24 
+ int a,d;
+ imprima "\nDigite numero de tres casas: ";
+ leia a;
+ d<-(a div 10) % 10;
+ imprima "\nalgarismo da casa das dezenas: ",d;
+ imprima "\n";
+fimprog

@@ -1,0 +1,14 @@
+prog algoritmo216
+int numero, cp, c;
+cp <- 0;
+para( c <- 1; c <=200; c++)
+{
+   imprima "\ndigite numero: ";
+   leia numero;
+   se( numero % 2 == 0 )
+   {   cp <-  cp +1;  }
+ }
+imprima "\npares: ", cp;
+imprima "\nimpares: ", 200-cp;
+imprima "\n";
+fimprog

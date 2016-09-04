@@ -1,0 +1,14 @@
+prog algoritmo50
+ real  perimetro, area, diagonal, base, altura;
+ imprima "\ndigite base: ";    
+ leia base;         
+ imprima "\ndigite altura: ";  
+ leia altura;
+ perimetro <- 2*(base + altura);
+ area <-base * altura;
+ diagonal <- raiz(base**2 + altura**2);
+ imprima "\nperimetro = " ,perimetro;
+ imprima "\narea = ", area ;
+ imprima "\ndiagonal = ", diagonal ;
+ imprima "\n";
+fimprog

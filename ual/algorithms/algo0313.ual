@@ -1,0 +1,45 @@
+prog algoritmo313
+real peso, altura, soma1020;
+int idade,c1020,c50,ct,c40;
+soma1020  <- 0.;
+ct  <-  0;
+c1020  <-  0;
+c50   <-  0;
+c40 <- 0;
+imprima "\nEntre a idade ou 0 para terminar: ";
+leia idade;
+enquanto(idade > 0)
+{
+  ct ++;
+  imprima "\nEntre altura com ponto: ";
+  leia altura;
+  imprima "\nEntre peso com ponto: ";
+  leia peso;
+  se(peso < 40.)
+   { c40 ++; }
+   se(idade > 50)
+   { c50 ++; }
+   senao
+   {
+     se(idade > 10 && idade < 20)
+       {c1020++;
+      soma1020 <- soma1020 +  idade;
+     }
+   }
+   imprima "\nEntre a idade ou 0 para terminar: ";
+   leia idade;
+}
+se(c40 > 0)
+{ imprima "\nTotal com mais de 50 anos: ", c50;}
+senao
+{imprima "\nNinguem com mais de 50 anos"; }
+se(c1020 > 0)
+{ imprima "\nMedia entre de 10 ate 20: ", soma1020/c1020;}
+senao
+{imprima "\nNinguem dentro da faixa 10 ate 20"; }
+se(c40 > 0)
+{ imprima "\nPercentual com menos de 40 kg: ", formatar(c40 *100/ct,2);}
+senao
+{imprima "\nNinguem com menos de 40 kg"; }
+imprima "\n";
+fimprog

@@ -1,0 +1,15 @@
+prog algoritmo80
+ int quant;
+ real valAluguel, fatAnual, multas, quantFinal;
+ imprima "\n Digite a quantidade de fitas: ";
+ leia quant;
+ imprima "\n Digite o valor do aluguel: ";
+ leia valAluguel;
+ fatAnual <- quant/3 * valAluguel * 12;
+ imprima "\n Faturamento anual: ", fatAnual;
+ multas <- valAluguel * 0.1 * (quant/3)/10;
+ imprima "\n Multas mensais: ", formatar(multas,2);
+ quantFinal <- quant - quant * 0.02 + quant/10;  /*  quant * 1.08   */
+ imprima "\n Quantidade de fitas no final do ano : ", quantFinal;
+ imprima "\n";
+fimprog

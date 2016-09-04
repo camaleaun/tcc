@@ -1,0 +1,24 @@
+prog algoritmo378
+ int L ,c,d,  num[100];
+# trecho de entrada de 100
+L<- 0;
+imprima "\ndigite ", L + 1, " numero ou 0 para terminar: ";
+leia num[ L ] ;
+enquanto(L<=98 && num[L]<>0)
+{ L++;
+  imprima "\ndigite ", L + 1, " numero ou 0 para terminar: ";
+  leia num[ L ] ;
+}
+# fim do trecho de entrada
+se(num[L] ==0)
+{L--;}
+c<-0;
+para(d<-0; d<=L-1;d++)
+{se(num[d]==num[L])
+  {c++;}
+}
+# trecho de saida
+imprima "\nTotal de numeros iguais ao ultimo: ", c;
+# fim do trecho de saida
+imprima "\n";
+fimprog

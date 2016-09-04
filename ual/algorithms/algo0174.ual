@@ -1,0 +1,6 @@
+prog algoritmo174
+int i;
+para( i <- 1; i <= 100; i++ )
+{   imprima i, "   "; }
+imprima "\n";
+fimprog

@@ -1,0 +1,29 @@
+prog algoritmo311
+int mat, i, nd;	
+real cr, nota, maior;
+imprima "\ndigite matricula (1 - 1500): ";
+leia mat;
+maior <- 0.;
+enquanto(mat >= 1 && mat <= 1500)
+{ imprima "\nnumero de disciplinas: ";
+  leia nd;
+  cr <- 0.;
+  para( i <- 1 ; i <=nd ; i++)
+  { imprima "\ndigite nota com ponto: ";
+    leia nota;
+    cr <- cr + nota;
+  }
+  cr <- cr / nd;
+  se( nd > 5)
+  {
+    se(cr > maior)
+    { maior <- cr; }
+  }
+  imprima "\nMatricula: ", mat;
+  imprima "\nCR: ", cr;
+  imprima "\ndigite matricula (1 - 1500): ";
+  leia mat;
+}
+imprima "\nMaior CR: ", maior;
+imprima "\n";
+fimprog

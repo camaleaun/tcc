@@ -1,0 +1,30 @@
+prog algoritmo295
+int qte, qtp, np, mqte, a, qtv;
+string nome, mnome;
+a <-1;
+mqte <-0;
+imprima "\nDigite a quantidade de produtos da fabrica : ";
+leia np;
+enquanto(a <= np)
+{
+   imprima "\n\nDigite o nome do produto ",a,": ";
+   leia nome;
+   imprima "\nDigite a quantidade produzida :";
+   leia qtp;
+   imprima "\nDigite a quantidade vendida :";
+   leia qtv;
+   qte <- qtp - qtv;
+   se(qte > mqte)
+    {
+       mqte <-qte;
+       mnome <-nome;
+     }
+   imprima "\nProduto :", nome;
+   imprima "\nA quantidade deste produto: ", qte, " itens";
+   se(qte<50)
+   { imprima "\nIMPORTANTE! Produto precisa de uma maior producao!";  }
+   a++;
+}
+imprima "\nO produto com maior estoque: ", mnome, "\ncom: ", mqte, " pecas";
+imprima "\n";
+fimprog

@@ -1,0 +1,6 @@
+prog algoritmo31
+ real ma; 
+ ma <- ( 8 +  9 + 7 ) / 3;
+ imprima "\nA media aritmetica e : ", ma;
+ imprima "\n";
+fimprog

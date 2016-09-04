@@ -1,0 +1,9 @@
+prog algoritmo108
+string nome, prenome;
+imprima "\ndigite nome: ";
+leia nome;
+prenome <- strnprim(nome,5);
+se(prenome == "JOSÉ " || prenome == "José "|| prenome == "josé "|| nome == "josé" || nome == "José" || nome == "JOSÉ" ) # mesma linha
+{ imprima "\n",nome; }
+imprima "\n";
+fimprog

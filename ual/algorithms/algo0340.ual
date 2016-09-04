@@ -1,0 +1,50 @@
+prog algoritmo340
+int n1, n2,nf, d1, d2,d, D,num1, num2,pinteira, pfrac,  numeradorfracao, denominadorfracao, soma;
+imprima "\nEntre com 1 numerador: ";
+leia n1;
+imprima "\nEntre com 1 denominador: ";
+leia d1;
+enquanto(d1 <= 0)
+{ imprima "\nDENOMINADOR INVALIDO";
+  imprima "\nEntre com 1 denominador: ";
+  leia d1;
+}
+imprima "\nEntre com 2 numerador: ";
+leia n2;
+imprima "\nEntre com 2 denominador: ";
+leia d2;
+enquanto(d2 <= 0)
+{ imprima "\nDENOMINADOR INVALIDO";
+  imprima "\nEntre com 2 denominador: ";
+  leia d2;
+}
+se(d1==d2)
+{ numeradorfracao <- n1 + n2; denominadorfracao <- d1; soma<-d1;}
+senao
+{  se(d1 < d2)
+    { soma <- d2;d <- d1;D<-d2;}
+    senao
+    { soma <- d1;d<-d2; D<-d1;}
+    enquanto(soma % d <> 0)
+     { soma <-soma + D;}
+     num1<- (soma div d1) * n1;  
+     num2 <- ( soma div d2) * n2; 
+     numeradorfracao<-num1 + num2; denominadorfracao <- soma;
+}
+imprima "\na soma das fracoes: ",n1," / ", d1, "  e  ", n2, " / ",d2, "  = ", numeradorfracao," / ", denominadorfracao;
+nf<-abs(numeradorfracao);
+pinteira<-nf div denominadorfracao;
+se(numeradorfracao<0)
+{ pinteira <- pinteira *(-1);} 
+se( nf % denominadorfracao == 0)
+{ imprima "\n\nnumero inteiro = ",pinteira;}
+senao
+{ se(nf >denominadorfracao)
+  { pfrac <- nf % denominadorfracao;
+    imprima "\n\nnumero misto =", pinteira, "  ",  pfrac," /  ",  soma;}
+  senao
+  {imprima "\n\nfracao propria";}
+}
+imprima "\n";
+fimprog
+

@@ -1,0 +1,41 @@
+prog algoritmo306
+int num,ca,tt,pl,sd,mca;
+real mconta,soma,conta;
+mconta  <-  0.;
+soma <- 0.;
+num <- 0;
+imprima "\ndigite o codigo do assinante ou 0 para terminar: ";
+leia ca;
+enquanto(ca <> 0)
+{ imprima "\ndigite o tipo do telefone( 1 residencial 2 comercial): ";
+   leia tt;
+   imprima "\ndigite o numero de pulsos locais: ";
+   leia pl;
+   imprima "\ndigite o numero de servicos despertador: ";
+   leia sd;
+   se(tt == 1)
+   { se(pl > 90)
+     {conta <- 23.00 + ( (pl - 90) * 0.1) + (0.47 * sd);}
+     senao
+     {conta <- 23.00 + (0.47 * sd);}
+   }
+   senao
+   {  se(pl > 90)
+      {conta <- 30.00 + ( (pl - 90) * 0.1) + (0.47 * sd);}
+      senao
+      {conta <- 30.00 + (0.47 * sd);}
+  }
+  num <- num +1;
+  soma <- soma + conta;
+  se(conta > mconta)
+   {mconta <- conta;
+    mca <- ca;
+   }
+  imprima "\no total da conta e R$ ",conta;
+  imprima "\ndigite o codigo do assinante ou 0 para terminar: ";
+  leia ca;
+}
+imprima "\no valor da maior conta e R$ ",mconta, " e o codigo e: ", mca;
+imprima "\no valor medio arrecadado e R$ ",soma/num;
+imprima "\n";
+fimprog

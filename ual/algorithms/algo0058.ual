@@ -1,0 +1,12 @@
+prog algoritmo58
+ real xnum1, xnum2, xnum3, x;
+ imprima "\nEntrar com 1 valor: ";  
+ leia xnum1;
+ imprima "\nEntrar com 2 valor: ";  
+ leia  xnum2;
+ imprima "\nEntrar com 3 valor: ";  
+ leia  xnum3;
+ x <- xnum1 + xnum2 / (xnum3 + xnum1) + 2 *(xnum1 - xnum2) + log(64.)/ log(2.);
+ imprima "\nX = ", x;
+ imprima "\n";
+fimprog

@@ -1,0 +1,9 @@
+prog algoritmo193
+int i, num, vf;
+imprima "\nDigite um numero: ";
+leia num;
+vf <- num  * 2;
+para( i <- 2; i <= vf;  i <- i + 2)
+{ imprima i, "   ";}
+imprima "\n";
+fimprog

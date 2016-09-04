@@ -1,0 +1,11 @@
+prog algoritmo75
+ int peso, pesogramas;
+ real  novopeso;
+ imprima "\nentre com seu peso, so a parte inteira: ";
+ leia peso;
+ pesogramas <- peso * 1000;
+ novopeso  <- pesogramas * 1.12;
+ imprima "\npeso em gramas: ", pesogramas;
+ imprima "\nnovo peso: ", novopeso;
+ imprima "\n";
+fimprog

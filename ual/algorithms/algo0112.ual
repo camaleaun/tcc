@@ -1,0 +1,12 @@
+prog algoritmo112
+real a, b;
+imprima "\ndigite 1o numero: ";  
+leia a;
+imprima "\ndigite 2o numero: ";  
+leia  b;
+se (a < b) 
+ {  imprima "\nmenor: ", a; }
+senao
+{ imprima "\nmenor: ", b; }
+imprima "\n";
+fimprog

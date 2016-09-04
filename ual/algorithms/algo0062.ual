@@ -1,0 +1,8 @@
+prog algoritmo62
+ real preco, npreco;
+ imprima "\ndigite valor do produto: ";  
+ leia preco;
+ npreco <-preco * 0.91;
+ imprima "\npreco com desconto: ",npreco;
+ imprima "\n";
+fimprog

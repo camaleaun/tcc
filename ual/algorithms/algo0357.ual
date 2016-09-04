@@ -1,0 +1,30 @@
+prog algoritmo357
+ int L,c ,t;
+string nomes[20];
+real sal[20];
+# trecho de entrada de 20 nomes
+  para( L<- 0; L <= 19 ; L++)
+  {
+    imprima "\ndigite ", L + 1, " nome: ";
+    leia nomes[ L ] ;
+    enquanto( strtam(nomes[L]) >30)
+    {imprima "\nNomes com ate 30 caracteres";
+    imprima "\n\nDigite ", L + 1, " nome: ";
+    leia nomes[ L ] ;
+    }
+    t<-30-strtam(nomes[L]);
+    para(c<-1; c <= t; c++)
+    {nomes[L]<-strconcat(nomes[L], " ");}
+
+    imprima "\ndigite salario com ponto: ";
+    leia sal[ L ] ;
+    sal[L] <-sal[L] * 1.08;
+  }
+# fim do trecho de entrada
+# trecho de sa­da
+   imprima "\nNOMES\t\t\t\t\t\n";
+  para( L<- 0; L <= 19 ; L++)
+   {  imprima "\n", L+1, "- ", nomes[ L],"\t",formatar(sal[L],2);   }
+# fim do trecho de sa­da
+ imprima "\n";
+ fimprog

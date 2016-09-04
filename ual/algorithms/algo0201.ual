@@ -1,0 +1,19 @@
+prog algoritmo201
+int ini, vf, soma, i;
+imprima "\ndigite valor inicial e valor final de um intervalo, pressionando enter apos digitar cada um: ";
+leia ini;
+leia vf;
+soma <-0;
+se( ini % 2 == 0)
+{ ini <- ini +  2; }
+senao
+{ ini <- ini +  1; }
+vf--;
+para( i <- ini ; i <= vf;  i <- i +  2)
+{
+    soma <- soma + i;
+    imprima i, "   ";
+}
+imprima "\nsoma = ", soma;
+imprima "\n";
+fimprog

@@ -1,0 +1,51 @@
+prog algoritmo120a
+real a, b, c, maior, intermediario, menor;
+imprima "\ndigite 1 numero: ";  
+leia a;
+imprima "\ndigite 2 numero: ";  
+leia b;
+imprima "\ndigite 3 numero: ";  
+leia c;
+se ( a > b)
+{ se  ( c > a)
+  {  maior <- c;
+      intermediario <- a ;
+      menor <- b;
+  }
+  senao
+  { se  ( c > b)
+    { maior <- a;
+      intermediario <- c;
+         menor <- b;
+      }
+    senao
+    {  maior <- a;
+         intermediario <- b;
+         menor <- c ;
+     } 
+  } 
+}
+senao
+{ se  ( c >b) 
+  {  maior <- c;
+      intermediario <- b;
+      menor <- a;
+    }
+  senao
+  { se  ( c > a) 
+    {  maior <- b;
+         intermediario <- c;
+         menor <- a;
+      }
+    senao
+    {   maior <- b;
+          intermediario <- a;
+          menor <-c;
+     }
+  }
+ }
+imprima "\nmaior: ", maior;
+imprima "\nintermediario: ",intermediario;
+imprima "\nmenor: ", menor;
+imprima "\n";
+fimprog

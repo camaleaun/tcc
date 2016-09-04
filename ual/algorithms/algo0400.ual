@@ -1,0 +1,187 @@
+prog algoritmo400
+int leitos[50], nd[50], i, k, chave, quarto, op;
+string sit[50], din[50], dout[50], nome[50], tel[50],resp, resp1,respo, nomep;
+real precos[50], despesas[50], valor, total;
+chave <- 0;
+faca
+{
+   imprima "\n\n\nHotel Fazenda Sucesso \n";
+   imprima "\n1. Cadastra quartos ";
+   imprima "\n2. Lista todos os quartos ";
+   imprima "\n3. Lista quartos desocupados ";
+   imprima "\n4. Aluguel / reserva quarto ";
+   imprima "\n5. Entra despesas extras ";
+   imprima "\n6. Calcula despesa do quarto ";
+   imprima "\n7. Sai";
+   imprima "\nOpcao: ";
+   leia op;
+   imprima "\n";
+   se(op==1)
+   { se( chave ==1)
+     { imprima "\nAtencao. Dados ja cadastrados"; }
+     senao
+     { para( i <- 0; i < 50; i++)
+       # use este trecho se vc desejar ver o funcionamento
+       { sit[i] <-"L"; nd[i] <- 0; despesas[i] <- 0.;
+         din[i] <-"XXXX"; dout[i] <-"XXXX"; nome[i] <- "";
+         tel[i] <- "";
+         precos[i] <- 30.; leitos[i] <-5;}
+
+         # o trecho abaixo e que seria o correto
+       /*{ imprima "\nquantidade de leitos para o quarto ", i + 1, ": ";
+         leia  leitos[i];
+         imprima "\npreco do quarto: ";
+         leia  precos[i];
+         sit[i] <-"L";
+         nd[i] <- 0;
+         despesas[i] <- 0.;
+         din[i] <-" XXXX";
+         dout[i] <-" XXXX";
+         nome[i] <- "";
+         tel[i] <- "";
+        } */
+
+         chave <- 1;
+      }
+   }
+   senao
+   { se(op==2)
+     { se( chave == 0)
+       { imprima "\nEscolha a opcao 1"; }
+       senao
+       { para( i <- 0; i < 50; i++)
+         { imprima "\nnumero do quarto: ", i +1, "\n";
+           imprima "\nsituacao quarto: ", sit[i];
+           se(sit[i]== "A" || sit[i] == "R")
+           { imprima "\nnome: ", nome[i]; imprima "\ntelefone: ", tel[i];}
+           imprima "\nquantidade de leitos: ", leitos[i];
+           imprima "\npreco do quarto: ", precos[i];
+           imprima "\ndespesas: ", despesas[i];
+           imprima "\ndata de entrada: ", din[i];
+           imprima "\ndata de saida: ", dout[i];
+           imprima "\nnumero de dias: ", nd[i];
+           imprima "\npressione enter para continuar: ";
+           leia  respo;
+          }
+        }
+      }
+      senao
+      { se(op==3)
+        { se( chave ==0)
+          { imprima "\nEscolha a opcao 1"; }
+          senao
+          { para( i <- 0; i < 50; i++)
+           { se( sit[i] == "A")
+            { imprima "\nnumero do quarto: ", i +1, "\n";
+              imprima "\ndespesas: ", despesas[i];
+              imprima "\ndata de entrada: ", din[i];
+              imprima "\ndata de saida: ", dout[i];
+              imprima "\nnumero de dias: ", nd[i];
+              imprima "\npressione enter para continuar: ";
+              leia  resp;
+             }
+            }
+           }
+         }
+         senao
+         { se(op==4)
+           { se( chave ==0)
+             { imprima "\nEscolha a opcao 1"; }
+             senao
+             { imprima "\nDigite A( aluguel)  R(reserva): ";
+               leia  resp;
+               enquanto( resp <> "A" && resp <> "a" && resp <> "R" && resp <> "r")
+               { imprima "\nResposta invalida. Digite ( aluguel)  R(reserva): ";
+                 leia  resp; }
+               se( resp == "A"  || resp == "a")
+               { imprima "\n Tinha reserva ( s /n)? ";leia  resp1;
+                 se( resp1 == "S"  || resp1 == "s")
+                 { imprima "\nEntre com  nome: "; leia  nomep;
+                   i <- 0;
+                   enquanto( nomep <> nome[i] && i < 49 )
+                   { i++;}
+                   se(nomep == nome[i] )
+                   { quarto <- i; sit[i] <- "A"; despesas [i] <- 0.;
+                     imprima "\ndata de entrada: ";leia din[quarto];
+                     imprima "\ndata de saida: "; leia dout[quarto];
+                     imprima "\nnumero de dias: ";leia  nd[quarto];
+                   }
+                   senao
+                   { imprima "\nReserva nao encontrada ";
+                     resp1  <- "N"; }
+                   }
+               }
+               se(resp1 == "N" || resp1 == "n" || resp=="r" || resp=="R")
+               { para( i <- 0; i < 50; i++)
+                 { se( sit[i] == "L")
+                   { imprima "\nnumero do quarto: ", i +1, "\n";
+                     imprima "\nquantidade de leitos: ", leitos[i];
+                     imprima "\npreco do quarto: ", precos[i];
+                     imprima "\npressione enter para continuar: ";
+                     leia  respo;
+                   }
+                }
+                imprima "\nDigite o numero do quarto para aluguel ou reserva: ";
+                leia  quarto;
+                enquanto( quarto < 1|| quarto > 50)
+                { imprima "\nQuarto Invalido. Entre novamente: ";
+                  leia  quarto; }
+                 enquanto(sit[quarto-1]  == "A")
+                { imprima "\nQuarto ocupado. Digite novamente: ";
+                  leia  quarto; }
+                  se( resp == "A"  || resp == "a")
+                 { sit[quarto-1] <- "A"; despesas [quarto -1] <- 0.;}
+                senao
+                { sit[ quarto -1]  <- "R"; }
+                imprima "\nDigite nome: "; leia nome[quarto -1];
+                imprima "\nDigite telefone para contato: "; leia tel[quarto-1];
+                imprima "\ndata de entrada: "; leia din[quarto -1];
+                imprima "\ndata de saida: ";  leia dout[quarto -1];
+                imprima "\nnumero de dias: ";leia  nd[quarto-1];
+               }
+              } }
+              senao
+              { se(op==5)
+                { se( chave ==0)
+                  { imprima "\nEscolha a opcao 1"; }
+                  senao
+                  {  imprima "\nentre com numero do quarto: ";
+                     leia  quarto;
+                     enquanto( quarto < 1|| quarto > 50)
+                     { imprima "\nentre com numero do quarto: ";
+                       leia  quarto; }
+                     imprima "\ndespesas: ";
+                     leia valor;
+                     despesas[quarto-1]  <- despesas[quarto-1]+ valor;
+                  }
+                }
+                senao
+                { se(op==6)
+                  { se( chave ==0)
+                    { imprima "\nEscolha a opcao 1"; }
+                  senao
+                  { imprima "\nentre com numero do quarto: ";
+                    leia  quarto;
+                    enquanto( quarto < 1|| quarto > 50)
+                    { imprima "\nentre com numero do quarto: ";
+                       leia  quarto; }
+                    total <- despesas[quarto-1] + precos[quarto-1];
+                    imprima "\ndespesas: R$  ", total;
+                    sit[quarto-1] <-"L";
+                    despesas[quarto-1] <- 0.;
+                    din[quarto-1] <- "XXXX";
+                    dout[quarto-1] <-"XXXX";
+                    nd[quarto-1] <- 0;
+                    nome[quarto-1] <-"";
+                 }
+               }
+               senao
+               { se(op==7)
+                 { imprima "\nSaindo ";}
+                 senao
+                 {imprima "\nOpcao nao disponivel";}
+} } } } } }
+}
+enquanto( op<>7)
+imprima "\n\n";
+fimprog

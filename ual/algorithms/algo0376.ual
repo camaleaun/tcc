@@ -1,0 +1,21 @@
+prog algoritmo376
+int L ;
+real a[10], b[10];
+#vetor com 10 elementos
+para( L<- 0;L <= 9 ; L++)
+{
+    imprima "\ndigite numero com ponto:";
+    leia a[L ];
+    se(L   % 2 == 0)
+    { b[L ] <- a[L ] / 2; }
+     senao
+     { b[L ] <- a[L ] * 3; }
+ }
+imprima "\n\n Vetores\n";
+para( L<- 0;L <= 9; L++)
+{    imprima a [L ], "  " ;  }
+imprima "\n";
+para( L<- 0;L <= 9; L++)
+{    imprima b [L ], "  " ;  }
+imprima "\n";
+fimprog

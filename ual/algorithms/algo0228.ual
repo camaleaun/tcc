@@ -1,0 +1,31 @@
+prog algoritmo228
+ int c,c1,tam,meio, L,p1, p2,t1;
+ string nome, n1, n2,n;
+ imprima "\ndigite nome: ";
+ leia nome;
+ L <- strtam(nome);
+ se( L % 2 <> 0 )
+ { meio <-L div 2 ;
+   tam <-meio;
+   p1 <-meio;
+   p2 <-meio;
+   n  <-strelem(nome,p1);
+   para(c1 <-1; c1<=meio; c1++)
+      {imprima " "; } meio<-meio-1;
+   imprima n, "\n";
+   para( c <- 1; c <= tam ; c++)
+   {   para(c1 <-1; c1<=meio; c1++)
+       {imprima " "; } meio<-meio-1;
+      p1 <- p1 - 1;
+      p2 <- p2 + 1;
+      n1 <- strelem(nome,p1);
+      n2 <- strelem(nome,p2);
+      n  <- strconcat(n1,n);
+      n  <- strconcat(n,n2);
+      imprima n,"\n";
+   }
+ }
+senao
+{  imprima "\nNAO FACO "; }
+imprima "\n";
+fimprog

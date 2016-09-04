@@ -1,0 +1,31 @@
+prog algoritmo124
+real a, b, c, maior, lados;
+imprima "\ndigite 1 lado: ";  
+leia a;
+imprima "\ndigite 2 lado: ";  
+leia b;
+imprima "\ndigite 3 lado: ";  
+leia c;
+se ( a < b + c &&  b < a + c &&   c < a + b )
+{
+     se ( a > b  &&    a > c )
+    {   maior <- a ** 2;   lados  <- b ** 2 + c ** 2;   }
+    senao
+    { se  ( b > c) 
+      {    maior <- b ** 2;     lados  <- a ** 2 + c ** 2;     }
+      senao
+      {    maior <- c ** 2;      lados  <- a **2 + b ** 2 ;    } 
+     }
+    se ( maior == lados )
+    {   imprima "\nTriangulo Retangulo";  }
+    senao
+    {  se ( maior > lados )
+      {   imprima "\nTriangulo Obtusangulo";   }
+      senao
+      {  imprima "\nTriangulo Acutangulo";   }
+    }
+}
+senao
+{   imprima "\nas medidas n∆o formam  um  triangulo"; }
+imprima "\n";
+fimprog

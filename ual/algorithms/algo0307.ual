@@ -1,0 +1,39 @@
+prog  algoritmo307
+int idade, cont;
+real peso, pesom, alt, altm, soma;
+string nome, sexo, nomem, nomep;
+altm <- 0.;
+pesom <- 0.;
+soma <- 0.;
+cont <- 0;
+nomem<-"";
+nomep <-"";
+imprima "\ndigite o nome do atleta ou @ para terminar: ";
+leia nome;
+enquanto(nome <> "@")
+{  cont++;
+   imprima "\ndigite sexo (M / F): ";
+   leia sexo;
+   imprima "\ndigite idade: ";
+   leia idade;
+   imprima "\ndigite peso com ponto: ";
+   leia peso;
+   imprima "\ndigite altura com ponto: ";
+   leia alt;
+   soma <- soma + idade;
+   se(sexo == "M" || sexo == "m" )
+    {  se(alt > altm)
+      { altm <-  alt; nomem <- nome;}
+    }
+    senao
+    {   se(peso> pesom)
+        { pesom <-   peso; nomep <- nome;}
+    }
+   imprima "\ndigite o nome do atleta ou @ para terminar: ";
+   leia nome;
+}
+imprima "\nnome do atleta do sexo masculino mais alto: ", nomem;
+imprima "\nnome da atleta do sexo feminino mais pesada: ", nomep;
+imprima "\nmedia das idades dos atletas: ", soma / cont;
+imprima "\n";
+fimprog

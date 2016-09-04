@@ -1,0 +1,11 @@
+prog algoritmo45
+ real num, quad, raizquad;
+ imprima "\ndigite numero com ponto: ";  
+ leia num;
+ quad <-num ** 2;
+ raizquad <- raiz(num);
+ imprima "\nnumero: ", num;
+ imprima "\nquadrado: ", quad;
+ imprima "\nraiz quadrada: ", raizquad;
+ imprima "\n";
+fimprog

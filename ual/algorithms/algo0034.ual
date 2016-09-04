@@ -1,0 +1,9 @@
+prog algoritmo34
+ int numero, suc, ant;
+ imprima "\n entre com um numero: ";  
+ leia numero;
+ ant <- numero -1;
+ suc <- numero +1;
+ imprima "\no sucessor e ", suc," e  o antecessor e ", ant;
+ imprima "\n";
+fimprog  

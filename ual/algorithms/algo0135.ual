@@ -1,0 +1,15 @@
+prog algoritmo135
+ int idade;
+ imprima "\ndigite idade: ";
+ leia idade;
+ se ( idade < 16 )
+ {  imprima "\nNao eleitor"; }
+ senao
+ {
+   se (idade > 65  ||  idade <  18)
+   { imprima "\nEleitor facultativo"; }
+   senao
+   { imprima "\nEleitor obrigatorio"; }
+ }
+imprima "\n";
+fimprog

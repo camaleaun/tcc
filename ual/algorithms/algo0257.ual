@@ -1,0 +1,31 @@
+prog algoritmo257
+int L, C, Y, Z,FAT, FAT1, S;
+real  SOMA;
+imprima "\ndigite o numero de termos: ";
+leia Y;
+SOMA <- 0.;
+C <- 0;
+S <- 1;
+para( L <- Y; L >= 0; L--)
+{
+   FAT <- 1;
+   para( Z <- 1; Z <=L; Z++)
+   { FAT <- FAT * Z; }
+   FAT1 <- 1;
+   para( Z <- 1; Z <=C; Z++)
+   { FAT1 <- FAT1 * Z; }
+      se( S == 1)
+      { imprima L, "! /", C ^ 2,"!  - ";
+       SOMA <- SOMA + FAT /(FAT1 ^2);
+       S <- 0;
+      }
+      senao
+      { imprima L,"! /", C ^  2,"!  + ";
+        SOMA <- SOMA - FAT / (FAT1 ^ 2);
+        S  <-  1;
+    }
+    C  <-  C + 2;
+}
+imprima "\nSOMA: ",SOMA;
+imprima "\n";
+fimprog

@@ -1,0 +1,22 @@
+prog algoritmo355
+ int L , cont, num[8];
+cont <- 0;
+# trecho de entrada
+  para( L<- 0; L <= 7 ; L++)
+  {
+    imprima "\ndigite ", L + 1, " numero: ";
+    leia num[ L ] ;
+    se(num[L] %6==0)
+     { cont++;}
+  }
+# fim do trecho de entrada
+# trecho de saida
+   imprima "\nRELACAO DAS NUMEROS\n";
+   para( L<- 0; L <= 7 ; L++)
+   {
+     imprima "\n", L+1, "- ", num[L];
+   }
+# fim do trecho de saida
+imprima "\n Total de multiplos de 6: ",cont;
+ imprima "\n";
+ fimprog

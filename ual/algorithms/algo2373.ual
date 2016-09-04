@@ -1,0 +1,13 @@
+prog algoritmo237sol3
+intc, num, sinal;
+real h;
+h <- 0. ; 
+sinal <- 1;
+imprima "\ndigite numero: ";
+leia num;
+imprima "\nTerceira Solucao ";
+para( c<- 1; c  <= num; c++)
+{   h <- h + sinal * 1/c; sinal <- sinal * (-1); }
+imprima "\n\nsoma: ", h ;
+imprima "\n";
+fimprog

@@ -1,0 +1,26 @@
+prog  algoritmo143
+string pal, p1, p2, p3;
+int n1, n2;
+imprima "\ndigite uma palavra: ";
+leia pal;
+se(strtam(pal) % 2 == 0)
+{ n1<-strtam(pal) div 2;
+   n2<- n1-1;
+   p1<-strelem(pal,n1);
+   p2<-strelem(pal,n2);
+   p3<-strconcat(p2,p1);
+   se( p3  ==  "rr" || p3  ==  "ss" )
+   {imprima "\nE rr OU ss";}
+   senao
+   {imprima "\nNAO E rr OU ss";}
+}
+senao
+{ n1<-strtam(pal) div 2;
+   p1<-strelem(pal,n1);
+   se( p1 == "a" || p1 == "e"|| p1 == "i" || p1 == "o" || p1 == "u")
+   {imprima "\nE VOGAL";}
+   senao
+   {imprima "\nNAO E VOGAL";}
+}
+imprima "\n";
+fimprog

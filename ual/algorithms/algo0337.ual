@@ -1,0 +1,37 @@
+prog algoritmo337
+int reg, meses;
+real imposto, multa;
+imprima "\ndigite numero do registro do imovel ou 0 para terminar: ";
+leia reg;
+enquanto(reg > 0)
+{ imprima "\nvalor do imposto a ser pago com ponto: ";
+  leia imposto;
+  imprima "\nnumero de meses em atraso: ";
+  leia meses;
+  se( imposto <= 500.00)
+  { multa <- imposto * 0.01 * meses;}
+  senao
+  { se( imposto <= 1800.00)
+    { multa <- imposto * 0.02 * meses;}
+    senao
+    { se( imposto <= 5000.00)
+      { multa <- imposto * 0.04 * meses;}
+      senao
+      { se( imposto <= 12000.00)
+        { multa <- imposto * 0.07 * meses;}
+        senao
+        { multa <- imposto * 0.1 * meses;}
+      }
+     }
+   }
+   imprima "\nnumero do registro: ", reg;
+   imprima "\nvalor do imposto: R$ ", formatar(imposto,2);
+   imprima "\nnumero de meses em atraso: ", meses;
+   imprima "\nvalor da multa: R$ ", formatar(multa,2);
+   imprima "\nvalor total: R$ ", formatar(imposto + multa,2);
+   imprima "\n\n";
+   imprima "\ndigite numero do registro do imovel ou 0 para terminar: ";
+   leia reg;
+}
+imprima "\n";
+fimprog

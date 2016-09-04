@@ -1,0 +1,54 @@
+prog algoritmo138
+ int  num;
+ imprima "\ndigite um numero de 1 - 12: ";
+ leia  num ;
+ se (num==1)
+ { imprima "\njaneiro"; }
+ senao
+ {  se (num==2)
+    {  imprima "\nfevereiro";  }
+    senao
+    { se (num==3)
+      {  imprima "\nmarco";  }
+     senao
+     { se (num==4)
+      { imprima "\nabril"; }
+      senao
+      { se (num==5)
+        { imprima "\nmaio"; }
+        senao
+        { se (num==6)
+          { imprima "\njunho"; }
+          senao
+          { se (num==7)
+            {  imprima "\njulho";  }
+            senao
+            { se (num==8)
+             { imprima "\nagosto"; }
+             senao
+             { se (num==9)
+               { imprima "\nsetembro"; }
+               senao
+               { se (num==10)
+                 { imprima "\noutubro"; }
+                 senao
+                 {  se (num==11)
+                   {  imprima "\nnovembro"; }
+                   senao
+                   { se (num==12)
+                     { imprima "\ndezembro";  }
+                     senao
+                     {  imprima "\nnao existe mes correspondente a este numero"; }
+                    }
+                  }
+                }
+              }
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+ imprima "\n";
+fimprog

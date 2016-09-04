@@ -1,0 +1,11 @@
+prog algoritmo168
+int L,c,t;
+imprima "\nDIAGONAL PRINCIPAL\n";
+para(L<-1;L<=10;L++)
+{
+  imprima L, "-",L,"\n";
+  para(t<-1;t<=L;t++)
+   {  imprima "\t";  }
+}
+imprima "\n";
+fimprog

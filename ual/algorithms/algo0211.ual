@@ -1,0 +1,13 @@
+prog algoritmo211
+int num , aux;
+para( num <- 11; num <= 99; num++)
+{
+  se(num % 10 <>  0 )
+  {
+    aux <- num div 10;
+    se( num % aux == 0)
+    {  imprima num, "   ";  }
+  }
+}
+imprima "\n";
+fimprog

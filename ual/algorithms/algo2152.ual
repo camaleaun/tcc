@@ -1,0 +1,14 @@
+prog algoritmo2152
+/*melhor solucao porque nao ficar  procurando divisores depois da metade*/
+int c, num, vf;
+imprima "\ndigite numero: ";
+leia num;
+vf <- num  div 2;
+para( c <- 1; c <= vf; c++)
+{
+   se( num  % c == 0 )
+  {   imprima c,"  " ;  }
+}
+imprima  num;
+imprima "\n";
+fimprog

@@ -1,0 +1,17 @@
+prog algoritmo350
+int L, c;
+string nomes[5], aux;
+para( L<- 0; L <= 4 ; L++)
+{  imprima "\nnome: " ;  leia nomes[L] ;}
+para( L<- 0; L <= 3 ; L++)
+{   para( c<- L + 1; c <= 4 ; c++)
+    {  se(  nomes[L] > nomes[c] )
+        {  aux <- nomes[L];
+            nomes[L] <- nomes[c ];
+            nomes[c] <- aux;   }
+     }  }
+imprima "\n\n " ;
+para( L<- 0; L <= 4 ; L++)
+ {   imprima "\n", L +1, " - ", nomes[L] ;}
+imprima "\n";
+fimprog

@@ -1,0 +1,31 @@
+prog algoritmo298
+int nt, a, x, na, contap, total;
+real nota, sn;
+a <- 1;
+contap <- 0;
+total <- 0;
+imprima "Digite o numero de turmas :";
+leia nt;
+enquanto(a<=nt)
+{
+   sn <-0.;
+   imprima "\n\nDigite o numero de alunos da turma ", a, ": ";
+   leia na;
+  total <- total + na;
+   x <- 1;
+   enquanto(x <= na)
+   {
+      imprima "\nDigite a nota do aluno com ponto: ", x, ": ";
+      leia nota;
+      se(nota >=7.0)
+      { contap++;   }
+      sn <- sn + nota;
+      x++;
+    }
+    imprima "\nMedia da turma ", a, ": ", sn/na;
+    a++;
+}
+imprima "\n\nForam aprovados ", contap, " alunos.";
+imprima "\n\nPercentual de alunos reprovados  ", formatar( (total-contap)* 100/total,2), "%";
+imprima "\n";
+fimprog

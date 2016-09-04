@@ -1,0 +1,12 @@
+prog algoritmo68
+ real  a, b, aux;
+ imprima "\ndigite 1 numero com ponto: "; 
+ leia a;
+ imprima "\ndigite 2 numero com ponto: ";
+ leia b;
+ aux <- a;
+ a <- b;
+ b <-aux;
+ imprima "\na = ", a, "\nb = ", b;
+ imprima "\n";
+fimprog   

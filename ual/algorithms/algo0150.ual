@@ -1,0 +1,11 @@
+prog algoritmo150
+real  ang, rang;
+imprima "\ndigite angulo em graus: ";  
+leia ang;
+rang <-  ang * pi / 180 ;
+se ( ( rang > pi / 2  &&  rang <= pi) || ( rang >3 * pi / 2  &&  rang <= 2 * pi)  ) 
+{  imprima "\nseno: ", sen(rang); }
+senao
+{  imprima "\nco-seno: ", cos(rang);}
+imprima "\n";
+fimprog

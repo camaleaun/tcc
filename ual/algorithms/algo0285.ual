@@ -1,0 +1,20 @@
+prog algoritmo285
+int dividendo, divisor, aux, resto;
+imprima "\ndigite dividendo: " ;
+leia dividendo;
+imprima "\ndigite divisor: " ;
+leia divisor;
+se(dividendo < divisor)
+{
+ aux  <- dividendo;
+ dividendo <-  divisor;
+ divisor <-  aux;
+ }
+resto  <- dividendo - divisor;
+enquanto( resto > divisor)
+{  dividendo <- resto;
+   resto  <- dividendo - divisor;
+}
+imprima "\nResto: ", resto;
+imprima "\n";
+fimprog

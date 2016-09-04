@@ -1,0 +1,29 @@
+prog algoritmo379
+real num[100],soma, media;
+int cm,cmm, c30, L;
+soma <-0.;
+c30 <-0;
+para(L <-0;L<=99;L++)
+{
+  imprima "\ndigite numero com ponto: ";
+  leia num[L];
+  soma <-soma +num[L];
+  se(num[L]==30.)
+  {c30++;}
+}
+media <-soma/100;
+cm <-0;
+cmm <-0;
+para(L <-0;L<=99;L++)
+{
+  se(num[L] > media)
+  {cmm++;}
+  senao
+  {se(num[L]==media)
+  {cm++;}}
+}
+imprima "\nTotal iguais a 30: ",c30;
+imprima "\nTotal iguais a media: ",cm;
+imprima "\nTotal maiores que a media: ",cmm;
+imprima "\n";
+fimprog

@@ -1,0 +1,26 @@
+prog algoritmo365
+string num[20], valor[20], destino[20], data[20], resp;
+int nc, k;
+imprima "\nnumero de cheques do talonario: ";
+leia nc;
+para( k <- 0; k <  nc; k++)
+{   imprima "\nnumero do cheque: ";
+    leia num[k];
+    imprima "\nvalor do cheque com ponto: ";
+    leia valor[k];
+    imprima "\ndata do cheque ddmmaa: ";
+    leia data[k];
+    imprima "\ndestino do cheque: ";
+    leia destino[k];
+}
+imprima "\nRELACAO dos CHEQUES\n";
+para( k <-0; k < nc; k++)
+{  imprima "\nNumero do cheque: ", num[k];
+   imprima "\nValor do cheque: ", valor[k];
+   imprima "\nData do cheque: ", data[k];
+   imprima "\nDestino do cheque: ", num[k];
+   imprima "\n\nPressione enter para ver outro cheque: ";
+   leia resp; # necessario pois a tela so tem 25 linhas
+}
+imprima "\n";
+fimprog

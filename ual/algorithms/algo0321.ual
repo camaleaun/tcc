@@ -1,0 +1,26 @@
+prog algoritmo321
+real  percfalta;
+string turma;
+int soma, nalunos, naula, nfaltas, aluno, i;
+soma <- 0;
+imprima "\ndigite turma ou * para acabar: ";
+leia  turma;
+enquanto(turma <> "*")
+{ imprima "\ndigite numero de alunos: ";
+  leia nalunos ;
+  imprima "\ndigite numero de aulas dadas: ";
+  leia naula ;
+  para( i <- 1; i <= nalunos; i++)
+  {  imprima "\n\ndigite numero de faltas do ", i," aluno: ";
+     leia nfaltas;
+     percfalta <- 100 * nfaltas / naula;
+     se(percfalta >= 25.)
+     { soma ++; }
+     imprima "\nPercentual de faltas: ", formatar(percfalta,2), "%";
+  }
+  imprima "\ndigite turma ou * para acabar: ";
+  leia  turma;
+}
+imprima "\ntotal de alunos reprovados por falta: ",soma;
+imprima "\n";
+fimprog

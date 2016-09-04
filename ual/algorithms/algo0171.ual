@@ -1,0 +1,11 @@
+prog algoritmo171
+int L,c,t;
+imprima "\nDIAGONAL SECUNDARIA\n";
+para(L<-1;L<=10;L++)
+{
+  para(t<-10 - L;t >=1;t--)
+  {  imprima "\t";  }
+   imprima L, "-",11-L,"\n";
+ }
+imprima "\n";
+fimprog

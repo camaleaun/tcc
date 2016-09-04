@@ -1,0 +1,8 @@
+prog algoritmo258
+real num;
+enquanto( num  > 0.)
+{ imprima "\ndigite numero com ponto: "; leia num;
+ imprima "\ndobro do numero: ", num * 2;
+}
+imprima "\n";
+fimprog

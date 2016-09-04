@@ -1,0 +1,60 @@
+prog algoritmo398
+int k,codi,cod[50],quant[50],codigo,t,i,quantidade,aux;
+real preco[50], venda, geral, auxp;
+k<-0;
+geral <- 0.;
+imprima "\nDigite o codigo do produto ou 0 para acabar: ";
+leia codi;
+enquanto(k <50 && codi <> 0)
+{ cod[k] <- codi;
+  imprima "\nDigite a quantidade do produto: ";
+  leia quant[k];
+  imprima "\nDigite o preco do produto com ponto: ";
+  leia preco[k];
+  k++;
+  imprima "\nDigite o codigo do produto ou 0 para acabar: ";
+  leia codi;
+}
+imprima "\n\n - Venda de produtos - \n";
+imprima "\nDigite o codigo do produto ou 0 para terminar: ";
+leia codigo;
+enquanto(codigo <> 0)
+{  i <- 0;
+   enquanto(codigo <> cod[i] && i < k-1)
+   { i++; }
+   se(codigo == cod[i])
+   { imprima "\nDigite a quantidade desejada: ";
+     leia quantidade;
+     se(quantidade > quant[i])
+     {imprima "\nEstoque insuficiente\n"; }
+     senao
+     { quant[i] <- quant[i] - quantidade;
+       venda <- quantidade * preco[i];
+       geral <- geral + venda;
+       imprima "\nPreco da venda: ",venda,"\n";}
+   }
+  senao
+  { imprima " Produto nao cadastrado. \n";}
+   imprima "\nDigite o codigo do produto ou 0 para terminar: ";
+   leia codigo;
+}
+  para( t <-0; t <= k-2; t++)
+  {
+    para(i <- t +1 ;i <= k - 1; i++)
+   { se(quant[t] < quant[i])
+    {  aux <- quant[t];  quant[t] <- quant[i]; quant[i] <- aux;
+       aux <- cod[t];  cod[t] <- cod[i];  cod[i] <- aux;
+       auxp <- preco[t];  preco[t] <- preco[i];  preco[i] <- auxp;
+     }
+   }
+  }
+imprima "\n\nRelacao\n";
+para(i <- 0; i < k; i++)
+{imprima "\ncodigo: ", cod[i];
+  imprima "\nquantidade: ", quant[i];
+  imprima "\npreco: ",  preco[i];
+  imprima "\n";
+}
+imprima "\nTotal de vendas: R$ ", geral;
+imprima "\n";
+fimprog

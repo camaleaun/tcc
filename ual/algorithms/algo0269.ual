@@ -1,0 +1,11 @@
+prog algoritmo269
+int num;
+faca
+{
+   imprima "\ndigite numero ou multiplo de 6 para acabar: ";
+   leia num;
+   imprima  "quadrado: ", num ^2;
+}
+enquanto( num % 6 <> 0 )
+imprima "\n";
+fimprog

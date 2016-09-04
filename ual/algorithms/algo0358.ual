@@ -1,0 +1,27 @@
+prog algoritmo358
+real precocompra[100],precovenda[100],lucro;
+int totlucromenor10,totlucromenor20,totlucromaior20, A;
+totlucromenor10 <-  0;
+totlucromenor20 <-  0;
+totlucromaior20 <-  0;
+para(A <- 0; A < 100; A++)
+ { imprima "\nPreco de compra: ";  leia precocompra [A];
+   imprima "\nPreco de venda: ";  leia precovenda [A];
+ }
+para(A<-0;A < 100;A++)
+ {
+  lucro <- precovenda[A] - precocompra[A] ;
+  se(lucro<10.0)
+  {totlucromenor10++;  }
+  senao
+  {  se(lucro <= 20.0)
+      {  totlucromenor20++;  }
+     senao
+     { totlucromaior20++;  }
+  }
+ }
+imprima "\ntotal de mercadorias com lucro < 10%: ",totlucromenor10;
+imprima "\ntotal de mercadorias com 10% <= lucro <= 20%: ",totlucromenor20;
+imprima "\ntotal de mercadorias com lucro > 20%: ",totlucromaior20;
+imprima "\n";
+fimprog

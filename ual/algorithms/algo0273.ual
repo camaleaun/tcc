@@ -1,0 +1,47 @@
+prog algoritmo273
+int c12, codigo;
+real  qtde, total, total12;
+c12  <-  0;
+total  <-  0.;
+total12  <-  0.;
+imprima "\ndigite codigo(1-res 2-com 3-ind) ou 0 para sair: ";
+leia codigo;
+enquanto( codigo <> 0)
+{
+  imprima "digite quantidade em KWH com ponto: ";
+  leia qtde;
+  total  <-  total + qtde;
+  se(codigo ==1)
+  {
+    imprima  "\ncusto: ",qtde * 0.3;
+    c12  <-   c12 + 1;
+    total12  <-  total12 + qtde;
+  }
+  senao
+  {
+   se(codigo == 2)
+   {
+     imprima  "\ncusto: ",qtde * 0.5;
+     c12  <- c12 + 1;
+     total12  <- total12 + qtde;
+    }
+    senao
+    {
+      se(codigo == 3)
+      {
+       imprima  "\ncusto: ",qtde * 0.70;
+      }
+    }
+ }
+imprima "\ndigite codigo(1-res 2-com 3-ind) ou 0 para sair: ";
+leia codigo;
+}
+imprima  "\ntotal consumido em 1-2-3: ", total ;
+se(c12<>0)
+{
+ imprima  "\nmdia 1-2: ", total12 / c12 ;
+}
+senao
+{ imprima "\nNenhum consumidor na faixa 1-2";}
+imprima "\n";
+fimprog

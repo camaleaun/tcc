@@ -1,0 +1,26 @@
+prog algoritmo134
+int idade;
+imprima "\nentre com a idade: ";
+leia idade;
+se( idade < 5 )
+{ imprima "\nnao existe categoria para essa idade" ;}
+senao
+{ se( idade <= 7 )
+   { imprima "\ncategoria Infantil A" ;}
+   senao
+   { se( idade <= 10 )
+     { imprima "\ncategoria Infantil B";}
+     senao
+     { se( idade <= 13 )
+       { imprima "\ncategoria Juvenil A"; }
+       senao
+       { se( idade <= 17 )
+         { imprima "\ncategoria Juvenil B";}
+        senao
+        { imprima "\ncategoria Senior";}
+       }
+     }
+   }
+}
+imprima "\n";
+fimprog

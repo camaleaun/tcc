@@ -1,0 +1,8 @@
+prog algoritmo195
+int soma, i;
+soma <-0;
+para( i <- 26; i <= 198;  i <- i + 2)
+{   soma <-soma + i;}
+imprima "Soma 26-198: ",soma;
+imprima "\n";
+fimprog

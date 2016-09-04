@@ -1,0 +1,43 @@
+prog algoritmo243
+ int L,ca,ce,ci,co,cu;
+ string msg,letra;
+ ca <-0;
+ ce<-0;
+ ci <-0;
+ co<-0;
+ cu<-0;
+ imprima "\nDigite uma mensagem: ";
+ leia msg;
+ para( L <- 0; L <strtam(msg); L++)
+ {
+   letra<-strelem(msg,L);
+   se(letra=="a" || letra =="A")
+   {ca++;}
+   senao
+   {
+     se(letra=="e" || letra =="E")
+     {ce++;}
+     senao
+     {
+       se(letra=="i" || letra =="I")
+       {ci++;}
+       senao
+       {
+         se(letra=="o" || letra =="O")
+         {co++;}
+         senao
+         {
+           se(letra=="u" || letra =="U")
+           {cu++;}
+         }
+        }
+       }
+      }
+   }
+imprima "\n Total de letras A: ", ca;
+imprima "\n Total de letras E: ", ce;
+imprima "\n Total de letras I: ", ci;
+imprima "\n Total de letras O: ", co;
+imprima "\n Total de letras U: ", cu;
+imprima "\n";
+fimprog

@@ -1,0 +1,90 @@
+prog algoritmo397
+int L, flag, flag1, op, ped,n ;
+string resp, nome[10], tel[10];
+real preco[8], soma,valor, pedido[10];
+para( L<- 0; L < 10 ; L++)
+{ pedido[L] <- 0.;}
+flag <-0;
+flag1 <-0;
+faca
+{
+ imprima "\n\n\n";
+ imprima "\n Atelier Maravilha \n";
+ imprima "\n1 - Cadastar as freguesas ";
+ imprima "\n2 - Cadastrar precos das costuras ";
+ imprima "\n3-  Calcular e imprimir o total que ser  pago por cada freguesa ";
+ imprima "\n4-  Lista dados de uma cliente ";
+ imprima "\n5 - Sai do programa ";
+ imprima "\nOPCAO:";
+ leia op;
+ se( op == 1)
+ { flag<-1;
+   para( L<- 0; L < 10 ; L++)
+  { imprima "\n nome " , L + 1, ": ";  leia nome[L] ;
+   imprima "\n telefone " , L + 1, ": "; leia tel[L] ;
+  }
+ }
+ senao
+ { se(op == 2)
+   {imprima "\n1 Ves-s 2 Ves-p 3 Ves-L  4 Conjunto 5 Blaizer 6 Saia 7 Calca 8 blusa";
+     para( L<- 0; L < 8; L++)
+     { imprima "\n preco do  ", L + 1, ": "; leia preco[L];}
+     flag1 <-1 ;
+   }
+   senao
+   {se(op == 3)
+    { se(flag1 == 0)
+      {imprima "\n Nao tem precos cadastrados";}
+      senao
+      {soma  <- 0.;
+       imprima "\n1 Ves-s 2 Ves-p 3 Ves-L  4 Conjunto 5 Blaizer 6 Saia 7 Calca 8 blusa 0 para acabar";
+       leia  ped;
+       enquanto( ped <> 0)
+       { enquanto(  ped < 1 ||  ped >8)
+         {imprima "\n1 Ves-s 2 Ves-p 3 Ves-L 4 Conjunto 5 Blaizer 6 Saia 7 Calca 8 blusa r";
+          leia  ped; }
+         soma  <-  soma + preco[ped -1];
+         imprima "\n1 Ves-s 2 Ves-p 3 Ves-L  4 Conjunto 5 Blaizer 6 Saia 7 Calca 8 blusa 0 para acabar";
+         leia  ped; }
+       imprima "\nTotal: ", soma;
+       imprima  "\n Cliente cadastrada(S/N)? "; leia resp;
+       se( resp == "S" || resp =="s")
+       { para( L<-0; L < 10 ; L++)
+         { imprima "\n " , L + 1, ": ",nome[L] ; }
+         imprima  "\n Numero da cliente: "; leia n;
+         enquanto(  n< 1 ||  n>10)
+         { imprima "\nNumero de 1 - 10: "; leia  n; }
+         pedido[n-1] <- soma;
+       }
+      }
+    }
+    senao
+     { se(op==4)
+       {
+        para( L<-0; L < 10 ; L++)
+        { imprima "\n " , L + 1, ": ",nome[L] ; }
+        imprima  "\n Numero da cliente: ";
+        leia n;
+        enquanto(  n< 1 ||  n>10)
+        {imprima "\nNumero de 1 - 10: "; leia  n; }
+        imprima "\nSaldo R$: ", pedido[n -1];
+        imprima  "\n Fazer pagamento(S / N)? ";
+        leia resp;
+        se( resp == "S" || resp =="s")
+        {imprima  "\n Valor do pagamento: ";
+         leia valor;
+         pedido[n-1] <- pedido[n-1]- valor; }
+       }
+       senao
+       { se(op==5)
+         {imprima "\nSaindo do algoritmo"; }
+         senao
+         {imprima "\nOpcao nao disponivel"; }
+       }
+     }
+    }
+  }
+ }
+enquanto(op<>5)
+imprima "\n";
+fimprog

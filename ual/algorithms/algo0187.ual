@@ -1,0 +1,19 @@
+prog algoritmo187
+int base, expo, pot, i;
+imprima "\nDigite a  base inteira e maior do que 1: ";
+leia base;
+imprima "\nDigite expoente inteiro maior que 1: ";
+leia expo;
+se( base  >= 2 && expo > 1)
+{
+   pot <- 1;
+   para( i <- 1; i <= expo; i++)
+   {
+       pot <- pot * base;
+   }
+   imprima "\npotencia: ", pot;
+}
+senao
+{ imprima "\nNao satisfazem";}
+imprima "\n";
+fimprog

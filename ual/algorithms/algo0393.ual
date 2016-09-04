@@ -1,0 +1,46 @@
+prog algoritmo393
+string nomes[40];
+int op, x, y, cadastrou,estoque[40];
+real auxhoras, auxiliar,preco[40], soma;
+cadastrou <- 0;
+faca
+{
+   imprima "\n1 - Cadastra mercadorias";
+   imprima "\n2 - Exibe valor total em mercadorias da empresa";
+   imprima "\n3 - Sai";
+   imprima "\nDigite sua opcao:";
+   leia op;
+  se(op == 1)
+  { para( x <- 0; x <= 39; x++)
+    { imprima "\ndigite nome da mercadoria: ";
+      leia nomes[x];
+      imprima "\ndigite quantidade em estoque: ";
+      leia estoque[x];
+      imprima "\ndigite preco da mercadoria com ponto: ";
+      leia preco[x];
+   }
+   cadastrou <- 1;
+}
+senao
+{ se(op == 2)
+  { se(cadastrou == 0)
+    {  imprima "\nNao ha  dados cadastrados, escolha opcao 1";}
+    senao
+    { soma <- 0.;
+      para( x <- 0; x <= 39; x++)
+      {  soma <- soma + estoque[x] * preco[x]; }
+        imprima "\nvalor total em estoque = ",soma;
+     }
+   }
+   senao
+   { se(op == 3)
+     { imprima "\nEncerrar algoritmo";}
+     senao
+     { imprima "\nOpcao invalida";}
+    }
+  }
+  imprima "\n\n";
+}
+enquanto(op <> 3)
+imprima "\n";
+fimprog

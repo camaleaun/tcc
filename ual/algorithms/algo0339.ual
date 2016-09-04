@@ -1,0 +1,36 @@
+prog algoritmo339
+int num,p1,p2,c,c1, c2;
+imprima "\ndigite um numero maior do que 0 e par: ";
+leia num;
+enquanto( num % 2==0 && num > 2)
+{   p1<-2;p2<-2;
+    enquanto(p1<=num-p2)
+    { c1<-0; c<-2; 
+      enquanto( c1 == 0 && c <= p1 div 2 )
+       { se( p1 % c ==0)
+         { c1<-1; }
+         c++;
+       }
+       se(c1==0)
+       {  p2<-2;
+          enquanto(p2<=num-p1)
+          {
+             c2<-0; c<-2;
+             enquanto( c2 == 0 && c <= p2 div 2 )
+             { se( p2 % c ==0)
+               { c2<-1; }
+               c++;
+              }
+              se(c2==0  && p1+p2 == num)
+              {  imprima "\n", p1, " + ", p2," = ", p1 + p2;}
+             p2++;
+         }
+      }
+      p1++;
+      p2<-2;
+   }
+   imprima "\ndigite um numero maior do que 0 e par: ";
+   leia num;
+}
+imprima "\n";
+fimprog

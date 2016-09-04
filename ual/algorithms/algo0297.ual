@@ -1,0 +1,25 @@
+prog algoritmo297
+int contac, ndias, tot, totc;
+string nome;
+tot <-0;
+totc <-0;
+imprima "Digite o numero da conta do cliente ou zero para sair: ";
+leia contac;
+enquanto(contac<>0)
+ {
+     imprima "\nDigite o nome do cliente:";
+     leia nome;
+     imprima "\nQuantos dias vai ser a estadia dele ?";
+     leia ndias;
+     se(ndias < 10)
+     { totc <-(ndias*30) + (ndias*15); }
+     senao
+     { totc <-(ndias*30) + (ndias*8);  }
+     tot <-tot +totc;
+     imprima "\nCliente :", nome, "\nConta numero :", contac, "\nSaldo final : R$ ",totc;
+     imprima "\n\nDigite o numero da conta do cliente ou zero para sair: ";
+     leia contac;
+ }
+imprima "\nO total arrecadado pela pousada foi de : R$ ", tot;
+imprima "\n";
+fimprog

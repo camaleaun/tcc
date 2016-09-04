@@ -1,0 +1,25 @@
+prog algoritmo386
+int L ;
+string nome, nomes [30], end[30], tel[30];
+para( L<- 0; L <= 29 ; L++)
+{
+   imprima "\n nome ", L+1, ": " ;   leia nomes[L] ;
+   imprima "\n endereco: " ;   leia end[L] ;
+   imprima "\n telefone: " ;   leia tel[L] ;
+}
+# entra com nome para procura
+imprima "\n Digite nome para procura: " ;
+leia nome;
+L <-0;
+enquanto ( L<29 &&  nome<>nomes[L]  )
+{  L++;  }
+se (nome ==nomes[L] )
+{
+  imprima "\nnome    : ", nomes[L];
+  imprima "\nendereco: ", end[L];
+  imprima "\ntelefone: ", tel[L];
+}
+senao
+{  imprima "\nnao encontrei" ; }
+imprima "\n";
+fimprog

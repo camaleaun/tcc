@@ -1,0 +1,9 @@
+prog algoritmo78
+ real  nd;
+ int n;
+ imprima "\ndigite o numero de lados do poligono: ";
+ leia n;
+ nd <- n * ( n - 3)  / 2;
+ imprima "\nnumero de diagonais: ", nd;
+ imprima "\n";
+fimprog    

@@ -1,0 +1,5 @@
+prog algoritmo16
+int x;
+ x <- 10;
+ imprima  x ;
+fimprog

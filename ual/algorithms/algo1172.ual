@@ -1,0 +1,16 @@
+prog algoritmo117solucao2
+real a, b, c, maior;
+imprima "\ndigite 1 numero: ";  
+leia a;
+imprima "\ndigite 2 numero: ";  
+leia b;
+imprima "\ndigite 3 numero: ";  
+leia c;
+maior <- a;
+se (b > maior)
+{  maior <- b ; }
+se (c > maior)
+{  maior <- c; }
+imprima "\nmaior: ", maior;
+imprima "\n";
+fimprog

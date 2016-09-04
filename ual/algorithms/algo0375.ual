@@ -1,0 +1,25 @@
+prog algoritmo375
+ int L;
+ real a[30], b[30], dif[30];
+ #trecho de entrada para 30 numeros
+ para( L<- 0;L <= 29; L++)
+  {
+    imprima "\ndigite elemento ",L+1, " do vetor A:";
+    leia a[L ];
+  }
+   imprima "\n\n";
+ para( L<- 0;L <= 29 ; L++)
+  {
+    imprima "\ndigite elemento ",L+1, " do vetor B:";
+    leia b[L ];
+    #Gera o vetor diferenca
+    dif [L] <- a[L ] - b[L] ;
+  }
+#trecho de saida
+  imprima "\nVetor A\t\tVetor B\t\tVetor Diferenca";
+    para( L<- 0;L <= 29; L++)
+  {
+    imprima "\n",a[L], "\t\t",b [L], "\t\t\t", dif[L]  ;
+   }
+imprima "\n";
+fimprog

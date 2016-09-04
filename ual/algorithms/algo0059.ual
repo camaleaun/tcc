@@ -1,0 +1,10 @@
+prog algoritmo59
+ real a,b,c;
+ imprima "\nEntrar com 1 cateto: ";  
+ leia b;
+ imprima "\nEntrar com 2  cateto: ";  
+ leia c;
+ a <- raiz (b**2 + c**2);
+ imprima "\nA hipotenusa e: ", a;
+ imprima "\n";
+fimprog

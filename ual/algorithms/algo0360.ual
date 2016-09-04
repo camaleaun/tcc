@@ -1,0 +1,23 @@
+prog algoritmo360
+int ultdia [ 12 ] , data, i, dia, mes;
+string signo[ 12 ] ;
+para( i<- 0; i< 12; i++)
+{ imprima "\ndigite signo: ";
+  leia signo[i];
+  imprima "\ndigite ultimo dia(ddmm): ";
+     leia  ultdia [ i ] ;
+}
+imprima "\ndigite data no formato ddmm ou 9999 para terminar: ";
+leia data;
+enquanto( data <> 9999)
+{ dia <- data div 100;
+  mes <- data % 100;
+  mes--;
+  se( dia > ultdia [ mes ] )
+   { mes <- (mes + 1 ) % 12; }
+  imprima "\nsigno: ",signo[ mes ], "\n" ;
+  imprima "\ndigite data no formato ddmm ou 9999 para terminar: ";
+  leia data;
+}
+imprima "\n";
+fimprog

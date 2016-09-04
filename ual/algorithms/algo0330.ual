@@ -1,0 +1,28 @@
+prog  algoritmo330
+int contt,contf, contd, fil;
+real rend, soma, dolar;
+soma <- 0.;
+contt <- 0;
+contf <- 0;
+contd <- 0;
+imprima "\ndigite valor do dolar em reais com ponto: ";
+leia dolar;
+imprima "\ndigite rendimento familiar com ponto ou para terminar, 0. ou numero negativo: ";
+leia rend;
+enquanto(rend > 0.)
+{  contt++;
+   soma <- soma + rend;
+   se(rend >= 100 * dolar)
+   {contd++;}
+   imprima "\ndigite numero de filhos: ";
+   leia fil;
+   contf <- contf + fil;
+   imprima "\ndigite rendimento familiar com ponto ou para terminar, 0. ou numero negativo: ";
+   leia rend;
+}
+imprima  "\nmedia dos rendimentos da populacao: ", soma / contt;
+imprima "\nmedia do numero de filhos: ", contf / contt;
+imprima "\npercentual de familias com rendimento igual ou superior a $100 dolares: ",
+formatar( contd *100 / contt,2), "%"; #  na mesma linha anterior
+imprima "\n";
+fimprog

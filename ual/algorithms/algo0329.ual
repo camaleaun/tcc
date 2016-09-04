@@ -1,0 +1,53 @@
+prog algoritmo329
+int voto, cand1, cand2, cand3, cand4, vn, vb, total;
+cand1 <- 0;
+cand2 <- 0;
+cand3 <- 0;
+cand4 <- 0;
+vn <- 0;
+vb <- 0;
+total <- 0;
+imprima "\ndigite candidadtos (1 / 2 / 3 /4) 5(voto nulo ) 6(voto em branco) 7(finalizar): ";
+leia voto;
+enquanto( voto <> 7)
+{
+ enquanto( voto < 1 || voto >7 )
+ { imprima "\nVOTO INVALIDO.";
+   imprima "\ndigite candidadtos (1 / 2 / 3 /4) 5(voto nulo ) 6(voto em branco) 7(finalizar): ";
+   leia voto;
+ }
+  total++;
+  se(voto == 1)
+  { cand1++; }
+  senao
+  { se(voto == 2)
+    { cand2++; }
+    senao
+    { se(voto == 3)
+      { cand3++; }
+      senao
+      { se(voto == 4)
+        { cand4++; }
+        senao
+        { se(voto == 5)
+          { vn++; }
+          senao
+          { se(voto == 6)
+            { vb++; }
+           }
+          }
+        }
+       }
+      }
+ imprima "\ndigite candidadtos (1 / 2 / 3 /4) 5(voto nulo ) 6(voto em branco) 7(finalizar): ";
+ leia voto;
+}
+imprima "\ntotal de votos do candidato 1: ", cand1;
+imprima "\ntotal de votos do candidato 2: ", cand2;
+imprima "\ntotal de votos do candidato 3: ", cand3;
+imprima "\ntotal de votos do candidato 4: ", cand4;
+imprima "\ntotal de votos nulos: ", vn;
+imprima "\ntotal de votos em branco: ", vb;
+imprima "\npercentual dos votos em branco e nulos sobre o total: ", formatar((vn +vb)*100 / total, 2), "%";
+imprima "\n";
+fimprog

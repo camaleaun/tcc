@@ -1,0 +1,59 @@
+prog algoritmo88
+string resp;
+real a,b;
+imprima "\n\n\t\t\t\t*************\n";
+imprima "\t\t\t\t*CALCULADORA*\n";
+imprima "\t\t\t\t*************\n";
+imprima "\n\t\t\t\t+ para somar\n";
+imprima "\n\t\t\t\t- para subtrair\n";
+imprima "\n\t\t\t\t* para multiplicar\n";
+imprima "\n\t\t\t\t/ para dividir\n";
+imprima "\n\n\t\t\t\tDigite op‡Æo: ";
+leia resp;
+se(resp=="+")
+ {
+  imprima "\nDigite 1 numero com ponto: ";
+  leia a;
+  imprima "\nDigite 2 numero com ponto: ";
+  leia b;
+  imprima "\nSOMA: ",a + b;
+ }
+senao
+ {
+   se(resp=="-")
+    {
+     imprima "\nDigite 1 numero com ponto: ";
+     leia a;
+     imprima "\nDigite 2 numero com ponto: ";
+     leia b;
+     imprima "\nSUBTRACAO: ",a - b;
+     }
+   senao
+    {
+     se(resp=="*")
+      {
+       imprima "\nDigite 1 numero com ponto: ";
+       leia a;
+       imprima "\nDigite 2 numero com ponto: ";
+       leia b;
+       imprima "\nMULTIPLICACAO: ",a * b;
+       }
+     senao
+      {
+       se(resp=="/")
+        {
+         imprima "\nDigite 1 numero com ponto: ";
+         leia a;
+         imprima "\nDigite 2 numero com ponto: ";
+         leia b;
+         imprima "\nDIVISAO: ",a / b;
+        }
+       senao
+        {
+         imprima "\nOP€ÇO NÇO DISPONÖVEL!";
+        }
+      }
+    }
+ }
+imprima "\n";
+fimprog

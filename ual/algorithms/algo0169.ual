@@ -1,0 +1,11 @@
+prog algoritmo169
+int L,c,t;
+imprima "\nABAIXO DA DIAGONAL PRINCIPAL\n";
+para(L<-2;L<=10;L++)
+{
+  imprima "\n";
+  para(c<-1;c < L;c++)
+   {  imprima L, "-",c,"\t";  }
+ }
+imprima "\n";
+fimprog

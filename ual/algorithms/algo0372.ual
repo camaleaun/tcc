@@ -1,0 +1,27 @@
+prog algoritmo372
+ int L, c,t;
+  string  times[12];
+#trecho de entrada
+  para( L<- 0;L <= 11; L++)
+  {
+    imprima "\n\nDigite ", L + 1, " time: ";
+    leia times[L];
+    enquanto( strtam(times[L]) >20)
+    {imprima "\nNomes com ate 20 caracteres";
+    imprima "\n\nDigite ", L + 1, " time: ";
+    leia times[ L ] ;
+    }
+    t<-20-strtam(times[L]);
+    para(c<-1; c <= t; c++)
+    {times[L]<-strconcat(times[L], " ");}
+   }
+  imprima "\n Rodada Simples";
+  para( L<- 0;L <= 10; L++)
+  {
+   para( c<- L +1;c <= 11; c++)
+    {
+      imprima "\n", times[L ],"\t",times[c ];
+   }
+ }
+imprima "\n";
+fimprog

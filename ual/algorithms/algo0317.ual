@@ -1,0 +1,29 @@
+prog algoritmo317
+real venda, comissao, forn, loja, totvenda, totcomissao, totforn, totloja;
+imprima "\nDigite valor da venda com ponto ou 0. para terminar: ";
+leia venda;
+totvenda <- 0.;
+totcomissao <- 0.;
+totforn <- 0.;
+totloja <- 0.;
+enquanto( venda > 0. )
+{  comissao <- venda *  0.03;
+   forn <- venda * 0.5;
+   loja <- venda - comissao - forn;
+   totvenda <- totvenda + venda;
+   totcomissao <- totcomissao + comissao;
+   totforn <- totforn + forn;
+   totloja <- totloja + loja;
+   imprima "\nvalor da venda: ",venda;
+   imprima "\nvalor da comissao: ",comissao;
+   imprima "\nvalor do repasse: ",forn;
+   imprima "\nganho da loja: ",loja;
+   imprima "\nDigite valor da venda com ponto ou 0. para terminar: ";
+   leia venda;
+}
+imprima "\nTotal de vendas: ",totvenda;
+imprima "\nTotal de comissoes: ",totcomissao;
+imprima "\nTotal do repasse: ",totforn;
+imprima "\nGanho total da loja: ",totloja;
+imprima "\n";
+fimprog

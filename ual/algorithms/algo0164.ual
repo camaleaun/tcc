@@ -1,0 +1,8 @@
+prog algoritmo164
+int a;
+ imprima "\nComecei\n";
+ para(a<-1; a<=50000;a++)
+ { }
+imprima "\nFim";
+imprima "\n";
+fimprog

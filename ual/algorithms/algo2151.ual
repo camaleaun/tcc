@@ -1,0 +1,11 @@
+prog algoritmo2151
+int c, num;
+imprima "\ndigite numero: ";
+leia num;
+para( c <- 1; c <=num; c++)
+{
+   se( num  % c == 0 )
+  {    imprima c, "  " ;    }
+}
+imprima "\n";
+fimprog

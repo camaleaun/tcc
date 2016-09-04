@@ -1,0 +1,19 @@
+prog algoritmo349
+int L, a[5], b[5], soma[5];
+para( L<- 0; L <= 4 ; L++)
+{
+  imprima "\nelemento do vetor A[", L + 1, "]: ";
+  leia  a[ L];
+}
+imprima "\n";
+para( L<- 0; L <= 4 ; L++)
+{
+ imprima "\nelemento do vetor B[", L + 1, "]: ";
+ leia  b[ L];
+ soma[L] <- a[L] + b[L];
+}
+imprima "\n\n\nVetor Soma\n";
+para( L<- 0; L <= 4 ; L++)
+{ imprima "\nsoma[",L + 1, "] - ", soma[ L];}
+imprima "\n";
+fimprog

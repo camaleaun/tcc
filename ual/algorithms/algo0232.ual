@@ -1,0 +1,21 @@
+prog algoritmo232
+int c, neg;
+real numero, soma;
+neg <- 0;
+soma <-0.;
+para( c <- 1; c <=20; c++)
+{
+   imprima "\ndigite numero com ponto: ";
+   leia numero;
+   se( numero > 0. )
+   { soma <-  soma + numero;   }
+   senao
+   {
+     se(numero<0.)
+     { neg ++;  }
+    }
+ }
+imprima "\nSoma dos positivos: ", soma;
+imprima "\nTotal de negativos: ", neg;
+imprima "\n";
+fimprog

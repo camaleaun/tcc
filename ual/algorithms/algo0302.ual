@@ -1,0 +1,38 @@
+prog algoritmo302
+int a, cont;
+real dist, mdist;
+string nome, cond, mnome;
+a <-0;
+cont <- 0;
+mdist <-0.;
+imprima "\nDigite o nome da praia ou @ para terminar:";
+leia nome;
+enquanto(nome <> "@")
+ { a++;
+   imprima "\nQual  a distancia do hotel com ponto ?";
+   leia dist;
+   imprima "\nPraia P(ropria) ou N(nao propria)?  ";
+   leia cond;
+   enquanto(cond <> "P"&& cond <> "p"&& cond <> "N"&& cond <> "n")
+   { imprima "\nAtencao! Digite somente P(ropria) ou N(ao propria)?  ";
+     leia cond;
+   }
+   se(cond=="P"|| cond =="p")
+   { cont++;    }
+   senao
+   {
+    se(dist>10.)
+    {
+     imprima "\nNome da praia :", nome;
+     imprima "\nDistancia hotel :", dist;
+    }
+  }
+  se(dist > mdist)
+  { mdist <- dist;  mnome <- nome; }
+  imprima "\nDigite o nome da praia ou @ para terminar:";
+  leia nome;
+}
+imprima "\nA porcentagem de turistas nas praias proprias foi de :", formatar((cont*100)/a, 2), "%."; # na mesma linha anterior
+imprima "\nPraia mais distante :", mnome;
+imprima "\n";
+fimprog

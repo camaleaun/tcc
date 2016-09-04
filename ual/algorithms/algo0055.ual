@@ -1,0 +1,10 @@
+prog algoritmo55
+ real diagmaior, diagmenor, area;
+ imprima "\nmedida da diagonal maior: ";
+ leia  diagmaior;
+ imprima "\nmedida da diagonal menor: ";
+ leia  diagmenor;
+ area <- (diagmaior * diagmenor)/2;
+ imprima "\narea =", area;
+ imprima "\n";
+fimprog

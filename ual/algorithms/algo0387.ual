@@ -1,0 +1,31 @@
+prog algoritmo387
+int L, c, mat[1000],auxi ;
+real media[1000], auxr;
+para( L<- 0; L <= 999 ; L++)
+{
+  imprima "\n matricula do aluno ",L+1,": " ;
+  leia mat[L] ;
+  imprima "\n media: " ;
+  leia media[L] ;
+}
+para( L<- 0; L <= 998 ; L++)
+{
+  para( c<- L + 1; c <= 999; c++)
+  {
+    se (  media[L] < media[c] )
+    {
+      auxr <- media[L];
+      media[L] <- media[c];
+      media[c] <- auxr;
+      auxi <- mat[L];
+      mat[L] <- mat[c];
+      mat[c] <- auxi;
+     }
+   }
+ }
+imprima "\nORDENADOS\n";
+imprima "\nMATRICULA\tMEDIA\n " ;
+para( L<- 0; L <= 999 ; L++)
+ {   imprima "\n", mat[L], "\t\t",media[L] ;}
+imprima "\n";
+fimprog

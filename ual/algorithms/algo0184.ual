@@ -1,0 +1,14 @@
+prog algoritmo184
+int a;
+real numero;
+para( a <- 1; a <=8; a++)
+{
+   imprima "\ndigite numero com ponto: ";
+   leia numero;
+   se(numero > 0.)
+   {  imprima "\nlogaritmo: ", formatar( log(numero) /log(10.),4); }
+   senao
+   { imprima "\nNao fao logaritmo de numero negativo"; }
+}
+imprima "\n";
+fimprog

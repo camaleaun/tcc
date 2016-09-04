@@ -1,0 +1,32 @@
+prog algoritmo385
+int L,c, soma,tam, insc[1200],pontos[100];
+string nomes[1200], gab[100], resp;
+para(L<-0;L<=99;L++)
+{imprima "\nDigite gabarito (a/b/c/d/e) da questao ", L+1,": ";
+ leia gab[L];}
+para(L<-0;L<=1199;L++)
+{imprima "\nDigite numero de inscricao do candidato ", L+1, ": "; leia insc[L];
+ imprima "\nDigite nome do candidato: "; leia nomes[L];
+ enquanto(strtam(nomes[L]) > 30)
+ {imprima "\nNomes com ate 30 caracteres. Digite nome: ";  leia nomes[L];}
+  tam <-strtam(nomes[L] );
+  se(tam<30)
+  {para(c<-0;c<=30 - tam; c++)
+    {nomes[L]<-strconcat(nomes[L], " ");
+  }
+ }
+ soma <-0;
+ para(c<-0;c<=99;c++)
+ {imprima "\nDigite resposta da ", c+1," questao: ";
+  leia resp;
+  se(resp==gab[c])
+  { soma++;}
+  }
+  pontos[L]<-soma;
+}
+imprima "\n\n\n";
+imprima "\nINSC.\tNOME\t\t\t\tPONTOS\n";
+para(L<-0;L<=1199;L++)
+{imprima "\n",insc[L], "\t",nomes[L],"\t",pontos[L];}
+imprima "\n";
+fimprog

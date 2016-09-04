@@ -1,0 +1,15 @@
+prog algoritmo251
+int L, c;
+string r;
+para( L <- 1; L <=10 ; L++)
+{
+   para(c<-1; c<=10; c++)
+   {
+      se(L <> c)
+      {   imprima "\ntime ",L, " x time ", c, " ________";  }
+   }
+   imprima "\n\nPressione enter: ";
+   leia r;
+}
+imprima "\n";
+fimprog

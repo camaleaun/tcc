@@ -1,0 +1,10 @@
+prog algoritmo220
+int c, vf;
+string nome;
+imprima "\ndigite nome: ";
+leia nome;
+vf <- strtam(nome);
+para( c <- 1; c <=vf; c++)
+{   imprima "\n",nome ; }
+imprima "\n";
+fimprog

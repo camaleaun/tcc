@@ -1,0 +1,11 @@
+prog algoritmo100
+int num, c;
+imprima "\nnumero de 4 algarismos: ";
+leia num;
+c <- num  div  100;
+se( c % 4  == 0 )
+{imprima "\no numero e multiplo de 4: ",c;}
+senao
+{imprima "\no numero nao e multiplo de 4: ",c;}
+imprima "\n";
+fimprog

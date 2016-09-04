@@ -1,0 +1,16 @@
+prog algoritmo286
+int a, b, aux, soma;
+imprima "\nEntre com 1 numero: ";
+leia a;
+imprima "\nEntre com 2 numero: ";
+leia b;
+se(a < b)
+{  aux  <- a;  a  <- b;  b  <-  aux;}
+soma  <- a;
+enquanto(soma % b <> 0)
+{
+  soma  <- soma + a;
+}
+imprima "\nM.M.C: ",soma;
+imprima "\n";
+fimprog

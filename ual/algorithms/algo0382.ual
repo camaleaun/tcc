@@ -1,0 +1,30 @@
+prog algoritmo382
+int L, c,vet[20], vet1[20], aux;
+para( L<- 0; L <= 19 ; L++)
+{
+  imprima "\n numero: " ;
+  leia vet[L] ;
+}
+para( L<- 0; L <= 18 ; L++)
+{
+  para( c<- L + 1; c <= 19 ; c++)
+  {  se (  vet[L] > vet[c] )
+     {  aux <- vet[L];   vet[L] <- vet[c ];   vet[c] <- aux;    }
+   }
+ }
+imprima "\n\n\n";
+imprima "\n Rela‡Æo  dos numeros ordenados\n " ;
+para( L<- 0; L <= 19 ; L++)
+ {    imprima "\n", L +1, " - ", vet[L] ;}
+vet1[0]<- vet[0];
+c<-1;
+para( L<- 1; L <= 19 ; L++)
+{ se(vet[L] <> vet1[c-1])
+  {   vet1[c] <- vet[L];   c++;  }
+ }
+imprima "\n\n\n";
+imprima "\n Rela‡Æo  dos numeros nao repetidos\n " ;
+para( L<- 0; L <= c-1 ; L++)
+ {   imprima "\n", L +1, " - ", vet1[L] ;}
+imprima "\n";
+fimprog

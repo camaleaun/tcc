@@ -1,0 +1,23 @@
+prog algoritmo296
+int contempo;
+real massa, tempo;
+string resp;
+imprima "\nDigite S se desejar novo calculo ou qualquer letra para terminar: ";
+leia resp;
+enquanto(resp == "S"|| resp == "s")
+{ contempo <- 0;
+  imprima "\nDigite a massa em gramas do material com ponto:";
+  leia massa;
+  enquanto(massa >= 0.10)
+  {
+    contempo++;
+    massa <- 0.75 * massa;
+  }
+  tempo <- (contempo*30) / 60;
+  imprima "\nO tempo foi de : ", tempo, " minutos.";
+  imprima "\n";
+  imprima "\nDigite S se desejar novo calculo ou qualquer letra para terminar: ";
+  leia resp;
+ }
+ imprima "\n";
+fimprog

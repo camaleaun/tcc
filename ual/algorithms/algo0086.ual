@@ -1,0 +1,14 @@
+prog algoritmo86
+real num;
+imprima "\nDigite numero: ";
+leia num;
+se(num > 0.)
+{imprima "\nPOSITIVO";}
+senao
+{ se(num < 0.)
+  { imprima "\nNEGATIVO";}
+  senao
+  { imprima "\nNULO";}
+}
+imprima "\n";
+fimprog

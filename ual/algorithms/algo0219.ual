@@ -1,0 +1,8 @@
+prog algoritmo219
+ int c, num, vf;
+ imprima "\ndigite numero de vezes que deseja imprimir a palavra SOL? ";
+ leia num;
+ para( c <- 1; c <=num; c++)
+ {  imprima  "SOL " ; }
+ imprima "\n";
+fimprog

@@ -1,0 +1,25 @@
+prog algoritmo137
+real a, b, c, d, x1, x2;
+imprima "\nEntre com valor de a: ";
+leia a;
+imprima "\nEntre com valor de b: ";
+leia  b;
+imprima "\nEntre com valor de c: ";
+leia  c;
+se (a == 0.)
+{  imprima "\n Nao e equacao do 2 grau";}
+senao
+{
+  d<- b**2 - 4 * a * c;
+  se (d >=0.)
+  {
+    d<- raiz(d);
+    x1<- (-b + d)/ (2 *a);
+    x2 <-(-b - d)/ (2 *a);
+    imprima "\n X1= ", x1, "\t\tX2= ", x2;
+  }
+  senao
+  {  imprima "\n NÆo h  ra¡zes reais"; }
+}
+imprima "\n";
+fimprog

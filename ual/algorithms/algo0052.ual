@@ -1,0 +1,12 @@
+prog algoritmo52
+ real lado, perimetro, area, diagonal;
+ imprima "\ndigite o lado do quadrado: ";
+ leia lado ;
+ perimetro <- 4 * lado;
+ area<- lado ** 2;  
+ diagonal <- lado * raiz(2); 
+ imprima "\nperimetro: ", perimetro;
+ imprima "\narea: ", area;
+ imprima "\ndiagonal: ", diagonal;
+ imprima "\n";
+fimprog

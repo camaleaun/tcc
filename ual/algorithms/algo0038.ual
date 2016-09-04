@@ -1,0 +1,7 @@
+prog algoritmo38
+ real num;
+ imprima "\nentre com um numero com ponto: ";
+ leia num;
+ imprima "\na terca parte e : ", num/3;
+ imprima "\n";
+fimprog

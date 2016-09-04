@@ -1,0 +1,14 @@
+prog algoritmo122
+real a, b, c;
+imprima "\ndigite 1 lado: ";  
+leia a;
+imprima "\ndigite 2 lado: ";  
+leia b;
+imprima "\ndigite 3 lado: ";  
+leia c;
+ se ( a < b + c  &&   b < a + c &&  c < a + b ) 
+ {  imprima  "\nPodem ser lados de um triangulo"; }
+senao
+{ imprima "\nNÆo podem ser lados de um triangulo"; }
+imprima "\n";
+fimprog

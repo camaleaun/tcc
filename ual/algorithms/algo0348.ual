@@ -1,0 +1,24 @@
+prog algoritmo348
+int L;
+string nomes[5];
+real pr1[5], pr2[5], media[5];
+# trecho de entrada
+para( L<- 0; L <= 4 ; L++)
+{
+ imprima "\ndigite ", L + 1, " nome: ";
+ leia nomes[ L ] ;
+ imprima "digite la nota com ponto: ";
+ leia pr1[L];
+ imprima "digite 2a nota com ponto: ";
+ leia pr2[L];
+ media[L] <- (pr1[L] + pr2[L])/2;
+}
+# fim do trecho de entrada
+#trecho de saida
+imprima "\n\n\n\t\t\t\tRELACAO FINAL\n";
+para( L<- 0; L <= 4 ; L++)
+{ imprima "\n", L+1, "- ", nomes[L];
+  imprima "\n",pr1[L],"\t", pr2[L], "\t",media[L];}
+# fim do trecho de saida
+imprima "\n";
+fimprog

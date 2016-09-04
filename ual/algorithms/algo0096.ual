@@ -1,0 +1,10 @@
+prog algoritmo96
+int  numero;
+imprima "\ndigite numero: ";  
+leia numero;
+se ( numero % 3 == 0  &&  numero % 7 == 0 ) /* poderia testar (numero % 21 == 0) */
+{   imprima "\n e divisivel por 3 e  por 7"; }
+senao
+{  imprima "\nnao e divisivel por 3 e por 7"; }
+imprima "\n";
+fimprog

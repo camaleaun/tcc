@@ -1,0 +1,23 @@
+prog algoritmo291
+int data, np,quant;
+real   pu, val,soma;
+imprima "\nDigite numero do pedido ou 0 para terminar: ";
+leia  np;
+soma  <-  0.;
+enquanto( np > 0 )
+{
+  imprima "\nDigite data: ";
+  leia  data;
+  imprima "\nDigite preco unitario com ponto: ";
+  leia  pu;
+  imprima "\nDigite quantidade: ";
+  leia  quant;
+   val  <-   pu * quant;
+   soma  <-  soma + val;
+   imprima "\no valor da compra  na data ", data, "   ", val ;
+   imprima "\nDigite numero do pedido ou 0 para terminar: ";
+   leia  np;
+}
+imprima "o valor total da compra:",soma;
+imprima "\n";
+fimprog

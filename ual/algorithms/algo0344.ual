@@ -1,0 +1,67 @@
+prog algoritmo344
+string nome, menor, frase, frasei, op, letra;
+int  x, i, cont, num, numi, c, n, numd;
+real ang, rang;
+faca 
+ {
+  imprima "\nMENU";
+  imprima "\nA - Entra com uma frase e armazena em outra variavel a frase invertida e imprime";
+  imprima "\nB - Entra com um numero e seu numero de digitos e imprime invertido";
+  imprima "\nC - Calcula e imprime a tangente de um angulo em graus";
+  imprima "\nF - Termina o algoritmo";
+  imprima "\nOPCAO: ";
+  leia  op;
+   se(  op == "A" || op == "a"  )
+   {
+     imprima "\n Digite um frase: ";
+     leia frase;
+     frasei <-"";
+     cont <- strtam(frase) - 1;
+     para(  x <- cont; x>= 0 ; x--)
+     { letra <- strelem( frase, x);
+     frasei <- strconcat(frasei,letra );
+     }
+     imprima "\nfrase invertida: ", frasei;
+   }
+   senao
+   {
+     se(  op == "B" || op == "b"  )
+     {
+       imprima "\nnumero: ";
+       leia num;
+       imprima "\nnumero de digitos: ";
+       leia numd;
+       numi <- 0;
+       n <- num;
+        para( c<- 1; c <= numd; c++)
+        {
+           numi<- numi * 10 + n % 10;
+           n <- n  div  10;
+        }
+        imprima "\n numero invertido: ",numi;
+     }
+     senao
+     {
+      se(  op == "C" || op == "c"  )
+      {
+       imprima "\nangulo com ponto: ";
+       leia ang;
+       rang <-ang * pi / 180;
+       se(cos(rang)<> 0.)
+       {
+        imprima "\nTangente: ", tan(rang) ; }
+       senao
+       {  imprima "\nTangente tende a infinito: ";}
+     }
+     senao
+     {
+       se(  op == "F" || op == "f"  )
+       {  imprima "\nSaindo: "; }
+       senao
+       {imprima "\nOpcao nao disponivel"; }
+}}}
+imprima "\n\n\n\n";
+}
+enquanto(op <> "F" && op<>"f"  )
+imprima "\n";
+fimprog

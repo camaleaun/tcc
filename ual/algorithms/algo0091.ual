@@ -1,0 +1,11 @@
+prog algoritmo91
+int  num1, num2, soma;
+imprima "\n\ndigite 1 numero: ";  
+ leia num1;
+imprima "\n\ndigite 2 numero: ";  
+leia num2;
+soma <- num1 + num2;
+se ( soma > 10 )
+{   imprima "\nsoma: ", soma; }
+imprima "\n";
+fimprog

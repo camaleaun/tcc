@@ -1,0 +1,12 @@
+prog algoritmo53
+ real a, b, c, diagonal;
+ imprima "\nentre com a base: ";
+ leia a;
+ imprima "\nentre com a altura: ";
+ leia b;
+ imprima "\nentre com a profundidade: ";
+ leia c;
+ diagonal <-raiz( a**2 + b**2 + c**2 );
+ imprima "\ndiagonal : ", diagonal;
+ imprima "\n";
+fimprog

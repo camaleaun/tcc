@@ -1,0 +1,65 @@
+prog algoritmo326
+int idade, contpessoas, contfem, contmasc, soma, contexph, conthom, contexpm, contexpmt, menor;
+string sexo, expe;
+contpessoas <- 0;
+contfem <- 0;
+contmasc <- 0;
+soma <- 0;
+contexph <- 0;
+conthom <- 0;
+contexpm <- 0;
+contexpmt <- 0;
+imprima "\ndigite idade ou negativo para acabar: ";
+leia idade;
+menor <- 200;
+enquanto(idade > 0)
+{  imprima "\ndigite sexo( M / F): ";
+   leia sexo;
+   imprima "\ndigite experiencia(S / N): ";
+   leia expe;
+   contpessoas++;
+   se(sexo == "f" || sexo == "F")
+   { contfem++;
+     se(expe == "s" || expe == "S")
+     {  contexpmt++;
+        se(idade < menor)
+        { menor <- idade;}
+        se(idade < 35)
+        {contexpm++;}
+     }
+   }
+   senao
+   { contmasc++;
+     se(expe == "s" || expe == "S")
+     {  contexph++;
+        soma <- soma + idade;
+      }
+        se(idade > 45)
+        { conthom++; }
+     }
+    imprima "\ndigite idade ou negativo para acabar: ";
+    leia idade;
+}
+se( contmasc <> 0)
+{ imprima "\nnumero de candidatos do sexo masculino: ", contmasc;
+  imprima "\nporcentagem dos homens com mais de 45 anos entre o total dos homens: ",conthom * 100/contmasc;
+  se(contexph <> 0)
+  {imprima "\nidade media dos homens que ja tem experiencia no servico: ", soma/contexph;}
+  senao
+  { imprima "\nNenhum homem com experiencia no servico";}
+}
+senao
+{ imprima "\nNenhum homem";}
+se(contfem <>0)
+{ imprima "\nnumero de candidatos do sexo feminino: ", contfem;
+  se(contexpmt <> 0)
+  { imprima "\nnumero de mulheres com idade inferior a 35 anos e com experiencia no servico: ", contexpm;
+    imprima "\nmenor idade entre as mulheres que ja tem experiencia no servico: ", menor;
+  }
+  senao
+  { imprima "\nNenhuma mulher com experiencia no servico";}
+}
+senao
+{ imprima "\nNenhuma mulher";}
+imprima "\n";
+fimprog

@@ -1,0 +1,49 @@
+prog algoritmo121
+int  n1, n2, n3, n4, n5, maior, menor;
+imprima "\ndigite 1 numero: ";  
+leia n1;
+imprima "\ndigite 2 numero: ";  
+leia n2;
+imprima "\ndigite 3 numero: ";  
+leia n3; 
+imprima "\ndigite 4 numero: ";  
+leia n4;
+imprima "\ndigite 5 numero: ";  
+leia n5;
+se (n1<>n2 && n1<>n3 && n1<>n4 && n1<>n5 && n2<>n3 && n2<>n4 && n2<>n5  && 
+n3<>n4 && n3<>n5 && n4<>n5)
+{
+/* Teste necess rio porque o exerc¡cio  fala sobre os n£meros serem diferentes. Veja 
+como ‚ importante saber COMBINA€ÇO  */
+ se (n1 > n2)
+ {   maior <- n1;    menor <- n2; }
+ senao
+ {   maior <- n2;   menor <- n1; }
+ se (n3 > maior)
+ {  maior <- n3; }
+ senao
+ {
+   se (n3 < menor)
+   {  menor <- n3;  }
+ }
+ se (n4 > maior)
+ {  maior <- n4; }
+ senao
+ {
+   se (n4 < menor) 
+   { menor <- n4;  }
+ }
+ se (n5 > maior)
+ {  maior <- n5; }
+ senao
+ {
+   se (n5 < menor)
+   {  menor <- n5;  }
+ }
+ imprima "\nMaior= ", maior;
+ imprima "\nMenor= ", menor;
+}
+senao
+{ imprima "\nOs valores devem ser diferentes ";}
+imprima "\n";
+fimprog

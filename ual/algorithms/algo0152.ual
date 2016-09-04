@@ -1,0 +1,44 @@
+prog algoritmo152
+int idade;
+real  peso,gotas;
+imprima "\ndigite peso: ";  
+leia peso;
+imprima "\ndigite idade: ";  
+leia idade;
+ gotas <- 500  /  20;  # calculo do numero de mg por gotas
+ se (peso <5.)
+ {  imprima "\nnao pode tomar o remdio porque nao tem peso. Consulte medico."; }
+ senao
+ {
+   se ( idade >= 12)
+   {
+     se ( peso >= 60. )
+     { imprima "\nTomar  ",1000 / gotas, "  gotas"; }
+     senao
+     {  imprima "\nTomar  ", 875  /gotas, "  gotas"; }
+   }
+   senao
+   {
+    se ( peso <= 9.)
+    {  imprima "\nTomar  ", 125  / gotas, "  gotas";  }
+    senao
+    {
+     se ( peso <= 16. )
+     {   imprima "\nTomar  ", 250  / gotas, "  gotas";  }
+     senao
+     {
+       se ( peso <= 24. )
+       {  imprima "\nTomar  ", 375  / gotas, "  gotas";  }
+       senao
+       {
+         se ( peso <=30. )
+         {  imprima "\nTomar  ", 500  / gotas, "  gotas";  }
+         senao
+         {  imprima "\nTomar  ", 750  / gotas, "  gotas";  }
+        }
+      }
+    }
+  }
+}
+imprima "\n";
+fimprog

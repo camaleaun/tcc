@@ -1,0 +1,37 @@
+prog algoritmo362
+int vet1[10], vet2[20],vetc[10], i, c, d, L;
+L <- 0;
+imprima "\nentrada de dados do vetor 1 ( 10 elementos)";
+para(i <-0 ; i <= 9; i++)
+{ imprima "\nentre com ", i + 1, " elemento: ";
+  leia vet1[i];
+}
+imprima "\nentrada de dados do vetor 2 ( 20 elementos)";
+para(i <-0 ; i <= 19; i++)
+{ imprima "\nentre com ", i + 1, " elemento: ";
+  leia vet2[i];
+}
+para(i <-0 ; i <= 9; i++)
+{ vetc[i] <- -999999999;} # inicializando com valores fora do contexto
+para(i <-0 ; i <= 9; i++)
+{ c <- 0;
+  enquanto(vet1[i] <> vet2[c] && c < 19)
+  { c++; }
+  se( vet1[i] == vet2[c] )
+  { d <- 0;
+    enquanto(vet1[i] <> vetc[d] && d < L)
+    {d++; }
+    se( d == L)
+    { vetc[d] <- vet1[i]; L++;}
+  }
+}
+se( L <> 0)
+{
+ imprima "\n\nElementos comuns\n\n";
+ para(i <-0 ; i <= L -1 ; i++)
+ { imprima "\n", vetc[i]; }
+}
+senao
+{ imprima "\n\nNao existem elementos comuns"; }
+imprima "\n";
+fimprog

@@ -1,0 +1,25 @@
+prog algoritmo85
+real a, b, c, max;
+imprima "\ndigite 1 numero: ";  
+leia a;
+imprima "\ndigite 2 numero: ";  
+leia b;
+imprima "\ndigite 3 numero: ";  
+leia c;
+se (a > b)
+{
+  se (a > c)
+  {  max <- a ;  }
+  senao
+  {  max <- c;  }
+}
+senao
+{
+   se ( b > c)
+   {  max <- b; }
+   senao
+   {  max <- c ; }
+}
+imprima "\n",max;
+imprima "\n";
+fimprog

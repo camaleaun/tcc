@@ -1,0 +1,12 @@
+prog algoritmo27
+ int x,y;
+ x<-2;
+ y<-5;
+ imprima "\nx = ",x;
+ x++;
+ imprima "\n\ny = ",y;
+ y--;
+ imprima "\n\nnovo valor de x = ",x;
+ imprima "\n\nnovo valor de y = ",y;
+ imprima "\n\n";
+fimprog

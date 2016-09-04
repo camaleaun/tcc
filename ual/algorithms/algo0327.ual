@@ -1,0 +1,35 @@
+prog algoritmo327
+real saldo, retira, val, deposito;
+int cod;
+imprima "\ndigite saldo com ponto: ";
+leia saldo;
+imprima "\ndigite codigo: Saque em dinheiro(10) Deposito(33) Pagamento de cheque(4) Finalizar (0): ";
+leia cod;
+enquanto(cod <> 0)
+{  se(cod == 10)
+   {  imprima "\ndigite valor da retirada com ponto: ";
+      leia retira;
+      saldo <- saldo - retira;
+   }
+   senao
+   {  se(cod == 33)
+      {  imprima "\ndigite valor do deposito com ponto: ";
+         leia deposito;
+          saldo <- saldo + deposito;
+      }
+      senao
+      {  se(cod == 4)
+         {  imprima "Entre com o valor do cheque com ponto: ";
+            leia val;
+            saldo <- saldo - val;
+         }
+       }
+   }
+  se(saldo < 0. )
+  { imprima "\nSaldo negativo de: ", saldo; }
+  imprima "\ndigite codigo: Saque em dinheiro(10) Deposito(33) Pagamento de cheque(4) Finalizar (0): ";
+  leia cod;
+}
+imprima "\nSaldo atual = ", saldo;
+imprima "\n";
+fimprog

@@ -1,0 +1,69 @@
+prog algoritmo338
+int cfaz, tipo, qcm, q1faz, q2faz, q3faz, q4faz, q1afa, q2afa, q3afa, q4afa, ntmfaz, ntmafa,
+qcfaz, qcafa, ntfafa ;
+q1afa <- 0;
+q2afa <- 0;
+q3afa <- 0;
+q4afa <- 0;
+qcafa <- 0;
+ntfafa <- 0;
+ntmafa <- 0;
+imprima "\ncodigo da fazenda ou -1 para terminar: ";
+leia cfaz;
+enquanto(cfaz <> -1)
+{  ntfafa++;
+   ntmfaz <- 0;
+   q1faz <- 0;
+   q2faz <- 0;
+   q3faz <- 0;
+   q4faz <- 0;
+   qcfaz <- 0;
+   imprima "\ndigite tipo de manada 1 vaca  2 touro 3  boi  4 bezerro ou 5 para terminar: ";
+   leia tipo;
+   enquanto(tipo <> 5)
+   {  ntmfaz++;
+      imprima "\ndigite quantidade de cabecas: ";
+      leia qcm;
+      se(tipo ==1 )
+       { q1faz <- q1faz + qcm; }
+       senao
+       {  se(tipo ==2 )
+          { q2faz <- q2faz + qcm; }
+          senao
+          { se(tipo == 3 )
+            { q3faz <- q3faz + qcm; }
+            senao
+            { se(tipo == 4 )
+               { q4faz <- q4faz + qcm; }
+             }
+          }
+       }
+      imprima "\ndigite tipo de manada 1 vaca  2 touro 3  boi  4 bezerro ou 5 para terminar: ";
+      leia tipo;
+    }
+    imprima "\ndigite quantidade de cabecas para corte: ";
+    leia qcfaz;
+    qcafa <- qcafa + qcfaz;
+    ntmafa <- ntmafa + ntmfaz;
+    q1afa <- q1afa + q1faz;
+    q2afa <- q2afa + q2faz;
+    q3afa <- q3afa + q3faz;
+    q4afa <- q4afa + q4faz;
+    imprima "\ncodigo da fazenda: ", cfaz;
+    imprima "\nquantidade de cabeas do tipo 1: ", q1faz;
+    imprima "\nquantidade de cabeas do tipo 2: ", q2faz;
+    imprima "\nquantidade de cabeas do tipo 3: ", q3faz;
+    imprima "\nquantidade de cabeas do tipo 4: ", q4faz;
+    imprima "\nquantidade de manadas: ", ntmfaz;
+    imprima "\ncodigo da fazenda ou -1 para terminar: ";
+    leia cfaz;
+}
+imprima "\nnumero total de fazendas: ", ntfafa;
+imprima "\nquantidade de cabecas do tipo 1: ", q1afa;
+imprima "\nquantidade de cabecas do tipo 2: ", q2afa;
+imprima "\nquantidade de cabecas do tipo 3: ", q3afa;
+imprima "\nquantidade de cabecas do tipo 4: ", q4afa;
+imprima "\nquantidade de manadas: ", ntmafa;
+imprima "\nquantidade de cabecas para corte: ", qcafa;
+imprima "\n";
+fimprog

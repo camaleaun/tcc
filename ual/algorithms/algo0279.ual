@@ -1,0 +1,23 @@
+prog algoritmo279
+int num, cont, num1, primo;
+imprima "\nEntre com o numero maior do que 0: ";
+leia num;
+primo <-  0;
+enquanto(num > 0)
+{
+ cont  <-  0;
+ num1  <-  2;
+ enquanto(cont == 0 && num1<= num div   2)
+ {
+   se( num % num1== 0 )
+   { cont <- 1;  }
+     num1++;
+ }
+ se( cont <> 1 )
+ { primo++;  }
+ imprima "\nEntre com o numero maior do que 0: ";
+ leia num;
+ }
+imprima "\nTotal de primos: ", primo;
+imprima "\n";
+fimprog

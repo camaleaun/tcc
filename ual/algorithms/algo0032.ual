@@ -1,0 +1,7 @@
+prog algoritmo32
+ int num;
+ imprima "\n entre com um numero: "; 
+ leia num;
+ imprima "\nnumero : ", num;
+ imprima "\n";
+fimprog

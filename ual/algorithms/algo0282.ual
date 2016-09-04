@@ -1,0 +1,24 @@
+prog algoritmo282
+int conta, cneg, c;
+real  saldo;
+ c  <-  0;
+ cneg  <-  0;
+ imprima "\ndigite conta ou numero negativo para terminar: ";
+ leia conta;
+ enquanto(  conta > 0)
+{
+   c++;
+   imprima "\nsaldo com ponto: ";
+   leia saldo;
+   se( saldo < 0. )
+   {   cneg++;
+      imprima conta, "-", saldo, "- negativo " ;
+   }
+   senao
+   {   imprima conta, " - ",saldo, "- positivo " ;   }
+   imprima "\ndigite conta ou numero negativo para terminar: ";
+   leia conta;
+}
+imprima  "\npercentual negativo: ", cneg * 100 / c,  "% " ;
+imprima "\n";
+fimprog

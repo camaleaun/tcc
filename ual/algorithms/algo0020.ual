@@ -1,0 +1,20 @@
+prog algoritmo20
+ string c,c1,d,d1;
+ imprima "\ndigite palavra 1: ";
+ leia c;
+ imprima "\ndigite palavra 2: ";
+ leia c1;
+ imprima "\n",strtam(c) ;
+ imprima "\nconcatenando: ",strconcat(c,c1) ; 
+ d <- strcopia(c) ;
+ imprima "\nE O CONTEUDO DE D: ",d;
+ d1<-strconcat(c,c1) ;
+ imprima "\nconcatenacao: ",d1;
+ imprima "\nprimeiro caracter: ",strprim(c);
+ imprima "\nultimo caracter: ",strult(c);
+ imprima "\ntodos menos o primeiro: ",strresto(c);
+ imprima "\no terceiro elemento: ",strelem(c,3); # sair  o 4o caracter 
+ imprima "\nos tres primeiros elementos: ",strnprim(c,3);
+ imprima "\nos tres ultimos elementos: ",strnresto(c,3);
+ imprima "\n";
+fimprog

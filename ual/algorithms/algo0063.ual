@@ -1,0 +1,15 @@
+prog algoritmo63
+ int na;
+ real   vha, pd, td, sb, sl;
+ imprima "\nhoras trabalhadas: ";
+ leia  na ;
+ imprima "\nvalor da hora-aula: ";
+ leia  vha ;
+ imprima "\npercentual de desconto: ";
+ leia  pd ;
+ sb <-  na * vha;
+ td  <-  ( pd / 100) * sb;
+ sl   <-    sb - td;
+ imprima "\nsalario liquido: ",sl;
+ imprima "\n";
+fimprog

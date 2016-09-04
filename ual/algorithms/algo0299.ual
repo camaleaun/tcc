@@ -1,0 +1,38 @@
+prog algoritmo299
+int x, qa, cont;
+real n1, n2, n3, n4, n5;
+string nome;
+x <-0;
+imprima "\nDigite a quantidade de alunos :";
+leia qa;
+cont <- 0;
+enquanto(x < qa)
+{
+    imprima "\nDigite nome:";
+    leia nome;
+    imprima "\nDigite a nota na prova 1 com ponto:";
+    leia n1;
+    imprima "\nDigite a nota na prova 2 com ponto:";
+    leia n2;
+    imprima "\nDigite a nota na prova 3 com ponto:";
+    leia n3;
+    imprima "\nDigite a nota na prova 4 com ponto:";
+    leia n4;
+    imprima "\nDigite a nota na prova 5 com ponto:";
+    leia n5;
+    se(n1 >= 7.0 && n4 >= 7.0)
+    {
+      se(n2 >= 7.0 && n3 >= 7.0 && n5 >= 7.0)
+      {
+        imprima "\nParabens! ", nome, " voce foi aprovado em todas as materias!";
+      }
+      senao
+      {imprima "\n", nome, " voce passou nas materias 1 e 4"; }
+    }
+    se(n3 >= 7.0)
+    { cont++;    }
+    x++;
+ }
+imprima "\n\nA porcentagem dos aprovados na materia 3  :",formatar( (cont*100)/qa,2);
+imprima "\n";
+fimprog

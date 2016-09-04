@@ -1,0 +1,24 @@
+prog algoritmo388
+int L, c,d,n, a[10];
+para( L<- 0; L <= 9 ; L++)
+{a[L]<-0; }
+para( L<- 0; L <= 9 ; L++)
+{
+  imprima "elemento do vetor A[", L + 1, "]: ";  leia  n;
+  c<-0;
+  enquanto(n<=a[c])
+  {c++;}
+  se(L>0)
+  {para(d<-L;d>=c+1;d--)
+   {a[d]<-a[d-1];}
+   }
+   a[c]<-n;
+}
+imprima "\n";
+imprima "\n\n\nVetor Ordenado\n";
+para( L<- 0; L <= 9 ; L++)
+{
+  imprima "\na[",L + 1, "]- ", a[L];
+}
+imprima "\n";
+fimprog

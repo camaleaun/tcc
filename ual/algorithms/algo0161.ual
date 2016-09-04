@@ -1,0 +1,11 @@
+prog algoritmo161
+ int  c;
+ real num;
+ para( c<- 1; c <= 5 ; c++)
+ {
+    imprima "\nnumero: ";
+    leia  num ;
+    imprima "quadrado: ", num ** 2;
+ }
+imprima "\n";
+fimprog

@@ -1,0 +1,21 @@
+prog algoritmo131
+ string nome,L;
+ imprima "\nDigite nome: ";
+ leia nome;
+ L<-strprim(nome);
+ se  ((L>="A" && L<="K") ||  (L>="a" && L<="k"))
+ {  imprima "\n", nome, " sala: 101"; }
+ senao
+ {
+  se ((L>="L" && L<="N") ||  (L>="l" && L<="n"))
+  {  imprima "\n", nome, " sala: 102"; }
+  senao
+  {
+    se ( (L>="O" && L<="Z") ||  (L>="o" && L<="z"))
+    {   imprima "\n", nome, " sala: 103";  }
+    senao
+    {  imprima "\n NOME INVALIDO"; }
+   }
+  }
+  imprima "\n";
+ fimprog

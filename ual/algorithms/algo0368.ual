@@ -1,0 +1,39 @@
+prog algoritmo368
+int k, v1[10], v2[10];
+real  v4[10];
+string op, v3[10];
+imprima "\nEntrada de dados do primeiro vetor numerico\n";
+para( k <- 0; k < 10; k++)
+{ imprima "\ndigite elemento: "; leia  v1[k]; }
+imprima "\nEntrada de dados do segundo vetor numerico\n";
+para( k <- 0; k < 10; k++)
+{ imprima "\ndigite elemento: "; leia  v2[k]; }
+imprima "\nEntrada de dados das operacoes a serem realizadas entre os dois vetores\n";
+para( k <- 0; k < 10; k++)
+{ imprima "\ndigite operacao ( +  -  *  / ): "; leia  op;
+  enquanto( op <> "+"  &&  op <> "-"  && op <> "*"  &&  op <> "/" )
+  { imprima "\noperacao invalida. digite operacao ( +  -  *  / ): ";
+    leia  op;
+   }
+   v3[k] <- op;
+}
+# gerando e imprimindo vetor
+para( k <- 0; k < 10; k++)
+{ se(v3[k] == "+")
+   { v4[k] <- intreal(v1[k] + v2[k]);
+    # necessario pois esta versao nao deixa ser atribuido um numero inteiro a uma variavel real
+   }
+   senao
+   { se(v3[k] == "-")
+     { v4[k] <- intreal(v1[k] - v2[k]); }
+     senao
+     { se(v3[k] == "*")
+       { v4[k] <- intreal(v1[k] *v2[k]); }
+       senao
+       {  v4[k] <- v1[k] / v2[k]; }
+     }
+  }
+ imprima "\no ", k +1, " elemento do vetor 1: ", v1[k], " ", v3[k], " o ", k +1, " elemento do vetor 2: ", v2[k], " = ", v4[k];
+}
+imprima "\n";
+fimprog

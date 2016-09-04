@@ -1,0 +1,13 @@
+prog algoritmo79
+ real  va, i, p;
+ int  n;
+ imprima "\ndigite o valor da aplica‡Æo: ";
+ leia p;
+ imprima "\ndigite a taxa( 0 - 1): ";
+ leia i;
+ imprima "\ndigite o numero de meses: ";
+ leia n;
+ va <-p*(((1+ i )** n)-1) / i;
+ imprima "\nO valor acumulado: ", va;
+ imprima "\n";
+fimprog    

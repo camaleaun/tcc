@@ -1,0 +1,33 @@
+prog algoritmo132
+real r,l, d,f, m;
+string moeda;
+imprima "\ndigite valor em reais a ser convertido: ";
+leia r;
+imprima "\ndigite f - franco suico l - libra esterlina d - dolar m - marco alemao: ";
+leia moeda;
+se( moeda =="f" || moeda =="F")
+{ imprima "\ndigite valor de um franco suico em reais: ";
+  leia f;
+  imprima "\nTotal de francos suicos: ", formatar(r /f,2);}
+senao
+{ se( moeda =="l" || moeda =="L")
+  { imprima "\ndigite valor de uma libra esterlina em reais: ";
+    leia l;
+    imprima "\nTotal de libras esterlinas: ", formatar(r /l,2);}
+  senao
+  { se( moeda =="d" || moeda =="D")
+    { imprima "\ndigite valor de um dolar em reais: ";
+      leia d;
+      imprima "\nTotal de dolares: ", formatar(r /d,2);}
+    senao
+    { se( moeda =="m" || moeda =="M")
+      { imprima "\ndigite valor de um marco alemao em reais: ";
+        leia m;
+        imprima "\nTotal de marcos alemaes: ", formatar(r /m,2);}
+     senao
+     { imprima "\nmoeda desconhecida";}
+    }
+  }
+}
+imprima "\n";
+fimprog

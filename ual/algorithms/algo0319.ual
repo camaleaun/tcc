@@ -1,0 +1,19 @@
+prog algoritmo319
+string nome;
+int c, cont;
+imprima "\nDigite nome completo ou @ para terminar: ";
+leia nome;
+enquanto(nome <>"@")
+{ cont <-0;
+  c <- strtam(nome)-1;
+  enquanto(c >= 0)
+  { se(strelem(nome,c)== " ") 
+    {cont++;}
+    c--;
+   }
+  imprima "\ntotal de sub-nomes: ",cont+1;
+  imprima "\n\nDigite nome completo ou @ para terminar: ";
+  leia nome;
+}
+imprima "\n";
+fimprog

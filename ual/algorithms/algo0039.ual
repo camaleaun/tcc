@@ -1,0 +1,10 @@
+prog algoritmo39
+ real nota1, nota2, media;
+ imprima "\ndigite 1a  nota: "; 
+ leia nota1;
+ imprima "\ndigite 2a  nota: ";  
+ leia nota2;
+ media <- ( nota1 + nota2)/2;
+ imprima "\nmedia: ", media;
+ imprima "\n";
+fimprog

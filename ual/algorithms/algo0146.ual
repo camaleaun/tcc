@@ -1,0 +1,27 @@
+prog algoritmo146
+real percurso, consumo;
+string tipo;
+imprima "\ndigite tipo de carro( A / B / C): ";  
+leia  tipo;
+imprima "\ndigite percurso: ";  
+leia  percurso;
+se ( tipo == "C" || tipo == "c")
+{  consumo <- percurso / 12;}
+senao
+{
+  se ( tipo == "B" || tipo == "b")
+  {  consumo <- percurso / 10;  }
+  senao
+  {
+    se ( tipo == "A" || tipo == "a")
+    {  consumo <- percurso / 8;  } 
+    senao 
+    {  consumo <- 0.;  }
+  }
+}
+se ( consumo <> 0.)
+{  imprima "\nConsumo estimado em litros: ", formatar(consumo,2);}
+senao
+{  imprima "\nModelo inexistente";}
+imprima "\n";
+fimprog

@@ -1,0 +1,14 @@
+prog algoritmo133
+string sexo;
+real h, peso;
+imprima "\nentre com a altura: ";
+leia  h;
+imprima "\nentre com o sexo M / F: ";
+leia sexo;
+se( sexo == "M" || sexo == "m")
+{peso <-  72.7 * h  - 58;}
+senao
+{peso <- 62.1 * h  - 44.7;}
+imprima "\nseu peso ideal : ", peso;
+imprima "\n";
+fimprog

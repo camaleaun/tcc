@@ -1,0 +1,15 @@
+prog algoritmo40
+ int quoc, rest, val1, val2;
+ imprima "\nentre com o dividendo: "; 
+ leia val1;
+ imprima "\nentre com divisor: "; 
+ leia val2;
+ quoc <- val1 div val2;
+ rest <- val1 % val2;
+ imprima "\n\n\n";
+ imprima "\ndividendo : ", val1;
+ imprima "\ndivisor     : ", val2;
+ imprima "\nquociente: ", quoc;
+ imprima "\nresto       : ", rest;
+ imprima "\n";
+fimprog

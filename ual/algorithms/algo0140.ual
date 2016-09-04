@@ -1,0 +1,15 @@
+prog algoritmo140
+ string nome,L;
+ real vc, vcd;
+ imprima "\nDigite nome: ";
+ leia nome;
+ imprima "\nDigite valor da conta: ";
+ leia vc;
+ L<-strprim(nome);
+ se( L=="A" || L=="a" || L=="D" || L=="d" || L=="M" || L=="m" || L=="S" || L=="s" )
+ { imprima "\n", nome, " valor da conta com desconto: R$ ", formatar(vc * 0.7, 2); }
+ senao
+ { imprima "\n Que pena. Nesta semana o desconto nÆo ‚ para seu nome, mas continue 
+nos prestigiando que sua vez chegar "; }
+  imprima "\n";
+ fimprog

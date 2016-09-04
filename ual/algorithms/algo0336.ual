@@ -1,0 +1,52 @@
+prog  algoritmo336
+int fil, esc, c;
+real prest, total, totalesc;
+totalesc <- 0.;
+imprima "\ntotal de filhos ou 0 para terminar: ";
+leia fil;
+enquanto(fil  > 0)
+{ imprima "\ndigite escolaridade do 1o filho: 1 pre-escola  2 1o ciclo do EF 3  2o ciclo do EF 4 EM: ";
+  leia esc;
+  se(esc ==1 )
+  { total <- 300.00; }
+  senao
+  { se(esc ==2 )
+    { total<- 400.00; }
+    senao
+    { se(esc == 3 )
+      { total <- 500.00; }
+      senao
+      { se(esc == 4 )
+        { total <- 600.00 ; }
+      }
+    }
+   }
+   se(fil > 1)
+   { para(c <-1; c <= fil -1; c++)
+     { imprima "\ndigite escolaridade do ",c+1, "o filho: 1 pre-escola  2 1o ciclo do EF 3  2o ciclo do EF  4 EM:  ";
+       leia esc;
+       se(esc ==1 )
+       { prest <- 300.00 - (300.00 * c/10); }
+       senao
+       { se(esc ==2 )
+         { prest <- 400.00 - (400.00 * c/10); }
+         senao
+         { se(esc == 3 )
+           { prest <- 500.00 - (500.00 * c/10); }
+           senao
+           { se(esc == 4 )
+             { prest <- 600.00 - (600.00 * c/10); }
+           }
+         }
+       }
+       total <- total + prest;
+     }
+    }
+    imprima "\ntotal a ser pago pela familia: ", total;
+    totalesc <- totalesc + total;
+    imprima "\ntotal de filhos ou 0 para terminar: ";
+    leia fil;
+}	
+imprima "\ntotal arrecadado pela escola: ", totalesc;
+imprima "\n";
+fimprog

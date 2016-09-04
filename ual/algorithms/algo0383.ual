@@ -1,0 +1,12 @@
+prog algoritmo383
+int L, c,vet[20], aux;
+para( L<- 0; L <= 19 ; L++)
+{  imprima "\n numero: " ;  leia vet[L] ;}
+para( L<- 0; L <= 9 ; L++)
+{  aux <- vet[L];  vet[L] <- vet[19-L];   vet[19-L] <- aux; }
+imprima "\n\n\n";
+imprima "\nVetor trocado\n " ;
+para( L<- 0; L <= 19 ; L++)
+{ imprima "\n", L +1, " - ",vet[L];}	
+imprima "\n";
+fimprog

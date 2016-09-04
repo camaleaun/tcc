@@ -1,0 +1,25 @@
+prog algoritmo303
+int c, cart, nmult, mcart, mnmult;
+real valor, total;
+mnmult <- 0;
+imprima "\ndigite carteira de motorista ou 0 para terminar:  ";
+leia cart;
+enquanto( cart <> 0)
+{  total <- 0.;
+   imprima "\ndigite numero de multas:  ";
+   leia nmult;
+   se(nmult > mnmult)
+   {  mnmult <- nmult; mcart <- cart; }
+   para(c <-1; c <= nmult; c++)
+   { imprima "\ndigite valor da multa com ponto:  ";
+     leia valor;
+     total <- total + valor;
+    }
+     imprima "\ncarteira: ", cart;
+     imprima "\nvalor a pagar: ", total;
+     imprima "\ndigite carteira de motorista ou 0 para terminar:  ";
+     leia cart;
+}
+imprima "\nnumero da carteira com maior numero de multas: ", mcart;
+imprima "\n";
+fimprog

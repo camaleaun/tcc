@@ -1,0 +1,16 @@
+prog algoritmo267
+int a, c;
+string prof;
+a   <-  0;
+imprima "\ndigite profissao ou FIM para sair: ";
+leia prof;
+enquanto(  prof  <>  "FIM" && prof <>"fim" && prof <>"Fim")
+{
+  se( prof ==  "DENTISTA" || prof == "Dentista" || prof =="dentista" )
+  { a++; }
+  imprima "\ndigite profissao ou FIM para sair: ";
+  leia prof ;
+ }
+imprima "\ntotal de dentistas: ", a;
+imprima "\n";
+fimprog

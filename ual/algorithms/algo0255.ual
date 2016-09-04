@@ -1,0 +1,25 @@
+prog algoritmo255
+int L,c, cap, n, totalunos;
+real media, somageral;
+somageral <- 0.;
+totalunos <- 0;
+para(L <- 1;L <= 5;L++)
+{
+   cap <- 0;
+   imprima "\nQuantos alunos tem a ", L, "a turma? ";
+   leia n;
+   totalunos <- totalunos + n;
+   para(c <- 1;c <= n;c++)
+   {
+     imprima "\nDigite media do ", c, "o  aluno: ";
+     leia media;
+      se(media >7.)
+      {cap++;}
+      somageral <- somageral + media;
+    }
+    imprima "\nTotal de alunos com media superior ou igual a 7: ",cap;
+    imprima "\n";
+  }
+  imprima "\nMedia da escola: ", somageral / totalunos;
+imprima "\n";
+fimprog

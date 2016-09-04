@@ -1,0 +1,33 @@
+prog  algoritmo332
+int cont5,cont510, cont10, cont, vezes;
+string resp;
+cont5 <- 0;
+cont510 <- 0;
+cont10 <- 0;
+cont <- 0;
+imprima "\nvoce fez uso da xerox?( S / N / F):  ";
+leia resp;
+enquanto( resp <> "F" && resp <> "f")
+{  se(resp == "S" || resp == "s")
+    {  cont++;
+       imprima "\nquantas vezes?  ";
+       leia vezes;
+       se(vezes <5)
+        {cont5++;}
+       senao
+        { se(vezes <10)
+          {cont510++;}
+         senao
+          { cont10++;}
+       }
+    }
+    imprima "\nvoce fez uso da xerox?( S / N / F):  ";
+    leia resp;
+}
+imprima  "\ntotal de alunos que fizeram uso da xerox: ", cont;
+imprima "\npercentual de alunos que utilizou menos de 5 vezes: ", formatar( cont5 *100 /cont,2), "%";
+imprima "\npercentual de alunos que  utilizou entre 5 e 10 vezes inclusive: ", formatar(
+cont510 *100 / cont,2), "%";
+imprima "\npercentual de alunos que  utilizou mais de 10 vezes: ", formatar( cont10 *100 /cont,2), "%";
+imprima "\n";
+fimprog

@@ -1,0 +1,11 @@
+prog algoritmo181
+int i, soma;
+soma <-0;
+para( i <-1; i <= 100;  i ++)
+{
+   soma <- soma + i;
+   imprima i, "  ";
+ }
+  imprima "\nSomatorio de 1 a 100: ",soma;
+imprima "\n";
+fimprog

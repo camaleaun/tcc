@@ -1,0 +1,22 @@
+prog algoritmo320
+int cont;
+real nota, snota, qsnota, media, qmedia, variancia;
+cont <- 0;
+qsnota <- 0.;
+snota <- 0.;
+imprima "\ndigite nota com ponto( 0. - 10.): ";
+leia nota;
+enquanto(nota >= 0.)
+{
+  cont++;
+  snota <- snota + nota;
+  qsnota <- qsnota + nota ** 2;
+  imprima "\ndigite nota com ponto( 0. - 10.): ";
+  leia nota;
+}
+media <- snota / cont;
+variancia <- qsnota / cont - media ** 2;
+imprima "\nMedia: ", media;
+imprima "\nVariancia: ", variancia;
+imprima "\n";
+fimprog

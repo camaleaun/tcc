@@ -1,0 +1,15 @@
+prog algoritmo104
+int idade;
+string nome, sexo;
+imprima "\ndigite nome: ";
+leia nome;
+imprima "\ndigite sexo: ";
+leia sexo;
+imprima "\ndigite idade: ";
+leia idade;
+se( (sexo =="F" || sexo=="f") &&  idade<25)
+ {  imprima "\n",nome, " ACEITA"; }
+ senao
+ {  imprima  "\n",nome, " NAO ACEITA"; }
+imprima "\n";
+fimprog

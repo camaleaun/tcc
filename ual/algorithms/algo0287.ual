@@ -1,0 +1,14 @@
+prog algoritmo287
+int a, b, aux, resto;
+imprima "\nEntre com 1 numero: ";
+leia a;
+imprima "\nEntre com 2 numero: ";
+leia b;
+se(a < b)
+{  aux  <- a;  a  <- b;  b  <-  aux;}
+resto  <- a % b;
+enquanto(resto <>0)
+{   a  <- b;   b  <-  resto;   resto  <- a % b;}
+imprima "\nM.D.C: ",b;
+imprima "\n";
+fimprog

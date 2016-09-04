@@ -1,0 +1,102 @@
+prog algoritmo395
+int L, c,tam, flag;
+real sal[15], auxn;
+string nomes[15], auxc,op, nomep;
+flag <-0;
+faca
+{imprima "\n\n\n";
+ imprima "\n MENU\n";
+ imprima "\n1 - INSERIR";
+ imprima "\n2 - ORDENAR";
+ imprima "\n3 - LISTAR";
+ imprima "\n4 - PROCURAR";
+ imprima "\n5 - SAIR";
+ imprima "\nOPCAO:";
+ leia op;
+ se(op=="1")
+ {flag<-1;
+  para( L<- 0; L <= 14 ; L++)
+  {
+      imprima "\nDigite ", L+1,  " nome : " ;
+      leia nomes[L] ;
+      enquanto(strtam(nomes[L] ) > 30)
+      {  imprima "\nNome com ate 30 caracteres. Digite ", L+1,  "  nome: ";
+           leia nomes[L]; }
+      tam <- strtam(nomes[L]);
+       se(tam < 30)
+       {  para(c<-0;c<=30 - tam; c++)
+           {nomes[L]<-strconcat(nomes[L], " ");}}
+           imprima "\n salario (maior do que 0.): " ;
+           leia sal[L] ;
+           enquanto(sal[L] < 0.)
+           {imprima "\nNAO EXISTE SALARIO NEGATIVO. Digite salario (maior do que 0.): ";
+             leia sal[L]; }
+       }
+  }
+  senao
+  { se(op=="2")
+    { se(flag==0)
+      {imprima "\n NAO TEM DADOS CADASTRADOS";}
+      senao
+      {
+       para( L<- 0; L <= 13 ; L++)
+       {
+         para( c<- L + 1; c <= 14 ; c++)
+         {
+          se (  nomes[L] > nomes[c] )
+          {
+           auxc <- nomes[L];
+           nomes[L] <- nomes[c];
+            nomes[c] <- auxc;
+            auxn <- sal[L];
+            sal[L] <- sal[c];
+            sal[c] <- auxn;
+          } }  } }  }
+      senao
+      { se(op=="3")
+        { se(flag==0)
+          {imprima "\n NAO TEM DADOS CADASTRADOS";}
+          senao
+          {
+           imprima "\n\n\n";
+           imprima "\n   NOME\t\t\t\t\tSALARIO\n " ;
+           para( L<- 0; L <= 14 ; L++)
+           {
+            imprima "\n",L +1," - ",nomes[L],"\t", formatar(sal[L],2);
+           }
+          }
+         }
+        senao
+        {se(op=="4")
+         { se(flag==0)
+          {imprima "\n NAO TEM DADOS CADASTRADOS";}
+          senao
+          { imprima "\nDigite nome para procura: ";
+            leia nomep;
+            enquanto(strtam(nomep)>30)
+            {imprima "\nNome com ate 30 caracteres. Digite nome: ";
+             leia nomep;}
+             tam <-strtam(nomep);
+             se(tam <30)
+             {para(c<-0;c<=30 - tam; c++)
+             {nomep<-strconcat(nomep, " ");}}
+            c<-0;
+            enquanto(nomep<>nomes[c] && c < 14)
+            {c++;}
+            se(nomep==nomes[c])
+            {imprima "\nnome: ",nomes[c];
+             imprima "\nsalario R$ ",formatar(sal[c],2);}
+             senao
+             {imprima "\nNOME NAO ENCONTRADO";}
+             }
+            }
+            senao
+            {se(op=="5")
+             {saia;}
+             senao
+             {imprima "\nOPCAO NAO DISPONIVEL";
+             } } } } }
+ }
+ enquanto(op<>"5")
+imprima "\n";
+fimprog

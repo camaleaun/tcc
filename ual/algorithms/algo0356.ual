@@ -1,0 +1,36 @@
+prog algoritmo356
+int L ,c ,t, media[15];
+string nomes[15], sit[15];
+real pr1[15], pr2[15];
+# trecho de entrada de 15 nomes
+para( L<- 0; L <= 14 ; L++)
+{
+    imprima "\n\nDigite ", L + 1, " nome: ";
+    leia nomes[ L ] ;
+    enquanto( strtam(nomes[L]) >30)
+    {  imprima "\nNomes com ate 30 caracteres";
+        imprima "\n\nDigite ", L + 1, " nome: ";
+       leia nomes[ L ] ;
+    }
+  # trecho que garante todos nomes com 30 caracteres para fazer tabulacao
+  t<-30-strtam(nomes[L]);
+  para(c<-1; c <= t; c++)
+  {nomes[L]<-strconcat(nomes[L], " ");}
+  imprima "\ndigite l nota com ponto: ";
+  leia pr1[L];
+  imprima "\ndigite 2 nota com ponto: ";
+  leia pr2[L];
+  media[L] <- realint((pr1[L] +pr2[L] )/2+0.0001);
+  se(media[ L ] >= 5 )
+  {  sit[ L ] <- "AP";   }
+   senao
+   {   sit[ L ] <- "RP";   }
+}
+# fim do trecho de entrada
+#trecho de sa­da
+imprima "\n\n\n\t\t\t\tRELACAO FINAL\n";
+para( L<- 0; L <= 14 ; L++)
+{ imprima "\n", L+1, "- ",nomes[L],"\t",pr1[L], "\t", pr2[L], "\t",media[L], "\t",sit[L]; }
+# fim do trecho de sa­da
+imprima "\n";
+fimprog

@@ -1,0 +1,14 @@
+prog algoritmo364
+int vet[10], w[10], L, f, fat;
+para(L <- 0; L <10 ; L++)
+{ imprima "\ndigite elemento ", L + 1,": ";
+  leia vet[L];
+  w[L] <-1;
+  para(f<-2 ; f <= vet[L]; f++)
+  { w[L] <- w[L]  * f;}
+}
+imprima "\nVetor fatorial\n";
+para(L <- 0; L <10 ; L++)
+{ imprima "\n", w[L]; }
+imprima "\n";
+fimprog

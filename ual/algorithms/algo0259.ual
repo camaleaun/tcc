@@ -1,0 +1,8 @@
+prog algoritmo259
+real num;
+imprima "\ndigite numero com ponto: ";
+leia num;
+enquanto( num  >0.)
+{ imprima "\n dobro do numero: ", num  *2; }
+imprima "\n";
+fimprog

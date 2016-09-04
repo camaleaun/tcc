@@ -1,0 +1,11 @@
+prog algoritmo77
+ real  a, b, d, q;
+ imprima "\ndigite 1 numero com ponto: ";
+ leia a;
+ imprima "\ndigite 2 numero com ponto: ";
+ leia b;
+ d <- (a - b)**2;
+ q <-a**2 - b**2;
+ imprima "\no quadrado da diferenca =",d , "\ndiferenca dos quadrados =", q;
+ imprima "\n";
+fimprog
