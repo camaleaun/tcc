@@ -94,10 +94,7 @@
     _slash = {binop: 10, beforeExpr: true},
     _assign = {isAssign: true, beforeExpr: true},
 
-    _function = {keyword: 'function'},
-
-    // testar com name var
-    name;
+    _function = {keyword: 'function'};
 
   function LineLocT() {
     this.line = tokCurLine;
