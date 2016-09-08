@@ -111,6 +111,38 @@
     });
   }
 
+  function readToken() {
+    var code, tok, ch;
+    tokStart = tokPos;
+    if (options.locations) { tokStartLoc = new LineLocT(); }
+    if (tokPos >= inputLen) { return finishToken(_eof); }
+
+    code = input.charCodeAt(tokPos);
+    if (isIdentifierStart(code) || code === 92) { return readWord(); }
+
+    tok = getTokenFromCode(code);
+
+    if (tok === false) {
+      ch = String.fromCharCode(code);
+      if (ch === '\\' || nonASCIIidentifierStart.test(ch)) { return readWord(); }
+      raise(tokPos, "Unexpected character '" + ch + "'");
+    }
+    return tok;
+  }
+
+  function next() {
+    lastStart = tokStart;
+    lastEnd = tokEnd;
+    lastEndLoc = tokEndLoc;
+    readToken();
+  }
+
+  function expect(type) {
+    if (tokType === type) {
+      next();
+    } else { unexpected(); }
+  }
+
   function parseExprList(close, allowTrailingComma, allowEmpty) {
     var elts = [], first = true;
     while (!eat(close)) {
@@ -125,12 +157,15 @@
     return elts;
   }
 
-  function parseIdent(liberal) {
-    var node = startNode();
-    node.name = tokType === _name ? tokVal : (liberal && !options.forbidReserved && tokType.keyword) || unexpected();
-    tokRegexpAllowed = false;
-    next();
-    return finishNode(node, 'Identifier');
+  function NodeT() {
+    this.type = null;
+    this.start = tokStart;
+    this.end = null;
+  }
+
+  function startNode() {
+    var node = new NodeT();
+    return node;
   }
 
   function skipSpace() {
@@ -242,15 +277,6 @@
           case 114: // 'r' -> '\r'
             out += '\r';
             break;
-          case 120: // 'x'
-            out += String.fromCharCode(readHexChar(2));
-            break;
-          case 117: // 'u'
-            out += String.fromCharCode(readHexChar(4));
-            break;
-          case 85: // 'U'
-            out += String.fromCharCode(readHexChar(8));
-            break;
           case 116: // 't' -> '\t'
             out += '\t';
             break;
@@ -300,41 +326,16 @@
     return false;
   }
 
-  function readToken() {
-    var code, tok, ch;
-    tokStart = tokPos;
-    if (options.locations) { tokStartLoc = new LineLocT(); }
-    if (tokPos >= inputLen) { return finishToken(_eof); }
-
-    code = input.charCodeAt(tokPos);
-    if (isIdentifierStart(code) || code === 92) { return readWord(); }
-
-    tok = getTokenFromCode(code);
-
-    if (tok === false) {
-      ch = String.fromCharCode(code);
-      if (ch === '\\' || nonASCIIidentifierStart.test(ch)) { return readWord(); }
-      raise(tokPos, "Unexpected character '" + ch + "'");
-    }
-    return tok;
+  function unexpected() {
+    raise(tokStart, 'Unexpected token');
   }
 
-  function NodeT() {
-    this.type = null;
-    this.start = tokStart;
-    this.end = null;
-  }
-
-  function startNode() {
-    var node = new NodeT();
-    return node;
-  }
-
-  function next() {
-    lastStart = tokStart;
-    lastEnd = tokEnd;
-    lastEndLoc = tokEndLoc;
-    readToken();
+  function parseIdent(liberal) {
+    var node = startNode();
+    node.name = tokType === _name ? tokVal : (liberal && !options.forbidReserved && tokType.keyword) || unexpected();
+    tokRegexpAllowed = false;
+    next();
+    return finishNode(node, 'Identifier');
   }
 
   function parseExprOp(left, minPrec, noIn) {
@@ -346,19 +347,20 @@
   }
 
   function parseExprAtom() {
+    var node;
     switch (tokType) {
     case _name:
       return parseIdent();
 
     case _string:
-      var node = startNode();
+      node = startNode();
       node.value = tokVal;
       node.raw = input.slice(tokStart, tokEnd);
       next();
       return finishNode(node, 'Literal');
 
     case _progBegin:
-      var node = startNode();
+      node = startNode();
       next();
       return parseProgram(node, false);
 
@@ -393,31 +395,9 @@
       node.left = left;
       next();
       node.right = parseMaybeAssign(noIn);
-      checkLVal(left);
       return finishNode(node, 'AssignmentExpression');
     }
     return left;
-  }
-
-  function parseExpression(noComma, noIn) {
-    var expr = parseMaybeAssign(noIn);
-    if (!noComma && tokType === _comma) {
-      var node = startNodeFrom(expr);
-      node.expressions = [expr];
-      while (eat(_comma)) { node.expressions.push(parseMaybeAssign(noIn)); }
-      return finishNode(node, 'SequenceExpression');
-    }
-    return expr;
-  }
-
-  function unexpected() {
-    raise(tokStart, 'Unexpected token');
-  }
-
-  function expect(type) {
-    if (tokType === type) {
-      next();
-    } else { unexpected(); }
   }
 
   function eat(type) {
@@ -447,6 +427,17 @@
     var node = startNodeFrom(base);
     node.arguments = base;
     return finishNode(node, 'CallPrint');
+  }
+
+  function parseExpression(noComma, noIn) {
+    var expr = parseMaybeAssign(noIn);
+    if (!noComma && tokType === _comma) {
+      var node = startNodeFrom(expr);
+      node.expressions = [expr];
+      while (eat(_comma)) { node.expressions.push(parseMaybeAssign(noIn)); }
+      return finishNode(node, 'SequenceExpression');
+    }
+    return expr;
   }
 
   function parsePrintStatement() {
