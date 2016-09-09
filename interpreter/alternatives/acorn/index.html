@@ -8,10 +8,9 @@
     function initAlert(interpreter, scope) {
       var wrapper = function(text) {
         text = text ? text.toString() : '';
-        return interpreter.createPrimitive(console.log(text));
+        return interpreter.createPrimitive(alert(text));
       };
-      interpreter.setProperty(scope, 'print',
-          interpreter.createNativeFunction(wrapper));
+      interpreter.setProperty(scope, 'imprima', interpreter.createNativeFunction(wrapper));
     };
 
     function runButton() {
