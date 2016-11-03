@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 
     shell: {
       pdflatex: {
-        command: 'pdflatex papper && bibtex papper && pdflatex papper && pdflatex papper'
+        command: 'pdflatex papper && bibtex papper && pdflatex papper && pdflatex papper && rm *.aux *.bbl *.blg *.idx *.log *.toc'
       }
     },
 
