@@ -1,0 +1,61 @@
+
+% ---
+% Inserir folha de aprovação
+% ---
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+\begin{folhadeaprovacao}
+
+  \begin{center}
+    {\ABNTEXchapterfont\bfseries\MakeTextUppercase{\imprimirautor}}
+
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\MakeTextUppercase{\imprimirtitulo}
+    \end{center}
+    \vspace*{\fill}
+
+   \end{center}
+
+  \noindent
+  \imprimirpreambulo
+
+  \vspace*{\fill}
+
+  \noindent
+  {\bfseries Banca Examinadora}
+
+  \vspace*{\ABNTEXsignskip}
+
+  \setlist[description]{font=\normalfont}
+
+  \begin{description}[labelindent=0pt,labelwidth=4cm] %label={\textnormal},
+    \item[Orientador:]
+    \assinaturaorientador{\textbf{\imprimirorientador \\ Universidade do Vale do Itajaí}}
+  \end{description}
+
+  \setlist[description]{font=\bfseries}
+
+  \begin{description}[labelindent=0pt,labelwidth=4cm] %label={\textnormal},
+    \item[Membros:]
+    \vspace*{\ABNTEXsignskip}
+    \assinaturaorientador{\textbf{(titulação + nome completo) \\ IES de origem}}
+    \item[]
+    \vspace*{\ABNTEXsignskip}
+    \assinaturaorientador{\textbf{(titulação + nome completo) \\ IES de origem}}
+  \end{description}
+
+   \begin{center}
+    \vspace*{0.5cm}
+    \inserecidade~\insereuf, 24/11/2016
+    \vspace*{1cm}
+  \end{center}
+
+\end{folhadeaprovacao}
+% ---
