@@ -178,9 +178,9 @@
 \renewcommand{\cftsubsectionfont}{\rmfamily\bfseries}
 \renewcommand{\cftsubsubsectionfont}{\rmfamily\bfseries}
 
+% TODO Ajustar tabulação no sumários
+
 %\settocdepth{subsubsection}
-% TODO Colocar a produndidade máxima
 %\settocdepth{section}
 %\setsecnumdepth{subsubsection}
-% TODO Colocar a produndidade máxima
 %\setsecnumdepth{section}
