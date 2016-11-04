@@ -21,6 +21,7 @@ module.exports = function (grunt) {
     watch: {
       monograph: {
         files: [
+          '**/*.tex',
           '*.tex',
           '*.cls',
           '*.bib'
