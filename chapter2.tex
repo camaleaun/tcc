@@ -232,8 +232,10 @@ detalhadamente os processos que estão implícitos nesta pequena rotina (ver tab
 \begin{table} [!htb]
   \caption{Ações e Operações}\label{tab:action+operation}
   \centering
-  \begin{tabular}{| m{2.4cm} | m{10.9cm}|}\hline
-  \rowcolor{black!20}\Centering\bfseries Ações & \Centering\bfseries Operações \\ \hline
+  %\begin{tabular}{| m{2.4cm} | m{10.9cm}|}\hline
+  \begin{tabular}{ m{2.4cm} | m{10.9cm} }\hline
+  %\rowcolor{black!20}\Centering\bfseries Ações & \Centering\bfseries Operações \\ \hline
+  \bfseries Ações & \bfseries Operações \\ \hline
   \MakeTextUppercase{Pegar} & Receber os dois valores numéricos e armazená-los \\ \hline
   \MakeTextUppercase{Somar} & Executar a instrução de soma e armazenar o resultado \\ \hline
   \MakeUppercase{Dar o \mbox{Resultado}} & Mostrar o resultado, armazená-lo para o uso
@@ -253,6 +255,11 @@ a um computador executar a tarefa proposta não é tão simples.
 Segundo \cite[p. 17]{farreretal1989}: ``Algoritmo é a descrição de um conjunto de comandos que, obedecidos, resultam numa sucessão finita de ações''.
 A tabela \ref{tab:action+operation}, mostra duas leituras de um algoritmos, uma bastante genérica (ações) e outro um pouco mais detalhada (operações), porém, apesar de apresentar um bom nível de detalhamento ainda não pode ser considerado um algoritmo para o computador. Em Portugol, o mesmo algoritmo pode ser escrito da seguinte forma:
 
+%\DeclareRobustCommand{\Attribuition}{\text{\reflectbox{$\ding{212}$}}}
+
+%\reflectbox{$\ding{212}$}
+%\text{\reflectbox{$\ding{212}$}}
+
 % FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
 \begin{lstlisting}[]  % Start your code-block
 
@@ -261,7 +268,7 @@ Var v1 ,v2 , v3 : inteiro;
 Inicio
   leia (v1);
   leia (v2);
-  v3 <- v1 + v2;
+  v3 \%\ding{212}) v1 + v2;
   escreva (v3);
 Fim.
 \end{lstlisting}
