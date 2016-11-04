@@ -273,18 +273,192 @@ Inicio
 Fim.
 \end{lstlisting}
 
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
 A representação dos algoritmos em Portugol, conhecido também como pseudocódigo,
 é muito utilizada, segundo \cite[p.~6]{saliba1992}: ``Esta forma de
 representação de algoritmo é rica em detalhes, como a definição dos tipos das
 variáveis usadas no algoritmo e, por assemelhar-se bastante à forma em que os
 programas são escritos, encontra muita aceitação.''
 
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
 A tradução de um algoritmo escrito em Portugol para um programa de computador
 numa linguagem de programação é muito fácil e clara, facilitando assim o ensino
 e aprendizado da linguagem de programação. O Portugol é a forma mais utilizada
 para escrever algoritmos por ser uma linguagem simples e permitir o
 detalhamento dos algoritmos.
 
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
 O ensino do Portugol, hoje, em muitos casos é feito de maneira manual
 (utilizando folhas de papel), o que não estimula os alunos em aprender e
 exercitar o desenvolvimento de algoritmos.
+
+\subsection{A Ferramenta Portugol/Plus}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+O Objetivo principal do sistema Portugol/Plus é fornecer uma ferramenta de apoio
+ao ensino da lógica de programação baseado no Portugol, sem reduzir o estudo
+teórico. Com esta ferramenta pretende-se proporcionar uma forma de estimular os
+alunos a praticar e exercitar o desenvolvimento de algoritmos em Portugol.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+O ambiente foi desenvolvido para operar em microcomputador do tipo PC
+(\textit{Personal Computer}), sob o sistema operacional DOS
+(\textit{Disk Operating System}), e divide-se em duas partes principais:
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item Editor de algoritmos (padrão ASCII);
+  \item Compilador.
+\end{itemize}
+
+\begin{enumerate}
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  {\bfseries\item Editor de Algoritmos:}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \begin{figure}[h]
+    \centering
+    \includegraphics{figures/portugolplus-ambiente.pdf}
+    \caption{Visão Geral do Ambiente}\label{fig:portugolplus-ambiente}
+  \end{figure}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+O editor de algoritmos, permite a digitação e a manipulação dos arquivos que
+contém os algoritmos utilizando uma interface dirigida por menus. Numa visão
+geral (figura \ref{fig:portugolplus-ambiente}) vê-se os diversos menus (Arquivo,
+Editar, Localizar, Compilar, Janela e Opções):
+
+\begin{itemize}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item O menu arquivos permite, como o nome diz, a manutenção de arquivos, com
+  itens como criar, salvar e salvar como (salvar com outro nome), contando também
+  com ações extras, tais como:
+
+\begin{itemize}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item Mudar o dir que serve para alterar o diretório (área de trabalho) em que
+  o ambiente pesquisa os arquivos para edição.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item Dos shell que serve para se obter uma sessão de linha de comando do
+  sistema operacional sem abandonar o ambiente.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item Sair para encerrar a execução do ambiente.
+
+\end{itemize}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item O menu editar permite executar ações sobre os arquivos em edição
+  (abertos), estas ações compreendem copiar, mudar e/ou apagar partes dos
+  arquivos em edição.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item O menu localizar ajuda na busca e/ou substituição de trechos escritos no
+  arquivo atual em uso (corrente).
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item O menu janela controla o modo como são visualizados todos os arquivos
+  abertos (em edição) em um mesmo instante.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item O menu opções controla valores configuráveis pelo usuário dentro do
+  ambiente como cores e mouse.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item O menu opções controla valores configuráveis pelo usuário dentro do
+  ambiente como cores e mouse.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \begin{figure}[h]
+    \centering
+    \includegraphics{figures/portugolplus-compilar.pdf}
+    \caption{Visão do Menu Compilar}\label{fig:portugolplus-compilar}
+  \end{figure}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \item O menu compilar (figura \ref{fig:portugolplus-compilar}), serve para
+  tornar possível a execução dos algoritmos criados. Após editado e salvo,
+  usa-se este menu para a realização da compilação do algoritmo, depois de
+  corrigidos os erros (caso seja encontrado algum), pode-se executar o algoritmo
+  para ver o seu comportamento, se o resultado obtido é realmente o desejado.
+  Podendo-se também, o que é muito importante para o aprendizado, partir para
+  sucessivos refinamentos (melhorias) nas soluções encontradas, sempre tendo-se
+  a possibilidade de visualizar como as alterações feitas afetam o resultado
+  pretendido (a nova solução pode vir a ser melhor, pior ou equivalente).
+
+\end{itemize}
+
+  {\bfseries\item Compilação:}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+O conhecimento sobre a construção de compiladores, segundo
+\cite{ahoetal1995,joseneto1987}, remonta do início da década de 50, não se
+sabendo precisamente o seu início. A construção de compiladores foi motivada
+pela complexidade de programar em computadores na época, quando usava-se código
+de máquina ou Assembler, o que  além de difícil, forçava a execução do programa
+no equipamento para o qual o mesmo havia sido escrito, pois em outros o código
+precisava ser reescrito, o que resultava em versões do mesmo programa para cada
+tipo de equipamento.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+Os compiladores são programas que recebem com entrada um programa fonte,
+analisam-no o conteúdo e o contexto, caso encontrem erros informam ao usuário,
+do contrário, convertem o programa fonte para um programa objeto geralmente em
+linguagem da máquina.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+O compilador trabalha sobre uma gramática, que é um conjunto de palavras
+(instruções) limitado por ele e reconhecidas como comandos, que tem regras fixas
+e não conflitantes de uso, o que significa que uma instrução tem apenas um
+significado para um compilador, não havendo ambiguidade.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+  \begin{figure}[h]
+    \centering
+    \includegraphics{figures/portugolplus-compilador.pdf}
+    \caption{O Compilador}\label{fig:portugolplus-compilador}
+  \end{figure}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+Durante o processo de compilação como mostrado na figura 3, o compilador do
+ambiente Portugol/Plus faz uma verificação da sintaxe das instruções usadas no
+algoritmo, caso não sejam encontrados erros, um programa objeto é gerado na
+linguagem de programação Pascal \cite{farreretal1995}. Através de um compilador
+Pascal executa-se o programa objeto.
+
+\end{enumerate}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+A programação de computador, não é algo muito complexo de ser aprendida, no
+entanto, para o seu aprendizado é necessário dominar a lógica de programação.
+O ensino da lógica depara-se hoje com uma problemática, que é a falta de
+experimentar na prática o que é estudado na teoria. A falta de prática
+desestimula os alunos iniciantes a aprofundar no conteúdo a ser aprendido
+\cite{118}.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+Visando a melhoria do ensino da lógica foi desenvolvido o Portugol/Plus, que
+é um sistema que auxilia na tarefa de ensinar e estudar a lógica de programação.
+Ele estimula o aluno a praticar e exercer o desenvolvimento de algoritmos,
+facilitando assim o trabalho do professor e também ajudando o aluno a ter um
+domínio melhor sobre o assunto \cite{118}.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+O principal público alvo são os alunos iniciantes dos cursos de Informática,
+onde se espera, com a utilização desta ferramenta, um aumento no domínio do
+conteúdo da lógica \cite{118}.
+
+\section{Processamento de Linguagem Natural}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {mirandaetal2000}
+\citeonline{barrfeigengaum1986} colocam que o caminho mais comum para que as
+pessoas se comuniquem é falando ou escrevendo através de linguagem natural, seja
+em inglês, francês, português ou chinês. As linguagens de computadores possuem
+um formato mais rígido, para que possam ser convertidas em uma seqüência de
+instruções de computador. O estudo de processamento de linguagem natural procura
+fazer com que os computadores possam entender a linguagem natural humana,
+tornando-se mais fáceis de utilizar.
