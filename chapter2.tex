@@ -192,7 +192,77 @@ desenvolvimento do programa, pois a parte essencial, a parte lógica do problema
 já está resolvida. Portanto, o aluno deve somente transferir a resolução para a
 linguagem de programação \cite{miranda2004}.
 
+\section{O Ensino da Linguagem de Programação Portugol}
+
+O ensino da lógica de programação geralmente é tratado nas primeiras fases dos
+cursos de informática, onde os alunos iniciantes aprendem a desenvolver o
+raciocínio lógico para então escrever algoritmos para solução de problemas. O
+Portugol é uma pseudo linguagem algorítmica muito utilizada na descrição de
+algoritmos, destaca-se pelo uso de comandos em português, o que facilita o
+aprendizado da lógica de programação, habituando o iniciante com o formalismo de
+programação.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+Apesar de todas essas vantagens, o Portugol apresenta o inconveniente dos
+algoritmos não poderem ser executados no computador. Dessa forma, o iniciante
+precisa imaginar a sua execução, o que não é uma tarefa tão fácil para quem está
+começando.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+A lógica para programação consiste em aprender a pensar na mesma sequência em
+que o computador executa as tarefas, aprende-se a imaginar como as ações serão
+executadas partindo-se do estudo de um problema até chegar a construção de um
+algoritmo (solução). Considere com exemplo o seguinte problema:
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+``Expressar o resultado da soma de dois valores.''
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+É comum, para uma pessoa pensar em algo assim:
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+``Pegar os dois valores, somar e dar o resultado.''
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+Após ter adquirido uma certa experiência, a mesma pessoa pode, de forma
+automática, converter tal pensamento em instruções sem necessidade de especificar
+detalhadamente os processos que estão implícitos nesta pequena rotina (ver tabela 1):
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+\begin{table} [!htb]
+  \caption{Ações e Operações}\label{tab:action+operation}
+  \centering
+  \begin{tabular}{| m{2.4cm} | m{10.9cm}|}\hline
+  \rowcolor{black!20}\Centering\bfseries Ações & \Centering\bfseries Operações \\ \hline
+  \MakeTextUppercase{Pegar} & Receber os dois valores numéricos e armazená-los \\ \hline
+  \MakeTextUppercase{Somar} & Executar a instrução de soma e armazenar o resultado \\ \hline
+  \MakeUppercase{Dar o \mbox{Resultado}} & Mostrar o resultado, armazená-lo para o uso
+  posterior ou para ser visualizado em outra oportunidade \\
+  \hline
+  \end{tabular}
+  \caption*{\footnotesize Fonte: Farrer (1989)}
+\end{table}
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+Quanto maior o domínio da lógica de programação, mais fácil será detalhar as
+tarefas envolvidas na solução do problema proposto e mais eficiente será o
+algoritmo criado, porém, para um iniciante construir um algoritmo que permita
+a um computador executar a tarefa proposta não é tão simples.
+
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+Segundo \cite[p. 17]{farreretal1989}: ``Algoritmo é a descrição de um conjunto de comandos que, obedecidos, resultam numa sucessão finita de ações''.
+A tabela \ref{tab:action+operation}, mostra duas leituras de um algoritmos, uma bastante genérica (ações) e outro um pouco mais detalhada (operações), porém, apesar de apresentar um bom nível de detalhamento ainda não pode ser considerado um algoritmo para o computador. Em Portugol, o mesmo algoritmo pode ser escrito da seguinte forma:
+
 \lstset{language=Pascal}
+
+\begin{lstlisting}[frame=single]  % Start your code-block
+for i:=maxint to 0 do
+begin
+{ do nothing }
+end;
+Write('Case insensitive ');
+Write('Pascal keywords.');
+\end{lstlisting}
 
 % Insert Pascal examples here.
 
