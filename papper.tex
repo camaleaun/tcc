@@ -67,16 +67,20 @@
 \usepackage[alf,abnt-emphasize=bf,abnt-etal-cite=2]{abntex2cite}	% Citações padrão ABNT
 %,abnt-full-initials=yes
 %\citeoption{abnt-and-type=&}
+
 % ---
 % Pacotes de cor em tabela
 % ---
 \usepackage[table]{xcolor}
 \usepackage{array,ragged2e}
+
+% ---
+% Pacotes de algoritmos
+% ---
+\usepackage{listings}
 % ---
 % CONFIGURAÇÕES DE PACOTES
 % ---
-
-%\usepackage{listings}
 
 % ---
 % Configurações do pacote backref
@@ -93,7 +97,19 @@
 %	\else
 %		Citado #1 vezes nas páginas #2.%
 %	\fi}%
-% ---
+% ---% ---
+% Configurações do pacote listings
+\lstdefinelanguage{portugol}
+  {morekeywords={Algoritmo,Var,inteiro,Inicio,escreva,Fim}
+}
+\lstset{
+  breakatwhitespace=false,
+  breaklines=true,
+  keywordstyle=\bfseries\color{black},
+  language=portugol,
+  showstringspaces=false,
+}
+% ---% ---
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO

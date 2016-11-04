@@ -253,16 +253,15 @@ a um computador executar a tarefa proposta não é tão simples.
 Segundo \cite[p. 17]{farreretal1989}: ``Algoritmo é a descrição de um conjunto de comandos que, obedecidos, resultam numa sucessão finita de ações''.
 A tabela \ref{tab:action+operation}, mostra duas leituras de um algoritmos, uma bastante genérica (ações) e outro um pouco mais detalhada (operações), porém, apesar de apresentar um bom nível de detalhamento ainda não pode ser considerado um algoritmo para o computador. Em Portugol, o mesmo algoritmo pode ser escrito da seguinte forma:
 
-\lstset{language=Pascal}
+% FIX ME REESCREVER com minhas palavras "PLÁGIO" de {118}
+\begin{lstlisting}[]  % Start your code-block
 
-\begin{lstlisting}[frame=single]  % Start your code-block
-for i:=maxint to 0 do
-begin
-{ do nothing }
-end;
-Write('Case insensitive ');
-Write('Pascal keywords.');
+Algoritmo exemplo;
+Var v1 ,v2 , v3 : inteiro;
+Inicio
+  leia (v1);
+  leia (v2);
+  v3 <- v1 + v2;
+  escreva (v3);
+Fim.
 \end{lstlisting}
-
-% Insert Pascal examples here.
-
