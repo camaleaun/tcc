@@ -73,15 +73,15 @@
 \renewcommand{\imprimircapa}{%%
   \begin{capa}%
     \center
-    \ABNTEXchapterfont\bfseries\MakeTextUppercase{\insereinstituicao}
+    \bfseries\MakeTextUppercase{\insereinstituicao}
 
-    \ABNTEXchapterfont\bfseries\MakeTextUppercase{\inserecentro}
+    \bfseries\MakeTextUppercase{\inserecentro}
 
-    \ABNTEXchapterfont\bfseries\MakeTextUppercase{\inserecurso}
+    \bfseries\MakeTextUppercase{\inserecurso}
 
     \vfill
     \begin{center}
-    \ABNTEXchapterfont\bfseries\Large\MakeTextUppercase{\imprimirtitulo}
+    \bfseries\Large\MakeTextUppercase{\imprimirtitulo}
     \end{center}
     \vfill
 
@@ -97,11 +97,11 @@
   \begin{center}
 
     %\vspace*{1cm}
-    {\ABNTEXchapterfont\bfseries\MakeTextUppercase{\imprimirautor}}
+    {\bfseries\MakeTextUppercase{\imprimirautor}}
 
     \vspace*{\fill}\vspace*{\fill}
     \begin{center}
-      \ABNTEXchapterfont\bfseries\Large\MakeTextUppercase{\imprimirtitulo}
+      \bfseries\Large\MakeTextUppercase{\imprimirtitulo}
     \end{center}
     \vspace*{\fill}
 
@@ -184,3 +184,9 @@
 %\settocdepth{section}
 %\setsecnumdepth{subsubsection}
 %\setsecnumdepth{section}
+
+\setlength{\cftbeforechapterskip}{0em}
+
+\newlength{\twolineskip}
+\setlength{\twolineskip}{\onelineskip}
+\addtolength{\twolineskip}{\onelineskip}
