@@ -6,4 +6,5 @@ node_modules
 *.log
 *.toc
 *.lot
+*.lof
 /monograph/
