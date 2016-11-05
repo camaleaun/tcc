@@ -17,7 +17,7 @@
 			"node_modules",
 			"monograph"
 		],
-		"excludeFiles": []
+		"excludeFiles": ["chapter2-old.tex"]
 	},
 	"sort": {
 		"done": true
