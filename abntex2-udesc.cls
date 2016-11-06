@@ -186,7 +186,3 @@
 %\setsecnumdepth{section}
 
 \setlength{\cftbeforechapterskip}{0em}
-
-\newlength{\twolineskip}
-\setlength{\twolineskip}{\onelineskip}
-\addtolength{\twolineskip}{\onelineskip}
