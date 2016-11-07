@@ -14,7 +14,10 @@ module.exports = function (grunt) {
 
     shell: {
       pdflatex: {
-        command: 'pdflatex papper && bibtex papper && pdflatex papper && pdflatex papper && rm *.aux *.bbl *.blg *.idx *.log *.toc'// *.lot
+        command: 'pdflatex papper && bibtex papper && pdflatex papper && pdflatex papper'
+      },
+      clean: {
+        command: 'rm *.aux *.bbl *.blg *.idx *.log *.toc *.lot *.lof'
       }
     },
 
@@ -36,7 +39,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('pdflatex', ['shell:pdflatex']);
+  grunt.registerTask('pdflatex', ['shell:pdflatex', 'shell:clean']);
 
   grunt.registerTask('default', ['watch']);
 

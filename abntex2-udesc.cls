@@ -186,3 +186,8 @@
 %\setsecnumdepth{section}
 
 \setlength{\cftbeforechapterskip}{0em}
+
+\makeatletter
+\def\ifdraft{\ifdim\overfullrule>\z@
+  \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
+\makeatother
