@@ -2,7 +2,7 @@
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
-\chapter{Introdução}
+\ifdraft{\color{green}}{}\chapter{Introdução}\color{black}
 %\addcontentsline{toc}{chapter}{Introdução}
 % ----------------------------------------------------------
 
@@ -16,6 +16,10 @@
 
 \input{chapters/chapter1/reasons.tex}
 
-\section{Estrutura do Trabalho}
+\ifdraft{\color{green}}{}\section{Limitações do Trabalho}\color{black}
+
+\input{chapters/chapter1/limits.tex}
+
+\ifdraft{\color{green}}{}\section{Estrutura do Trabalho}\color{black}
 
 \input{chapters/chapter1/struct.tex}
