@@ -1,6 +1,7 @@
 /node_modules/
 /bower_components/
 /.sass-cache/
+/monograph/
 #jquery*.*
 #bootstrap*.*
 #glyphicons-halflings-regular*
