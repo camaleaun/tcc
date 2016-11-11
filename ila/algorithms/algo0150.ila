@@ -1,0 +1,16 @@
+//prog algoritmo150
+variaveis
+numerico  ang, rang 
+inicio
+limpar
+escrever "digite angulo em graus: " 
+posicionar 1,25
+ler ang 
+rang =  ang * pi / 180 
+posicionar 3,1 
+se ( ( rang > pi / 2  ) e (  rang <= pi) ) ou ( ( rang >3 * pi / 2  ) e (  rang <= 2 * pi)  ) entao
+escrever "seno: ", sen(rang)  
+senao
+escrever "co-seno: ", cos(rang) 
+fim_se 
+fim

@@ -1,0 +1,40 @@
+//prog algoritmo317
+variaveis
+numerico venda, comissao, forn, loja, totvenda, totcomissao, totforn, totloja
+caracter resp
+inicio
+limpar
+escrever "Digite valor da venda ou 0 para terminar: "
+ler venda
+totvenda = 0
+totcomissao = 0
+totforn = 0
+totloja = 0
+faca enquanto  venda <> 0
+   comissao = venda *  0.03
+   forn = venda * 0.5
+   loja = venda - comissao - forn
+   totvenda = totvenda + venda
+   totcomissao = totcomissao + comissao
+   totforn = totforn + forn
+   totloja = totloja + loja
+  escrever "valor da venda: ",venda
+  ler resp // so para descer cursor
+  escrever "valor da comissao: ",comissao
+ ler resp // so para descer cursor
+  escrever "valor do repasse: ",forn
+  ler resp // so para descer cursor
+  escrever "ganho da loja: ",loja
+  ler resp // so para descer cursor
+   escrever "Digite valor da venda ou 0 para terminar: "
+  ler venda
+fim_enquanto
+limpar
+escrever "Total de vendas: ",totvenda
+posicionar 3,1
+escrever "Total de comissoes: ",totcomissao
+posicionar 5,1
+escrever "Total do repasse: ",totforn
+posicionar 7,1
+escrever "Ganho total da loja: ",totloja
+fim

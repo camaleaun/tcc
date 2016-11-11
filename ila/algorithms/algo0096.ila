@@ -1,0 +1,14 @@
+//prog algoritmo96
+variaveis
+numerico numero
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler numero 
+se (resto(numero,3) = 0 ) e (resto(numero,7) = 0 )entao // poderia testar resto(numero,21)
+  escrever "divis°vel por 3 e por 7"  
+senao
+escrever "n∆o e divis°vel por 3 e por 7"  
+fim_se 
+fim

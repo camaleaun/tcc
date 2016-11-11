@@ -1,0 +1,90 @@
+//prog algoritmo338
+variaveis
+numerico cfaz, tipo, qcm, q1faz, q2faz, q3faz, q4faz, q1afa, q2afa, q3afa, q4afa, ntmfaz,ntmafa, qcfaz, qcafa, ntfafa 
+caracter resp
+inicio
+limpar
+q1afa = 0
+q2afa = 0
+q3afa = 0
+q4afa = 0
+qcafa = 0
+ntfafa = 0
+ntmafa = 0
+escrever "codigo da fazenda ou -1 para terminar: "
+ler cfaz
+faca enquanto cfaz <> -1
+   ntfafa= ntfafa +1
+   ntmfaz = 0
+   q1faz = 0
+   q2faz = 0
+   q3faz = 0
+   q4faz = 0
+   qcfaz = 0
+   escrever "digite tipo de manada 1 vaca  2 touro 3  boi  4 bezerro ou 5 para terminar: "
+   ler tipo
+   faca enquanto tipo <> 5
+      ntmfaz= ntmfaz +1
+      escrever "digite quantidade de cabecas: "
+      ler qcm
+      se tipo =1 entao
+        q1faz = q1faz + qcm 
+       senao
+          se tipo =2 entao 
+           q2faz = q2faz + qcm 
+          senao
+           se tipo = 3 entao
+             q3faz = q3faz + qcm 
+            senao
+               se tipo = 4 entao 
+                q4faz = q4faz + qcm 
+              fim_se
+           fim_se
+          fim_se
+       fim_se
+      escrever "digite tipo de manada 1 vaca  2 touro 3  boi  4 bezerro ou 5 para terminar: "
+      ler tipo
+    fim_enquanto
+    escrever "digite quantidade de cabecas para corte: "
+    ler qcfaz
+    qcafa = qcafa + qcfaz
+    ntmafa = ntmafa + ntmfaz
+    q1afa = q1afa + q1faz
+    q2afa = q2afa + q2faz
+    q3afa = q3afa + q3faz
+    q4afa = q4afa + q4faz
+    limpar
+    escrever "codigo da fazenda: ", cfaz
+    posicionar 3,1
+    escrever "quantidade de cabecas do tipo 1: ", q1faz
+    posicionar 5,1
+    escrever "quantidade de cabecas do tipo 2: ", q2faz
+    posicionar 7,1
+    escrever "quantidade de cabecas do tipo 3: ", q3faz
+    posicionar 9,1
+    escrever "quantidade de cabecas do tipo 4: ", q4faz
+    posicionar 11,1
+    escrever "quantidade de manadas: ", ntmfaz
+    posicionar 24,1
+    escrever "pressione enter: "
+    posicionar 24,17
+    ler resp
+    limpar
+    escrever "codigo da fazenda ou -1 para terminar: "
+    ler cfaz
+fim_enquanto
+limpar
+escrever "numero total de fazendas: ", ntfafa
+posicionar 3,1
+escrever "quantidade de cabecas do tipo 1: ", q1afa
+posicionar 5,1
+escrever "quantidade de cabecas do tipo 2: ", q2afa
+posicionar 7,1
+escrever "quantidade de cabecas do tipo 3: ", q3afa
+posicionar 9,1
+escrever "quantidade de cabecas do tipo 4: ", q4afa
+posicionar 11,1
+escrever "quantidade de manadas: ", ntmafa
+posicionar 13,1
+escrever "quantidade de cabecas para corte: ", qcafa
+fim

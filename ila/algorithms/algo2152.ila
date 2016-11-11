@@ -1,0 +1,27 @@
+//prog algoritmo2152
+//melhor solucao porque nao fica  procurando divisores depois da metade
+variaveis
+numerico  c, num, vf, linha, col
+caracter resp
+inicio
+limpar
+escrever "digite numero: " 
+posicionar 1,16
+ler num 
+vf = inteiro(num / 2) 
+linha=3
+col=1
+para c = 1  ate  vf 
+   se resto( num , c) = 0 entao
+    posicionar linha,col  
+    escrever c
+    col=col+6
+  fim_se
+  se  col =73 entao
+    linha =linha +1
+    col=1
+   fim_se
+proximo
+posicionar linha,col
+escrever  num 
+fim

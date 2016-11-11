@@ -1,0 +1,29 @@
+//prog  algoritmo334
+variaveis
+numerico iden, maioriden, menoriden, peso, maiorpeso, menorpeso
+inicio
+limpar
+maiorpeso = 0
+menorpeso = 10000000
+escrever "digite identificacao do boi ou, para terminar, 0 ou numero negativo: "
+ler iden
+faca enquanto  iden > 0
+   escrever "digite peso do boi: "
+   ler peso
+   se peso > maiorpeso entao
+      maiorpeso = peso
+      maioriden = iden
+   senao
+     se peso < menorpeso entao
+        menorpeso = peso
+        menoriden = iden
+     fim_se
+  fim_se
+  escrever "digite identificacao do boi ou, para terminar, 0 ou numero negativo"
+  ler iden
+fim_enquanto
+limpar
+escrever  "maior peso ", maiorpeso, " e do boi cuja identificacao e: ", maioriden
+posicionar 3,1
+escrever  "menor peso ", menorpeso, " e do boi cuja identificacao e: ", menoriden
+fim

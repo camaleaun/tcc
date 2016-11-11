@@ -1,0 +1,14 @@
+//prog algoritmo84
+variaveis
+numerico a 
+inicio
+limpar
+escrever "Digite numero: " 
+posicionar 1,16
+ler a 
+se resto(a,2) = 0  entao
+escrever "PAR" 
+senao
+escrever "IMPAR" 
+fim_se 
+fim

@@ -1,0 +1,32 @@
+//algoritmo algoritmo412 
+ variaveis
+   numerico L, c,m
+   matriz numerico N[5,5]
+   inicio
+   limpar
+   para L = 1 ate 5
+   para c = 1 ate 5   
+     escrever "elemento:", L, "-",c 
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+limpar
+escrever "TODA A MATRIZ"
+para L = 1 ate 5   
+   para c = 1 ate 5   
+      posicionar L+1, (c-1)*5 +1
+        escrever  N[L,c]
+    proximo
+  proximo
+posicionar 8,1
+escrever "So os lementos nas posicoes cuja soma da linha mais coluna resulta num par"
+para L = 1 ate 5   
+   para c = 1 ate 5   
+      posicionar L+9, (c-1)*5 +1
+       se resto(L+c,2)=0 entao
+          escrever  N[L,c]
+       fim_se 
+    proximo
+  proximo
+fim

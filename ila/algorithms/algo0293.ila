@@ -1,0 +1,34 @@
+//prog algoritmo293
+variaveis
+numerico media, totpessoas, masc, fem,sexo, soma, idade
+inicio
+limpar
+soma  =  0
+masc  =  0
+fem  =   0
+totpessoas   =   0
+escrever "Entre a idade ou 0 para terminar: "
+ler idade
+faca enquanto idade > 0
+  totpessoas  = totpessoas+1
+  soma  =  soma + idade
+  escrever "Entre sexo(0-masculino e 1- feminino) "
+  ler sexo
+   se sexo = 0 entao
+    masc =masc+1
+   senao
+        se (idade >= 30 ) e ( idade <= 45) entao
+         fem=fem+1
+     fim_se
+   fim_se
+   escrever "Entre a idade ou 0 para terminar: "
+   ler idade
+fim_enquanto
+media  =  soma / totpessoas
+limpar
+escrever "Masculino: ", masc
+posicionar 3,1
+escrever "Feminino de 30 ate 45: ", fem
+posicionar 5,1
+escrever "Media: ", media
+fim

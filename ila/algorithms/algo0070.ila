@@ -1,0 +1,11 @@
+//prog algoritmo70
+variaveis
+numerico cres, cgorj 
+inicio
+limpar
+escrever "Entre com o valor da conta: "
+posicionar 1,29
+ler cres 
+cgorj = cres *1.1 
+escrever "O valor da conta com a gorjeta ser : ", cgorj 
+fim   

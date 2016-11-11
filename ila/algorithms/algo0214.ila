@@ -1,0 +1,36 @@
+//prog algoritmo214
+variaveis
+numerico  c, linha, pr1, pr2, soma, media
+caracter nome 
+inicio
+limpar
+soma = 0  
+linha=7
+posicionar linha,1
+escrever "RELACAO DOS ALUNOS" 
+para  c = 1  ate 15 
+  posicionar 1,1
+   escrever "digite nome: "
+  posicionar 1,19
+   ler nome 
+   escrever "digite nota 1: " 
+  posicionar 2,19
+   ler pr1 
+   escrever "digite nota 2: "
+  posicionar 3,19 
+   ler pr2 
+   media  = (pr1 + pr2)/2 
+   soma   = soma + media 
+  linha=linha+1
+   posicionar linha,1
+   escrever  nome
+   posicionar linha,30
+   escrever  pr1
+   posicionar linha,40
+   escrever  pr2
+   posicionar linha,50
+   escrever media
+proximo
+posicionar linha+1,1
+escrever  "media: ", soma / 15  
+fim

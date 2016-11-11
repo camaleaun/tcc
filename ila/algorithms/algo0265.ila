@@ -1,0 +1,17 @@
+//prog algoritmo265
+variaveis
+numerico a, num
+inicio
+limpar
+a   =  0
+escrever "digite numero ou 0 para sair: "
+ler num
+faca enquanto   num <> 0
+    se (num>=100 ) e ( num <=200) entao
+       a= a+1
+  fim_se
+   escrever "digite numero ou 0 para sair: "
+   ler num
+fim_enquanto
+escrever "total: ",  a
+fim

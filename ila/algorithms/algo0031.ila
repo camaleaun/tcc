@@ -1,0 +1,8 @@
+// prog algoritmo31
+variaveis
+numerico ma 
+inicio
+limpar
+ma = ( 8 +  9 + 7 ) / 3
+escrever  "A m‚dia aritm‚tica ‚: ", ma
+fim

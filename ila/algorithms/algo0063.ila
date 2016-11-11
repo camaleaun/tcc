@@ -1,0 +1,19 @@
+//prog algoritmo63
+variaveis
+numerico na, vha, pd, td, sb, sl 
+inicio
+limpar
+escrever "horas trabalhadas: "
+posicionar 1,20
+ler  na  
+escrever "valor da hora-aula: "
+posicionar 2,21
+ler  vha  
+escrever "percentual de desconto: "
+posicionar 3,25
+ler  pd  
+sb =  na * vha 
+td  =  ( pd / 100) * sb 
+sl   =    sb - td 
+escrever "salario liquido: ",sl 
+fim

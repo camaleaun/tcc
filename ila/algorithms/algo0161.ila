@@ -1,0 +1,15 @@
+//prog algoritmo161
+variaveis
+numerico  c,  num, linha 
+inicio
+limpar
+linha =1
+para c = 1 ate 5 passo 1
+ posicionar linha, 1
+ escrever "numero: " 
+ posicionar linha, 9
+ ler  num  
+ escrever "quadrado: ", num ^ 2
+ linha = linha +2 
+proximo
+fim

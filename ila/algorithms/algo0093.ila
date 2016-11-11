@@ -1,0 +1,16 @@
+//prog algoritmo93
+variaveis
+numerico numero
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler numero 
+se  numero > 0 entao
+  escrever " raiz: ", raiz(numero,2)  
+senao
+  se numero < 0 entao
+    escrever " quadrado: ", numero ^ 2  
+  fim_se
+fim_se
+fim

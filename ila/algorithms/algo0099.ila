@@ -1,0 +1,15 @@
+//prog algoritmo99
+variaveis
+numerico num, c 
+inicio
+limpar
+escrever "numero de 3 algarismos: "
+posicionar 1,25
+ler num 
+c =inteiro( num  /  100) 
+se resto(c , 2)  = 0 entao
+ escrever "o algarismo das centenas e par: ",c 
+senao
+ escrever "o algarismo das centenas e ­mpar: ",c 
+fim_se 
+fim

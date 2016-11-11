@@ -1,0 +1,36 @@
+//prog algoritmo216
+variaveis
+numerico  numero, cp, c, linha
+caracter resp
+inicio
+limpar
+linha =1 
+cp = 0 
+para c = 1  ate 200  
+   posicionar linha,1
+   escrever "digite numero: " 
+   posicionar linha,16
+   ler numero 
+   se resto( numero, 2) = 0 entao
+      cp =  cp +1  
+   fim_se
+   linha=linha+1
+  se  linha=23 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+ fim_se
+proximo
+posicionar 24,1
+escrever "pressione enter:"
+ posicionar 24,17
+ler resp
+limpar
+posicionar 1,1
+escrever "pares: ", cp 
+posicionar 2,1
+escrever "impares: ", 200-cp 
+fim

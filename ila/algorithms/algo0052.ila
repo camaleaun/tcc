@@ -1,0 +1,18 @@
+//prog algoritmo52
+variaveis
+numerico lado, perimetro, area, diagonal
+inicio
+limpar 
+escrever "digite o lado do quadrado: "
+posicionar 1,28
+ler lado  
+perimetro = 4 * lado 
+area= lado ^ 2   
+diagonal = lado * raiz(2,2)
+limpar  
+escrever "perimetro: ", perimetro
+posicionar 2,1   
+escrever " rea: ", area 
+posicionar 3,1  
+escrever "diagonal: ", diagonal 
+fim

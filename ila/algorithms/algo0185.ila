@@ -1,0 +1,29 @@
+//prog algoritmo185
+variaveis
+numerico  a, numero, linha
+caracter r
+inicio
+limpar
+linha = 1 
+para a = 1 ate 15 
+  posicionar linha,1 
+  escrever "digite numero: " 
+  posicionar linha,16
+  ler numero
+  se numero >= 0 entao
+     escrever  "raiz: ", raiz(numero,2)  
+   senao
+    escrever "Nao faco raiz de numero negativo"   
+ fim_se
+ se a = 11 entao
+ posicionar 24,1
+ escrever "pressione enter:"
+ posicionar 24,17
+ ler r
+ limpar
+ linha =1
+ senao
+ linha = linha +2
+ fim_se
+proximo
+fim

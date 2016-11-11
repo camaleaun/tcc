@@ -1,0 +1,12 @@
+//prog algoritmo46
+variaveis
+numerico saldo, nsaldo
+inicio
+limpar
+escrever "digite saldo: "
+posicionar 1,15
+ler saldo 
+nsaldo =saldo  * 1.01
+limpar
+escrever "novo saldo: ",nsaldo 
+fim

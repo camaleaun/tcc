@@ -1,0 +1,42 @@
+//prog algoritmo452
+variaveis
+matriz numerico m[5,5]
+numerico  L, c, n,ti 
+inicio
+limpar
+para L = 1 ate 5  
+   para c = 1 ate 5  
+    escrever "Elemento: ", L, "-", c
+    ler n
+   m[L,c]=n
+    proximo
+proximo
+ti = 1 
+L = 1
+faca enquanto ( L<= 4  ) e ( ti=1)  
+   c  = L+1
+    faca enquanto(c <= 5 ) e  ( ti =1)   
+      se (m[L,c] = 0 ) e ( ti =1 ) entao
+         ti = 1
+      senao
+         ti = 0 
+      fim_se
+      c= c+1 
+   fim_enquanto
+   L= L+1
+fim_enquanto
+limpar
+escrever "Toda a Matriz"
+para L = 1 ate 5  
+   para c = 1 ate 5
+    posicionar L+2,(c-1)*6+1  
+      escrever m[L,c]  
+   proximo   
+proximo
+posicionar 10,1
+se( ti =1 ) entao
+ escrever "Triangular Inferior " 
+senao
+ escrever " Nao e Triangular Inferior "
+fim_se
+fim

@@ -1,0 +1,37 @@
+//prog algoritmo481
+variaveis
+numerico num,base,c,nnum, nbase, nb,r,b
+funcao converte(nnum,nbase)
+inicio
+   b= 0 
+   nb= 0 
+  faca enquanto  nnum >= nbase 
+     r = resto(nnum , nbase) 
+     nb = nb + 10 ^b * r 
+     nnum = inteiro(nnum / nbase)  
+     b=b+1 
+  fim_enquanto
+   nb = nb + 10 ^b * nnum 
+ retornar(nb) 
+fim
+inicio
+limpar
+escrever "digite numero maior ou igual a 0(nao pode ser muito grande): "
+posicionar 1,62
+ler num 
+faca enquanto num  < 0
+  escrever "Numero negativo.Digite numero maior ou igual a 0: "
+  ler num
+fim_enquanto
+escrever "digite a base em deseja representa-lo (2-10): "
+ler base 
+faca enquanto (base <2 ) ou ( base >10)
+  escrever "Nao sei converter.Digite a base em deseja representa-lo(2-10): "
+ ler base
+fim_enquanto
+c = converte(num,base) 
+limpar
+escrever  "numero em decimal:  ",num 
+posicionar 3,1
+escrever  "numero na base ", base, ": ",c 
+fim

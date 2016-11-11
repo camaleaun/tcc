@@ -1,0 +1,21 @@
+//prog  algoritmo460
+variaveis
+numerico a,c,x,linha
+funcao dob(x)
+ inicio
+    retornar( x * 2)
+fim
+inicio
+limpar
+linha=1
+para c=1 ate 3
+posicionar linha,1
+escrever "digite numero: "
+posicionar linha,16
+ler a
+posicionar linha+1,1
+escrever "dobro: ",dob(a)
+linha=linha+2
+proximo
+fim
+

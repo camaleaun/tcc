@@ -1,0 +1,27 @@
+//prog p algoritmo232
+variaveis
+numerico  c, neg, linha, numero, soma 
+inicio
+limpar
+neg = 0 
+soma =0 
+linha=1
+para c = 1 ate 20  
+  posicionar linha,1
+  escrever "digite numero: " 
+ posicionar linha, 16
+   ler numero 
+   se  numero > 0 entao
+    soma =  soma + numero    
+   senao
+      se numero < 0 entao
+       neg = neg + 1
+    fim_se
+  fim_se
+    linha = linha +1
+proximo
+posicionar linha,1
+escrever "Soma dos positivos: ", soma
+posicionar linha + 1,1 
+escrever "Total de negativos: ", neg 
+fim

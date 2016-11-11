@@ -1,0 +1,58 @@
+//prog algoritmo121
+variaveis
+numerico  n1, n2, n3, n4, n5, maior, menor 
+inicio
+limpar
+escrever "digite 1 numero: "
+posicionar 1,18   
+ler n1 
+escrever "digite 2 numero: "  
+posicionar 2,18    
+ler n2 
+escrever "digite 3 numero: "  
+posicionar 3,18    
+ler n3  
+escrever "digite 4 numero: "  
+posicionar 4,18    
+ler n4 
+escrever "digite 5 numero: "  
+posicionar 5,18    
+ler n5 
+se (n1<>n2) e (n1<>n3) e (n1<>n4) e (n1<>n5) e (n2<>n3) e (n2<>n4) e (n2<>n5) e (n3<>n4) e (n3<>n5) e (n4<>n5) entao
+se n1 > n2 entao
+ maior = n1 
+ menor = n2  
+ senao
+  maior = n2
+  menor = n1  
+fim_se
+ se n3 > maior entao
+   maior = n3  
+ senao
+   se n3 < menor entao
+     menor = n3
+   fim_se
+fim_se  
+ se n4 > maior  entao
+   maior = n4  
+ senao
+   se n4 < menor entao
+     menor = n4
+   fim_se
+fim_se  
+se n5 > maior entao
+   maior = n5  
+ senao
+   se n5 < menor entao
+     menor = n5
+   fim_se
+fim_se
+posicionar 8,1
+escrever "Maior = ", maior 
+posicionar 9,1
+escrever "Menor = ", menor
+senao
+posicionar 8,1
+escrever "Os valores devem ser diferentes " 
+fim_se 
+fim

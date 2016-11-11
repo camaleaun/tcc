@@ -1,0 +1,22 @@
+//prog algoritmo97
+variaveis
+numerico numero
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler numero 
+se resto(numero,10) = 0 entao
+ escrever "multiplo de 10" 
+senao
+ se  resto(numero,2) = 0 entao  
+  escrever "multiplo de 2"   
+ senao
+  se resto(numero,5) = 0  entao
+   escrever "multiplo de 5"  
+  senao
+     escrever "nao e multiplo de 2 nem de 5"  
+  fim_se
+ fim_se
+fim_se
+fim

@@ -1,0 +1,59 @@
+//prog algoritmo362
+variaveis
+numerico L, n, i, c, d
+matriz numerico vet1[10]
+matriz numerico vet2[20]
+matriz numerico vetc[10]
+caracter resp
+inicio
+limpar
+L = 1 
+escrever "entrada de dados do vetor 1 ( 10 elementos)"
+posicionar 2,1
+para i = 1 ate 10
+  escrever "entre com ", i , " elemento: "
+  ler n
+ vet1[i]=n 
+proximo
+posicionar 24,1
+escrever "pressione enter: "
+posicionar 24,17
+ler resp
+limpar
+escrever "entrada de dados do vetor 2 ( 20 elementos)"
+posicionar 2,1
+para i = 1 ate 20
+  escrever "entre com ", i , " elemento: "
+  ler n
+ vet2[i]=n 
+proximo
+para i = 1 ate 10
+  vetc[i] = -999999999
+proximo // inicializando com valores fora do contexto
+para i = 1 ate 10
+  c = 1
+  faca enquanto (vet1[i] <> vet2[c] ) e ( c < 20)
+    c=c+1
+  fim_enquanto
+  se  vet1[i] = vet2[c]  entao
+   d=1 
+    faca enquanto (vet1[i] <> vetc[d] ) e ( d < L)
+     d= d+1
+     fim_enquanto
+    se  d = L entao
+      vetc[d] = vet1[i] 
+     L=L +1 
+   fim_se
+  fim_se
+proximo
+limpar
+se  L <> 1 entao
+ escrever "Elementos comuns"
+ para i =1 ate L -1 
+   posicionar i+3,1
+   escrever vetc[i]
+ proximo
+senao
+  escrever "Nao existem elementos comuns" 
+fim_se
+fim

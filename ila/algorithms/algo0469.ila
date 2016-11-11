@@ -1,0 +1,22 @@
+//prog algoritmo469
+variaveis
+numerico x, num, n, i , fat 
+funcao fatorial(n)
+inicio
+   fat=1 
+   para i=1 ate n 
+   fat=fat*i 
+  proximo
+   retornar(fat) 
+fim
+inicio
+limpar
+escrever "digite numero positivo: "
+ler num 
+faca enquanto num<=0
+   escrever "Invalido.Digite numero positivo: "
+  ler num
+ fim_enquanto
+ x=fatorial(num) 
+ escrever "fatorial de ",num," =  ", fat 
+ fim

@@ -1,0 +1,11 @@
+//prog algoritmo78
+variaveis
+numerico  nd,  n
+inicio
+limpar 
+escrever "digite o numero de lados do poligono: "
+posicionar 1,39
+ler n 
+nd = n * ( n - 3)  / 2 
+escrever "numero de diagonais: ", nd 
+fim    

@@ -1,0 +1,23 @@
+//prog  algoritmo289
+variaveis
+numerico num, cont, soma
+inicio
+limpar
+soma = 0
+cont = 0
+escrever "digite numero positivo e para terminar, negativo ou 0: "
+ler num
+faca enquanto num > 0
+   se resto(num , 3) = 0 entao
+     cont=cont +1 
+     soma = soma + num 
+  fim_se
+   escrever "digite numero positivo e para terminar, negativo ou 0: "
+   ler num
+fim_enquanto
+se cont<>0 entao
+ escrever  "media dos numeros multiplos de 3: ", soma / cont
+senao
+ escrever "nenhum numero multiplo de 3: "
+fim_se
+fim

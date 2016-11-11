@@ -1,0 +1,28 @@
+//prog  algoritmo331
+variaveis
+numerico arv, cont, resp,resp1
+inicio
+limpar
+cont = 0
+escrever "escolha uma arvore de 1 - 100  "
+ler arv
+limpar
+faca enquanto  (resp <> arv ) e ( cont <5)
+  escrever "qual o numero da arvore que o marciano esta escondido?(1 - 100)  "
+   ler resp
+   cont=cont +1 
+     se resp = arv entao
+      escrever "Voce me acertou! Vou morrer. "
+     senao
+       se resp > arv entao
+          escrever "HA! HA! HA! Estou mais a esquerda "
+        senao
+          escrever "HA! HA! HA! Estou mais a direita "
+     fim_se
+     fim_se
+     ler resp1
+fim_enquanto
+se resp <> arv entao
+  escrever "Cacador, voce vai morrer! "
+fim_se
+fim

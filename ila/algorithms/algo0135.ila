@@ -1,0 +1,19 @@
+//prog algoritmo135
+ variaveis
+numerico idade
+inicio
+limpar 
+ escrever "digite idade: "
+ posicionar 1,15
+ ler idade
+posicionar 4,1  
+ se  idade < 16 entao
+   escrever "Nao eleitor" 
+ senao
+  se (idade > 65) ou (idade < 18) entao
+    escrever "Eleitor facultativo"  
+  senao
+    escrever "Eleitor obrigatorio"  
+ fim_se
+fim_se
+fim

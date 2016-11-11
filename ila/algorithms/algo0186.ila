@@ -1,0 +1,30 @@
+//prog algoritmo186
+variaveis
+numerico  a, numero, linha
+caracter resp
+inicio
+limpar
+linha = 1 
+para a = 1 ate 8 
+  posicionar linha,1 
+  escrever "digite numero: " 
+  posicionar linha,16
+  ler numero
+  escrever  "cubo: ", numero ^ 3 
+  posicionar linha+2,1
+  se numero < 0 entao
+    escrever "Nao faco raiz de numero negativo: "  
+   senao
+    escrever "raiz: ", numero ^(1/3)  //raiz(numero,3)
+ fim_se
+ linha = linha +3
+ se linha = 22 entao
+  posicionar 24,1
+  escrever "pressione enter:"
+  posicionar 24,17
+  ler resp
+  limpar
+  linha=1
+  fim_se
+  proximo
+fim

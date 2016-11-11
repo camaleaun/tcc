@@ -1,0 +1,27 @@
+//prog algoritmo276
+variaveis
+numerico idade, c21, c50
+caracter resp
+inicio
+limpar
+c21  =  0
+c50  =  0
+ escrever "Entre com uma idade: "
+ ler idade
+ faca enquanto (idade >=0 ) e ( idade <= 140)
+
+   se idade < 21 entao
+     c21 = c21+1
+   senao
+      se idade > 50 entao
+       c50=c50+1
+     fim_se
+  fim_se
+  escrever "Entre com uma idade: "
+  ler idade
+  fim_enquanto
+limpar
+escrever "Total de idades inferiores a 21: ", c21
+posicionar 3,1
+escrever "Total de idades maiores do que 50: ", c50
+fim

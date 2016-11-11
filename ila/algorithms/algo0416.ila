@@ -1,0 +1,24 @@
+//algoritmo algoritmo416 
+ variaveis
+   numerico L, c,n
+   matriz numerico M[4,5]
+   matriz numerico METADE[4,5]
+   inicio
+   limpar
+   para L = 1 ate 4
+   para c = 1 ate 5   
+     escrever "elemento de M[", L, ",",c,"]" 
+     ler n    
+     M[L, c]=n
+     METADE[L,c]=n/2
+    proximo
+  proximo
+limpar
+escrever "MATRIZ METADE"
+para L = 1 ate 4   
+   para c = 1 ate 5   
+      posicionar L+1, (c-1)*6 +1
+        escrever  METADE[L,c]
+    proximo
+proximo
+fim

@@ -1,0 +1,15 @@
+//prog algoritmo55 
+variaveis
+numerico diagmaior, diagmenor, area 
+inicio
+limpar
+escrever "medida da diagonal maior: "
+posicionar 1,28
+ler  diagmaior 
+escrever "medida da diagonal menor: "
+posicionar 2,28
+ler  diagmenor 
+area = (diagmaior * diagmenor)/2 
+limpar
+escrever "area =", area 
+fim

@@ -1,0 +1,19 @@
+//prog  algoritmo464
+variaveis
+numerico ang,g, gang
+ funcao graus( gang)
+  inicio
+    gang = gang * 180/pi 
+    retornar(gang)
+ fim
+inicio
+limpar
+escrever "digite angulo em radianos: "
+posicionar 1,28
+ler ang
+g = graus(ang)
+posicionar 4,1
+escrever "radianos: ",  ang, "  graus: ", g
+fim
+
+

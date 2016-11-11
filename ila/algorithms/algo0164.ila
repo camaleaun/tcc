@@ -1,0 +1,11 @@
+//prog algoritmo164
+variaveis
+numerico  a 
+inicio
+limpar
+escrever "Comecei"
+posicionar 2,1
+para a = 1 ate 50000 passo 1
+proximo
+escrever "Fim" 
+fim

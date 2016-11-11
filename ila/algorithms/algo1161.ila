@@ -1,0 +1,28 @@
+//prog algoritmo116solucao1
+variaveis
+numerico a, b, c 
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler a
+escrever "digite 2 numero: " 
+posicionar 2,18    
+ler b
+escrever "digite 3 numero: " 
+posicionar 3,18      
+ler c 
+se a > b entao
+ se a > c entao
+   escrever  "maior: ", a   
+   senao
+    escrever "maior: ", c  
+ fim_se
+senao
+  se b > c entao
+   escrever "maior: ", b  
+   senao
+   escrever "maior: ", c   
+  fim_se
+fim_se
+fim

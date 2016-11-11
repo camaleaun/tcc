@@ -1,0 +1,29 @@
+//prog algoritmo477
+variaveis
+numerico num,rz,n,c,p
+funcao raiz1(n)
+inicio 
+   c = 1
+   p = c*c
+  faca enquanto p < num
+   c=c+1
+    p =c * c
+   fim_enquanto
+  se p = num entao
+    retornar(1)
+  senao
+    retornar(0)
+  fim_se
+fim
+inicio
+limpar
+escrever "digite numero: "
+posicionar 1,16
+ler num 
+rz=raiz1(num) 
+se rz= 1 entao
+ escrever "e um quadrado perfeito. "
+senao
+ escrever "nao e um quadrado perfeito. "
+fim_se
+fim

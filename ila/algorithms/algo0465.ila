@@ -1,0 +1,23 @@
+//prog algoritmo465
+variaveis
+numerico num1,num2 ,n1,n2
+funcao verifica(n1, n2)
+inicio
+ se n1 < n2 entao
+  escrever  n2
+  senao
+  escrever  n1
+fim_se
+fim
+inicio
+limpar
+escrever "Digite  numero 1: "
+posicionar 1,19
+ler num1
+escrever "Digite  numero 2: "
+posicionar 2,19
+ler num2
+posicionar 4,1
+verifica(num1,num2)
+fim
+

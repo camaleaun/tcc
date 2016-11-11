@@ -1,0 +1,45 @@
+//prog algoritmo337
+variaveis
+numerico reg, meses, imposto, multa
+caracter resp
+inicio
+limpar
+escrever "digite numero do registro do imovel ou 0 para terminar: "
+ler reg
+faca enquanto reg > 0
+  escrever "valor do imposto a ser pago: "
+  ler imposto
+  escrever "numero de meses em atraso: "
+  ler meses
+  se  imposto <= 500 entao
+    multa = imposto * 0.01 * meses
+  senao
+    se  imposto <= 1800 entao
+      multa = imposto * 0.02 * meses
+    senao
+      se  imposto <= 5000 entao
+        multa = imposto * 0.04 * meses
+      senao
+        se  imposto <= 12000 entao
+          multa = imposto * 0.07 * meses
+        senao
+          multa = imposto * 0.1 * meses
+       fim_se
+      fim_se
+     fim_se
+   fim_se
+  limpar
+   escrever "numero do registro: ", reg
+   ler resp // so para descer o cursor
+   escrever "valor do imposto: R$ ", imposto
+    ler resp // so para descer o cursor
+    escrever "numero de meses em atraso: ", meses
+   ler resp // so para descer o cursor
+   escrever "valor da multa: R$ ", multa
+   ler resp // so para descer o cursor
+   escrever "valor total: R$ ", imposto + multa
+   ler resp // so para descer o cursor
+   escrever "digite numero do registro do imovel ou 0 para terminar: "
+   ler reg
+fim_enquanto
+fim

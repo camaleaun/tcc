@@ -1,0 +1,57 @@
+//prog algoritmo3422
+variaveis
+ caracter nome, maiornome, op, resp
+ numerico  x, num
+inicio
+op = "A"
+faca enquanto (op <> "F") e (op <> "f")
+ limpar
+ cor 15,2
+ janela 1,1,13,78
+ posicionar 2,38
+ escrever "Menu"
+ posicionar 3,3
+  escrever "A - Imprime o nome que tiver o maior  numero de caracteres entre 20 nomes" 
+ posicionar 5,3
+  escrever "B - Brinca com a palavra"
+ posicionar 7,3
+  escrever "C - Calcula e imprime a raiz  quarta de um numero"
+ posicionar 9,3
+  escrever "F - Termina o algoritmo"
+ posicionar 11,3
+  escrever "OPCAO: "
+ posicionar 11,11
+  ler  op
+  cor 15,0
+  limpar
+  faca caso
+     caso   (op = "A") ou ( op = "a" ):
+       escrever "Digite um nome "
+       ler  nome
+       maiornome = nome 
+       para  x  = 1  ate  19  
+         escrever "Digite um nome "
+          ler  nome
+          se  comprimento(nome) > comprimento(maiornome) entao
+            maiornome = nome 
+          fim_se
+       proximo
+       escrever "Nome com maior numero de caracteres: ", maiornome
+    caso (  op = "B") ou ( op = "b" ):
+      escrever "NÆo pode ser feito no ILA "
+    caso (  op = "C") ou ( op = "c" ):
+         escrever "numero"
+         ler  num
+         se num > 0 entao
+             escrever "Raiz  quarta: ", raiz(num,4) 
+         senao
+          escrever "Nao faco raiz de numero negativo: "
+      fim_se
+    caso (  op = "F") ou ( op = "f" ):
+       escrever "Saindo"
+    outro_caso:
+        escrever "Opcao nao disponivel"
+ fim_caso
+ ler resp
+fim_enquanto
+fim

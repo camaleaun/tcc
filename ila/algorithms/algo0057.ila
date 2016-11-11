@@ -1,0 +1,17 @@
+//prog algoritmo57
+variaveis 
+numerico  pr1, pr2, mf
+inicio
+limpar
+escrever "digite pr1: "
+posicionar 1,13
+ler  pr1
+escrever "digite pr2: "
+posicionar 2,13
+ler  pr2
+mf = ( pr1 + pr2 ) / 2
+limpar
+escrever "media truncada = ", inteiro( mf ) 
+posicionar 2,1  
+escrever "media arredondada = ", inteiro( mf  + 0.5 )
+fim

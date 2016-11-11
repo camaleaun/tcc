@@ -1,0 +1,19 @@
+//prog algoritmo81
+variaveis
+numerico conta, inv, digito, d1, d2, d3,soma
+inicio
+limpar 
+escrever "Digite conta de tres digitos: "
+posicionar 1,31
+ler conta 
+d1 = inteiro(conta / 100)
+d2 = inteiro(resto(conta, 100) / 10)
+d3 = resto(resto(conta, 100), 10)
+inv = d3 *100 + d2 *10 +d1 
+soma = conta + inv 
+d1 = inteiro(soma/100) * 1
+d2 = inteiro( resto(soma,100) / 10) * 2
+d3 = resto( resto(soma,100) , 10) * 3
+digito = resto((d1 +d2 +d3) , 10) 
+escrever "digito verificador: ", digito 
+fim

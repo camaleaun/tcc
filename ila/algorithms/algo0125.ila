@@ -1,0 +1,18 @@
+//prog algoritmo125
+variaveis
+numerico   idade
+inicio
+limpar
+escrever "digite sua idade: " 
+posicionar 1,19
+ler idade 
+se idade >= 65 entao
+ escrever "maior de 65"  
+senao
+  se  idade >= 18 entao
+    escrever "maior de idade"  
+  senao
+     escrever "menor de idade"  
+  fim_se
+fim_se 
+fim

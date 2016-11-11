@@ -1,0 +1,21 @@
+//prog algoritmo181
+variaveis
+numerico  i, linha, col, soma
+inicio
+limpar
+soma = 0
+linha = 1
+col = 1
+para i = 1 ate 100 
+  posicionar linha,  col 
+  escrever i
+  soma = soma + i
+  col = col + 4
+  se col=77 entao
+  linha = linha +1
+  col = 1
+  fim_se  
+proximo
+posicionar linha+1, 1
+escrever "Somatorio de 1 a 100: ",soma
+fim

@@ -1,0 +1,35 @@
+//prog algoritmo315
+variaveis
+numerico famt,famf,sf,sm, rs
+caracter filhos, fam
+inicio
+limpar
+famt=0
+famf=0
+sf =0
+sm=0
+escrever "Cadastra fam­lia( s ou qualquer caracter) ou @ para terminar: "
+ler fam
+faca enquanto fam<>"@"
+  famt= famt +1
+  escrever "Tem filhos (s/n) ? "
+  ler filhos
+  se (filhos ="s") ou ( filhos ="S") entao
+     famf= famf +1
+    escrever "Quantas do sexo feminino? "
+    ler rs
+    sf=sf + rs
+    escrever "Quantas do sexo masculino? "
+    ler rs
+    sm=sm + rs
+   fim_se
+   escrever "Cadastra fam­lia( s ou qualquer caracter) ou @ para terminar: "
+   ler fam
+fim_enquanto
+limpar
+escrever "Total gasto com as  meninas: ", sf * 11.00
+posicionar 3,1
+escrever "Total gasto com meninos: ", sm * 12.00
+posicionar 5,1
+escrever "Percentual de fam­lias beneficiadas: ", famf*100/famt
+fim

@@ -1,0 +1,23 @@
+//prog algoritmo187
+variaveis
+numerico  base, expo, pot, i 
+inicio
+limpar
+escrever "Digite base inteira e maior do que 1: " 
+posicionar 1,39
+ler base 
+posicionar 2,1 
+escrever "Digite expoente inteiro maior que 1: "
+posicionar 2,38 
+ler expo
+posicionar 5, 1
+se ( base  >= 2) e ( expo > 1) entao
+   pot = 1 
+   para  i = 1 ate  expo 
+    pot = pot * base 
+   proximo
+   escrever "potencia: ", pot 
+senao
+ escrever "Nao satisfazem" 
+fim_se
+fim

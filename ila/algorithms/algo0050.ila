@@ -1,0 +1,21 @@
+//prog algoritmo50
+variaveis
+numerico  perimetro, area, diagonal, base, altura
+inicio
+limpar
+escrever "digite base: "
+posicionar 1,14
+ler base          
+escrever "digite altura: "
+posicionar 2,16
+ler altura 
+perimetro = 2*(base + altura) 
+area =base * altura 
+diagonal = raiz(base^2 + altura^2, 2)
+limpar 
+escrever "perimetro = ",perimetro
+posicionar 2,1   
+escrever "area = ", area  
+posicionar 3,1  
+escrever "diagonal = ", diagonal  
+fim

@@ -1,0 +1,18 @@
+//prog algoritmo213
+variaveis
+numerico  a, numero, soma,linha
+inicio
+limpar
+linha=1 
+soma = 0  
+para  a = 1  ate 12
+ posicionar linha, 1  
+  escrever "digite numero: "
+ posicionar linha, 16 
+  ler numero 
+ soma  =soma + numero
+linha= linha +1 
+proximo
+posicionar linha +3,1
+escrever  "media: ", soma/12  
+fim

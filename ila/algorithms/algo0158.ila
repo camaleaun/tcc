@@ -1,0 +1,16 @@
+//prog algoritmo158
+variaveis
+numerico x, fx
+inicio
+limpar 
+escrever "digite valor de x: " 
+posicionar 1,20
+ler x 
+posicionar 3,1
+se x <> 2  entao
+  fx = 8  / (2 - x) 
+  escrever "f(x)= ",fx
+senao
+  escrever "NAO PODE SER FEITA" 
+fim_se 
+fim

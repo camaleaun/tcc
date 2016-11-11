@@ -1,0 +1,26 @@
+//prog algoritmo470
+variaveis
+numerico num, pri, n, c, p  
+funcao primo(n)
+inicio 
+c=0 
+p=2 
+faca enquanto( c = 0 ) e ( p <= inteiro(n /2))
+ se resto(n , p) = 0 entao
+   c=1
+ fim_se
+  p=p+1 
+fim_enquanto
+retornar(c)  
+fim
+inicio
+limpar
+escrever "digite um numero > 0: "
+ler num 
+pri=primo(num) 
+se pri = 0 entao
+ escrever " e primo ",num 
+senao
+ escrever "nao e primo ",num 
+fim_se
+fim

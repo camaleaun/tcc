@@ -1,0 +1,11 @@
+//prog algoritmo64
+variaveis
+numerico  f, c 
+inicio
+limpar
+escrever "digite o valor da temperatura em graus centigrados: "
+posicionar 1,53
+ler c 
+f =  ( 9 * c + 160)/5  
+escrever "o valor da temperatura em graus fahrenheit ‚ = ", f 
+fim

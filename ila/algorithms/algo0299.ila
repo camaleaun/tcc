@@ -1,0 +1,38 @@
+//prog algoritmo299
+variaveis
+numerico x, qa, cont, n1, n2, n3, n4, n5
+caracter nome, resp
+inicio
+limpar
+x =0
+escrever "Digite a quantidade de alunos :"
+ler qa
+cont = 0
+faca enquanto x < qa
+    escrever "Digite nome:"
+    ler nome
+    escrever "Digite a nota na prova 1 :"
+    ler n1
+    escrever "Digite a nota na prova 2 :"
+    ler n2
+    escrever "Digite a nota na prova 3 :"
+    ler n3
+    escrever "Digite a nota na prova 4 :"
+    ler n4
+    escrever "Digite a nota na prova 5 :"
+    ler n5
+    se (n1 >= 7 ) e ( n4 >= 7) entao
+       se (n2 >= 7 ) e ( n3 >= 7 ) e ( n5 >= 7) entao
+          escrever "Parabens ", nome, ", voce foi aprovado em todas as materias!"
+     senao
+         escrever nome, ", voce passou nas materias 1 e 4"
+     fim_se
+    fim_se
+    se n3 >= 7 entao
+     cont = cont +1
+     fim_se
+    x=x+1
+  ler resp // so para descer cursor
+fim_enquanto
+escrever "A porcentagem dos aprovados na materia 3  :",(cont*100)/qa
+fim

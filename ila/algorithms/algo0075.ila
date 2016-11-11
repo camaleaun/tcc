@@ -1,0 +1,15 @@
+//prog algoritmo75
+variaveis
+numerico peso, pesogramas, novopeso
+inicio
+limpar 
+escrever "entre com seu peso, so a parte inteira: "
+posicionar 1,41
+ler peso 
+pesogramas = peso*1000 
+novopeso  = pesogramas*1.12
+limpar 
+escrever "peso em gramas: ", pesogramas 
+posicionar 2,1  
+escrever "novo peso: ", novopeso 
+fim

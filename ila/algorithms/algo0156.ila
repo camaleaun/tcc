@@ -1,0 +1,45 @@
+//prog algoritmo156
+variaveis
+numerico ANO, MES, DIA, VD
+inicio
+limpar 
+escrever "digite dia: "
+posicionar 1,13 
+ler DIA 
+escrever "digite mes: " 
+posicionar 2,13
+ler MES 
+escrever "digite ano: " 
+posicionar 3,13
+ler ANO 
+posicionar 5,1 
+se ANO>=1 entao
+ VD = 1 
+   se( MES < 1 ) ou ( MES > 12 ) ou ( DIA < 1 ) ou ( DIA > 31)  entao
+    VD = 0  
+   senao
+     se( (MES = 4 ) ou ( MES = 6 ) ou ( MES = 9 ) ou ( MES = 11) ) e ( DIA > 30)  entao
+        VD = 0
+     senao
+       se MES = 2  entao
+        se ((resto(ANO, 4) =0 ) e (resto(ANO,100) <> 0)) ou (resto(ANO ,400)=0)   entao 
+         se DIA > 29  entao
+          VD = 0 
+	fim_se
+     senao 
+       se  DIA > 28  entao
+           VD = 0 
+	fim_se
+      fim_se
+     fim_se
+    fim_se   
+  fim_se
+senao
+ VD = 0 
+fim_se
+se  VD = 0  entao
+ escrever "DATA INVALIDA" 
+senao
+ escrever "DATA VALIDA" 
+fim_se 
+fim

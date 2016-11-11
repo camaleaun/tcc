@@ -1,0 +1,39 @@
+//prog algoritmo328
+variaveis
+numerico qsde, codcli,p, qs,  ps, vp
+caracter resp
+inicio
+limpar
+escrever "entre com a quantidade de sacos disponiveis em estoque: "
+ler qsde
+escrever "entre com o preco de cada saco: "
+ler ps
+p = inteiro(qsde * 0.1)
+escrever "entre com o codigo do cliente ou 0 para terminar: "
+ler codcli
+faca enquanto  (codcli <> 0 ) e (  qsde > 100)
+   escrever "entre com a quantidade de sacos a serem comprados: "
+   ler qs
+   vp = qs * ps
+   se (qsde >= qs ) e ( qs <= p) entao
+    escrever "codigo do cliente = ", codcli
+    ler resp // so para descer cursor
+     escrever "quantidade de sacos pedidos = ", qs
+    ler resp // so para descer cursor
+     escrever "valor do pedido = ", vp
+     qsde = qsde - qs
+  senao
+    se qsde < qs entao
+      escrever "estoque insuficiente"
+     senao
+       se  qs > p entao
+         escrever "ultrapassado o maximo permitido"
+     fim_se
+    fim_se
+  fim_se
+  ler resp // so para descer cursor
+  escrever "entre com o codigo do cliente ou 0 para terminar: "
+  ler codcli
+fim_enquanto
+escrever "quantidade de sacos em estoque = ", qsde
+fim

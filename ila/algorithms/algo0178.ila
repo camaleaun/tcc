@@ -1,0 +1,10 @@
+//prog algoritmo178
+variaveis
+numerico  c
+inicio
+limpar
+para c = 1 ate 20 
+  posicionar c, 1
+  escrever  c ^ 2
+proximo
+fim

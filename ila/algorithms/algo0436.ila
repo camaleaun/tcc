@@ -1,0 +1,41 @@
+//prog algoritmo436
+variaveis
+matriz numerico M[10,10]
+numerico L, c, n, soma
+caracter resp
+inicio
+limpar
+para L=1 ate   10 
+  para c=1 ate   10 
+  escrever "digite elemento de M[" ,L, ",",  c,  "]"
+   ler n
+  M[L,c]=n
+ proximo
+proximo
+limpar
+escrever  "Toda matriz"
+para L=1 ate   10 
+   para c=1 ate  10 
+   posicionar L+1,(c-1)*5 +1
+     escrever  M[L,c] 
+ proximo
+proximo   
+soma = 0
+posicionar 13,1
+escrever  "Colunas pares"
+para L=1 ate  10 
+  para c = 2 ate  10  passo 2
+   posicionar L+13,(c-1)*5 +1
+   escrever  M[L,c]
+    soma = soma + M[L,c] 
+   proximo
+proximo
+posicionar 23,1
+escrever  "Soma dos elementos das colunas pares: ", soma
+posicionar 24,1
+escrever "pressione enter:"
+ posicionar 24,17
+ ler resp
+fim
+
+

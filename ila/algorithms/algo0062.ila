@@ -1,0 +1,11 @@
+//prog algoritmo62
+variaveis
+numerico preco, npreco 
+inicio
+limpar
+escrever "digite valor do produto: "
+posicionar 1,26
+ler preco 
+npreco =preco * 0.91 
+escrever "preco com desconto: ",npreco 
+fim

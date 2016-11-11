@@ -1,0 +1,26 @@
+//prog algoritmo220
+variaveis
+numerico  c, vf, linha
+caracter nome, resp 
+inicio
+limpar
+escrever "digite nome: "
+posicionar 1,14 
+ler nome
+limpar
+linha=1 
+vf = comprimento(nome) 
+para  c = 1  ate  vf  
+   posicionar linha,1
+   escrever nome
+   linha = linha +1
+   se linha = 23  entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+   fim_se
+proximo   
+fim

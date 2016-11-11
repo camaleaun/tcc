@@ -1,0 +1,12 @@
+//prog algoritmo34
+variaveis
+numerico numero, suc, ant 
+inicio
+limpar
+escrever "entre com um numero: "
+posicionar 1,22
+ler numero 
+ant = numero -1 
+suc = numero +1 
+escrever "o sucessor e ", suc," o antecessor e ", ant 
+fim 

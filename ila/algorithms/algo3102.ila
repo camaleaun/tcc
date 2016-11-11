@@ -1,0 +1,42 @@
+//prog algoritmo3102
+variaveis
+numerico op,num,can4,can5,can7,can12, totent
+inicio
+limpar
+can4 = 0
+can5 = 0
+can7 = 0
+can12 = 0
+totent = 0
+escrever "Canal(4/5/7/12), para terminar 0: "
+ler op
+faca enquanto op>0
+  se  (op<>4 ) e ( op<>5 ) e ( op<>7 ) e ( op<>12) entao
+     escrever "opcao invalida"
+  senao
+    escrever "numero de pessoas que estavam assistindo: "
+     ler num
+    totent = totent + num
+     faca caso
+        caso op = 4:
+          can4 = can4 + num 
+        caso op = 5:
+         can5 = can5 + num 
+        caso op = 7:
+          can7 = can7 + num 
+        caso op = 12:
+          can12 = can12 + num 
+        fim_caso
+ fim_se
+ escrever "Canal(4/5/7/12), para terminar 0: "
+ ler op
+fim_enquanto
+limpar
+escrever  "porcentagem de audiencia do canal 4: ", can4*100/totent
+posicionar 3,1
+escrever  "porcentagem de audiencia do canal 5: ", can5*100/totent
+posicionar 5,1
+escrever  "porcentagem de audiencia do canal 7: ", can7*100/totent
+posicionar 7,1
+escrever  "porcentagem de audiencia do canal 12: ",can12*100/totent,
+fim

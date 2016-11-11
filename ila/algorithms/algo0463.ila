@@ -1,0 +1,17 @@
+//prog  algoritmo463
+variaveis
+numerico ang,r, rang
+ funcao radiano( rang)
+  inicio
+    rang= rang * pi /180 
+    retornar(rang)
+ fim
+inicio
+limpar
+escrever "digite angulo em graus: "
+posicionar 1,25
+ler ang
+r = radiano(ang)
+posicionar 4,1
+escrever "graus: ", ang, "    radianos:  ",r
+fim

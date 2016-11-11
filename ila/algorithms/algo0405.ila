@@ -1,0 +1,22 @@
+//algoritmo algoritmo405
+ variaveis
+   numerico L, c, m, s
+   matriz numerico N[10,10]
+   inicio
+   limpar
+   para L = 1 ate 10
+   para c = 1 ate 10  
+     escrever "elemento linha ", L, "  coluna ",c 
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+ s=0
+limpar
+para L = 1 ate 9  
+   para c = L+1 ate 10  
+      s= s +  N[L, c]
+     proximo
+  proximo
+escrever "Soma dos elementos acima da diagonal principal:" ,s
+fim

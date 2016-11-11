@@ -1,0 +1,18 @@
+//prog algoritmo267
+variaveis
+numerico a, c
+caracter prof
+inicio
+limpar
+a   =  0
+escrever "digite profiss∆o ou FIM para sair: "
+ler prof
+faca enquanto (prof <> "FIM") e ( prof <>"fim") e ( prof <>"Fim")
+  se ( prof = "DENTISTA") ou ( prof = "Dentista") ou ( prof = "dentista") entao
+   a=a+1
+ fim_se
+  escrever "digite profiss∆o ou FIM para sair: "
+  ler prof 
+ fim_enquanto
+escrever "total de dentistas: ", a
+fim

@@ -1,0 +1,30 @@
+//prog algoritmo210
+variaveis
+numerico  a1, a2, i, termo,col
+inicio
+limpar 
+escrever "Entre com 1 termo: "
+posicionar 1,20 
+ler a1 
+escrever "Entre com 2 termo: "
+posicionar 2,20  
+ler a2 
+limpar
+posicionar 1,1
+ escrever  a1
+posicionar 1,5
+escrever  a2
+col=9 
+para i = 3 ate 10 passo 1
+  se resto( i , 2) = 0   entao
+     termo = a2 - a1  
+  senao
+     termo = a2 + a1  
+  fim_se
+  posicionar 1, col
+  escrever termo
+  col=col+4 
+  a1 = a2 
+  a2 = termo 
+proximo   
+fim

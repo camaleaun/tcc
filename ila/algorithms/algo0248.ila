@@ -1,0 +1,22 @@
+//prog algoritmo248
+variaveis
+numerico  c, c1, L, linha,col 
+caracter nome
+inicio
+limpar
+escrever "digite nome: " 
+posicionar 1,14
+ler nome 
+limpar
+linha=0
+L = comprimento(nome) 
+para  c = 1  ate L
+  linha=linha+1
+  col=1
+  para  c1=1  ate c  
+    posicionar linha, col
+    escrever nome
+    col=col + L +2
+  proximo
+proximo
+fim

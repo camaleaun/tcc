@@ -1,0 +1,43 @@
+//prog algoritmo 89
+variaveis
+numerico  op, pterra 
+inicio
+limpar
+escrever "planetas que podem ser analisados: " 
+posicionar 2,1 
+escrever "1 mercurio " 
+posicionar 3,1  
+escrever "2 venus "  
+posicionar 4,1
+escrever "3 marte "  
+posicionar 5,1
+escrever "4 jupiter "  
+posicionar 6,1
+escrever "5 saturno " 
+posicionar 7,1  
+escrever "6 urano"  
+posicionar 8,1
+escrever "escolha o planeta a ser analisado: " 
+posicionar 8,36 
+ler  op  
+escrever "entre com um peso na terra:  " 
+posicionar 9,30 
+ler  pterra 
+posicionar 12,1
+faca caso
+caso op =1 :
+ escrever "seu peso no planeta mercurio Ç : " ,  ( pterra / 10) *  0.37  
+caso op = 2 :
+ escrever  "seu peso no planeta venus Ç : " ,  ( pterra /  10) *  0.88  
+caso op = 3 : 
+ escrever  "seu peso no planeta marte Ç : " ,  ( pterra /  10) *  0.38  
+caso op = 4 :
+ escrever  "seu peso no planeta jupiter Ç : " ,  ( pterra /  10) *  2.64  
+caso op = 5 : 
+  escrever  "seu peso no planeta saturno Ç : " ,  ( pterra /  10) *  1.15  
+caso op = 6 :
+ escrever  "seu peso no planeta urano Ç : " ,  ( pterra /  10) *  1.17          
+outro_caso :
+ escrever  "este planeta n∆o pode ser analisado"  
+fim_caso
+fim   

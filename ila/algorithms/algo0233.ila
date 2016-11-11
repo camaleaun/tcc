@@ -1,0 +1,29 @@
+//prog algoritmo233
+variaveis
+numerico  ini, f, aux, i, linha,col 
+inicio
+limpar
+escrever "digite limite inferior: " 
+posicionar 1,25
+ler ini 
+escrever "digite limite superior: " 
+posicionar 2,25
+ler f 
+se  ini > f entao
+   aux = ini  
+   ini = f  
+   f = aux  
+ fim_se
+limpar
+linha=1
+col=1
+para  i = ini  ate f  
+  posicionar linha, col 
+  escrever i
+  col = col + 4
+  se col=77 entao
+  linha = linha +1
+  col = 1
+  fim_se  
+proximo
+fim

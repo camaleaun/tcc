@@ -1,0 +1,34 @@
+//prog algoritmo298
+variaveis
+numerico nt, a, x, na, contap, total, nota, sn
+caracter resp
+inicio
+limpar
+a = 1
+contap = 0
+total = 0
+escrever "Digite o numero de turmas :"
+ler nt
+faca enquanto a<=nt
+   sn =0
+   escrever "Digite o numero de alunos da turma ", a
+   ler na
+  total = total + na
+   x = 1
+   faca enquanto x <= na
+      escrever "Digite a nota do aluno ", x, ": "
+      ler nota
+      se nota >=7.0 entao
+       contap= contap+1 
+      fim_se
+      sn = sn + nota
+      x=x+1
+    fim_enquanto
+    escrever "Media da turma ", a, ": ", sn/na
+    ler resp // so para descer cursor
+    a=a+1
+ fim_enquanto
+escrever "Foram aprovados ", contap, " alunos."
+ler resp // so para descer cursor
+escrever "Percentual de alunos reprovados  ",  (total-contap)* 100/total, "%"
+fim

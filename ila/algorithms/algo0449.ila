@@ -1,0 +1,57 @@
+//prog algoritmo449
+variaveis
+matriz numerico a[5,4] //a[200,4]
+matriz numerico b[2,2]
+matriz numerico p[5,2] //p[200,2]
+numerico L, c,m,n,linha
+caracter resp
+inicio
+limpar
+para L=1 ate 5 //200
+   para c=1  ate 2
+     p[L,c]=0
+   proximo
+proximo
+para L=1 ate  5 //200
+   para c=1 ate 4
+    escrever "digite nota: ",L," -  ", c
+    ler n
+    a[L,c] =n
+  proximo
+proximo
+para L=1 ate 2
+ para c=1  ate 2
+   escrever "digite peso do prova : ", L, "  do professor : ",c
+   ler n
+   b[L,c] =n
+ proximo
+proximo
+para L=1 ate 5 //200
+  c=1
+  para m=1 ate 2
+     p[L,c]=p[L,c] + a[L,m] * b[m,c]
+  proximo
+  c=2
+  para m=3 ate  4
+     p[L,c]=p[L,c] + a[L,m] * b[m-2,c]
+  proximo
+proximo
+limpar
+escrever "Relacao das notas finais segundo criterio dos professores"
+linha=2 
+para L=1 ate  5 //200
+ para c=1 ate 2
+   posicionar linha, (c-1)*25 +1
+   escrever p[L,c]
+ proximo
+ linha=linha+1
+ se linha = 23 entao
+  posicionar 24,1
+  escrever "pressione enter:"
+  posicionar 24,17
+  ler resp
+  limpar
+  linha =1
+ fim_se
+proximo
+fim

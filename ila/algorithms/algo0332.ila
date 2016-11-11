@@ -1,0 +1,40 @@
+//prog  algoritmo332
+variaveis
+numerico cont5,cont510, cont10, cont, vezes
+caracter resp
+inicio
+limpar
+cont5 = 0
+cont510 = 0
+cont10 = 0
+cont = 0
+escrever "voce fez uso da xerox?( S / N / F)  "
+ler resp
+faca enquanto ( resp <> "F") e ( resp <> "f")
+  se (resp = "S") ou ( resp = "s") entao
+    cont=cont+1
+    escrever "quantas vezes?  "
+    ler vezes
+    se vezes <5 entao
+      cont5=cont5 +1
+    senao
+      se vezes <10 entao
+        cont510 = cont510+1
+      senao
+        cont10= cont10+1
+      fim_se
+    fim_se
+  fim_se
+   escrever "voce fez uso da xerox?( S / N / F) "
+   ler resp
+fim_enquanto
+// suponha que pelo menos um aluno usou a xerox senao, nao haveria pesquisa
+limpar
+escrever  "total de alunos que fizeram uso da xerox: ", cont
+posicionar 3,1
+escrever "percentual de alunos que utilizou menos de 5 vezes: ",  cont5 *100 /cont, "%"
+posicionar 5,1
+escrever "percentual de alunos que  utilizou entre 5 e 10 vezes inclusive: ", cont510 *100 /cont, "%"
+posicionar 7,1
+escrever "percentual de alunos que  utilizou mais de 10 vezes: ", cont10 *100 /cont, "%"
+fim

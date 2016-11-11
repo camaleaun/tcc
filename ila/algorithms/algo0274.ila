@@ -1,0 +1,29 @@
+//prog algoritmo274
+variaveis
+numerico num, a, linha,x
+inicio
+limpar
+linha=1
+ para a = 1 ate 10
+ posicionar linha,1
+  escrever "Entre com ",a, "o numero: "
+ posicionar linha,22
+   ler num
+   x=1
+   faca enquanto num <= 0
+      escrever "ATENCAO! Entre com ",a, "o numero maior do que 0: "
+     posicionar linha+x,46
+       ler num
+       x=x+1
+    fim_enquanto
+   linha=linha+x
+    se linha >=23 entao
+     limpar
+     linha=1
+     senao
+      linha=linha+1
+   fim_se
+  escrever "Raiz quadrada: ", raiz(num,2)
+ linha=linha+1
+proximo
+fim

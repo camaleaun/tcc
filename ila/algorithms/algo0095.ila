@@ -1,0 +1,14 @@
+//prog algoritmo95
+variaveis
+numerico numero
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler numero 
+se resto(numero,5) = 0 entao
+  escrever "e divis°vel por 5 "  
+senao
+  escrever "n∆o Ç divis°vel por 5"  
+fim_se 
+fim

@@ -1,0 +1,31 @@
+//prog algoritmo134
+variaveis
+numerico idade
+inicio
+limpar
+escrever "entre com a idade: "
+posicionar 1,20
+ler idade 
+posicionar 4,1
+se  idade < 5  entao
+ escrever "nao existe categoria para essa idade" 
+senao
+ se  idade <= 7  entao
+    escrever "categoria Infantil A"  
+   senao
+    se  idade <= 10  entao
+      escrever "categoria Infantil B" 
+     senao
+       se  idade <= 13  entao
+        escrever "categoria Juvenil A" 
+       senao
+         se  idade <= 17  entao
+          escrever "categoria Juvenil B" 
+        senao
+         escrever "categoria Senior" 
+       fim_se
+   fim_se
+  fim_se
+ fim_se
+fim_se
+fim

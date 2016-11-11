@@ -1,0 +1,18 @@
+//prog algoritmo 73
+variaveis
+numerico num, numfrac, numi,numa
+inicio
+limpar 
+escrever "entre com um numero com parte fracionaria: "
+posicionar 1,44
+ler num 
+numi = inteiro(num) 
+numfrac  = num - numi 
+numa = inteiro(num + 0.5)
+limpar
+escrever "parte inteira: ",numi
+posicionar 2,1
+escrever "parte fracionaria: ",numfrac
+posicionar 3,1
+escrever "numero arredondado: ", numa 
+fim

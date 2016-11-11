@@ -1,0 +1,22 @@
+//algoritmo algoritmo406
+ variaveis
+   numerico L, c, m, s
+   matriz numerico N[10,10]
+   inicio
+   limpar
+   para L = 1 ate 10
+   para c = 1 ate 10  
+     escrever "elemento linha ", L, "  coluna ",c 
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+limpar
+escrever "Elementos abaixo da diagonal principal"
+para L = 2 ate 10  
+   para c = 1 ate L -1  
+      posicionar L+1, (c-1)*5 +1
+      escrever  N[L, c]
+     proximo
+  proximo
+fim

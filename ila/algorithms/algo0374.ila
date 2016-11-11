@@ -1,0 +1,40 @@
+//prog algoritmo374
+variaveis
+numerico L, n, linha
+matriz numerico a[50]
+matriz numerico b[50]
+caracter resp
+inicio
+limpar
+//trecho de entrada para 50 numeros
+para L = 1 ate 50
+ escrever "digite numero :"
+  ler n
+ a[L ] = n
+  b[L] = a[L ] ^ 2 
+proximo
+//trecho de saida
+limpar
+escrever "Original"
+posicionar 1,15 
+escrever "Quadrado"
+linha=2
+para L = 1 ate 50
+  posicionar linha,1
+  escrever a[L]
+  posicionar linha,15
+   escrever b [L ] 
+  linha=linha+1
+   se linha = 22 entao
+      posicionar 24,1
+      escrever "pressione enter: "
+      posicionar 24,17
+      ler resp
+      limpar
+      escrever "Original"
+      posicionar 1,15 
+      escrever "Quadrado"
+      linha=2
+   fim_se
+proximo
+fim

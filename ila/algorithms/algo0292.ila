@@ -1,0 +1,31 @@
+//prog algoritmo292
+variaveis
+numerico num, maior, menor, soma, a
+inicio
+limpar
+escrever "Entre com um numero ou 0 para terminar: "
+ler num
+a  = 0
+soma  = 0
+maior  = num
+menor  = num
+faca enquanto num <> 0
+    a= a+1
+   soma  =  soma + num
+   se num > maior entao
+   maior  =  num
+   senao
+    se num<menor entao
+       menor  =  num 
+     fim_se
+   fim_se
+ escrever "Entre com um numero ou 0 para terminar: "
+ ler num
+fim_enquanto
+limpar
+escrever "Maior: ", maior
+posicionar 3,1
+escrever "Menor: ", menor
+posicionar 5,1
+escrever "Media: ", soma/a
+fim

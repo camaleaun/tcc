@@ -1,0 +1,7 @@
+//prog algoritmo13
+inicio
+limpar
+escrever "Aprendendo Algoritmo!!!"
+posicionar  2,1 
+escrever  "Com Anita e Guto"  
+fim

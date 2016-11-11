@@ -1,0 +1,26 @@
+//prog algoritmo291
+variaveis
+numerico data, np1,quant,  pu, val,soma
+caracter resp
+inicio
+limpar
+escrever "Digite numero do pedido ou 0 para terminar: "
+ler  np1
+soma  =  0
+faca enquanto  np1 > 0 
+  escrever "Digite data: "
+  ler  data
+  escrever "Digite preco unitario: "
+  ler  pu
+  escrever "Digite  quantidade: "
+  ler  quant
+   val  =   pu * quant
+   soma  =  soma + val
+   escrever "o valor da compra  na data ", data, "  e  ", val 
+   ler resp // so para descer cursor
+   escrever "Digite numero do pedido ou 0 para terminar: "
+   ler  np1
+fim_enquanto
+escrever "o valor total da compra e  ",soma
+fim
+

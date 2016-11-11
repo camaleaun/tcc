@@ -1,0 +1,17 @@
+//prog algoritmo281
+variaveis
+numerico num, maior
+inicio
+limpar
+escrever "digite numero ou - 999 para acabar: "
+ler num
+maior   =  num
+faca enquanto  num <> -999
+   se num > maior entao
+     maior   =  num 
+   fim_se
+   escrever "digite numero ou - 999. para acabar: "
+   ler num
+fim_enquanto
+escrever "maior: ", maior 
+fim

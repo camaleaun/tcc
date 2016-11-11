@@ -1,0 +1,28 @@
+//prog algoritmo421
+variaveis
+numerico L,c,n, soma
+matriz numerico A[3,5]
+matriz numerico s[3]
+inicio
+limpar
+para L= 1 ate 3
+ para c =1 ate 5
+  escrever "digite elemento de A[", L, "][",c,"] "
+   ler n
+  A[L,c]=n
+  proximo
+proximo
+//Gera o vetor soma-linha
+para L= 1 ate 3
+  s[L] = 0
+  para c =1 ate 5
+  s[L] = s[L] + A[L,c]  
+ proximo
+proximo
+limpar
+escrever "Vetor Soma-Linha"
+para L= 1 ate 3
+  posicionar L+1, 1
+ escrever s[L] 
+proximo
+fim

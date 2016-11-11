@@ -1,0 +1,28 @@
+//prog algoritmo123
+variaveis
+numerico a, b, c 
+inicio
+limpar
+escrever "digite 1 lado: " 
+posicionar 1,16  
+ler a 
+escrever "digite 2 lado: " 
+posicionar 2,16    
+ler b 
+escrever "digite 3 lado: "
+posicionar 3,16     
+ler c 
+ se ( a < b + c  ) e (   b < a + c ) e (  c < a + b ) entao
+   se  ( a = b  ) e ( a = c) entao
+    escrever "Triangulo equilatero"   
+   senao
+    se ( a = b  ) ou (  a = c ) ou (  b = c) entao
+        escrever "Triangulo isosceles"   
+    senao
+     escrever "Triangulo escaleno"   
+    fim_se
+  fim_se
+senao
+ escrever "NÆo podem ser lados de um triangulo"  
+fim_se 
+fim

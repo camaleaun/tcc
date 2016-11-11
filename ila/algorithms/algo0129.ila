@@ -1,0 +1,24 @@
+//prog algoritmo129
+variaveis
+numerico salario, desconto
+inicio
+limpar 
+escrever "digite salario: "
+posicionar 1, 17     
+ler salario 
+se salario <= 600 entao
+desconto = 0
+senao
+ se  salario <= 1200 entao
+   desconto = salario * 0.2  
+ senao
+  se  salario <= 2000 entao
+     desconto = salario * 0.25  
+  senao
+   desconto = salario * 0.30  
+  fim_se
+fim_se
+fim_se
+posicionar 3, 1   
+escrever "desconto: ",desconto 
+fim

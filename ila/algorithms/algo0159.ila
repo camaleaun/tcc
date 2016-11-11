@@ -1,0 +1,16 @@
+//prog algoritmo159
+variaveis
+numerico x, fx 
+inicio
+limpar 
+escrever "digite valor de x: " 
+posicionar 1,20
+ler x 
+posicionar 3,1
+se (x > 4. ) ou ( x < (-4.))  entao
+ fx = (5 * x + 3 ) / raiz(x^2 -16,2) 
+  escrever "f(x)= ",fx 
+senao
+ escrever "NAO PODE SER FEITA" 
+fim_se 
+fim

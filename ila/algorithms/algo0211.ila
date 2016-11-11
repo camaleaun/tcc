@@ -1,0 +1,22 @@
+//prog algoritmo211
+variaveis
+numerico  num , aux, linha,col
+inicio
+limpar
+linha=1
+col=1 
+para  num = 11  ate  99  
+  se resto(num , 10) <>  0 entao
+   aux = inteiro(num / 10) 
+   se resto( num , aux) = 0 entao
+      posicionar linha,col
+      escrever num
+      col=col+4
+      se col=77 entao
+        linha = linha+1
+        col = 1
+       fim_se  
+   fim_se
+  fim_se
+proximo
+fim

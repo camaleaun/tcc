@@ -1,0 +1,25 @@
+//prog algoritmo279
+variaveis
+numerico num, cont, num1, primo
+inicio
+limpar
+escrever "Entre com o numero: "
+ler num
+primo =  0
+faca enquanto num > 0
+  cont  =  0
+ num1  =  2
+faca enquanto (cont = 0 ) e ( num1<= inteiro(num / 2) )
+  se resto( num , num1)=0 entao
+    cont = 1  
+  fim_se
+  num1=num1+1
+fim_enquanto
+se  cont <> 1 entao
+  primo= primo +1
+fim_se
+escrever "Entre com o numero: "
+ler num
+fim_enquanto
+escrever "Total de primos: ", primo
+fim

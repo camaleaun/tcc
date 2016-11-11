@@ -1,0 +1,27 @@
+//prog algoritmo462
+variaveis
+numerico n1,n2,n3, m, x,y,z,ma
+funcao media(x,y,z)
+inicio
+   ma=(x + y + z)/3
+   retornar(ma)
+fim
+
+inicio
+limpar
+escrever "digite nota 1: "
+posicionar 1,16
+ler n1
+escrever "digite nota 2: "
+posicionar 2,16
+ler n2
+escrever "digite nota 3: "
+posicionar 3,16
+ler n3
+posicionar 5,1
+escrever "media aritmetica: ", media(n1,n2,n3)
+m=media(n1,n2,n3)
+posicionar 7,1
+escrever"media aritmetica em variavel = ",m
+fim
+

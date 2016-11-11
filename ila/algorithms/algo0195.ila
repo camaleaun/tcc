@@ -1,0 +1,11 @@
+//prog algoritmo195
+variaveis
+numerico  soma, i
+inicio
+limpar 
+soma =0 
+para i = 26  ate  198 passo 2
+ soma =soma + i
+proximo
+escrever "Soma:", soma 
+fim

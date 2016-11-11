@@ -1,0 +1,34 @@
+//prog algoritmo205
+variaveis
+numerico  i, num,  num1, maior,linha 
+inicio
+limpar
+escrever "Quantos numeros voce quer digitar? "
+posicionar 1,36 
+ler num 
+escrever "Digite um numero: "
+posicionar 2,19 
+ler num1 
+maior= num1 
+linha=3
+para  i = 1  ate num - 1  
+ posicionar linha, 1
+  escrever "Digite um numero: "
+ posicionar linha, 19  
+  ler num1 
+  se num1 > maior entao
+   maior =num1 
+ fim_se 
+  linha = linha +1
+  se linha=23 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+  fim_se
+proximo
+escrever "Maior numero digitado: ", maior 
+fim
+

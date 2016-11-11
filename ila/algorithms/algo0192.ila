@@ -1,0 +1,23 @@
+//prog algoritmo192
+variaveis
+numerico  num, i, vf, linha, col
+inicio
+limpar
+
+escrever "Digite um numero: "
+posicionar 1, 19 
+ler num 
+vf =num  - 1 
+limpar
+linha = 1
+col = 1
+para i = 1 ate vf passo 2
+  posicionar linha,  col
+  escrever i
+  col = col + 4
+  se col = 77 entao
+  linha = linha +1
+  col = 1
+  fim_se  
+proximo
+fim

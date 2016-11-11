@@ -1,0 +1,28 @@
+//prog algoritmo363
+variaveis
+numerico cont,L,n, num
+matriz numerico v[10]
+matriz numerico v1[10] 
+inicio
+limpar
+cont =1 
+escrever "digite numero positivo ou 0. para terminar: "
+ler num 
+faca enquanto  (cont <= 10 ) e ( num > 0 )
+   v[cont] = num 
+   v1[cont] =  1 / num  
+   cont= cont+1 
+   escrever "digite numero positivo ou 0. para terminar: "
+   ler num 
+fim_enquanto
+se  cont = 1 entao
+    escrever "Vetor nao tem dados"
+senao
+ cont= cont-1 
+limpar
+para L = 1 ate cont
+  posicionar L,1
+    escrever v1[L]
+  proximo
+fim_se
+fim

@@ -1,0 +1,43 @@
+//prog algoritmo257
+variaveis
+numerico  L, C, Y, Z,FAT, FAT1, S,  SOMA, linha,col
+inicio
+limpar 
+escrever "digite o numero de termos: "
+posicionar 1,28 
+ler Y 
+limpar
+linha=1
+col=1
+SOMA = 0 
+C = 0 
+S = 1 
+para  L = Y  ate  0  passo  -1
+   FAT = 1 
+   para  Z = 1  ate  L  
+     FAT = FAT * Z  
+   proximo
+   FAT1 = 1 
+   para  Z = 1  ate  C  
+     FAT1 = FAT1 * Z
+   proximo
+   posicionar linha,col
+    se S = 1 entao
+      escrever L, "! /", C ^ 2,"!  - " 
+       SOMA = SOMA + FAT /(FAT1 ^2) 
+       S = 0 
+     senao
+       escrever L,"! /", C ^  2,"!  + " 
+        SOMA = SOMA - FAT / (FAT1 ^ 2) 
+        S  =  1 
+    fim_se
+    C  =  C + 2
+col=col+13
+se col=79 entao
+  linha = linha +1
+  col = 1
+fim_se  
+proximo
+posicionar linha+3,1
+escrever "SOMA: ",SOMA 
+fim

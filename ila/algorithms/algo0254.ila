@@ -1,0 +1,32 @@
+//prog algoritmo254
+variaveis
+numerico  L,c, cap, somaa, somat, nota, media
+caracter resp
+inicio
+limpar 
+somat = 0 
+cap = 0 
+para L = 1 ate 20 
+   somaa  =  0 
+    para c = 1 ate  10
+      escrever "Digite ", c,"¦ nota do aluno ",L
+      ler nota 
+      somaa = somaa +nota 
+   proximo
+  media = somaa/10 
+  se media>=5 entao
+     cap=cap+1
+  fim_se
+  escrever "Media do ", L,"§ aluno: ",media 
+  posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+  somat = somat+media 
+proximo
+posicionar 3,1
+ escrever "Media da turma: ", somat/20 
+posicionar 5,1
+ escrever "Percentual de Aprovados: ", cap*100/20 
+fim

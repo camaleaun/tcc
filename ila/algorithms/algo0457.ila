@@ -1,0 +1,80 @@
+//prog algoritmo457
+variaveis
+numerico L, C,m, n, flag,op
+caracter resp
+matriz numerico tortas[10] 
+matriz numerico material[3,10] 
+matriz numerico materialfinal[3]
+inicio
+limpar
+op=0
+faca enquanto op<>4
+  limpar
+ escrever "TORTAS SONHOS "
+  posicionar 4,1
+  escrever "1 - Entra com as quantidades dos tres ingredientes para todas as tortas "
+  posicionar 6,1 
+  escrever "2 - Entra com a quantidade de tortas de cada tipo feitas por dia "
+  posicionar 8,1  
+  escrever "3 - Calcula e imprime a quantidade usada de farinha de trigo, acucar e leite "
+  posicionar 10,1
+   escrever "4 - Sai do algoritmo"
+  posicionar 12,1
+  escrever "Opcao: " 
+  posicionar 12,8
+  ler  op
+  limpar
+  faca caso
+     caso  op = 1:
+         flag=1
+         escrever " ingrediente 1 - Farinha de trigo ingrediente  2 - acucar ingrediente 3 - leite"
+         para  L= 1 ate 3  
+        para  C= 1 ate 10  
+            escrever " ingrediente ", L ,  "  torta  ", C
+            ler n
+        material[L,C]=n 
+       proximo
+     proximo
+
+     caso  op = 2:
+       se  flag = 0 entao
+         escrever " NAO TEM DADOS CADASTRADOS"
+       senao
+         para  L= 1  ate 10 
+           escrever " quantidade de tortas numero:  ", L 
+           ler n
+          tortas[L]=n 
+         proximo
+     fim_se
+
+     caso  op = 3:
+       se flag = 0 entao
+          escrever "NAO TEM DADOS CADASTRADOS"
+        senao
+           para L=1 ate 3 
+             materialfinal[L] = 0
+             para m = 1 ate 10 
+               materialfinal[L] = materialfinal[L]  + material[L,m] * tortas[m]
+            proximo
+           proximo
+           escrever "MATERIAL NECESSARIO"
+           posicionar 2,1
+           escrever " ingrediente 1: Farinha de trigo ingrediente 2:  acucar ingrediente 3:  leite"
+           para L=1 ate 3 
+           posicionar L+3,1
+           escrever  L," - ", materialfinal[L] 
+         proximo
+        fim_se
+
+     caso  op = 4:
+         limpar
+   outro_caso:
+       escrever "OPCAO NAO DISPONIVEL"
+  fim_caso
+  posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+  ler resp
+  limpar
+fim_enquanto
+fim

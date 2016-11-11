@@ -1,0 +1,22 @@
+//prog algoritmo105
+variaveis
+caracter sigla 
+inicio
+limpar
+escrever "digite sigla: " 
+posicionar 1,15   
+ler sigla 
+se ( sigla = "RJ" ) ou (  sigla = "rj") entao
+  escrever "carioca"
+  senao
+   se (sigla ="SP" ) ou (  sigla = "sp") entao
+     escrever "paulista"  
+   senao
+    se ( sigla ="MG" ) ou ( sigla = "mg") entao
+     escrever "mineiro" 
+    senao
+     escrever  "outros estados"  
+   fim_se
+ fim_se
+fim_se
+fim

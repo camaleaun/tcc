@@ -1,0 +1,23 @@
+//prog algoritmo277
+variaveis
+numerico num,c,p
+caracter resp
+inicio
+limpar
+escrever "Digite numero maior do que 0: "
+ler num
+faca enquanto num >0
+ se raiz(num,2)=inteiro(raiz(num,2)) entao
+  escrever "Quadrado perfeito"
+ senao
+  escrever "Nao e quadrado perfeito"
+ fim_se
+ posicionar 24,1
+ escrever "pressione enter:"
+ posicionar 24,17
+ ler resp
+ limpar
+ escrever "Digite numero maior do que 0: "
+ ler num
+fim_enquanto
+fim

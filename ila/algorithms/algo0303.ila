@@ -1,0 +1,31 @@
+//prog algoritmo303
+variaveis
+numerico c, cart, nmult, mcart, mnmult, valor1, total
+caracter resp
+inicio
+limpar
+mnmult = 0
+escrever "digite carteira de motorista ou 0 para terminar:  "
+ler cart
+faca enquanto  cart <> 0
+  total = 0
+   escrever "digite numero de multas:  "
+   ler nmult
+   se nmult > mnmult entao
+     mnmult = nmult
+     mcart = cart
+   fim_se
+   para c =1 ate  nmult
+      escrever "digite valor da multa:  "
+     ler valor1
+     total = total + valor1
+    proximo
+    escrever "carteira: ", cart
+     ler resp // so para descer crusor
+    escrever "valor a pagar: ", total
+    ler resp // so para descer crusor
+    escrever "digite carteira de motorista ou 0 para terminar:  "
+     ler cart
+fim_enquanto
+escrever "numero da carteira com maior numero de multas: ", mcart
+fim

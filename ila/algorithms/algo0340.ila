@@ -1,0 +1,69 @@
+//prog algoritmo340
+variaveis
+numerico n1, n2,nf, d1, d2,d, dd,num1, num2,pinteira, pfrac,  numeradorfracao,denominadorfracao, soma
+caracter resp
+inicio
+limpar
+escrever "Entre com 1 numerador: "
+posicionar 1,24
+ler n1
+escrever "Entre com 1 denominador: "
+posicionar 2,26
+ler d1
+faca enquanto d1 <= 0
+ escrever "DENOMINADOR INVALIDO. Entre com 1 denominador: "
+  ler d1
+fim_enquanto
+escrever "Entre com 2 numerador: "
+ler n2
+escrever "Entre com 2 denominador: "
+ler d2
+faca enquanto d2 <= 0
+  escrever "DENOMINADOR INVALIDO.Entre com 2 denominador: "
+  ler d2
+fim_enquanto
+limpar
+se d1=d2 entao
+ numeradorfracao = n1 + n2
+ denominadorfracao = d1
+ soma=d1
+senao
+  se d1 < d2 entao
+    soma = d2
+    d = d1
+    dd=d2
+  senao
+    soma = d1
+    d=d2
+    dd=d1
+  fim_se
+  faca enquanto resto(soma,d) <> 0
+   soma =soma + dd
+  fim_enquanto
+   num1= inteiro(soma/d1) * n1  
+   num2 = inteiro(soma/d2) * n2 
+   numeradorfracao=num1 + num2
+   denominadorfracao = soma
+  // escrever "a soma das fracoes: ",n1,"/ ", d1, " e  ", n2, "/ ",d2, " = ", numeradorfracao,"/ ",denominadorfracao
+fim_se
+escrever "a soma das fracoes: ",n1,"/ ", d1, " e  ", n2, "/ ",d2, " = ", numeradorfracao,"/ ",denominadorfracao
+posicionar 3,1
+se  resto(numeradorfracao,denominadorfracao) = 0 entao
+    escrever "numero inteiro = ",numeradorfracao / denominadorfracao 
+senao
+  se numeradorfracao<0 entao
+    nf=numeradorfracao*-1
+  senao
+    nf=numeradorfracao
+  fim_se
+  se nf > denominadorfracao entao
+    pinteira= inteiro(numeradorfracao /denominadorfracao) 
+    pfrac= resto(nf , denominadorfracao)
+    escrever "numero misto = ", pinteira, "  ",  pfrac,"/ ",  soma
+  senao
+    escrever "fracao propria"
+  fim_se
+fim_se
+fim
+       
+

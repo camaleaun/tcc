@@ -1,0 +1,12 @@
+//prog algoritmo43
+variaveis
+numerico num, logaritmo 
+inicio
+limpar
+escrever "entre com o logaritmando: "
+posicionar 1,27
+ler num 
+logaritmo = log(num) 
+limpar
+escrever "logaritmo: ", logaritmo 
+fim

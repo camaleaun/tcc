@@ -1,0 +1,17 @@
+//prog algoritmo56
+variaveis
+caracter nome 
+numerico idade
+inicio
+limpar 
+escrever "digite nome: "
+posicionar 1,14
+ler nome 
+escrever "digite idade: "
+posicionar 2,15
+ler idade 
+limpar
+escrever "nome = ", nome 
+posicionar 2,1  
+escrever "idade = ", idade 
+fim

@@ -1,0 +1,14 @@
+//prog algoritmo60
+variaveis
+numerico dec, razao, termo 
+inicio
+limpar
+escrever "Entrar com o 1§ termo: "
+posicionar 1,24
+ler termo 
+escrever "Entrar com a razao: "
+posicionar 2,21
+ler razao 
+dec = termo + 9* razao 
+escrever "O 10 termo desta P.A. e: ", dec 
+fim

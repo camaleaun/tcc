@@ -1,0 +1,43 @@
+//prog algoritmo305
+variaveis
+numerico n1, maiorcod,  maior,n2,n4,tot
+caracter n3, resp
+inicio
+limpar
+tot =  0
+escrever "Entre com o codigo do cliente ou codigo menor ou igual a 0 para terminar: "
+ler n1
+maior = -999999999
+faca enquanto  n1 > 0 
+   escrever "Entre com o saldo anterior "
+    ler n2
+    escrever "Entre com o tipo de movimentacao C(Credito) D(Debito) F(fim) "
+    ler n3
+    faca enquanto  (n3 <> "f") e ( n3 <>"F")
+       escrever "Entre com o valor da movimentacao: "
+      ler n4
+      se (n3="c") ou ( n3="C") entao
+        n2 = n2 + n4 
+     senao
+         se (n3="d") ou ( n3="D") entao
+            n2 = n2 - n4  
+       fim_se
+      fim_se
+     escrever "Entre com o tipo de movimentacao C(Credito) D(Debito) F(fim)"
+    ler n3
+    fim_enquanto
+   escrever "seu  codigo e ", n1, "  o saldo atual  ", n2
+   ler resp // so para descer cursor
+  tot = tot  +  n2
+  se n2 > maior entao
+    maiorcod = n1 
+    maior = n2
+  fim_se
+  escrever "Entre com o codigo do cliente ou codigo menor ou igual a 0 para terminar : "
+  ler n1
+fim_enquanto
+limpar
+escrever "o total de dinheiro em banco : ", tot
+posicionar 3,1
+escrever maiorcod, " e o codigo do cliente com maior saldo: ", maior
+fim

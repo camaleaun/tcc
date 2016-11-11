@@ -1,0 +1,36 @@
+//prog algoritmo379
+variaveis
+matriz numerico num[100] 
+numerico cm,cmm, c30, L,n ,soma, media
+inicio
+limpar
+soma =0 
+c30 =0 
+para L = 1 ate 100
+ escrever "digite numero: "
+  ler n
+  num[L]=n 
+  soma =soma +num[L] 
+  se num[L]=30 entao
+   c30=c30+1
+ fim_se
+proximo
+media =soma/100 
+cm =0 
+cmm =0 
+para L = 1 ate 100
+   se num[L] > media entao
+   cmm=cm+1
+  senao
+   se num[L]=media entao
+   cm=cm+1
+  fim_se
+ fim_se
+proximo
+limpar
+escrever "Total iguais a 30: ",c30
+posicionar 3,1 
+escrever "Total iguais a media: ",cm 
+posicionar 5,1
+escrever "Total maiores que a media: ",cmm 
+fim

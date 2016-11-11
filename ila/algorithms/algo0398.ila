@@ -1,0 +1,115 @@
+//prog algoritmo398
+variaveis
+numerico k,n,codi, codigo,t,i,quantidade,aux, venda, geral, linha
+matriz numerico cod[50]
+matriz numerico quant[50]
+matriz numerico preco[50] 
+caracter resp
+inicio
+limpar
+k=1 
+geral = 0 
+escrever "Digite o codigo do produto ou 0 para acabar: "
+ler codi 
+faca enquanto (k <=50 ) e ( codi <> 0)
+  cod[k] = codi 
+  escrever "Digite a quantidade do produto: "
+  ler n
+  quant[k]=n 
+  escrever "Digite o preco do produto: "
+  ler n
+  preco[k]=n 
+  k= k+1
+  escrever "Digite o codigo do produto ou 0 para acabar: "
+  ler codi 
+fim_enquanto
+limpar
+escrever "  - Venda de produtos -  "
+posicionar 3,1
+escrever "Digite o codigo do produto ou 0 para terminar: "
+ler codigo 
+faca enquanto codigo <> 0
+   i = 1 
+   faca enquanto (codigo <> cod[i] ) e ( i < k-1)
+     i=i+1
+  fim_enquanto
+   se codigo = cod[i] entao
+     escrever "Digite a quantidade desejada: "
+     ler quantidade 
+     se quantidade > quant[i]  entao
+      escrever "Estoque insuficiente " 
+     senao
+       quant[i] = quant[i] - quantidade 
+       venda = quantidade * preco[i] 
+       geral = geral + venda 
+       escrever "Preco da venda: ",venda
+     fim_se 
+   senao
+     escrever "Produto nao cadastrado.  "
+  fim_se
+   escrever "Digite o codigo do produto ou 0 para terminar: "
+   ler codigo 
+fim_enquanto
+limpar
+para  t =1  ate  k-2  
+ para i = t +1  ate k - 1 
+   se quant[t] < quant[i] entao
+      aux = quant[t] 
+     quant[t] = quant[i] 
+    quant[i] = aux 
+     aux = cod[t]  
+     cod[t] = cod[i] 
+    cod[i] = aux 
+     aux = preco[t]
+    preco[t] = preco[i]
+     preco[i] = aux 
+  fim_se
+ proximo
+proximo
+limpar
+posicionar 1, 16
+escrever "Relacao"
+posicionar 2,1 
+escrever "codigo"
+posicionar 2,16 
+escrever "quantidade"
+posicionar 2,31
+escrever "preco"
+linha=4
+para i = 1  ate  k-1
+  posicionar linha,1
+  escrever cod[i]
+  posicionar linha,16
+   escrever  quant[i]
+   posicionar linha,31 
+  escrever  preco[i]
+  linha=linha+1
+  se linha=23 entao 
+  posicionar 24,1
+  escrever "pressione enter: "
+   posicionar 24,17
+   ler resp
+   limpar
+   posicionar 1,16
+  escrever "Relacao"
+  posicionar 2,1 
+  escrever "codigo"
+   posicionar 2,16 
+   escrever "quantidade"
+  posicionar 2,31
+  escrever "preco"
+  linha=4
+fim_se
+proximo
+se linha<= 23 entao   
+ posicionar linha+1,1
+senao
+ limpar
+ linha=1
+fim_se
+ escrever "Total de vendas: R$ ", geral
+ posicionar linha+1,30
+ ler resp
+
+
+fim   

@@ -1,0 +1,29 @@
+//prog algoritmo137
+variaveis
+numerico a, b, c, d, x1, x2 
+inicio
+limpar
+escrever "Entre com valor de a: "
+posicionar 1, 23  
+ler a 
+escrever "Entre com valor de b: "
+posicionar 2, 23   
+ler  b 
+escrever "Entre com valor de c: "
+posicionar 3, 23   
+ler  c 
+posicionar 6, 1   
+se a = 0  entao 
+  escrever "Nao e equacao do 2 grau" 
+senao
+  d= b^2 - 4 * a * c 
+  se d >=0  entao
+    d= raiz(d,2) 
+    x1= (-b + d)/ (2 *a) 
+    x2 =(-b - d)/ (2 *a) 
+    escrever "X1= ", x1, "  X2= ", x2 
+  senao
+   escrever "Nao ha raizes reais"  
+  fim_se
+fim_se
+fim

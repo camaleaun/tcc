@@ -1,0 +1,66 @@
+//prog algoritmo 88
+variaveis
+caracter resp 
+numerico a,b 
+inicio
+limpar
+escrever "************* " 
+posicionar 2,1
+escrever "*CALCULADORA*" 
+posicionar 3,1
+escrever "************* "
+posicionar 4,1 
+escrever "+ para somar " 
+posicionar 5,1
+escrever "- para subtrair " 
+posicionar 6,1
+escrever "* para multiplicar" 
+posicionar 7,1
+escrever "/ para dividir"
+posicionar 8,1 
+escrever "Digite opcao: " 
+posicionar 8,15
+ler resp 
+limpar
+se resp="+" entao
+escrever "Digite 1 numero: "
+posicionar 1,18 
+ler a 
+escrever "Digite 2 numero: "
+posicionar 2,18  
+ler b 
+escrever "SOMA: ",a + b 
+senao
+ se resp = "-" entao
+   escrever "Digite 1 numero: "
+   posicionar 1,18 
+   ler a 
+   escrever "Digite 2 numero: "
+   posicionar 2,18  
+   ler b 
+   escrever "SUBTRA€ÇO: ",a - b 
+   senao
+    se resp = "*" entao
+      escrever "Digite 1 numero: "
+      posicionar 1,18 
+      ler a 
+      escrever "Digite 2 numero: "
+      posicionar 2,18  
+      ler b 
+      escrever "MULTIPLICA€ÇO: ",a * b 
+    senao
+      se resp = "/" entao
+       escrever "Digite 1 numero: "
+       posicionar 1,18 
+       ler a 
+       escrever "Digite 2 numero: "
+       posicionar 2,18  
+       ler b 
+       escrever "DIVISAO: ",a / b 
+      senao
+        escrever "OP€ÇO NÇO DISPONÖVEL!" 
+    fim_se
+    fim_se
+  fim_se
+fim_se
+fim

@@ -1,0 +1,16 @@
+//prog algoritmo77
+variaveis
+numerico  a, b, d, q 
+inicio
+limpar
+escrever "digite 1 numero: "
+posicionar 1,18
+ler a 
+escrever "digite 2 numero: "
+posicionar 2,18
+ler b 
+d = (a - b)^2 
+q = a^2 - b^2 
+limpar
+escrever "o quadrado da diferen‡a = ",d , " diferenca dos quadrados = ", q 
+fim

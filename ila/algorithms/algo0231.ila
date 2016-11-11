@@ -1,0 +1,20 @@
+//prog algoritmo231
+variaveis
+numerico  c, m30,linha, numero
+inicio
+limpar
+linha=1 
+m30 = 0 
+para  c = 1  ate  15  
+   posicionar linha,1
+   escrever "digite numero: "
+  posicionar linha,16
+   ler numero 
+   se  numero > 30 entao
+     m30= m30 + 1
+  fim_se
+  linha = linha+1
+proximo
+posicionar linha +3,1 
+escrever "Maiores do que 30: ", m30 
+fim

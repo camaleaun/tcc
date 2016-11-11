@@ -1,0 +1,39 @@
+//prog algoritmo120solucao2
+variaveis
+numerico a, b, c, aux, maior, intermediario,menor 
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler a
+escrever "digite 2 numero: " 
+posicionar 2,18    
+ler b
+escrever "digite 3 numero: " 
+posicionar 3,18      
+ler c 
+se a  > b entao
+  aux = a
+ a = b
+  b = aux 
+fim_se
+se a  > c entao
+  aux = a 
+   a = c
+   c = aux
+fim_se
+se  b > c entao
+  aux = b 
+   b = c 
+   c = aux  
+fim_se
+maior = c 
+intermediario = b 
+menor = a 
+limpar
+escrever "maior: ", maior
+posicionar 2,1
+escrever "intermediario: ",intermediario
+posicionar 3,1 
+escrever "menor: ",menor
+fim

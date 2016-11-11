@@ -1,0 +1,20 @@
+//prog algoritmo122
+variaveis
+numerico a, b, c 
+inicio
+limpar
+escrever "digite 1 lado: " 
+posicionar 1,16  
+ler a 
+escrever "digite 2 lado: " 
+posicionar 2,16    
+ler b 
+escrever "digite 3 lado: "
+posicionar 3,16     
+ler c 
+ se ( a < b + c  ) e (   b < a + c ) e (  c < a + b ) entao
+   escrever  "Podem ser lados de um triangulo"  
+senao
+escrever "NÆo podem ser lados de um triangulo"  
+fim_se 
+fim

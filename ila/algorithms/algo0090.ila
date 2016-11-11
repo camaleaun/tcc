@@ -1,0 +1,12 @@
+//prog algoritmo90
+variaveis
+numerico numero
+inicio
+limpar
+escrever "digite numero: " 
+posicionar 1,16  
+ler numero 
+se  numero > 20 entao
+ escrever numero 
+fim_se
+fim

@@ -1,0 +1,16 @@
+//prog algoritmo68
+variaveis
+numerico  a, b, aux 
+inicio
+limpar
+escrever "digite 1 numero: "
+posicionar 1,18
+ler a 
+escrever "digite 2 numero: "
+posicionar 2,18
+ler b 
+aux = a 
+a = b 
+b =aux 
+escrever "a = ", a, "   b = ", b 
+fim   

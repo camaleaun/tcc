@@ -1,0 +1,32 @@
+//prog algoritmo471
+variaveis
+numerico num,num1,n , x, y, r, n1
+funcao divisor(x,y)
+inicio 
+   n1=0 
+   r= resto(x , y) 
+   faca enquanto r= 0
+     n1=n1+1 
+     x= inteiro(x / y) 
+     r= resto(x , y)
+   fim_enquanto
+  retornar(n1) 
+fim
+inicio
+limpar
+escrever "digite dividendo: "
+ler num 
+escrever "digite divisor: "
+ler num1 
+faca enquanto num1 > num
+ escrever "INVALIDO.digite numero menor do o dividendo: "
+ ler num1 
+fim_enquanto
+// chama a funcao divisor 
+ n=divisor(num,num1) 
+ se n=0 entao
+ escrever "Nenhuma vez" 
+ senao
+ escrever "Numero de vezes: ",n  
+fim_se
+fim

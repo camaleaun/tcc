@@ -1,0 +1,8 @@
+// prog algoritmo30
+variaveis
+ numerico produto 
+inicio
+limpar
+produto = 28 * 43
+escrever  "O produto entre os dois e: ", produto
+fim

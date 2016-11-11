@@ -1,0 +1,22 @@
+//prog algoritmo42
+variaveis
+numerico angulo, rang
+inicio
+limpar
+escrever "digite um angulo em graus: "
+posicionar 1,28
+ler angulo 
+rang = angulo*pi /180
+limpar 
+escrever "seno: ", sen(rang) 
+posicionar  2,1  
+escrever "co-seno: ", cos(rang) 
+posicionar  3,1  
+escrever "tangente: ", tan(rang) 
+posicionar  4,1  
+escrever "co-secante: ",1/ sen(rang)
+posicionar  5,1   
+escrever "secante: ", 1/cos(rang) 
+posicionar 6,1  
+escrever "cotangente: ", 1/ tan(rang) 
+fim

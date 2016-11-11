@@ -1,0 +1,33 @@
+//prog algoritmo311
+variaveis
+numerico mat, i, nd,  cr, nota, maior
+caracter resp
+inicio
+limpar
+escrever "digite matricula (1 - 1500): "
+ler mat
+maior = 0
+faca enquanto (mat >= 1 ) e ( mat <= 1500)
+  escrever "numero de disciplinas: "
+  ler nd
+  cr = 0
+  para  i = 1  ate nd  
+    escrever "digite nota: "
+    ler nota
+    cr = cr + nota
+  proximo
+  cr = cr / nd
+  se  nd > 5 entao
+   se cr > maior entao
+     maior = cr
+   fim_se
+  fim_se
+  escrever "Matricula: ", mat
+  ler resp // so para descer cursor
+  escrever "CR: ", cr
+  ler resp // so para descer cursor
+  escrever "digite matricula (1 - 1500): "
+  ler mat
+fim_enquanto
+escrever "Maior CR: ", maior
+fim

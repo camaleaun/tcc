@@ -1,0 +1,54 @@
+//prog algoritmo472
+variaveis
+numerico num,num1, ch,d,c1, n, n2, c, p, x, y, n1, r 
+funcao primo(n2)
+ inicio 
+   c=0 
+   p=2 
+  faca enquanto( c = 0 ) e ( p <= inteiro(n2/ 2) )
+    se resto(n2 , p) = 0 entao
+     c=1
+   fim_se
+     p=p+1 
+  fim_enquanto
+  retornar(c) 
+ fim
+funcao divisor(x,y)
+inicio
+ r= resto(x , y) 
+ se r = 0  entao
+  retornar(0)
+ senao
+  retornar(1)
+  fim_se
+fim
+inicio
+limpar
+d=2 
+n=0  
+escrever "digite numero: "
+ler num1 
+num=num1 
+faca enquanto (d<=5 ) e (  n=0 )
+   // chama a funcao divisor 
+   n=divisor(num,d) 
+  //procura proximo numero primo
+  ch=0 
+  faca enquanto ch=0
+      d=d+1 
+    // chama a funcao primo 
+    c1=primo(d) 
+    se c1=0 entao
+     ch=1 
+    senao
+     ch=0 
+  fim_se
+  fim_enquanto
+  //fim da procura do proximo numero primo
+fim_enquanto
+se  n= 0 entao
+ escrever  num1, " e numero regular"
+senao
+escrever num1, " nao e numero regular" 
+fim_se
+fim

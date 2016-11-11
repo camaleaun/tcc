@@ -1,0 +1,37 @@
+//prog algoritmo3142
+variaveis
+caracter op
+numerico valor1, totlimp, totalim, tothig
+inicio
+limpar
+totlimp = 0
+totalim = 0
+tothig =0
+escrever "Entre com valor ou 0 para terminar: "
+ler valor1
+faca enquanto valor1>0
+   escrever "Entre com H(higiene), A(alimentacao), L(limpeza) terminar: "
+   ler op
+  faca caso
+    caso  (op = "L") ou ( op = "l"):
+    totlimp = totlimp + valor1
+    caso (op = "A") ou ( op = "a") :
+        totalim =totalim + valor1
+      caso (op = "H") ou ( op = "h"):
+            tothig =tothig + valor1
+      outro_caso:
+            escrever "opcao invalida"
+  fim_caso
+  escrever "Entre com valor ou 0 para terminar: "
+  ler valor1
+fim_enquanto
+limpar
+escrever "total geral vendido: ", totlimp + totalim + tothig
+posicionar 3,1
+escrever "total limpeza: ", totlimp
+posicionar 5,1
+escrever "total alimentacao: ", totalim
+posicionar 7,1
+escrever "total higiene: ", tothig
+fim
+

@@ -1,0 +1,26 @@
+//prog algoritmo126
+variaveis
+numerico x 
+inicio
+limpar
+escrever "digite valor de X: " 
+posicionar 1,20  
+ler  x  
+se  x = 5 entao
+escrever  "O numero ‚ o 5"  
+senao
+  se  x =200  entao
+   escrever  "O numero ‚ o 200"  
+  senao
+    se  x = 400  entao
+     escrever  "O numero ‚ o 400"  
+    senao
+     se ( x >= 500 ) e ( x <= 1000) entao
+      escrever "Intervalo 500-1000"  
+     senao
+      escrever  "Fora do  escopo"  
+       fim_se
+    fim_se
+  fim_se
+fim_se
+fim

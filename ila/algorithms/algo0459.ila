@@ -1,0 +1,20 @@
+//prog  algoritmo459
+funcao linha()
+ inicio
+   escrever  "***************"
+ fim
+inicio
+limpar
+posicionar 1,1
+ linha()
+ posicionar 2,1
+escrever "ANITA LOPES"
+posicionar 3,1
+linha()
+posicionar 4,1
+escrever"GUTO GARCIA"
+posicionar 5,1
+linha()
+fim
+
+

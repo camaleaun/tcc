@@ -1,0 +1,30 @@
+//prog algoritmo391
+variaveis
+matriz numerico M[30]
+numerico L, C, Y,n 
+inicio
+limpar
+para L = 1  ate 30
+  escrever "Digite o elemento ", L 
+  ler n
+  M[L]=n
+proximo
+Y = 1  
+C = 0 
+para L = 1  ate 29
+   se  M[L + 1] > M[L] entao
+     Y = Y +1
+  senao
+     se  Y > C entao
+      C =  Y  
+    fim_se
+       Y =  1  
+   fim_se
+proximo   
+limpar
+se  C > Y entao
+  escrever "total: ",  C 
+senao
+   escrever "total: ",  Y 
+fim_se
+fim

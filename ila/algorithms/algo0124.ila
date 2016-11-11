@@ -1,0 +1,40 @@
+//prog algoritmo124
+variaveis
+numerico a, b, c, maior, lados 
+inicio
+limpar
+escrever "digite 1 lado: " 
+posicionar 1,16  
+ler a 
+escrever "digite 2 lado: " 
+posicionar 2,16    
+ler b 
+escrever "digite 3 lado: "
+posicionar 3,16     
+ler c 
+ se ( a < b + c  ) e (   b < a + c ) e (  c < a + b ) entao
+     se ( a > b  ) e ( a > c ) entao
+      maior = a ^2
+      lados  = b ^ 2 + c ^ 2    
+    senao
+      se  ( b > c) entao
+         maior = b ^ 2 
+         lados  = a ^ 2 + c ^ 2      
+      senao
+         maior = c ^ 2
+         lados  = a ^2 + b ^ 2      
+     fim_se
+  fim_se
+  se  maior = lados  entao
+     escrever "Triangulo Retangulo"   
+  senao
+      se  maior > lados  entao
+       escrever "Triangulo Obtusangulo"    
+      senao
+       escrever "Triangulo Acutangulo"    
+      fim_se
+ fim_se
+senao
+   escrever "as medidas n∆o formam  um  triangulo"  
+fim_se 
+fim

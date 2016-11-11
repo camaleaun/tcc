@@ -1,0 +1,17 @@
+//prog algoritmo79
+variaveis
+numerico  va, i, p,  n
+inicio
+limpar 
+escrever "digite o valor da aplica‡Æo: "
+posicionar 1,30
+ler p 
+escrever "digite a taxa( 0 - 1): "
+posicionar 2,24
+ler i 
+escrever "digite o numero de meses: "
+posicionar 3,27
+ler n 
+va =p*(((1+ i )^ n)-1) / i 
+escrever "O valor acumulado: ", va 
+fim    

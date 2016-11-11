@@ -1,0 +1,26 @@
+//prog algoritmo349
+variaveis
+numerico L,n
+matriz numerico a[5]
+matriz numerico b[5]
+matriz numerico soma[5]
+inicio
+limpar 
+para L = 1 ate 5
+ escrever "elemento do vetor A[", L , "]"
+  ler  n
+ a[ L] = n 
+proximo
+para L = 1 ate 5
+ escrever "elemento do vetor B[", L , "]"
+ ler  n
+ b[ L] = n
+ soma[L] = a[L] + b[L] 
+proximo
+limpar
+escrever "Vetor Soma "
+para L = 1 ate 5
+  posicionar L+2,1
+  escrever "soma[",L, "] - ", soma[ L]
+ proximo
+fim

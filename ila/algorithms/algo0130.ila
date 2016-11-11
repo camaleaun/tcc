@@ -1,0 +1,14 @@
+//prog algoritmo130
+variaveis
+numerico valorr
+inicio
+limpar 
+escrever "digite valor do produto: " 
+posicionar 1,26 
+ler valorr    
+se valorr < 20 entao
+ escrever  "Valor de venda: ", valorr * 1.45   
+senao
+ escrever  "Valor de venda: " , valorr *1.3  
+fim_se
+fim

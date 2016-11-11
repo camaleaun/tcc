@@ -1,0 +1,15 @@
+//prog algoritmo51 
+variaveis
+numerico  raio, perimetro, area  
+inicio
+limpar
+escrever "digite raio: "
+posicionar 1,14
+ler raio 
+perimetro = 2* pi * raio 
+area =pi *raio ^ 2
+limpar 
+escrever "perimetro : ", perimetro
+posicionar 2,1  
+escrever "area :  ", area 
+fim

@@ -1,0 +1,39 @@
+//prog algoritmo142
+variaveis
+numerico p1, p2, p3, aux, soma
+inicio
+limpar 
+escrever "Digite os pontos do primeiro jogador: " 
+posicionar 1,39
+ler p1 
+escrever "Digite os pontos do segundo jogador: " 
+posicionar 2,39
+ler p2 
+escrever "Digite os pontos do terceiro jogador: " 
+posicionar 3,39
+ler p3 
+se p1 > p2  entao 
+   aux= p1
+    p1= p2
+    p2= aux
+fim_se
+se p1 > p3  entao
+    aux= p1
+      p1= p3
+      p3= aux
+fim_se
+se p2 > p3  entao
+     aux= p2
+     p2= p3
+    p3= aux
+fim_se
+limpar
+escrever "p1=", p1, "  p2=", p2, "  p3=", p3 
+soma =  p1 + p2 + p3
+posicionar 3,1
+se soma > 100  entao
+  escrever "Media=", soma/3.2 
+senao
+  escrever "Equipe desclassificada!" 
+fim_se 
+fim

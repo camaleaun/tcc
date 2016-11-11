@@ -1,0 +1,23 @@
+//prog algoritmo473
+variaveis
+caracter c,letra 
+numerico x 
+funcao maiuscula(letra)
+inicio
+ se(letra<>"A")e(letra<>"a")e(letra<>"E")e(letra<>"e")e(letra<>"I")e(letra<>"i")e(letra<> "O")e(letra<> "o")e(letra<> "U")e(letra<> "u" ) entao
+  retornar(1) 
+  senao
+  retornar(0) 
+ fim_se
+fim
+inicio
+limpar
+escrever "Digite letra : "
+ler c
+x=maiuscula(c) 
+se x= 1 entao
+ escrever "e uma consoante "
+senao
+ escrever "nao e uma consoante"
+fim_se
+fim

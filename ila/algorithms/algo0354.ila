@@ -1,0 +1,28 @@
+//prog algoritmo354
+variaveis
+numerico L ,n
+matriz numerico num[15] 
+inicio
+limpar
+// trecho de entrada de 15 elementos
+para L = 1 ate 15
+ escrever "digite ", L, " numero"
+  ler n
+  num[ L ]=n  
+proximo
+// fim do trecho de entrada
+// trecho de sa¡da
+limpar
+escrever "RELACAO DOS NUMEROS "
+para L = 1 ate 15
+  posicionar L+2,1
+   escrever L, "- ", num[L] 
+   posicionar L+2,10
+   se resto(num[L] ,2)=0 entao
+      escrever "e' PAR"  
+    senao
+       escrever "e' IMPAR"  
+   fim_se
+proximo
+// fim do trecho de sa¡da
+fim

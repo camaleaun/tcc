@@ -1,0 +1,27 @@
+//prog algoritmo144
+variaveis
+numerico  saldomedio, credito
+inicio
+limpar 
+ escrever "digite saldo medio: " 
+posicionar 1,22
+ ler  saldomedio 
+ se  saldomedio < 501 entao
+       credito =0
+ senao
+    se saldomedio < 1001  entao
+         credito = saldomedio  *  0.3 
+    senao
+       se saldomedio < 3001  entao
+            credito = saldomedio  *  0.4 
+       senao
+          credito = saldomedio  *  0.5 
+      fim_se
+    fim_se
+fim_se
+se credito <> 0  entao
+   escrever "Como seu saldo era de:  ",saldomedio, " seu credito sera de:  ",credito 
+senao
+  escrever " Como seu saldo era de:  ", saldomedio, ", voce nao tera nenhum credito" 
+fim_se 
+fim

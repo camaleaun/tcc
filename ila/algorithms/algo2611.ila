@@ -1,0 +1,72 @@
+//prog algoritmo261
+variaveis
+caracter  op,menor,p1,p2,p3, resp
+numerico n, num
+inicio
+limpar
+op = "A"
+faca enquanto (op <> "F") e (op <> "f")
+limpar
+escrever "MENU - um pouco de tudo"
+posicionar 3,1
+escrever "A - Armazena na variavel menor e imprime .... menor numero de caracteres"
+posicionar 5,1
+escrever "B - Gera e imprime uma nova palavra"
+posicionar 7,1
+escrever "C - Calcula e imprime a raiz a quarta de um numero"
+posicionar 9,1
+escrever "F - Finalizar"
+posicionar 11,1
+escrever "OPCAO: "
+posicionar 11,8
+ler op
+limpar
+se (op  =  "A") ou ( op  =  "a") entao
+  escrever "digite 1 palavra: "
+  posicionar 1,19
+  ler p1
+  escrever "digite 2 palavra: "
+  posicionar 2,19
+  ler p2
+  escrever "digite 3 palavra: "
+  posicionar 3,19
+  ler p3
+  posicionar 5,1
+  se comprimento(p1)< comprimento(p2) entao
+   menor = p1 
+  senao
+   menor = p2
+  fim_se
+  se comprimento(p3)< comprimento(menor) entao
+    menor = p3 
+  fim_se
+   escrever menor
+  senao
+    se (op = "B") ou ( op  =  "b") entao
+      escrever "ESTE TRECHO NAO PODE SER FEITO NO ILA "
+    senao
+       se (op = "C") ou ( op = "c") entao
+          escrever "digite um numero: "
+          posicionar 1,19
+          ler num
+          posicionar 5,1
+          se num >= 0  entao
+           escrever "raiz a quarta: ",num ^ (1/4) // raiz(num,4)
+          senao
+            escrever "NAO PODE SER FEITA"   
+          fim_se
+      senao
+        se(op  =  "F") ou ( op  =  "f") entao
+          escrever "FINALIZANDO" 
+        senao
+         escrever "opcao invalida" 
+       fim_se
+     fim_se
+  fim_se
+ fim_se
+ posicionar 24,1
+ escrever "pressione enter:"
+ posicionar 24,17
+ler resp
+fim_enquanto  
+fim

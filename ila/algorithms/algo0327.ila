@@ -1,0 +1,37 @@
+//prog algoritmo327
+variaveis
+numerico saldo, retira, val, deposito, cod
+caracter resp
+inicio
+limpar
+escrever "digite saldo "
+ler saldo
+escrever "digite codigo:Saque (10) Deposito(33) Pagamento de cheque(4) Finalizar(0): "
+ler cod
+faca enquanto cod <> 0
+   se cod = 10 entao
+      escrever "digite valor da retirada: "
+      ler retira
+      saldo = saldo - retira
+   senao
+     se cod = 33 entao
+        escrever "digite valor do deposito: "
+         ler deposito
+         saldo = saldo + deposito
+    senao
+       se cod = 4 entao
+         escrever "Entre com o valor do cheque: "
+         ler val
+          saldo = saldo - val
+       fim_se
+    fim_se
+   fim_se
+  se saldo < 0 entao
+   escrever "Saldo negativo de: ", saldo 
+   ler resp // so para descer cursor
+  fim_se
+  escrever "digite codigo: dinheiro(10) Deposito(33) Pagamento de cheque(4)Finalizar (0): "
+  ler cod
+fim_enquanto
+escrever "Saldo atual = ", saldo
+fim

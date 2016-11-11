@@ -1,0 +1,57 @@
+//prog algoritmo3162
+variaveis
+numerico i, id, tcas, tsol, tdes, tviu, geral, somaviu
+caracter op
+inicio
+limpar
+tcas = 0
+geral = 0
+tsol = 0
+tviu = 0
+somaviu = 0
+tdes = 0
+escrever "Digite idade ou 0 para terminar: "
+ler id
+faca enquanto  id > 0
+  geral= geral+1
+  escrever "estado civil C / S / V / D: "
+  ler op
+ faca  caso
+   caso ( op = "c") ou ( op="C"):
+     tcas=tcas + 1
+    caso ( op = "s") ou ( op="S"):
+      tsol= tsol +1
+     caso ( op = "d") ou (op ="D"):
+        tdes= tdes +1
+       caso ( op = "v") ou (op ="V"):
+          somaviu = somaviu +id
+          tviu= tviu +1
+  fim_caso
+  escrever "Digite idade ou 0 para terminar: "
+  ler id
+fim_enquanto
+limpar
+se tcas <> 0 entao
+  escrever "total de casados: ", tcas
+senao
+  escrever "nao existem casados"
+fim_se
+posicionar 3,1
+se tsol <> 0 entao
+  escrever "total de solteiros: ", tsol
+senao
+  escrever "nao existem solteiros"
+fim_se
+posicionar 5,1
+se tviu <> 0 entao
+ escrever "mdia da idade das viuvos: ", somaviu/tviu
+senao
+  escrever "nao existem viuvos"
+fim_se
+posicionar 7,1
+se tdes<> 0 entao
+ escrever "porcentagem de pessoas desquitados ou separados: ", tdes * 100/geral
+senao
+ escrever "nao existem desquitados ou separados "
+fim_se
+fim

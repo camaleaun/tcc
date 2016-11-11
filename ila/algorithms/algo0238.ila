@@ -1,0 +1,18 @@
+//prog algoritmo238
+variaveis
+numerico  c, num, n,h 
+inicio
+limpar 
+h = 0  
+escrever "digite numero: " 
+posicionar 1,16
+ler num 
+posicionar 3,1
+n = num 
+para  c= 1  ate  num  
+  h = h + c / n 
+  n = n -1 
+proximo
+posicionar 4,1
+escrever "soma: ", h  
+fim

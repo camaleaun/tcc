@@ -1,0 +1,53 @@
+//prog algoritmo375
+variaveis
+ numerico L,n , linha
+matriz numerico a[30]
+matriz numerico b[30]
+matriz numerico dif[30]
+caracter resp 
+inicio
+limpar
+ //trecho de entrada para 30 numeros
+ para L = 1 ate 30
+    escrever "digite elemento ",L, " do vetor A"
+    ler n
+  a[L]=n 
+  proximo
+ para L= 1 ate 30
+   escrever "digite elemento ",L, " do vetor B"
+    ler n
+   b[L]=n 
+    //Gera o vetor diferenca
+    dif [L] = a[L] - b[L]  
+  proximo
+//trecho de saída
+limpar
+escrever "Vetor A"
+posicionar 1,16
+escrever "Vetor B"
+posicionar 1,31
+escrever "Vetor Diferenca"
+linha=2
+para L = 1 ate 30
+   posicionar linha,1
+    escrever a[L]
+   posicionar linha,16
+    escrever b[L]
+  posicionar linha,31
+   escrever dif [L]
+   linha=linha+1
+  se linha = 23 entao
+   posicionar 24,1
+   escrever "pressione enter: "
+  posicionar 24,17
+  ler resp
+  limpar
+  escrever "Vetor A"
+ posicionar 1,16
+ escrever "Vetor B" 
+ posicionar 1,31
+ escrever "Vetor Diferenca"
+ linha=2
+fim_se
+proximo
+fim

@@ -1,0 +1,18 @@
+//prog  algoritmo58
+variaveis
+numerico xnum1, xnum2, xnum3, x 
+inicio
+limpar
+escrever "Entrar com 1 valor: "
+posicionar 1,21
+ler xnum1 
+escrever "Entrar com 2 valor: "
+posicionar 2,21
+ler  xnum2 
+escrever "Entrar com 3 valor: "
+posicionar 3,21
+ler  xnum3 
+ x = xnum1 + xnum2 / (xnum3 + xnum1) + 2 *(xnum1 - xnum2) + log(64)/ log(2) 
+limpar
+escrever "X = ", x 
+fim

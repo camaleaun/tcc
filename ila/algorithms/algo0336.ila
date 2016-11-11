@@ -1,0 +1,58 @@
+//prog  algoritmo336
+variaveis
+numerico fil, esc, c, prest, total, totalesc
+caracter resp
+inicio 
+limpar
+totalesc = 0
+escrever "total de filhos ou 0 para terminar: "
+ler fil
+faca enquanto fil  > 0 
+ escrever "escolaridade do 1o filho:1 pre-escola 2 1o ciclo do EF  3 2o ciclo do EF 4 EM: "
+  ler esc
+  se esc =1 entao
+    total = 300
+  senao
+     se esc =2 entao
+      total = 400
+    senao
+      se esc = 3 entao
+       total = 500
+      senao
+        se esc = 4 entao
+         total = 600
+       fim_se
+      fim_se
+    fim_se
+   fim_se
+   se fil > 1 entao
+    para c =1 ate  fil -1 
+       escrever "escolaridade do ",c+1,"o filho: 1 pre-escola 2 1o ciclo-EF 3 2o ciclo-EF 4 EM:  "
+       ler esc
+       se esc =1 entao
+         prest = 300 - (300 * c/10) 
+       senao
+         se esc =2 entao
+           prest = 400 - (400 * c/10) 
+         senao
+           se esc = 3 entao
+            prest = 500 - (500 * c/10) 
+           senao
+             se esc = 4 entao
+               prest = 600 - (600 * c/10) 
+            fim_se
+           fim_se
+         fim_se
+       fim_se
+       total = total + prest
+     proximo
+    fim_se
+    limpar
+    escrever "total a ser pago pela fam­lia: ", total
+    ler resp  // so para descer o cursor 
+    totalesc = totalesc + total
+    escrever "total de filhos ou 0 para terminar: "
+    ler fil
+fim_enquanto	
+escrever "total arrecadado pela escola: ", totalesc
+fim

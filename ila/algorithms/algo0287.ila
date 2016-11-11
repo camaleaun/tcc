@@ -1,0 +1,22 @@
+//prog algoritmo287
+variaveis
+numerico a, b, aux, resto1
+inicio
+limpar
+escrever "Entre com 1 numero: "
+ler a
+escrever "Entre com 2 numero: "
+ler b
+se a < b entao
+   aux  = a  
+   a  = b 
+   b  =  aux
+fim_se
+resto1  = resto(a , b)
+faca enquanto resto1 <>0
+  a = b
+  b = resto1
+  resto1 = resto(a , b)
+fim_enquanto
+escrever "M.D.C: ",b
+fim

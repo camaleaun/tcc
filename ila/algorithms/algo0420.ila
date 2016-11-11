@@ -1,0 +1,18 @@
+//algoritmo algoritmo420 
+ variaveis
+   numerico L, c,m,soma
+   matriz numerico n[4,5]
+   inicio
+   limpar
+   soma=0
+   para L = 1 ate 4
+   para c = 1 ate 5   
+     escrever "elemento de n[", L, ",",c,"]" 
+     ler m    
+     n[L, c]=m
+     soma= soma + n[L,c]
+    proximo
+  proximo
+limpar
+escrever "Soma de todos os elementos: ", soma
+fim

@@ -1,0 +1,25 @@
+//prog algoritmo424
+ variaveis
+numerico L, c, n,det
+matriz numerico  M[2,2] 
+inicio
+limpar
+para L=1 ate 2 
+ para c=1 ate 2 
+  escrever "digite elemento de M[" ,L, ",",  c,  "] "
+  ler n
+  M[L,c]=n
+proximo
+proximo
+limpar
+para L=1 ate 2 
+ para c=1 ate 2
+  posicionar L, (c-1)*5 +1
+  escrever M[L,c]
+ proximo
+proximo
+//Calcula o determinante
+det = M[1,1] * M[2,2]  -  M[1,2] * M[2,1]
+posicionar 6,1
+escrever "Determinante:", det
+fim

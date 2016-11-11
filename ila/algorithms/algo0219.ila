@@ -1,0 +1,25 @@
+//prog algoritmo219
+variaveis
+numerico  c, num, vf, linha
+caracter resp
+inicio
+limpar
+escrever "digite numero de vezes que deseja imprimir a palavra SOL? " 
+posicionar 2,1
+ler num 
+limpar
+linha=1
+para c = 1  ate num
+   posicionar linha,1
+   escrever  "SOL " 
+   linha = linha +1
+   se linha = 23 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+   fim_se
+proximo   
+fim

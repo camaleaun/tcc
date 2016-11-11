@@ -1,0 +1,18 @@
+//prog algoritmo48
+variaveis
+numerico sm, qtdade, preco, vp, vd 
+inicio
+limpar
+escrever "entre com o sal rio m¡nimo: "
+posicionar 1,29
+ler sm
+escrever "entre com a quantidade em kilowatt: "
+posicionar 2,37
+ler qtdade 
+//divide por 7 para achar o pre‡o de 100 Kw e por 100 para achar de 1 Kw 
+preco = sm /700 
+vp = preco * qtdade 
+vd  = vp * 0.9
+limpar 
+escrever "pre‡o do kilowatt: ", preco, " valor a ser pago: ", vp, " valor com desconto: ", vd 
+fim 

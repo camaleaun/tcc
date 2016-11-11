@@ -1,0 +1,24 @@
+//prog algoritmo160
+variaveis
+numerico x, y
+inicio
+limpar 
+escrever "digite valor de x: " 
+posicionar 1,20
+ler x 
+posicionar 3,1
+se x <= 1  entao 
+ y = 1
+senao
+  se x <= 2  entao
+   y = 2
+  senao
+   se x <= 3  entao
+    y = x ^2 
+    senao
+    y = x ^3 
+   fim_se
+ fim_se
+fim_se
+escrever "valor de f(x): ",y 
+fim

@@ -1,0 +1,43 @@
+//prog algoritmo302
+variaveis
+numerico a, cont, dist, mdist
+caracter nome, cond, mnome, resp
+inicio
+limpar
+a =0
+cont = 0
+mdist =0
+escrever "Digite o nome da praia ou @ para terminar:"
+ler nome
+faca enquanto nome <> "@"
+   a=a+1
+   escrever "Qual  a distancia do hotel ?"
+   ler dist
+   escrever "Praia P(ropria) ou N(nao propria)?  "
+   ler cond
+   faca enquanto (cond <> "P") e ( cond <> "p") e ( cond <> "N") e ( cond <> "n")
+     escrever "Atencao! Digite somente P(ropria) ou N(ao propria)?  "
+     ler cond
+   fim_enquanto
+   se (cond="P") ou ( cond ="p") entao
+    cont=cont+1 
+   senao
+      se dist>10 entao
+        escrever "Nome da praia :", nome
+        ler resp // so para descer cursor
+        escrever "Distancia hotel :", dist
+        ler resp // so para descer cursor
+    fim_se
+  fim_se
+  se dist > mdist entao
+    mdist = dist
+  mnome = nome 
+ fim_se
+  escrever "Digite o nome da praia ou @ para terminar:"
+  ler nome
+fim_enquanto
+limpar
+escrever "A porcentagem de turistas nas praias proprias foi de :", (cont*100)/a, "%." 
+posicionar 3,1
+escrever "Praia mais distante :", mnome
+fim

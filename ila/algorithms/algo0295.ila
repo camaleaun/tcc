@@ -1,0 +1,34 @@
+//prog algoritmo295
+variaveis
+numerico qte, qtp, np1, mqte, a, qtv
+caracter nome, mnome, resp
+inicio
+limpar
+a =1
+mqte =0
+escrever "Digite a quantidade de produtos da fabrica : "
+ler np1
+faca enquanto a <= np1
+   escrever "Digite o nome do produto ",a
+   ler nome
+   escrever "Digite a quantidade produzida :"
+   ler qtp
+   escrever "Digite a quantidade vendida :"
+   ler qtv
+   qte = qtp - qtv
+   se qte > mqte entao
+      mqte =qte
+       mnome =nome
+  fim_se
+   escrever "Produto :", nome
+   ler resp // so para descer cursor
+   escrever "A quantidade deste produto e de :", qte, " itens"
+  ler resp // so para descer cursor
+   se qte<50 entao
+    escrever "IMPORTANTE! Produto precisa de uma maior producao!"
+   ler resp // so para descer cursor
+  fim_se
+   a= a+1
+fim_enquanto
+escrever "O produto com maior estoque  :", mnome, " com : ", mqte, " pecas"
+fim

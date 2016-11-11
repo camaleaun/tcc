@@ -1,0 +1,23 @@
+//prog algoritmo364
+variaveis
+numerico L, n, f, fat
+matriz numerico vet[10]
+matriz numerico w[10] 
+inicio
+limpar
+para L = 1 ate 10
+  escrever "digite elemento ", L 
+  ler n
+ vet[L]=n 
+  w[L] =1 
+  para f=2   ate  vet[L]  
+    w[L] = w[L]  * f 
+  proximo
+proximo
+limpar
+escrever "Vetor fatorial "
+para L = 1 ate 10
+  posicionar L+3,1
+  escrever  w[L]
+proximo
+fim

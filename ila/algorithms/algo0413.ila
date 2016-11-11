@@ -1,0 +1,32 @@
+//algoritmo algoritmo413 
+ variaveis
+   numerico L, c,m,soma
+   matriz numerico N[5,5]
+   inicio
+   limpar
+   para L = 1 ate 5
+   para c = 1 ate 5   
+     escrever "elemento:", L, "-",c 
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+limpar
+escrever "TODA A MATRIZ"
+para L = 1 ate 5   
+   para c = 1 ate 5   
+      posicionar L+1, (c-1)*5 +1
+        escrever  N[L,c]
+    proximo
+  proximo
+soma=0
+para L = 2 ate 5 passo 1
+  para c = 7-L ate 5 passo 1
+   se resto(N[L,c],2)=1 entao
+    soma=soma + N[L,c] * N[L,c]
+    fim_se
+ proximo
+proximo
+posicionar 8,1
+escrever "Raiz quadrada da soma dos quadrados dos numeros impares: ",raiz(soma,2)
+fim

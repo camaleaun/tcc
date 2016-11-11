@@ -1,0 +1,14 @@
+//prog algoritmo54
+variaveis
+numerico   a, b 
+inicio
+limpar
+escrever "Entre com a base: "
+posicionar 1,19
+ler a 
+escrever "Entre a altura do um triƒngulo: "
+posicionar 2,33
+ler b 
+limpar
+escrever "Area = ", (a * b)/2 
+fim

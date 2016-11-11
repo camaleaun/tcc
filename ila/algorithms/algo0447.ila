@@ -1,0 +1,48 @@
+//prog algoritmo447
+variaveis
+matriz numerico B[2,2]
+matriz numerico  PROD[12,2]
+matriz numerico A[12,2]
+numerico L,c,m, n, soma
+inicio
+limpar
+escrever "Producao dos motores"
+posicionar 2,1
+ para L=1 ate 12 
+   para c=1 ate 2 
+    escrever "digite numero de motores no mes ", L, " do tipo: ",c
+    ler n
+    A[L,c] = n
+   proximo
+proximo
+para L=1 ate 2 
+  escrever "digite custo do motor ", L
+   ler n
+   B[L,1] = n
+  escrever "digite lucro do motor ", L
+   ler n
+   B[L,2] =n
+proximo
+para L=1 ate 12 
+  para c=1 ate 2  
+     PROD[L,c] =0
+       para m = 1 ate 2
+         PROD[L,c]= PROD[L,c] + A[L,m] * B[m,c]   
+      proximo
+   proximo
+proximo
+limpar
+escrever "MATRIZ CUSTO   LUCRO"
+para L=1 ate 12 
+   para c=1 ate 2
+   posicionar L+2,(c -1)*15 +1 
+    escrever PROD[L,c]
+  proximo
+proximo
+soma= 0
+para L=1 ate 12
+ soma = soma + PROD[L,2]
+proximo
+posicionar 15,1
+escrever "Lucro anual: ", soma
+fim

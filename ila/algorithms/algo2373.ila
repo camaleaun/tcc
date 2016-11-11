@@ -1,0 +1,19 @@
+//prog algoritmo237sol3
+variaveis
+numerico  c, num, h, sinal 
+inicio
+limpar
+h = 0  
+escrever "digite numero: " 
+posicionar 1,16
+ler num 
+posicionar 3,1
+escrever "Terceira Solucao "
+sinal = 1  
+para  c= 1 ate  num  
+   h = h + sinal * 1/c
+   sinal = sinal * (-1)
+proximo
+posicionar 4,1
+escrever "soma: ", h  
+fim

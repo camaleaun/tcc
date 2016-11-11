@@ -1,0 +1,56 @@
+//prog algoritmo147
+variaveis
+numerico op, os, ob, calorias
+inicio
+limpar 
+calorias = 0 
+escrever "Digite 1- Vegetariano  2- Peixe  3- Frango  4- Carne: "
+posicionar 1,55      
+ler op
+faca caso
+  caso op=1:
+   calorias = calorias +180 
+ caso op=2:
+     calorias = calorias +230 
+  caso op=3:
+      calorias = calorias +250 
+  caso op=4:
+    calorias = calorias +350 
+outro_caso:
+   calorias = calorias +0
+fim_caso
+posicionar 3,1      
+escrever "Digite 1- Abacaxi  2- Sorvete diet  3- Suco melao  4- refrigerante diet: "
+posicionar 3,74       
+ler op 
+faca caso
+  caso op=1:
+   calorias = calorias +75 
+ caso op=2:
+     calorias = calorias +110 
+  caso op=3:
+      calorias = calorias +170 
+  caso op=4:
+    calorias = calorias +200 
+outro_caso:
+   calorias = calorias +0
+fim_caso
+posicionar 5,1      
+escrever "Digite 1- Cha  2- Suco de laranja  3- Mousse diet  4- Mousse de chocolate: "
+posicionar 5,76       
+ler op 
+faca caso
+  caso op=1:
+   calorias = calorias +20 
+ caso op=2:
+     calorias = calorias +70 
+  caso op=3:
+      calorias = calorias +100
+  caso op=4:
+    calorias = calorias +65 
+outro_caso:
+   calorias = calorias +0
+fim_caso
+posicionar 8,1      
+escrever "Total de calorias: ", calorias 
+fim

@@ -1,0 +1,44 @@
+//prog algoritmo199
+variaveis
+ numerico  ini, f, i, linha, col
+ caracter resp
+inicio
+limpar 
+linha=1
+col=1
+escrever "digite valor inicial e final do intervalo, pressionando enter apos cada um"
+posicionar 3,1
+ler ini 
+ler f 
+limpar
+se resto( ini, 6)= 0 entao
+  ini = ini  +  6   
+senao
+  ini = ini  +  (6 -  resto(ini,6) )
+fim_se
+f= f-1
+para  i = ini  ate  f  passo 6
+  posicionar linha,  col 
+  escrever i
+  col = col + 5
+  se col=76 entao
+  linha = linha +1
+  col = 1
+  fim_se
+  se linha = 23 entao
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+   linha=1
+   col=1
+   fim_se
+
+proximo
+fim
+
+
+
+
+

@@ -1,0 +1,16 @@
+//prog algoritmo33
+variaveis
+numerico num1, num2 
+inicio
+limpar
+escrever "entre com um numero: "
+posicionar 1,22
+ler num1 
+escrever "entre com outro numero: "
+posicionar 2,22
+ler num2 
+limpar 
+escrever "numero 1 : ", num1 
+posicionar  2,1 
+escrever "numero 2 : ", num2 
+fim

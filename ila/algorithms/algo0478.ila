@@ -1,0 +1,34 @@
+//prog algoritmo478
+variaveis
+numerico n,c, p, f, i, fat, n1, p1, c1
+funcao fatorial(f)
+inicio 
+  fat=1 
+  para i=2 ate f 
+   fat=fat*i 
+  proximo
+  retornar(fat) 
+fim
+funcao arranjo(n1,p1)
+inicio 
+ c1 = fatorial(n1) / fatorial(n1-p1)  
+ retornar(c1) 
+fim
+inicio
+limpar 
+ escrever "digite numero de elementos do arranjo: "
+ posicionar 1,40
+ ler n 
+ faca enquanto n<2
+   escrever "Invalido.Digite numero de elementos do arranjo: "
+   ler n 
+ fim_enquanto
+ escrever "digite numero de elementos que serao agrupados: "
+ ler p 
+ faca enquanto p> n
+  escrever "Invalido.Digite numero de elementos que serao agrupados: "
+  ler p
+ fim_enquanto
+ c=arranjo(n,p) 
+ escrever "Numero de arranjos = ",c 
+fim

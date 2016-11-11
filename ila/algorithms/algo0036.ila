@@ -1,0 +1,15 @@
+//prog algoritmo36
+variaveis
+numerico num1, num2, soma 
+inicio
+limpar
+escrever "entre com um numero: "
+posicionar 1,22
+ler num1 
+escrever "entre com outro numero: "
+posicionar 2,25
+ler num2 
+soma = num1 + num2 
+limpar
+escrever "Soma: ", soma 
+fim

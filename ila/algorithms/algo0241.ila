@@ -1,0 +1,11 @@
+//prog algoritmo241
+variaveis
+numerico  c 
+inicio
+limpar
+escrever "TABUADA DO 3" 
+para c=1 ate 10  
+  posicionar c+2,1
+   escrever "3", " x  ", c, " = ", 3*c    
+proximo
+fim

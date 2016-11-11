@@ -1,0 +1,11 @@
+//prog algoritmo188
+variaveis
+numerico  L,c, ca
+inicio
+limpar
+escrever "Conversao de polegadas para centimetros " 
+para L = 1 ate 20 
+ posicionar L+1,1
+  escrever   L, "'' equivale(m) a ",L*2.54, " cm" 
+proximo
+fim

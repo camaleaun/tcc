@@ -1,0 +1,15 @@
+//prog algoritmo72
+variaveis
+numerico deposito, taxa, valorr, total 
+inicio
+limpar
+escrever "entre com deposito: "
+posicionar 1,21
+ler deposito 
+escrever "entre coma taxa de juros: "
+posicionar 2,27
+ler taxa 
+valorr = deposito*taxa/100 
+total = deposito + valorr 
+escrever "Rendimentos: ", valorr, " Total: ", total 
+fim

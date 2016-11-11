@@ -1,0 +1,16 @@
+//prog algoritmo196
+variaveis
+numerico  i, num, soma 
+inicio
+limpar
+soma = 0 
+escrever "Digite um numero maior que zero: " 
+posicionar 1,34
+ler num 
+num=num-1
+posicionar 5,1
+para  i = 5  ate  num   passo  5
+   soma = soma + i
+proximo
+escrever "Soma:",  soma 
+fim

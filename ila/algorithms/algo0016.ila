@@ -1,0 +1,8 @@
+//prog algoritmo16
+variaveis
+numerico x
+inicio
+limpar
+x = 10 
+escrever  x  
+fim

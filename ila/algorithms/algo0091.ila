@@ -1,0 +1,16 @@
+//prog algoritmo91
+variaveis
+numerico  num1, num2, soma
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler num1 
+escrever "digite 2 numero: " 
+posicionar 2,18    
+ler num2 
+soma = num1 + num2 
+se  soma > 10 entao
+  escrever "soma: ", soma 
+fim_se
+fim

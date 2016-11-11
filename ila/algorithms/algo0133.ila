@@ -1,0 +1,20 @@
+//prog algoritmo133
+variaveis
+caracter sexo 
+numerico h, peso
+inicio
+limpar
+escrever "entre com a altura: "
+posicionar 1, 21 
+ler  h 
+escrever "entre com o sexo M / F: " 
+posicionar 2, 26
+ler sexo 
+se( sexo = "M" ) ou ( sexo = "m")  entao
+peso =  72.7 * h  - 58 
+senao
+peso = 62.1 * h  - 44.7
+fim_se
+posicionar 5,1
+escrever "seu peso ideal : ", peso 
+fim

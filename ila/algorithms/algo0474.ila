@@ -1,0 +1,24 @@
+//prog algoritmo474
+variaveis
+caracter c, letra
+ numerico x 
+funcao vogal(letra)
+inicio
+se (letra="a")ou(letra="e")ou(letra="i")ou(letra="o")ou(letra="u")ou(letra="A")ou(letra="E")ou(letra="I")ou(letra="O")ou(letra="U") entao
+ retornar(1) 
+senao
+ retornar(0) 
+fim_se
+fim
+inicio
+limpar
+escrever "Digite letra: "
+posicionar 1,15
+ler c  
+x=vogal(c) 
+se x= 1 entao
+ escrever "e uma vogal "
+senao
+ escrever "nao e uma vogal"
+fim_se
+fim

@@ -1,0 +1,20 @@
+//prog algoritmo25
+variaveis
+numerico data,r,dia,mes,ano
+inicio
+limpar
+escrever "Digite data no formato ddmmaa: "
+posicionar 1,32
+ler data 
+dia=inteiro(data / 10000)
+r = data - dia *10000
+// como o ILA nao consegue pegar o resto(data,10000), criamos r
+mes=inteiro(r/100) 
+ano=resto(r,100)
+posicionar 3,1
+escrever "DIA: ",dia
+posicionar 5,1
+escrever "MES: ",mes
+posicionar 7,1
+escrever "ANO: ",ano 
+fim

@@ -1,0 +1,48 @@
+//prog algoritmo148
+variaveis
+numerico op, iv
+inicio
+limpar
+escrever "Digite 1 Regiao Norte  2 Regiao Nordeste  3 Regiao Centro-Oeste  4 Regiao Sul: " 
+posicionar 3,1
+ler op 
+posicionar 5,1
+se (op < 1) ou (op > 4) entao
+ escrever "Opcao Inexistente"
+senao
+ escrever "Digite 1- Ida  2- Ida e Volta: " 
+ posicionar 5,32
+ ler iv
+ posicionar 7,1
+  se (iv<1) ou (iv>2) entao
+   escrever "Opcao Inexistente"
+  senao
+  faca caso
+   caso op=1:
+    se iv = 1 entao
+     escrever "O valor da passagem de ida para R.Norte R$500.00" 
+    senao
+      escrever "O valor da passagem de ida-volta para R.Norte: R$950.00" 
+    fim_se
+   caso op=2:
+    se iv = 1 entao
+     escrever "O valor da passagem de ida para R.Nordeste: R$350.00" 
+    senao
+     escrever "O valor da passagem de ida-volta para R.Nordeste: R$650.00" 
+    fim_se
+   caso op=3:
+      se iv = 1 entao
+    escrever "O valor da passagem de ida para R.C.Oeste: R$350.00" 
+    senao
+       escrever "O valor da passagem de ida-volta para R.C.Oeste: R$600.00"
+      fim_se
+  caso op=4:
+       se iv = 1 entao
+         escrever "O valor da passagem de ida para R.Sul: R$300.00" 
+      senao
+          escrever "O valor da passagem de ida-volta para R.Sul: R$550.00" 
+      fim_se
+ fim_caso
+ fim_se
+fim_se
+fim

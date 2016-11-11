@@ -1,0 +1,28 @@
+//prog algoritmo149
+variaveis
+numerico  vcompra, vvenda 
+caracter nomep 
+inicio
+limpar
+escrever "digite nome do produto: "
+posicionar 1,25   
+ler  nomep 
+escrever "digite valor da compra: "
+posicionar 2,26  
+ler  vcompra 
+se  vcompra < 10   entao
+  vvenda = vcompra * 1.7 
+senao
+ se  vcompra < 30  entao  
+    vvenda = vcompra * 1.5  
+  senao
+   se  vcompra < 50  entao
+      vvenda = vcompra * 1.4   
+   senao 
+      vvenda = vcompra * 1.3    
+  fim_se
+ fim_se
+fim_se
+posicionar 4,1
+escrever  nomep, " sera vendido por R$ ", vvenda 
+fim

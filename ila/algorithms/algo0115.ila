@@ -1,0 +1,21 @@
+//prog algoritmo115
+variaveis
+numerico x, y
+inicio
+limpar 
+escrever "digite valor de x: " 
+posicionar 1,20
+ler x 
+escrever "digite valor de y: "
+posicionar 2,20 
+ler y 
+se x > y entao
+ escrever raiz(x,2), " ", y ^2 
+senao
+ se y > x entao
+  escrever raiz(y,2), " ", x ^2 
+  senao
+  escrever "numeros iguais" 
+ fim_se
+fim_se 
+fim

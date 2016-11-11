@@ -1,0 +1,10 @@
+//prog algoritmo76
+variaveis
+numerico num
+inicio
+limpar 
+escrever "digite numero: "
+posicionar 1,16
+ler num 
+escrever "sucessor: ", resto((num + 1), 61) 
+fim

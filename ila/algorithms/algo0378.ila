@@ -1,0 +1,30 @@
+//prog algoritmo378
+variaveis
+ numerico L ,c,d, n
+matriz numerico num[100] 
+inicio
+limpar
+// trecho de entrada de 100
+L= 1 
+escrever "digite ", L , " numero ou 0 para terminar: " 
+ler n  
+faca enquanto( L<=100 ) e ( n<>0)
+  num[L]=n
+   L=L+1 
+  escrever "digite ", L , " numero ou 0 para terminar: " 
+  ler n  
+fim_enquanto
+// fim do trecho de entrada
+se num[L] =0 entao
+ L=L-1
+ fim_se
+ c=0
+para d=1  ate L-1 
+ se num[d]=num[L] entao
+   c=c+1
+  fim_se
+proximo
+// trecho de saida
+escrever "Total de numeros iguais ao ultimo: ", c 
+// fim do trecho de saida
+fim

@@ -1,0 +1,55 @@
+//prog  algoritmo141
+variaveis
+numerico p1, p2, p3, aux
+caracter n1,n2,n3,auxn 
+inicio
+limpar
+escrever "digite 1 nome: "
+posicionar 1,16 
+ler n1 
+escrever "digite pontos: "
+posicionar 2,16
+ler p1 
+escrever "digite 2 nome: " 
+posicionar 3,16
+ler n2 
+escrever "digite pontos: " 
+posicionar 4,16
+ler p2 
+escrever "digite 3 nome: " 
+posicionar 5,16
+ler n3 
+escrever "digite pontos: " 
+posicionar 6,16
+ler p3 
+se p1  < p2  entao
+    aux = p1
+   p1 = p2
+   p2 = aux
+   auxn = n1 
+    n1 = n2   
+    n2 = auxn  
+fim_se
+ se  p1  < p3  entao
+     aux = p1
+       p1 = p3
+       p3 = aux
+       auxn = n1
+       n1 = n3 
+       n3 = auxn 
+fim_se
+se  p2 < p3  entao
+    aux = p2
+     p2 = p3
+     p3 = aux
+     auxn = n2
+    n2 = n3
+   n3 = auxn
+fim_se
+limpar
+escrever "VENCEDOR         : ", n1, "  ",p1, " pontos" 
+posicionar 3,1
+escrever "SEGUNDO COLOCADO : ", n2, "  ",p2, " pontos"
+posicionar 5,1 
+escrever "TERCEIRO COLOCADO: ", n3, "  ",p3, " pontos" 
+fim

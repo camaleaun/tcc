@@ -1,0 +1,23 @@
+//prog  algoritmo466
+variaveis
+ numerico mesc,x
+ funcao mes(x)
+  inicio
+   faca caso
+    caso x=1:
+      escrever "janeiro"
+    caso x=2:
+      escrever "fevereiro"
+    caso x=3:
+      escrever "marco"
+    outro_caso:
+      escrever "Nao e do 1 trimestre"
+    fim_caso
+  fim
+inicio
+limpar
+escrever "digite um numero que corresponda a um mes do 1 trimestre: "
+posicionar 1,59
+ler mesc 
+mes(mesc) 
+fim

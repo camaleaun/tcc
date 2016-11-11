@@ -1,0 +1,15 @@
+//prog e algoritmo272
+variaveis
+numerico anos, c, j
+inicio
+limpar
+c = 1.5
+j = 1.1
+anos =  0
+faca enquanto   j <= c  
+    c = c + 0.02
+    j = j + 0.03
+    anos=anos +1
+fim_enquanto
+escrever "anos: ",anos
+fim

@@ -1,0 +1,18 @@
+//prog algoritmo268
+variaveis
+numerico a
+caracter sexo
+inicio
+limpar
+a = 0
+escrever "digite sexo(M/F) ou @ para sair: "
+ ler sexo
+ faca enquanto   sexo <>  "@"
+   se (sexo = "M") ou ( sexo = "m") entao
+     a=a+1
+ fim_se
+  escrever "digite sexo(M/F) ou @ para sair: "
+  ler sexo
+fim_enquanto
+escrever "total de pessoas do sexo masculino: ", a
+fim   

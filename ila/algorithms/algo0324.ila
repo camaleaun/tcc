@@ -1,0 +1,48 @@
+//prog algoritmo324
+variaveis
+numerico mmat,cont,mat,n,  sb,ab,ns,mab,reg
+caracter resp
+inicio
+limpar
+mab = 0
+cont = 0
+reg = 0
+escrever "digite a matricula ou numero negativo para acabar: "
+ler mat
+faca enquanto mat >= 0
+  escrever "digite o salario base "
+  ler sb
+  escrever "digite o nivel: 1- excelente  2- bom  3- regular: "
+  ler n
+  se n = 1 entao
+   ab = sb * 0.8
+    ns = sb + ab
+   senao
+     se n = 2 entao
+      ab = sb * 0.5
+      ns = sb + ab
+     senao
+      ab = sb * 0.3
+       ns = sb + ab
+       cont = cont + 1
+       reg = reg + ab
+     fim_se
+    fim_se
+    se ab > mab entao
+     mab = ab
+      mmat = mat
+   fim_se
+  escrever "o salario a ser pago e  ",ns
+  ler resp // so para descer cursor
+  escrever "digite a matricula ou numero negativo para acabar: "
+  ler mat
+fim_enquanto
+limpar
+escrever "a matricula de maior abono e ",mmat
+posicionar 3,1
+se cont <> 0 entao
+escrever "a media de abono de funcionario regular e ",reg/cont
+senao
+escrever "Nenhum funcionario regular "  
+fim_se
+fim

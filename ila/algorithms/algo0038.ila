@@ -1,0 +1,11 @@
+//prog algoritmo38
+variaveis
+numerico num
+inicio
+limpar
+escrever "entre com um numero: "
+posicionar 1,22
+ler num 
+limpar
+escrever "a terca parte e: ", num/3 
+fim

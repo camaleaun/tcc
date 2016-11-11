@@ -1,0 +1,42 @@
+//prog algoritmo309
+variaveis
+numerico cic, ndep, isento, rb, total, ir, totir
+caracter resp
+inicio
+limpar
+escrever "digite  o seu CIC ou 0 para acabar: "
+ler cic
+totir  = 0
+isento =0
+faca enquanto cic > 0
+    escrever "Digite o numero de dependentes: "
+    ler ndep
+    escrever "Digite sua renda bruta: "
+    ler rb
+    total = rb - 600 * ndep
+   escrever "Numero do CIC: ", cic
+    ler resp // so para descer cursor
+    se total <= 1000 entao
+        escrever "Isento " 
+        ler resp // so para descer cursor
+        isento = isento + 1
+     senao
+       se  total <=  5000  entao
+           ir = total * 0.15
+            totir = totir + ir
+            escrever "O imposto a ser pago: ", ir 
+       senao
+             ir = total * 0.20
+             totir = totir + ir
+             escrever "O imposto a ser pago  de: ", ir
+       fim_se
+    fim_se
+  ler resp // so para descer cursor       
+     escrever "Digite o seu CIC: "
+     ler cic
+fim_enquanto
+limpar
+escrever "O total de imposto arrecadado pela receita  de: ", totir
+posicionar 3,1
+escrever "O numero de contribuintes isentos: ", isento
+fim

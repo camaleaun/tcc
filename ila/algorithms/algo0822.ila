@@ -1,0 +1,12 @@
+//prog algoritmo82sol1
+variaveis  
+numerico numero 
+inicio
+limpar
+escrever "digite numero: " 
+posicionar 1,16
+ler numero 
+se  numero > 20 entao
+ escrever "metade: ", numero / 2 
+fim_se
+fim

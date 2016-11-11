@@ -1,0 +1,61 @@
+//prog algoritmo369
+variaveis
+matriz numerico mesa[30]
+matriz numerico qtde[30]
+numerico i, n, lugares,codigo, lugmesa, linha
+caracter resp
+inicio
+limpar
+para i = 1 ate 30
+  mesa[i] = 99 + i 
+  qtde[i] = 5 
+proximo
+lugares = 150 
+escrever "entre com codigo (100 - 129) ou 0 para terminar: "
+ler codigo 
+faca enquanto (codigo > 0 ) e ( lugares <> 0)
+   i = 1
+   faca enquanto (codigo <> mesa[i]  ) e ( i < 30)
+     i=i+1
+  fim_enquanto
+   se  codigo = mesa[i] entao
+     escrever "quantidade de lugares a reservar: "
+      ler lugmesa 
+      se qtde[i] >= lugmesa entao
+       qtde[i] = qtde[i] - lugmesa
+       lugares = lugares - lugmesa
+      senao
+         escrever "nao ha lugares a reservar" 
+      fim_se
+    senao
+       escrever "codigo de mesa invalido" 
+   fim_se
+   escrever "entre com codigo (100 - 129) ou 0 para terminar: "
+   ler codigo 
+fim_enquanto
+limpar
+se lugares = 0 entao
+ escrever "Lotacao esgotada"
+senao
+ escrever "Lugares vagos "
+ linha=2
+  para i = 1 ate 30
+    se qtde[i]<>0 entao
+    posicionar linha,1
+    escrever "mesa: ", mesa[i]
+    posicionar linha,15
+    escrever " total de lugares: ", qtde[i] 
+    linha=linha+1
+    se linha = 22 entao
+      posicionar 24,1
+      escrever "pressione enter: "
+      posicionar 24,17
+      ler resp
+      limpar
+      linha=1
+    fim_se
+   fim_se
+  proximo
+fim_se
+
+fim

@@ -1,0 +1,11 @@
+//prog algoritmo258
+variaveis
+numerico num
+inicio
+limpar
+faca enquanto  num  > 0
+ escrever "digite numero: "
+ ler num
+ escrever "dobro do numero: ", num  * 2 
+fim_enquanto
+fim

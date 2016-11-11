@@ -1,0 +1,89 @@
+//prog algoritmo454
+variaveis
+matriz numerico prod[3,3]
+matriz numerico tota[3]
+matriz numerico custo[3]
+matriz numerico custop[3]
+matriz numerico ca[3]
+numerico L,c, n,total, custogeral, pos,linha
+caracter  resp
+inicio
+limpar
+para L=1 ate 3
+  ca[L]=0
+ tota[L]=0
+ custop[L]=0
+proximo
+custogeraL=0
+para L=1 ate 3
+  escrever "digite preco do produto: ", L
+ler n
+custo[L] =n
+proximo
+para L=1 ate 3
+   para c=1  ate 3
+     escrever "digite quantidade do produto ", L , "  do armazem  ", c
+     ler n
+   prod[L,c] =n
+  proximo
+proximo
+limpar
+para L=1 ate 3
+ linha=1
+ posicionar linha,1
+ escrever "Estoque do armazem   ",   L
+ linha=3
+  para c=1  ate 3
+    posicionar linha,1
+     escrever "produto  ", c , ":  ", prod[L,c]
+     tota[L]=tota[L] +prod[L,c] 
+     linha=linha+1
+ proximo
+  posicionar linha+1,1
+  escrever "total:  ",  tota[L]
+  posicionar linha +3,1
+ escrever "Pressione enter:" 
+ posicionar linha+3,17
+ ler resp
+ limpar
+proximo
+pos=1
+para L= 2 ate 3
+   se prod[L,2]>prod[pos,2] entao
+   pos =L
+  fim_se
+proximo
+escrever "Armazem que contem mais produto 2: ",pos
+linha=4
+para L=1 ate 3
+  posicionar linha,1
+  escrever "Custo total de cada produto do armazem ",  L
+  linha=linha+2
+   para c=1 ate 3
+    total= custo[c] * prod[L,c]
+    custop[c]=custop[c]+total
+    ca[L]=ca[L] +total
+    posicionar linha,1
+    escrever "produto ", c , " - R$ ",total 
+    linha=linha+1
+  proximo
+  posicionar linha,1   
+  escrever "Custo total do armazem ", L , "  = R$ ", ca[L]
+  custogeral =  custogeral + ca[L]
+  posicionar linha,71
+  escrever "enter:" 
+  posicionar linha,78
+  ler resp
+  linha=linha+2 
+proximo
+limpar
+escrever "Custo total de cada produto em todos os armazens "
+linha=3
+para L=1 ate 3
+ posicionar linha,1
+ escrever "produto  ", L, "  - R$", custop[L] 
+ linha=linha+1
+proximo
+posicionar linha+2,1
+escrever "Custo total dos tres armazens R$ ", custogeral
+fim

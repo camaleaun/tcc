@@ -1,0 +1,14 @@
+//prog algoritmo101
+variaveis
+numerico   num
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler num 
+se ( num > 20 ) e ( num <  90 ) entao
+  escrever "o numero est  na faixa de 20 a 90, exclusive"  
+senao
+  escrever "o numero est  fora da faixa de 20 a 90" 
+fim_se 
+fim

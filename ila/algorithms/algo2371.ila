@@ -1,0 +1,21 @@
+//prog algoritmo237sol1
+variaveis
+numerico  c, num, h 
+inicio
+limpar
+h = 0  
+escrever "digite numero: " 
+posicionar 1,16
+ler num 
+posicionar 3,1
+escrever "Primeira Solucao " 
+para  c= 1  ate  num  
+ se resto( c , 2) = 1  entao
+      h = h + 1 / c  
+ senao
+      h = h - 1 / c   
+ fim_se
+proximo
+posicionar 4,1
+escrever "soma: ", h  
+fim

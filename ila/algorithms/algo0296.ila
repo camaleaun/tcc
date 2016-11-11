@@ -1,0 +1,23 @@
+//prog algoritmo296
+variaveis
+numerico contempo,  massa, tempo
+caracter resp, resp1
+inicio
+limpar
+escrever "Digite S se desejar novo calculo ou qualquer letra para terminar: "
+ler resp
+faca enquanto (resp = "S") ou ( resp = "s")
+  contempo = 0
+  escrever "Digite a massa em gramas do material :"
+  ler massa
+  faca enquanto massa >= 0.10
+    contempo= contempo +1
+    massa = 0.75 * massa
+  fim_enquanto
+  tempo = (contempo*30) / 60
+  escrever "O tempo foi de :", tempo, " minutos."
+  ler resp1 // so para descer cursor
+  escrever "Digite S se desejar novo calculo ou qualquer letra para terminar: "
+  ler resp
+fim_enquanto
+fim

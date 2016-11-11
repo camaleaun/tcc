@@ -1,0 +1,70 @@
+//prog algoritmo300
+variaveis
+numerico  x, op, op2, contflu, contbot, contvas, contfla, contout, contflu2, contout2,sal, msal
+caracter resp
+inicio
+limpar
+x =0
+contflu = 0
+contflu2 = 0
+contbot = 0
+msal =0.
+contvas = 0
+contfla = 0
+contout = 0
+contout2 = 0
+escrever "Digite 1 FLU  2 BOTA 3 VASCO 4 FLA 5 Outros 0 sair: "
+ler op
+faca enquanto op <> 0
+   faca enquanto (op < 1 ) ou ( op >5)
+     escrever "Digite 1 FLU  2 BOTA 3 VASCO 4 FLA 5 Outros: "
+      ler op
+   fim_enquanto
+  x=x+1
+  escrever "Onde voce mora 1 RJ 2 Niteroi 3 Outros ?"
+  ler op2
+  escrever "Qual o seu salario ?"
+  ler sal
+  faca caso
+  caso op = 1:
+   contflu= contflu +1
+   se op2=2 entao
+     contflu2= contflu2+1
+   fim_se
+  caso op = 2: 
+    contbot=contbot+1 
+    msal =msal + sal
+  caso op = 3 :
+    contvas= contvas +1
+  caso op = 4:
+    contfla= contfla +1
+  caso op = 5:
+   contout= contout +1
+   se op2=1 entao
+      contout2= contout2+1
+   fim_se
+ fim_caso
+  escrever "Digite 1 FLU  2 BOTA 3 VASCO 4 FLA 5 Outros 0 sair: "
+  ler op
+fim_enquanto
+limpar
+escrever "Total de torcedores do Fluminense :", contflu
+posicionar 3,1
+escrever "Total de torcedores do Botafogo :", contbot
+posicionar 5,1
+escrever "Total de torcedores do Vasco :", contvas
+posicionar 7,1
+escrever "Total de torcedores do Flamengo :", contfla
+posicionar 9,1
+escrever "Total de torcedores de outros clubes :", contout
+posicionar 11,1
+se contbot <>0 entao
+ escrever "Media salarial dos torcedores do Botafogo :", msal/contbot
+senao
+ escrever "Nenhum torcedor do Botafogo"
+fim_se
+posicionar 13,1
+escrever "Total de pessoas do Rio de Janeiro torcedores de outros clubes :",contout2
+posicionar 15,1
+escrever "Total de pessoas de Niteroi torcedores do Fluminense :", contflu2
+fim

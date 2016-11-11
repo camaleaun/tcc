@@ -1,0 +1,18 @@
+//prog algoritmo87
+variaveis
+caracter resp
+inicio
+limpar
+escrever " Qual a capital do Brasil? "
+posicionar 1,28
+ler resp
+se (resp = "BRAS÷LIA" ) ou ( resp = "Bras°lia") entao
+escrever " PARABêNS!" 
+senao
+ se(resp="bras°lia") ou (resp="brasilia") ou (resp="brazilia") ou (resp="brazilia") ou (resp="BRAZ÷LIA") ou (resp="BRAZILIA") ou (resp="Braz°lia") ou (resp="Brazilia") ou (resp="Brasilia") ou (resp="BRASILIA") entao
+  escrever " CERTO! Mas atená∆o para grafia: Bras°lia ou BRAS÷LIA "
+ senao
+  escrever " ERRADO! ESTUDE MAIS!" 
+ fim_se
+fim_se 
+fim

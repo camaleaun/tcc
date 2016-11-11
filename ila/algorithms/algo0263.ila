@@ -1,0 +1,15 @@
+//prog algoritmo263
+variaveis
+numerico a, num
+inicio
+limpar
+a = 0
+escrever "digite numero positivo: "
+ler num
+faca enquanto   num > 0
+  a= a+1
+   escrever "digite numero positivo: "
+   ler num
+fim_enquanto
+escrever "total: ", a
+fim

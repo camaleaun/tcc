@@ -1,0 +1,35 @@
+//prog algoritmo189
+variaveis
+numerico  f1, f2, c, dec,t, linha
+caracter r
+inicio
+limpar 
+escrever "entre com a temperatura maior em Fahrenheit: "
+posicionar 1,46 
+ler f1 
+posicionar 2,1
+escrever "entre com a temperatura menor em Fahrenheit: "
+posicionar 2,46 
+ler f2  
+posicionar 3,1
+escrever "entre com decremento: " 
+posicionar 3,23
+ler dec 
+limpar 
+linha =1
+para  t = f1  ate f2  passo - dec
+  c = 5 * (t - 32)/9
+  posicionar linha , 1 
+  escrever "temperatura em graus Celsius: ", c
+se linha = 23 entao
+ posicionar 24,1
+ escrever "pressione enter:"
+ posicionar 24,17
+ ler r
+ limpar
+ linha =1
+ senao
+ linha = linha +1
+ fim_se
+proximo
+fim

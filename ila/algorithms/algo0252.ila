@@ -1,0 +1,24 @@
+//prog algoritmo252
+variaveis
+numerico  L, c,linha 
+caracter resp
+inicio
+limpar
+para  L = 1  ate 9
+  linha=1
+  para c=L+1  ate  10  
+    posicionar linha,1
+    escrever "time : ",L
+    posicionar linha,15
+    escrever "x "
+    posicionar linha,25
+    escrever  "time : ", c, "     ________"
+    linha=linha+1
+   proximo
+   posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+proximo
+fim

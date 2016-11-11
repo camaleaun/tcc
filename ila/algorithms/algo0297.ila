@@ -1,0 +1,28 @@
+//prog algoritmo297
+variaveis
+numerico contac, ndias, tot, totc
+caracter nome, resp
+inicio
+limpar
+tot =0
+totc =0
+escrever "Digite o numero da conta do cliente ou zero para sair: "
+ler contac
+faca enquanto contac<>0
+     escrever "Digite o nome do cliente:"
+     ler nome
+     escrever "Quantos dias vai ser a estadia dele ?"
+     ler ndias
+     se ndias < 10 entao
+      totc =(ndias*30) + (ndias*15) 
+     senao
+      totc =(ndias*30) + (ndias*8)
+     fim_se
+     tot =tot +totc
+     escrever "Cliente : ", nome, " Conta numero : ", contac, " Saldo final : R$ ",totc
+     ler resp // so para descer cursor
+     escrever "Digite o numero da conta do cliente ou zero para sair: "
+     ler contac
+ fim_enquanto
+escrever "O total arrecadado pela pousada foi de : R$ ", tot
+fim

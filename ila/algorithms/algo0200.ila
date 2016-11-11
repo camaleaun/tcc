@@ -1,0 +1,41 @@
+//prog algoritmo200
+variaveis
+numerico  ini, f, num, i,  linha, col 
+caracter resp
+inicio
+limpar
+escrever "digite  valor inicial e valor final de um  intervalo e o numero que se procura "
+posicionar 2,1
+escrever "os multiplos, pressionando enter apos digitar cada um: "
+posicionar 3,1
+ler ini 
+ler f 
+ler  num 
+se resto(ini, num) = 0  entao
+ ini = ini  +  num  
+senao
+ini = ini  + (num - resto( ini , num ) )
+fim_se
+f= f-1
+limpar
+linha =1
+col=1
+para i = ini  ate  f  passo num 
+  posicionar linha,  col 
+  escrever i
+  col = col + 5
+  se col=76 entao
+  linha = linha +1
+  col = 1
+  fim_se
+  se linha = 23 entao
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+   linha=1
+   col=1
+  fim_se
+ proximo
+fim

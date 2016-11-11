@@ -1,0 +1,39 @@
+//prog algoritmo206
+variaveis
+numerico  i, quant, num, maior, menor, linha 
+inicio
+limpar
+escrever "Quantos numeros voce quer digitar? "
+posicionar 1,36 
+ler quant 
+escrever "Digite um numero: "
+posicionar 2,19 
+ler num 
+maior = num 
+menor = num 
+linha=3
+para  i = 1  ate quant -1
+ posicionar linha, 1
+  escrever "Digite um numero: "
+ posicionar linha, 19 
+  ler num 
+  se num > maior entao
+     maior = num 
+   senao
+     se num < menor  entao
+      menor = num 
+   fim_se
+  fim_se
+  linha = linha +1
+  se resto(linha,23) = 0 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+  fim_se
+proximo
+escrever "Maior: ", maior,  "   Menor: ", menor 
+fim
+

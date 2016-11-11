@@ -1,0 +1,28 @@
+//prog algoritmo235
+variaveis
+numerico  i, num, num1, maior, menor
+inicio
+limpar 
+escrever "Digite um numero: " 
+posicionar 1,19
+ler num1 
+maior = num1 
+menor = num1 
+para  i = 1  ate 9  
+   posicionar i +1,1
+   escrever "Digite um numero: " 
+   posicionar i +1,19
+    ler num1 
+    se num1 > maior entao
+     maior =num1  
+    senao
+      se num1 < menor entao
+        menor =num1  
+    fim_se
+  fim_se
+proximo
+posicionar 15,1
+escrever "Maior numero digitado: ", maior
+posicionar 17,1 
+escrever "Menor numero digitado: ", menor 
+fim

@@ -1,0 +1,28 @@
+//prog algoritmo355
+variaveis
+numerico L ,n, cont
+matriz  numerico num[8] 
+inicio
+limpar
+cont = 0 
+// trecho de entrada
+  para L = 1 ate 8
+   escrever "digite ", L, " numero "
+    ler n
+   num[ L ]=n  
+    se resto(num[L],6)=0 entao
+       cont=cont +1
+    fim_se
+  proximo
+// fim do trecho de entrada
+// trecho de saida
+limpar
+escrever "RELACAO DAS NUMEROS "
+para L = 1 ate 8
+  posicionar L+2,1
+   escrever L, "- ", num[L]
+   proximo
+// fim do trecho de saida
+posicionar 12,1
+escrever " Total de multiplos de 6: ",cont 
+fim

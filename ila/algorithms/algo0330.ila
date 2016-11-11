@@ -1,0 +1,33 @@
+//prog  algoritmo330
+variaveis
+numerico contt,contf, contd, fil, rend, soma, dolar
+caracter resp
+inicio
+limpar
+soma = 0
+contt = 0
+contf = 0
+contd = 0
+escrever "digite valor do dolar em reais: "
+ler dolar
+escrever "digite rendimento familiar ou para terminar, 0 ou numero negativo: "
+ler rend
+faca enquanto rend > 0
+   contt= contt +1
+   soma = soma + rend
+   se rend >= 100 * dolar entao
+    contd= contd +1
+  fim_se
+   escrever "digite numero de filhos: "
+   ler fil
+   contf = contf + fil
+   escrever "digite rendimento familiar ou para terminar, 0 ou numero negativo: "
+   ler rend
+fim_enquanto
+limpar
+escrever  "media dos rendimentos da populacao: ", soma / contt
+posicionar 3,1
+escrever "media do numero de filhos: ", contf / contt
+posicionar 5,1
+escrever "percentual de familias com rendimento igual ou superior a $100 dolares: ",contd *100 / contt, "%" //  na mesma linha anterior
+fim

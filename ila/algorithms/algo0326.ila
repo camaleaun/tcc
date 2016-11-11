@@ -1,0 +1,76 @@
+//prog algoritmo326
+variaveis
+numerico idade, contpessoas, contfem, contmasc, soma, contexph, conthom, contexpm, contexpmt, menor
+caracter sexo, expe
+inicio
+limpar
+contpessoas = 0
+contfem = 0
+contmasc = 0
+soma = 0
+contexph = 0
+conthom = 0
+contexpm = 0
+contexpmt=0
+escrever "digite idade ou negativo para acabar: "
+ler idade
+menor = 200
+faca enquanto idade > 0
+   escrever "digite sexo( M / F): "
+   ler sexo
+   escrever "digite experiencia(S / N): "
+   ler expe
+   contpessoas = contpessoas +1
+   se (sexo = "f") ou ( sexo = "F") entao
+     contfem= contfem +1
+     se (expe = "s") ou ( expe = "S") entao
+       contexpmt=contexpmt +1
+       se idade < menor entao
+         menor = idade
+       fim_se
+       se idade < 35 entao
+           contexpm = contexpm +1
+       fim_se
+     fim_se
+   senao
+    contmasc = contmasc +1
+     se (expe = "s") ou ( expe = "S") entao
+       contexph = contexph +1
+        soma = soma + idade
+    fim_se
+     se idade > 45 entao
+        conthom = conthom +1
+   fim_se
+  fim_se
+  escrever "digite idade ou negativo para acabar: "
+  ler idade
+fim_enquanto
+limpar
+se contmasc <> 0 entao
+  escrever "numero de candidatos do sexo masculino: ", contmasc
+  posicionar 3,1
+  escrever "porcentagem dos homens com mais de 45 anos entre o total dos homens: ", conthom * 100/ contmasc
+  posicionar 5,1
+  se contexph <> 0 entao
+   escrever "idade media dos homens que ja tem experiencia no servico: ", soma/contexph
+  senao
+   escrever "Nenhum homem com experiencia  "
+  fim_se 
+senao
+ escrever "Nenhum homem"
+fim_se 
+posicionar 9,1
+se contfem <> 0 entao
+  escrever "numero de candidatos do sexo feminino: ", contfem
+  posicionar 11,1
+  se contexpmt <> 0 entao
+    escrever "numero de mulheres com idade inferior a 35 anos e com experiencia no servico: ",contexpm
+    posicionar 13,1
+    escrever "menor idade entre as mulheres que ja tem experiencia no servico: ", menor
+  senao
+    escrever "Nenhuma mulher com experiencia no servico"
+  fim_se
+senao
+ escrever "Nenhuma mulher"
+fim_se
+fim

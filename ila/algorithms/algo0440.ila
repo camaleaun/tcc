@@ -1,0 +1,39 @@
+//prog algoritmo440
+variaveis
+matriz numerico mat[12,4]
+numerico i, j, n , totalmes, totalano, totalsem, linha
+inicio
+limpar 
+para  i = 1 ate 12
+  para  j= 1 ate 4
+   escrever "mes: ", i , "  semana: ", j 
+    ler n
+   mat[i,j] =n
+  proximo
+proximo
+totalano = 0
+limpar
+linha=1
+para  i = 1 ate 12
+  totalmes= 0
+   para  j= 1 ate 4
+   totalmes = totalmes + mat[i, j]
+   proximo
+  posicionar linha,1 
+  escrever "total do mes  ", i , "  = ", totalmes 
+  totalano = totalano + totalmes
+  linha =linha+1
+proximo
+linha=14
+para  j = 1 ate 4
+  totalsem = 0
+   para  i = 1 ate 12
+     totalsem = totalsem + mat[i,j]
+    proximo
+    posicionar linha,1
+    escrever "total da semana  ", j , "  = ", totalsem 
+   linha =linha+1
+proximo
+posicionar linha+2,1
+escrever  "total do ano = ",  totalano
+fim

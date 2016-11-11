@@ -1,0 +1,27 @@
+//prog algoritmo376
+variaveis
+numerico L ,n 
+matriz numerico a[10]
+matriz numerico b[10] 
+inicio
+limpar
+//vetor com 10 elementos
+para L = 1 ate 10
+  escrever "digite numero :"
+    ler n
+   a[L]=n 
+    se resto(L ,2) = 0 entao
+      b[L ] = a[L ] / 2
+     senao
+       b[L ] = a[L ] * 3
+    fim_se
+proximo
+limpar
+escrever "Vetores "
+para L = 1 ate 10
+    posicionar L+3,1
+     escrever a [L ]
+    posicionar L+3,15
+     escrever b [L ]
+proximo
+fim

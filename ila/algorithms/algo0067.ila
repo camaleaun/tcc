@@ -1,0 +1,18 @@
+//prog algoritmo67
+variaveis
+numerico  prest, valorr, taxa, tempo
+// valor e uma palavra reservada e por isto transformamos em valorr
+inicio
+limpar
+escrever "digite o valor da presta‡Æo: "
+posicionar 1,30
+ler valorr 
+escrever "digite  a taxa: "
+posicionar 2,17
+ler taxa 
+escrever "digite o tempo: "
+posicionar 3,17
+ler tempo 
+prest = valorr+(valorr*(taxa/100)*tempo) 
+escrever "o valor da presta‡Æo em atraso ‚ =", prest 
+fim    

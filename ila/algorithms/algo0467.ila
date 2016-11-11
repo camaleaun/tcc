@@ -1,0 +1,31 @@
+//prog algoritmo467
+variaveis
+  numerico L, b, c, base, expo,i,z
+  caracter resp
+ funcao loga(base,expo)
+  inicio
+    i=log(base)/log(expo) 
+   retornar(i) 
+  fim
+inicio
+limpar
+para c=1 ate 3 
+  escrever "digite logaritmando maior do que 0 "
+  ler L 
+  faca enquanto L<=0
+    escrever "Invalido.Digite logaritmando maior do que 0 "
+    ler L
+ fim_enquanto
+ escrever "digite base maior que 0 e diferente de 1"
+  ler b 
+   faca enquanto (b<0 ) ou ( b=1)
+   escrever "Invalido.digite base maior que 0 e diferente de 1: " 
+    ler b 
+  fim_enquanto
+ escrever "logaritmo e ",loga(L,b) 
+ z=loga(L,b) 
+ ler resp // so para descer cursor
+ escrever "z = ",z
+ ler resp // so para descer cursor
+proximo
+fim

@@ -1,0 +1,15 @@
+//prog algoritmo66
+variaveis
+numerico  tempo, vel, dist, litros 
+inicio
+limpar
+escrever "digite o tempo gasto: "
+posicionar 1,23
+ler tempo 
+escrever "digite  a velocidade media: "
+posicionar 2,29
+ler vel 
+dist =  tempo * vel 
+litros =  dist / 12 
+ escrever "velocidade = ", vel, " tempo = ", tempo, " distancia = ", dist, " litros = ", litros 
+fim

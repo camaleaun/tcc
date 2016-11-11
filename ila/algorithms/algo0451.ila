@@ -1,0 +1,42 @@
+//prog algoritmo451
+variaveis
+matriz numerico m[5,5]
+numerico  L, c, n, ts 
+inicio
+limpar
+para L = 1 ate 5  
+   para c = 1 ate 5  
+    escrever "Elemento: ", L, "-", c
+    ler n
+   m[L,c]=n
+    proximo
+proximo
+ts = 1 
+L = 2
+faca enquanto ( L <= 5  ) e  (ts =1 )    
+   c  = 1
+    faca enquanto (c < L ) e  (ts =1 )    
+      se ( m[L,c] = 0 ) e ( ts =1 ) entao
+         ts = 1
+      senao
+         ts = 0 
+      fim_se     
+      c= c+1 
+   fim_enquanto
+   L= L+1
+fim_enquanto
+limpar
+escrever "Toda a Matriz"
+para L = 1 ate 5  
+   para c = 1 ate 5
+    posicionar L+2,(c-1)*6+1  
+      escrever m[L,c]  
+   proximo   
+proximo
+posicionar 10,1
+se (ts =1 )  entao
+ escrever "Triangular Superior"
+senao
+ escrever "Nao e Triangular Superior"
+fim_se
+fim

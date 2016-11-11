@@ -1,0 +1,38 @@
+//prog algoritmo270
+variaveis
+numerico num, a,linha, col
+caracter resp
+inicio
+limpar
+escrever "digite numero ou -999 para acabar: "
+posicionar 1,36
+ler num
+faca enquanto num<>-999
+  limpar
+  col=1
+  linha=1
+  posicionar linha,col
+  escrever "1"
+  para a   =  2  ate inteiro( num /  2)
+     se resto( num , a) = 0  entao
+       col=col+5
+       posicionar linha,col
+       escrever a
+       se col=76 entao
+         linha=linha+1
+         col=-4
+       fim_se
+     fim_se 
+  proximo
+  posicionar linha ,col+5
+  escrever num
+  posicionar 24,1
+  escrever "pressione enter:"
+  posicionar 24,17
+  ler resp
+  limpar
+  escrever "digite numero ou -999 para acabar: "
+  posicionar 1,36
+  ler num
+fim_enquanto
+fim

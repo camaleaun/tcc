@@ -1,0 +1,31 @@
+//prog algoritmo433
+variaveis
+numerico L, c,n
+matriz numerico m[3,3]
+matriz numerico final[3,3]
+inicio
+limpar
+para  L= 1  ate 3 
+  para  c= 1 ate 3 
+  escrever "digite elemento: ",L ," - ",c 
+    ler n
+   m[L,c]=n
+   proximo
+proximo
+limpar
+escrever "matriz original"
+para  L= 1  ate 3
+   para  c= 1 ate 3
+   posicionar L+1, (c-1)*5 +1
+   escrever m[L,c]
+  proximo
+proximo
+ posicionar 7,1  
+escrever "matriz gira 270 "
+para  c= 3 ate 1 passo -1
+  para  L= 1 ate 3
+  posicionar (4 - c)+7,(L-1)*5 +1
+   escrever m[L,c]
+  proximo
+proximo
+fim

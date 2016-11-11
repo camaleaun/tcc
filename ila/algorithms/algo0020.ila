@@ -1,0 +1,18 @@
+//prog algoritmo20
+variaveis
+caracter c,c1,d1
+inicio
+limpar
+escrever "digite palavra 1: " 
+posicionar 1,19 
+ler c
+escrever "digite palavra 2: "
+posicionar 2,19 
+ler c1
+d1=c + c1
+limpar 
+escrever "primeira palavra: ",comprimento(C)
+posicionar  2,1
+escrever "concatenando: ", d1   
+// as demais linhas n∆o podem migrar para este interpretador
+fim

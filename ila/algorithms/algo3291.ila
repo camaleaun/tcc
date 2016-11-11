@@ -1,0 +1,64 @@
+//prog algoritmo3291
+variaveis
+numerico voto, cand1, cand2, cand3, cand4, vn, vb, total
+caracter resp
+inicio
+limpar
+cand1 = 0
+cand2 = 0
+cand3 = 0
+cand4 = 0
+vn = 0
+vb = 0
+total = 0
+escrever "digite candidatos (1 / 2 / 3 /4) 5(voto nulo ) 6(voto em branco) 7(finalizar): "
+ler voto
+faca enquanto  voto <> 7
+ faca enquanto  (voto < 1 ) ou ( voto >7 )
+   escrever "VOTO INVALIDO."
+  ler resp
+   escrever "digite candidadtos(1/2/3/4) 5(voto nulo) 6(voto em branco) 7(finalizar): "
+   ler voto
+ fim_enquanto
+  total=total+1
+  se voto = 1 entao
+   cand1= cand1+ 1
+  senao
+    se voto = 2 entao
+     cand2 = cand2+ 1
+    senao
+      se voto = 3 entao
+       cand3 = cand3 +1
+      senao
+        se voto = 4 entao
+         cand4 = cand4 + 1
+        senao
+         se voto = 5 entao
+           vn=vn+1
+          senao
+            se voto = 6 entao
+              vb=vb+1
+            fim_se
+         fim_se
+        fim_se
+       fim_se
+      fim_se
+  fim_se
+ escrever "digite candidadtos (1 / 2 / 3 /4) 5(voto nulo ) 6(voto em branco) 7(finalizar) "
+ ler voto
+fim_enquanto
+limpar
+escrever "total de votos do candidato 1: ", cand1
+posicionar 3,1
+escrever "total de votos do candidato 2: ", cand2
+posicionar 5,1
+escrever "total de votos do candidato 3: ", cand3
+posicionar 7,1
+escrever "total de votos do candidato 4: ", cand4
+posicionar 9,1
+escrever "total de votos nulos: ", vn
+posicionar 11,1
+escrever "total de votos em branco: ", vb
+posicionar 13,1
+escrever "percentual dos votos em branco e nulos sobre o total: ", (vn +vb)*100 / total, "%"
+fim

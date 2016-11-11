@@ -1,0 +1,23 @@
+//prog algoritmo284
+variaveis
+ numerico num, pos
+caracter resp
+inicio
+limpar
+escrever "Digite um numero ou zero para acabar: "
+ler num
+pos  =  0
+faca enquanto num <> 0
+   pos= pos +1
+   se resto(num , pos) = 0 entao
+        escrever num ," e multiplo da posicao: "
+  fim_se
+  posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+    escrever "Digite um numero ou zero para acabar: "
+   ler num
+fim_enquanto
+fim

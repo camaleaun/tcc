@@ -1,0 +1,43 @@
+//prog algoritmo152
+variaveis
+numerico idade, peso,gotas 
+inicio
+limpar
+escrever "digite peso: "
+posicionar 1,14   
+ler peso 
+escrever "digite idade: " 
+posicionar 2,15  
+ler idade 
+posicionar 3,1
+gotas = 500  /  20  // calculo do n£mero de mg por gotas
+se peso < 5 entao
+   escrever "nao pode tomar o remedio porque nao tem peso. Consulte medico."
+senao
+  se idade >= 12  entao
+     se  peso >= 60  entao
+      escrever "Tomar  ",1000 / gotas, "  gotas"  
+     senao
+       escrever "Tomar  ", 875  /gotas, "  gotas"  
+     fim_se
+  senao
+    se  peso <= 9  entao
+      escrever " Tomar  ", 125  / gotas, "  gotas"   
+    senao
+     se  peso <= 16  entao
+       escrever "Tomar  ", 250  / gotas, "  gotas"   
+     senao
+       se  peso <= 24  entao
+         escrever "Tomar  ", 375  / gotas, "  gotas"   
+       senao
+        se  peso <=30  entao
+           escrever "Tomar  ", 500  / gotas, "  gotas"   
+        senao
+           escrever "Tomar  ", 750  / gotas, "  gotas"   
+        fim_se
+      fim_se
+     fim_se
+    fim_se
+  fim_se
+ fim_se
+fim

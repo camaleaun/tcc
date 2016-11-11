@@ -1,0 +1,28 @@
+//prog algoritmo260
+variaveis
+numerico num, linha
+caracter resp
+inicio
+limpar
+linha = 1
+posicionar linha,1
+escrever "digite numero positivo: "
+posicionar linha, 25
+ler num
+faca enquanto  num > 0
+ escrever "dobro do numero: ", num  *2
+  linha = linha +2
+   se resto(linha,23)=0 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+  fim_se
+  posicionar linha,1
+  escrever "digite numero positivo: "
+  posicionar linha, 25
+  ler num
+fim_enquanto
+fim

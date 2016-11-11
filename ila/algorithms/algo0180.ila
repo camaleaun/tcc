@@ -1,0 +1,17 @@
+//prog algoritmo180
+variaveis
+numerico  c, linha,col
+inicio
+limpar
+linha = 1
+col = 1
+para c = 120 ate 300 passo 2
+  posicionar linha,  col 
+  escrever c
+  col = col + 5
+  se col= 76 entao
+  linha = linha +1
+  col = 1
+  fim_se  
+proximo
+fim

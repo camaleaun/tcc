@@ -7,3 +7,5 @@ glyphicons-halflings-regular*
 twbs/
 js/*.min.js
 /ui/css/style.css
+/monograph/
+/references/

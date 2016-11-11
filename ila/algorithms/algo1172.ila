@@ -1,0 +1,23 @@
+//prog algoritmo117solucao2
+variaveis
+numerico a, b, c, maior 
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler a
+escrever "digite 2 numero: " 
+posicionar 2,18    
+ler b
+escrever "digite 3 numero: " 
+posicionar 3,18      
+ler c 
+maior = a 
+se b > maior entao
+  maior = b 
+fim_se  
+se c > maior entao
+  maior = c  
+fim_se  
+escrever "maior: ", maior 
+fim

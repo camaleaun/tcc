@@ -1,0 +1,50 @@
+//prog algoritmo443
+variaveis
+matriz numerico vendas[20,20]
+matriz numerico codigo[190,2]
+ numerico L,c,n, L1, c1,n1, linha
+caracter resp
+inicio
+limpar
+n =1  
+para  L= 1 ate 19
+  escrever "digite o percentual de venda(0-100) para a linha:  " ,L
+   ler  n1
+  vendas[L,L]=n1
+   para  c =L+1 ate 20
+     escrever "digite o valor de compra do produto : ", L,"- ", c
+     ler n1
+    vendas[L,c]=n1 
+     escrever "digite o codigo do produto:"
+      ler n1
+    codigo[n,1]=n1 
+     codigo[n,2] = L * 10 + c
+     vendas[c,L]  = vendas[L,L]/ 100 * vendas[L,c] + vendas[L,c] 
+    n=n+1
+  proximo
+proximo
+limpar
+escrever "codigo         compra         venda"
+linha=2
+para  L= 1 ate n-1
+  L1 = inteiro(codigo[L,2] / 10) //recuperando a linha 
+  c1 = resto(codigo[L,2],10)    //recuperando a coluna 
+  posicionar linha,1
+  escrever codigo[L,1]
+   posicionar linha,15
+   escrever vendas[L1,c1]
+    posicionar linha,30
+    escrever vendas[c1,L1] 
+   linha=linha+1
+   se linha =23 entao
+     posicionar 24,1
+     escrever "pressione enter:"
+     posicionar 24,17
+     ler resp
+     limpar
+     linha =1
+   senao
+    linha=linha+1
+  fim_se
+proximo
+fim

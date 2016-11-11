@@ -1,0 +1,27 @@
+//prog algoritmo262
+variaveis
+numerico num,linha
+caracter resp
+inicio
+limpar
+escrever "digite numero ou -999. para terminar: "
+posicionar 1,41
+ler num
+linha = 1
+faca enquanto   num <> -999
+  escrever  "triplo: ", num * 3
+   linha = linha +2
+   se linha=23 entao
+     posicionar 24,1
+     escrever "pressione enter:"
+     posicionar 24,17
+     ler resp
+     limpar
+     linha =1
+  fim_se
+  posicionar linha,1
+   escrever "digite numero ou -999. para  terminar:  "
+  posicionar linha,41
+   ler num
+fim_enquanto
+fim

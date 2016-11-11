@@ -1,0 +1,37 @@
+//prog algoritmo304
+variaveis
+numerico num, cont, tot1, tot2, menor
+inicio
+limpar
+cont  =  0
+tot1  =  0
+tot2  =  0
+escrever "Digite numero ou -1 para acabar: "
+ler num
+menor  =  1001
+faca enquanto num > -1
+  tot2  =  tot2 + num
+ se (num>100 ) e ( num<1000)  entao
+    cont=cont +1   
+    tot1  =  tot1 + num
+    se num<menor entao
+      menor  =   num
+    fim_se
+ fim_se
+ escrever "Digite numero ou -1 para acabar: "
+ ler num
+fim_enquanto
+limpar
+posicionar 1,1
+se cont <> 0 entao
+  escrever "Menor entre 100 e 1000: ", menor
+  posicionar 3,1
+  escrever "Media entre 100 e 1000: ", tot1/cont
+  posicionar 5,1
+  escrever "Soma entre 100 e 1000: ", tot1
+senao
+  escrever "Nao foi digitado numero entre 100 e 1000"
+fim_se
+posicionar 7,1
+escrever "Soma de todos: ", tot2
+fim

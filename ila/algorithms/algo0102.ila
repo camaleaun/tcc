@@ -1,0 +1,18 @@
+//prog algoritmo102
+variaveis
+numerico numero 
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler numero 
+se  numero > 20  entao
+escrever "maior que 20" 
+senao
+ se  numero < 20 entao
+   escrever "menor que 20"  
+  senao
+   escrever "igual a 20"  
+  fim_se
+fim_se 
+fim

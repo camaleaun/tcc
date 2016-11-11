@@ -1,0 +1,26 @@
+//prog algoritmo312
+variaveis
+numerico num, cont, tot1, tot2, menor
+caracter resp
+inicio
+limpar
+cont  =  0
+tot1  =  0
+tot2  =  0
+escrever "Digite numero ou -1 para acabar: "
+ler num
+faca enquanto num <> -1
+   tot1  =  tot1 + num
+   cont = cont +1
+   se resto(num , 8) = 0 entao
+     tot2= tot2+1
+   fim_se
+  escrever  num
+   ler resp // so para descer cursor
+  escrever "Digite numero ou -1 para acabar: "
+   ler num
+fim_enquanto
+escrever "Total de multiplos de 8: ", tot2
+ler resp // so para descer cursor
+escrever "Media dos numeros: ", tot1/cont
+fim

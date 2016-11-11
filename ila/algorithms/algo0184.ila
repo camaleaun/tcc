@@ -1,0 +1,19 @@
+//prog algoritmo184
+variaveis
+numerico  a, numero, linha
+inicio
+limpar
+linha = 1 
+para a = 1 ate 8 
+  posicionar linha,1 
+  escrever "digite numero: " 
+  posicionar linha,16
+  ler numero
+  se numero > 0 entao
+     escrever "logaritmo: ", log(numero)  
+   senao
+    escrever "Nao faco logaritmo de numero negativo"  
+ fim_se
+ linha = linha +2 
+proximo
+fim

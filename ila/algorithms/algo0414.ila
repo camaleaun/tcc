@@ -1,0 +1,32 @@
+//algoritmo algoritmo414 
+ variaveis
+   numerico L, c,m
+   matriz numerico N[5,5]
+   inicio
+   limpar
+   para L = 1 ate 5
+   para c = 1 ate 5   
+     escrever "elemento:", L, "-",c 
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+limpar
+escrever "TODA A MATRIZ"
+para L = 1 ate 5   
+   para c = 1 ate 5   
+      posicionar L+1, (c-1)*5 +1
+        escrever  N[L,c]
+    proximo
+proximo
+posicionar 8,1
+escrever "So os numeros impares"
+para L = 1 ate 5   
+   para c = 1 ate 5   
+      posicionar L+8, (c-1)*5 +1
+        se resto(N[L,c],2)=1 entao
+         escrever  N[L,c]
+        fim_se
+    proximo
+proximo
+fim

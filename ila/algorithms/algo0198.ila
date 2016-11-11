@@ -1,0 +1,32 @@
+//prog algoritmo198
+variaveis
+numerico  ini, f, i, linha, col
+caracter resp
+inicio
+limpar
+linha = 1
+col = 1
+escrever "valor inicial e final, pressionando enter apos digitar cada um: "
+posicionar 2,1 
+ler ini 
+ler f 
+limpar
+para  i = ini  ate  f   
+  posicionar linha,  col 
+  escrever i
+  col = col + 5
+  se col=76 entao
+  linha = linha +1
+  col = 1
+  fim_se
+  se linha = 23 entao
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+   linha=1
+   col=1
+   fim_se
+proximo
+fim

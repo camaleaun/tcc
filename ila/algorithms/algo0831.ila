@@ -1,0 +1,16 @@
+//prog  algoritmo83sol1  
+variaveis
+numerico numero, inverso, absoluto
+inicio
+limpar 
+escrever "digite numero: " 
+posicionar 1,16 
+ler numero 
+se numero > 0  entao
+inverso = 1 / numero  
+escrever " inverso: ", inverso 
+senao
+absoluto = numero * -1 
+escrever "absoluto: ", absoluto 
+fim_se
+fim

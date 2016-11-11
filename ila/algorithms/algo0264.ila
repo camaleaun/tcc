@@ -1,0 +1,17 @@
+//prog algoritmo264
+variaveis
+numerico a, num, soma
+inicio
+limpar
+a = 0
+soma =  0
+escrever "digite numero positivo: "
+ler num
+faca enquanto   num > 0
+   a= a+1
+   soma  =  soma + num
+   escrever "digite numero positivo: "
+   ler num
+fim_enquanto
+escrever "media: ", soma / a
+fim

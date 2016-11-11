@@ -1,0 +1,21 @@
+//prog algoritmo139
+variaveis
+numerico ne, votos 
+caracter nome 
+inicio
+limpar
+escrever "Digite nome do Municipio: " 
+posicionar 1, 27   
+ler nome 
+escrever "numero de eleitores aptos: " 
+posicionar 2, 28   
+ler ne 
+escrever "numero de votos do candidato mais votado: "
+posicionar 3, 44    
+ler votos 
+se (ne >20000  ) e (  votos <= inteiro(ne/ 2))  entao
+  escrever nome," tera segundo turno"  
+senao
+escrever nome,"  nao tera segundo turno"  
+fim_se 
+fim

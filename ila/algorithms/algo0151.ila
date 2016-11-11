@@ -1,0 +1,31 @@
+//prog algoritmo151
+variaveis
+numerico  peso, altura, imc 
+inicio
+limpar
+escrever "digite peso: "
+posicionar 1,14   
+ler peso 
+escrever "digite altura: "
+posicionar 2,16   
+ler altura 
+imc =  peso / altura ^ 2
+posicionar 3,1 
+se  imc < 20 entao
+   escrever "abaixo do peso" 
+senao
+ se  imc <=25 entao
+   escrever "normal"   
+  senao
+      se  imc <=30entao
+      escrever "excesso de peso "  
+     senao
+       se  imc <=35  entao
+         escrever "obesidade "  
+       senao
+          escrever "o obesidade m¢rbida"    
+      fim_se
+   fim_se
+  fim_se
+fim_se
+fim

@@ -1,0 +1,5 @@
+//prog algoritmo29
+inicio
+limpar
+ escrever "<seu nome>"
+fim

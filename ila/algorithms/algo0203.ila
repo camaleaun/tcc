@@ -1,0 +1,28 @@
+//prog algoritmo203
+variaveis
+numerico  i, num, num1, linha
+caracter resp 
+inicio
+limpar
+escrever "Quantos numeros voce quer digitar? "
+posicionar 1,36 
+ler num
+limpar
+linha=1 
+para  i = 1   ate  num   
+   posicionar linha, 1
+   escrever "Digite o ", i ," numero de ", num, ": " 
+   posicionar linha, 30  
+   ler num1 
+   escrever  num1 * 3 
+  linha = linha +2
+  se linha=23 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+ fim_se
+proximo   
+fim

@@ -1,0 +1,95 @@
+//prog algoritmo456
+variaveis
+numerico L, C, n,flag,op,Li,i,j,aux, soma 
+matriz numerico mat[10,10]
+caracter resp
+inicio
+limpar
+flag =0
+op=0
+faca enquanto op<>4
+  limpar
+  escrever "MENU MATRIZ "
+  posicionar 4,1
+  escrever "1 - Entra com valores for uma matriz 10 X 10"
+  posicionar 6,1 
+  escrever "2 - Ordena por linha "
+  posicionar 8,1  
+  escrever "3 - Imprime a soma dos numeros pares abaixo da DS "
+  posicionar 10,1
+   escrever "4 - Sai do algoritmo"
+  posicionar 12,1
+  escrever "Opcao: " 
+  posicionar 12,8
+  ler  op
+  limpar
+  faca caso
+     caso  op = 1:
+         flag=1
+         para  L= 1 ate 10
+            para  C= 1 ate 10
+	     escrever "elemento linha: ",  L , " coluna:", C
+	     ler n
+           mat[L,C]=n
+            proximo
+         proximo
+
+   caso  op = 2:
+      se flag = 0 entao
+         escrever "NAO TEM DADOS CADASTRADOS"
+      senao
+        escrever "digite linha (1-10): "
+        ler Li
+        faca enquanto( Li < 1 ) ou ( Li > 10 )
+           escrever "digite linha (1-10): "
+           ler Li
+       fim_enquanto
+       limpar
+       para   C = 1 ate 10
+         posicionar 1,(c-1)*6 +1
+         escrever mat[Li,C]
+       proximo
+       para  i = 1 ate   9  
+         para  j= i + 1 ate  10 
+           se mat[Li,i] > mat[Li,j]  entao
+	    aux = mat[Li,i]
+	    mat[Li,i]= mat[Li,j]
+	     mat[Li,j] = aux
+          fim_se
+        proximo
+       proximo
+      para   C = 1 ate 10
+       posicionar 3,(c-1)*6 +1
+       escrever mat[Li,C]
+     proximo
+    fim_se
+
+   caso  op = 3:
+      se flag = 0 entao
+         escrever " NAO TEM DADOS CADASTRADOS"
+      senao
+	soma = 0
+        para L = 2 ate 10 
+          para C= 12-L  ate 10
+	     se resto( mat[L,C]  ,  2)  = 0 entao
+               soma = soma + mat[L,C] 
+             fim_se
+          proximo
+        proximo
+        escrever "SOMA:  ", soma
+     fim_se
+  caso op =4:
+        posicionar 1,1
+        escrever "Saindo do algoritmo" 
+
+    outro_caso:
+         posicionar 1,1
+         escrever "Opcao nao disponivel" 
+   fim_caso
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+  ler resp
+  limpar
+fim_enquanto
+fim

@@ -1,0 +1,94 @@
+//prog algoritmo455
+variaveis
+numerico L, n , op, flag, f, menor, linha
+caracter resp
+matriz numerico res[1000,4]
+matriz numerico faixa[3]
+inicio
+limpar
+flag = 0
+para  L= 1 ate 3
+  faixa[L] =0 
+proximo
+op=0
+faca enquanto op<>4
+  limpar
+  escrever "MENU" 
+  posicionar 4,1
+  escrever "1 - Armazenamento de todos os dados "
+  posicionar 6,1 
+  escrever "2 - Quantidade de eleitores por faixa etaria "
+  posicionar 8,1  
+  escrever "3 - Faixa com o menor numero de eleitores " 
+  posicionar 10,1
+  escrever "4 -Sair " 
+  posicionar 12,1
+  escrever "Opcao: " 
+  posicionar 12,8
+  ler  op
+  limpar
+  faca caso
+    caso op = 1:
+      flag  =  1
+      para  L= 1 ate 1000  
+       escrever "numero da residencia : "
+       ler n
+       res[L,1]=n
+       escrever "numero de eleitores com menos de 18 anos : " 
+      ler n
+      res[L,2]=n
+      faixa[1] =faixa[1]  + res[L,1] 
+      escrever " numero de eleitores na faixa 18-70 : " 
+      ler n
+      res[L,2]=n
+      faixa[2] =faixa[2]  + res[L,2] 
+      escrever " numero de eleitores com mais de 70 anos : " 
+      ler n
+      res[L,3]=n
+      faixa[3] =faixa[3]  + res[L,3] 
+    proximo
+
+  caso op =2:
+    linha=1
+    se  flag  = 1 entao
+     posicionar linha,1
+     escrever " Eleitores por faixa: 1 (menor que 18)   2 ( 18-70)   3 (maior que 70) :"
+     linha=3
+      para  L= 1 ate 3 
+       posicionar linha,1
+        escrever " Total de pessoas na faixa  ",L , " :  ", faixa[L] 
+       linha=linha+1
+     proximo
+    senao
+     escrever "Dados nao cadastrados"
+    fim_se
+  
+  caso op =3:
+    linha=1
+    se  flag  = 1 entao
+      menor= 1
+      para  L= 2 ate 3
+         se faixa[L] < faixa[menor] entao
+           menor= L
+           fim_se
+      proximo
+      escrever "Faixa com menor numero de eleitores: ", menor 
+    senao
+     escrever "Dados nao cadastrados" 
+    fim_se
+
+  caso op =4:
+    posicionar 1,1
+    escrever "Saindo"
+
+  outro_caso:
+     posicionar 1,1
+     escrever "Opcao Invalida"
+fim_caso
+posicionar 24,1
+escrever "pressione enter:"
+posicionar 24,17
+ler resp
+limpar
+fim_enquanto
+fim

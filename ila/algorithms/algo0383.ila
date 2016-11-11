@@ -1,0 +1,23 @@
+//prog algoritmo383
+variaveis
+numerico L, c, n, aux
+matriz numerico vet[20]
+inicio
+limpar 
+para L = 1 ate 20
+   escrever " numero: "
+   ler n
+  vet[L]=n
+proximo
+para L = 1  ate 10
+   aux = vet[L]
+   vet[L] = vet[21-L] 
+   vet[21-L] = aux
+  proximo
+limpar
+escrever "Vetor trocado " 
+para L = 1 ate 20
+  posicionar L+1,1
+  escrever L , " - ",vet[L]
+proximo	
+fim

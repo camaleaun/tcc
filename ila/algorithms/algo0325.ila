@@ -1,0 +1,41 @@
+//prog algoritmo325
+variaveis
+numerico salm, salb, salr, irrf, salq, salmes, vh, he, ht, dep
+caracter resp
+inicio
+limpar
+escrever "salario minimo: "
+ler salm
+vh = salm /10
+escrever "horas trabalhadas ou -1 para terminar "
+ler ht
+faca enquanto   ht <> -1
+  escrever "numero de dependentes "
+  ler dep
+  escrever "numero de horas extras "
+  ler he
+  salmes = vh * ht
+  escrever "salario mes: ",salmes
+  ler resp // so para descer cursor
+  salb = salmes + 32 * dep + vh * he * 1.5
+  se  salb > 1500 entao
+    irrf = salb * 0.20
+  senao
+    se salb > 900  entao
+      irrf = salb * 0.10
+     senao
+    irrf = salb * 0
+   fim_se
+ fim_se
+  salq = salb - irrf
+  se  salq >= 900 entao
+    salr = salq + 50
+  senao
+    salr = salq + 100
+  fim_se
+  escrever "salario a receber: ",salr 
+  ler resp  // so para descer cursor
+  escrever "horas trabalhadas ou -1 para terminar: "
+  ler ht
+fim_enquanto
+fim

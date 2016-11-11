@@ -1,0 +1,22 @@
+//algoritmo algoritmo407
+ variaveis
+   numerico L, c, m, prod
+   matriz numerico N[10,10]
+   inicio
+   limpar
+   prod=1
+   para L = 1 ate 10
+   para c = 1 ate 10  
+     escrever "elemento linha ", L, "  coluna ",c 
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+limpar
+para L = 2 ate 10  
+   para c = 1 ate L -1  
+      prod=prod * N[L, c]
+     proximo
+  proximo
+escrever "Produtorio dos elementos abaixo da DP: ",prod
+fim

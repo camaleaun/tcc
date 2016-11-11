@@ -1,0 +1,21 @@
+//prog algoritmo104
+variaveis
+numerico idade 
+caracter nome, sexo 
+inicio
+limpar
+escrever "digite nome: "
+posicionar 1,14  
+ler nome 
+escrever "digite sexo: " 
+posicionar 2,14 
+ler sexo 
+escrever "digite idade: "
+posicionar 3,15   
+ler idade 
+se( (sexo ="F" ) ou ( sexo="f") ) e (  idade<25) entao
+  escrever nome, " ACEITA"  
+ senao
+  escrever  nome, " NÇO ACEITA"  
+fim_se 
+fim

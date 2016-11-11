@@ -1,0 +1,14 @@
+//prog algoritmo61
+variaveis
+numerico  quinto, razao, termo 
+inicio
+limpar
+escrever "Entre com o 1§ termo: "
+posicionar 1,23
+ler termo 
+escrever "Entre coma razao: "
+posicionar 2,19
+ler razao 
+quinto = termo * razao ^ 4 
+escrever "O 5  termo desta P.G. ‚: ", quinto 
+fim

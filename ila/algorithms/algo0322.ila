@@ -1,0 +1,37 @@
+//prog algoritmo322
+variaveis
+numerico val, valvista, valprazo, valtotprazo, n, i
+caracter op
+inicio
+limpar
+valvista =  0
+valprazo = 0
+valtotprazo = 0
+escrever "quantidade de transacoes efetuadas neste dia: "
+ler n 
+para  i =  1 ate  n  
+    escrever "digite valor "
+    ler val
+    escrever "digite codigo: v (a vista)  p ( a prazo ): "
+    ler op
+    //trecho de protecao para o codigo
+    faca enquanto   (op <> "V") e (  op <> "P") e ( op <> "v") e (  op <> "p")
+       escrever "TIPO DE CODIGO INVALIDO. Digite codigo (v / p ) "
+       ler op
+    fim_enquanto
+    se (op = "V") ou ( op =  "v") entao
+      valvista = valvista + val
+    senao
+     valprazo = valprazo + val / 3
+        valtotprazo = valtotprazo + val 
+   fim_se
+proximo
+limpar
+escrever "total  vista: ", valvista
+posicionar 3,1
+escrever "total a prazo: ", valtotprazo
+posicionar 5,1
+escrever "valor total de compras: ", valvista + valtotprazo
+posicionar 7,1
+escrever "valor total a receber  da 1 parcela: ", valprazo
+fim

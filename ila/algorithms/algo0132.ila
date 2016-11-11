@@ -1,0 +1,43 @@
+//prog algoritmo132
+variaveis
+numerico r,l, d,f, m 
+caracter moeda
+inicio
+limpar 
+escrever "digite valor em reais a ser convertido: "
+posicionar 1,41 
+ler r 
+escrever "digite f - franco suico l - libra esterlina d - dolar m - marco alemao: " 
+posicionar 2,73
+ler moeda 
+posicionar 4,1
+se( moeda ="f" ) ou ( moeda ="F") entao
+  escrever "digite valor de um franco suico em reais: "
+ posicionar 4,43 
+ ler f 
+ escrever "Total de francos suicos: ", r /f 
+senao
+ se ( moeda ="l" ) ou ( moeda ="L")  entao
+   escrever "digite valor de uma libra esterlina em reais: "
+   posicionar 4,47
+   ler l 
+    escrever "Total de libras esterlinas: ", r /l 
+  senao
+    se ( moeda ="d" ) ou ( moeda ="D")  entao
+    escrever "digite valor de um dolar em reais: "
+    posicionar 4,36 
+      ler d 
+      escrever "Total de dolares: ", r /d 
+    senao
+      se ( moeda ="m" ) ou ( moeda ="M") entao
+       escrever "digite valor de um marco alemao em reais: "
+     posicionar 4,43
+        ler m 
+        escrever "Total de marcos alemaes: ", r /m 
+     senao
+      escrever "moeda desconhecida" 
+    fim_se
+   fim_se
+  fim_se
+fim_se
+fim

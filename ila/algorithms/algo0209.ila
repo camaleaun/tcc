@@ -1,0 +1,52 @@
+//prog algoritmo209
+variaveis
+numerico  a1, a2, i, n, termo, soma,linha, col
+caracter resp
+inicio
+limpar 
+escrever "Entre com 1 termo: "
+posicionar 1,20 
+ler a1 
+escrever "Entre com 2 termo: " 
+posicionar 2,20
+ler a2 
+escrever "Entre com n termos: " 
+posicionar 3,21
+ler n 
+soma = a1 + a2 
+limpar
+linha=1
+se n >= 3 entao
+  posicionar linha, 1
+  escrever  a1
+  posicionar linha, 5
+  escrever  a2
+  col = 9
+  para  i = 1  ate  n - 2  
+     termo  = a1 + a2 
+     a1  = a2 
+     a2  =  termo
+     posicionar linha, col 
+     escrever termo 
+     soma = soma + termo
+     col=col + 4
+     se col = 77 entao
+      linha =linha+1
+      col=1
+     fim_se
+     se linha =23 entao
+      posicionar 24,1
+    escrever "pressione enter:"
+      posicionar 24,17
+      ler resp
+      limpar
+      linha=1
+     col=1
+     fim_se
+  proximo
+   posicionar linha+2,1
+    escrever "Soma: ", soma 
+ senao
+  escrever "nao tem serie"  
+fim_se   
+fim

@@ -1,0 +1,58 @@
+//prog algoritmo441
+variaveis
+numerico L, c ,n , linha
+caracter resp
+matriz numerico total[6,13]
+inicio
+limpar
+// Inicializa a 6a  Linha
+para c=1 ate 13 
+  total[6,c ] = 0
+proximo
+// Inicializa a coluna 12
+para L=1 ate 6 
+   total[L,13] = 0
+proximo
+// Preenche a matriz total e calcula total linha
+para L=1 ate 5 
+ para c=1 ate 12
+   escrever "valor do mes ", c 
+  ler n
+  total[L,c] =n
+     // soma das colunas  na 6a linha
+     total[6,c] =total[6,c] + total[L, c]
+     // soma na 13¦ coluna das linhas
+     total[L,13] = total[L,13] + total[L, c] 
+  proximo
+  total[6,13] = total[6,13] + total[L,13] 
+proximo
+  // Lista totais por produto
+limpar
+escrever "Total de vendas ao ano por produto" 
+linha=2
+para L=1 ate 5 
+  posicionar linha,1
+   escrever "Total de vendas do produto ", L 
+   para c=1 ate 12
+    linha=linha+1
+    posicionar linha,1 
+    escrever "mes: ",c , ": ", total[L,c]
+ proximo
+ posicionar linha+2,1
+ escrever "Total Anual: ", total[L,13]
+ posicionar 24,1
+ escrever "pressione enter:"
+ posicionar 24,17
+ ler resp
+ limpar
+ linha=1
+proximo
+limpar
+// Lista totais por mes
+para c=1 ate 12 
+  posicionar c,1
+  escrever "TOTAL DO MES ",c , ": ",total[ 6,c]  
+proximo
+posicionar 14,1
+escrever " Total Anual: ", total[6,13] 
+fim

@@ -1,0 +1,64 @@
+//prog algoritmo3431
+variaveis
+caracter nome, menor, op, resp
+numerico  l,x,cont, ang, rang
+inicio
+op = "A"
+faca enquanto (op <> "F") e (op <> "f")
+ limpar
+ cor 15,4
+ janela 1,1,13,75
+ posicionar 2,38
+ escrever "Menu"
+ posicionar 3,3
+ escrever "A - Armazena e imprime, nome com menor numero de caracteres entre 3 "
+ posicionar 5,3
+  escrever "B - Brinca com a palavra"
+ posicionar 7,3
+  escrever "C - Calcula e imprime a tangente de um angulo em graus"
+ posicionar 9,3
+  escrever "F - Termina o algoritmo"
+ posicionar 11,3
+  escrever "OPCAO: "
+ posicionar 11,10
+  ler op
+  cor 15,0
+  limpar
+  limpar
+   se(  op = "A") ou ( op = "a" ) entao
+   escrever "Digite um nome: "
+    ler nome
+    menor = nome
+    para  x  = 1  ate  2 
+     escrever "Digite um nome: "
+     ler  nome
+     se   comprimento(nome) < comprimento(menor)  entao
+       menor = nome 
+     fim_se
+    proximo
+     escrever "Nome com menor numero de caracteres: ", menor
+    senao
+       se(  op = "B") ou ( op = "b" ) entao
+         escrever "NÆo pode ser feito no ILA "
+       senao
+         se(  op = "C") ou ( op = "c" ) entao
+           escrever "angulo "
+           ler ang
+           rang =ang * pi / 180
+           se cos(rang ) <> 0 entao
+             escrever "tangente: ", tan(rang) 
+          senao
+            escrever "Tangente tende a infinito: "
+      fim_se
+        senao
+           se(  op = "F") ou ( op = "f" ) entao
+               escrever "Saindo"
+          senao
+            escrever "Opcao nao dispon­vel"
+      fim_se
+     fim_se
+    fim_se
+   fim_se
+  ler resp
+fim_enquanto
+fim

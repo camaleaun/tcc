@@ -1,0 +1,18 @@
+//prog algoritmo207
+variaveis
+numerico  num1, num2, i, soma 
+inicio
+limpar 
+escrever "entre com o multiplicando: " 
+posicionar 1,28
+ler num1 
+escrever "entre com o multiplicador: "
+posicionar 2,28 
+ler num2  
+soma =0 
+para  i = 1  ate  num2  
+ soma = soma + num1 
+proximo
+posicionar 4,1
+escrever "Produto: ", soma 
+fim

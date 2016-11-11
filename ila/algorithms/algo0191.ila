@@ -1,0 +1,22 @@
+//prog algoritmo191
+variaveis
+numerico  i,limite, incr, linha, col
+inicio
+limpar
+linha = 1
+col = 1
+escrever "Digite numero limite e incremento pressionando enter apos digitar cada um: "
+posicionar 3,1
+ler limite
+ler incr
+limpar
+para i = 0 ate limite passo incr
+  posicionar linha,  col 
+  escrever i
+  col = col + 4
+  se col=77 entao
+  linha = linha +1
+  col = 1
+  fim_se  
+proximo
+fim

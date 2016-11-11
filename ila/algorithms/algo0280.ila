@@ -1,0 +1,19 @@
+//prog algoritmo280
+variaveis
+numerico num, p, num1
+inicio
+limpar
+num1 = 1
+escrever  "digite numero: "
+ler num
+p = num1 * (num1+1) * (num1+2)
+faca enquanto p < num 
+   num1=num1+1
+   p  = num1 *(num1+1)*(num1+2)
+fim_enquanto
+ se  p=num entao
+   escrever  "E triangular "
+ senao
+  escrever  "Nao e triangular "
+fim_se
+fim

@@ -1,0 +1,35 @@
+//prog algoritmo301
+variaveis
+numerico n,  cont, cont2, rp, rf, totali, totout
+caracter resp
+inicio
+limpar
+n =0
+cont = 0
+cont2 = 0
+escrever "Digite sua renda pessoal ou 0 para acabar: "
+ler rp
+faca enquanto rp > 0
+ n= n+1
+  escrever "Digite renda familiar fora a sua: "
+  ler rf
+  escrever "Digite quanto gasta com alimentacao: "
+  ler totali
+  escrever "Digite quanto gasta com outras despesas: "
+  ler totout
+  se totout >200 entao
+    cont=cont + 1
+   fim_se
+  se rp > rf entao
+    cont2= cont2+1
+  fim_se
+  escrever  ((totali+totout)*100)/(rp+rf), "% sao gastos com alimentos + despesas em relacao a renda pessoal e familiar"
+ ler resp // so para descer cursor
+  escrever "Digite sua renda pessoal ou 0 para acabar: "
+  ler rp
+fim_enquanto
+limpar
+escrever (cont*100)/n, "% dos alunos gastam acima de R$ 200,00 com outras despesas"
+posicionar 3,1
+escrever "Numero de alunos com renda pessoal maior que a familiar :", cont2
+fim

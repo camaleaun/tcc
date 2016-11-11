@@ -1,0 +1,58 @@
+//prog algoritmo445
+variaveis
+matriz numerico mat[5,5]
+matriz numerico a[5]
+matriz numerico b[5]
+numerico maior, menor, cont, x, y,n
+inicio
+limpar
+para  x = 1 ate 5
+  para  y = 1 ate 5
+      escrever "digite elemento ",x, "-", y
+    ler n
+    mat[x,y] = n
+  proximo
+proximo
+// trecho de selecao dos menores e maiores elementos das colunas 
+para  y = 1 ate 5
+    maior = mat[1,y]
+     menor = mat[1,y]
+   para  x = 2 ate 5
+     se mat[x,y] > maior entao
+       maior =  mat[x,y]
+     senao
+          se mat[x,y] < menor entao
+           menor = mat[x,y]
+         fim_se
+       fim_se
+     proximo
+    a[y] = maior
+    b[y] =menor
+proximo
+limpar
+escrever "Toda a matriz" 
+para  x = 1 ate 5
+  para  y = 1 ate 5
+    posicionar x+2, (y-1)*8 +1
+    escrever mat[x,y]
+   proximo
+proximo
+posicionar 9,1
+escrever "Maiores elementos das colunas"
+para  y= 1 ate 5
+  posicionar 11,(y-1)*8 +1
+  escrever  a[y]
+proximo
+posicionar 13,1
+escrever "Menores elementos das colunas"
+para  y= 1 ate 5
+  posicionar 15,(y-1)*8 +1
+  escrever  b[y]
+proximo
+posicionar 17,1
+escrever "Exibindo o resultado"
+para  y= 1 ate 5
+  posicionar 19,(y-1)*8 +1
+  escrever (a[y] + b[y])/2 
+proximo
+fim

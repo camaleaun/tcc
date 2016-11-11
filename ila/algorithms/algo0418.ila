@@ -1,0 +1,33 @@
+//algoritmo algoritmo418 
+ variaveis
+   numerico L, c,n
+   matriz numerico A[4,4]
+   matriz numerico B[4,4]
+   matriz numerico SOMA[4,4]
+   inicio
+   limpar
+   para L = 1 ate 4
+   para c = 1 ate 4   
+     escrever "elemento de A[", L, ",",c,"]" 
+     ler n    
+     A[L, c]=n
+    proximo
+  proximo
+   para L = 1 ate 4
+   para c = 1 ate 4   
+     escrever "elemento de B[", L, ",",c,"]" 
+     ler n    
+     B[L, c]=n
+     SOMA[L,c]=A[L,c]+B[L,c]
+    proximo
+  proximo
+
+limpar
+escrever "MATRIZ SOMA"
+para L = 1 ate 4   
+   para c = 1 ate 4   
+      posicionar L+1, (c-1)*6 +1
+        escrever  SOMA[L,c]
+    proximo
+proximo
+fim

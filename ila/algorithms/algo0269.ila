@@ -1,0 +1,29 @@
+//prog algoritmo269
+variaveis
+numerico num, linha
+inicio
+limpar
+linha=1
+escrever "digite numero ou multiplo de 6 para acabar: "
+posicionar 1,45
+ler num
+faca enquanto resto( num,6 )<> 0
+    escrever  "quadrado: ", num ^2
+     linha = linha +2
+    se linha=23 entao
+      posicionar 24,1
+      escrever "pressione enter:"
+      posicionar 24,17
+      ler resp
+      limpar
+      linha =1
+  fim_se
+  posicionar linha,1
+   escrever "digite numero ou multiplo de 6 para acabar: "
+  posicionar linha,45
+  ler num
+fim_enquanto
+escrever  "quadrado: ", num ^2
+fim
+
+

@@ -1,0 +1,22 @@
+//prog algoritmo40
+variaveis
+numerico quoc, rest, val1, val2
+inicio
+limpar
+escrever "digite o dividendo: "
+posicionar 1,21
+ler val1
+escrever "digite o divisor: "
+posicionar 2,19
+ler val2
+quoc = inteiro(val1 / val2)
+rest = resto(val1, val2)
+limpar
+escrever "dividendo : ", val1
+posicionar  2,1  
+escrever "divisor: ", val2
+posicionar  3,1  
+escrever "quociente : ", quoc
+posicionar  4,1  
+escrever "resto: ", rest
+fim

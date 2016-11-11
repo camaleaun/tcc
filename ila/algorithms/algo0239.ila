@@ -1,0 +1,17 @@
+//prog algoritmo239
+variaveis
+numerico  c, fat,  x,soma
+inicio
+limpar 
+soma = 1  // 0! = 1
+fat = 1  
+escrever "digite valor de x: "
+posicionar 1,20 
+ler x 
+posicionar 4,1
+para  c = 1  ate  9  
+   fat =  fat * c 
+   soma =  soma + x ^ c / fat 
+proximo
+escrever "valor de e elevado a ", x, ": ", soma 
+fim 

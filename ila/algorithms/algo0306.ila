@@ -1,0 +1,47 @@
+//prog algoritmo306
+variaveis
+numerico num,ca,tt,pl,sd,mca,  mconta,soma,conta
+caracter resp
+inicio
+limpar
+mconta  =  0
+soma = 0
+num = 0
+escrever "digite o codigo do assinante "
+ler ca
+faca enquanto ca <> 0
+  escrever "digite o tipo do telefone( 1 residencial 2 comercial) "
+   ler tt
+   escrever "digite o numero de pulsos locais: "
+   ler pl
+   escrever "digite o numero de servicos despertador: "
+   ler sd
+   se tt = 1 entao
+     se pl > 90 entao
+       conta = 23.00 + ( (pl - 90) * 0.1) + (0.47 * sd)
+     senao
+       conta = 23.00 + (0.47 * sd)
+     fim_se
+   senao
+      se pl > 90 entao
+        conta = 30.00 + ( (pl - 90) * 0.1) + (0.47 * sd)
+      senao
+       conta = 30.00 + (0.47 * sd)
+     fim_se
+  fim_se
+  num = num +1
+  soma = soma + conta
+  se conta > mconta entao
+   mconta = conta
+    mca = ca
+   fim_se
+  escrever "o total da conta e R$ ",conta
+  ler resp // so para descer cursor
+  escrever "digite o codigo do assinante: "
+  ler ca
+fim_enquanto
+limpar
+escrever "o valor da maior conta e R$ ",mconta, " e o codigo e:  ", mca
+posicionar 3,1
+escrever "o valor medio arrecadado e R$ ",soma/num
+fim

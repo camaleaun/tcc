@@ -1,0 +1,91 @@
+//prog algoritmo448
+variaveis
+numerico L, C,n, m, maiorD, maiorG1, maiorG2
+matriz numerico pesos[3,2]
+matriz numerico provas[10,3]
+matriz numerico pontos[10,2] 
+caracter resp
+inicio
+limpar
+ para  L= 1 ate 10  
+  para  C= 1 ate 3  
+   escrever "aluno: ", L, " nota : ",C
+	  ler n
+   provas[L,C]=n
+   proximo
+proximo
+para  L= 1 ate 3  
+  para  C= 1 ate 2  
+    escrever "peso da prova :  ", L, "  cargo: ", C
+	  ler n
+   pesos[L,C]=n
+  proximo
+proximo
+limpar
+para  L= 1 ate 10  
+  para  C= 1 ate 3
+    posicionar L, (C-1)*6 +1
+     escrever provas[L,C]
+  proximo
+proximo
+para  L= 1 ate 3  
+   para  C= 1 ate 2
+    posicionar L, 20 + (C-1)*6
+    escrever pesos[L,C] 
+  proximo
+proximo
+para L=1 ate 10 
+   para c=1 ate 2 
+     pontos[L,C] =0
+	  para m = 1 ate 3
+	   pontos[L,C] = pontos[L,C]  + provas[L,m] * pesos[m,C]	 
+     proximo
+    proximo
+proximo
+posicionar 11,1
+escrever "PONTOS DO CARGO DE DIRETOR"
+para L=1 ate 10 
+ posicionar L+11,1
+  escrever  L ," - ", pontos[L,1]  
+proximo
+posicionar 11,30
+escrever "PONTOS DO CARGO DE GERENTE"
+para L=1 ate 10 
+  posicionar L+11,30 +(c-1)*6
+   escrever  L ," - ", pontos[L,2]  
+proximo 
+maiorD=1
+para L = 2  ate 10  
+    se pontos[L,1]>pontos[maiorD,1] entao
+      maiorD=L
+    fim_se
+proximo
+posicionar 24,1
+escrever "pressione enter:"
+ler resp
+limpar
+escrever "DIRETOR - CANDIDADTO: ",maiorD
+se pontos[1,2] > pontos[2,2] entao
+ maiorG1=1
+  maiorG2=2
+senao
+  maiorG1=2
+  maiorG2=1
+fim_se
+para L = 3  ATE 10  
+   se pontos[L,2] > pontos[maiorG1,2] entao
+    maiorG2=maiorG1
+       maiorG1=L 
+  senao
+    se pontos[L,2]>=pontos[maiorG2,1] entao
+        maiorG2=L
+     fim_se
+  fim_se
+proximo
+posicionar 3,1
+se  maiorD=maiorG1 entao
+ escrever "GERENTE - CANDIDADTO: ",maiorG2
+senao
+  escrever "GERENTE - CANDIDADTO: ",maiorG1
+fim_se
+fim

@@ -1,0 +1,29 @@
+//prog algoritmo321
+variaveis
+numerico  percfalta, soma, nalunos, naula, nfaltas, aluno, i
+caracter turma,resp
+inicio
+limpar
+soma = 0
+escrever "digite turma ou * para acabar: "
+ler  turma
+faca enquanto turma <> "*"
+  escrever "digite numero de alunos: "
+  ler nalunos 
+  escrever "digite numero de aulas dadas: "
+  ler naula 
+  para  i = 1 ate  nalunos 
+    escrever "digite numero de faltas do ", i,"o aluno: "
+     ler nfaltas
+     percfalta = 100 * nfaltas / naula
+     se percfalta >= 25 entao
+       soma=soma+1
+     fim_se
+     escrever "Percentual de faltas: ", percfalta, "%"
+    ler resp // so pra descer cursor
+  proximo
+  escrever "digite turma ou * para acabar: "
+  ler  turma
+fim_enquanto
+escrever "total de alunos reprovados por falta: ",soma
+fim

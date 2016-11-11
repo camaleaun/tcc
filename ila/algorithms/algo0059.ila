@@ -1,0 +1,14 @@
+//prog algoritmo59
+variaveis
+numerico a,b,c
+inicio
+limpar 
+escrever "Entrar com 1 cateto: "
+posicionar 1,22
+ler b 
+escrever "Entrar com 2 cateto: "
+posicionar 2,22
+ler c 
+a = raiz (b^2 + c^2,2) 
+escrever "A hipotenusa e: ", a 
+fim

@@ -1,0 +1,33 @@
+//prog algoritmo283
+variaveis
+numerico conta, cneg, c, saldo, soma
+caracter nome, resp
+inicio
+limpar
+ c  =  0
+ cneg  =  0
+soma  =  0
+ escrever "digite conta ou -999 para terminar: "
+ ler conta
+ faca enquanto   (conta > 0 ) e (  c < 10000)
+   c = c+1
+   escrever "nome: "
+   ler nome
+   escrever "saldo: "
+   ler saldo
+   soma  =  soma + saldo
+   se  saldo < 0 entao
+    cneg     =  cneg +1
+     escrever conta, " ", saldo,"  negativo "
+   senao
+    escrever conta, "  ",saldo, "  positivo " 
+  fim_se
+  ler resp // so para descer cursor
+  escrever "digite conta ou -999 para terminar "
+   ler conta
+fim_enquanto
+limpar
+escrever  "Total de clientes com saldo negativo: ", cneg 
+posicionar 3,1
+escrever  "Total de clientes da agencia: ", c 
+fim

@@ -1,0 +1,20 @@
+//algoritmo algoritmo402
+ variaveis
+   numerico L,c,m
+   matriz numerico N[10,10]
+   inicio
+   limpar
+   para L = 1 ate 10 
+   para c = 1 ate 10   
+     escrever "elemento linha ", L, "  coluna ",c 
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+limpar
+escrever "Diagonal principal"
+para L = 1 ate 10   
+  posicionar L+1, (L-1)*5 +1
+  escrever  N[L,L]
+proximo
+fim

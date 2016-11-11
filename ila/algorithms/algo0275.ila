@@ -1,0 +1,24 @@
+//prog algoritmo275
+variaveis
+numerico num, fat, c
+caracter resp
+inicio
+limpar
+escrever "Digite numero positivo para calculo do fatorial ou < do que 1 para terminar: "
+ler num
+faca enquanto num > 0
+ fat = 1
+  para c =2 ate  num
+   fat = fat * c
+  proximo
+  posicionar 3,1
+  escrever "fatorial: ",fat
+  posicionar 24,1
+  escrever "pressione enter:"
+  posicionar 24,17
+  ler resp
+  limpar
+  escrever "Digite numero positivo para calculo do fatorial ou < do que 1 para terminar: "
+  ler num
+fim_enquanto
+fim

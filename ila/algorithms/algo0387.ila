@@ -1,0 +1,56 @@
+//prog algoritmo387
+variaveis
+numerico L, c, n, aux, linha
+caracter resp
+matriz numerico mat[1000]  
+matriz numerico media[1000] 
+inicio
+limpar
+para L = 1  ate 100
+ escrever "matricula do aluno ",L 
+  ler n
+ mat[L]=n  
+  escrever "media" 
+  ler n
+ media[L]=n  
+proximo
+para L = 1  ate 999
+ para c = L+1  ate 1000
+      se   media[L] < media[c]  entao
+      aux = media[L] 
+      media[L] = media[c] 
+      media[c] = aux 
+      aux = mat[L] 
+      mat[L] = mat[c] 
+      mat[c] = aux 
+   fim_se
+ proximo
+ proximo
+limpar
+escrever "ORDENADOS"
+posicionar 2,1
+escrever "MATRICULA"
+posicionar 2,16
+escrever "MEDIA " 
+linha=4
+para L = 1  ate 1000
+   posicionar linha,1
+     escrever  mat[L]
+ posicionar linha,16
+  escrever  media[L]
+  linha=linha+1
+  se linha = 23 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+  escrever "ORDENADOS"
+  posicionar 2,1
+  escrever "MATRICULA"
+  posicionar 2,16
+  escrever "MEDIA " 
+  linha=4
+ fim_se
+proximo
+fim

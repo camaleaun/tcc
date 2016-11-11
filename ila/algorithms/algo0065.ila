@@ -1,0 +1,14 @@
+//prog algoritmo65
+variaveis
+numerico  volume, altura, raio 
+inicio
+limpar
+escrever "digite a altura da lata: "
+posicionar 1,26
+ler altura 
+escrever "digite o raio da lata: "
+posicionar 2,24
+ler raio 
+volume =  pi *raio ^ 2 *altura 
+escrever "o volume da lata ‚ = ", volume 
+fim

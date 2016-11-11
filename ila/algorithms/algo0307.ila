@@ -1,0 +1,44 @@
+//prog  algoritmo307
+variaveis
+numerico idade, cont, peso, pesom, alt, altm, soma
+caracter nome, sexo, nomem, nomep
+inicio
+limpar
+altm = 0
+pesom = 0
+soma = 0
+cont = 0
+escrever "digite o nome do atleta ou @ para terminar: "
+ler nome
+faca enquanto nome <> "@"
+  cont=cont+1
+   escrever "digite sexo (M / F): "
+   ler sexo
+   escrever "digite idade: "
+   ler idade
+   escrever "digite peso: "
+   ler peso
+   escrever "digite altura: "
+   ler alt
+   soma = soma + idade
+   se (sexo = "M") ou ( sexo = "m") entao
+     se alt > altm entao
+       altm =  alt
+       nomem = nome
+      fim_se
+   senao
+       se peso> pesom entao
+         pesom =   peso
+         nomep = nome
+       fim_se
+    fim_se
+   escrever "digite o nome do atleta ou @ para terminar: "
+   ler nome
+fim_enquanto
+limpar
+escrever "nome do atleta do sexo masculino mais alto: ", nomem
+posicionar 3,1
+escrever "nome da atleta do sexo feminino mais pesada: ", nomep
+posicionar 5,1
+escrever "media das idades dos atletas: ", soma / cont
+fim

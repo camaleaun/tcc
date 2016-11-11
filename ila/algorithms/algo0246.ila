@@ -1,0 +1,47 @@
+//prog algoritmo246
+variaveis
+numerico   idade, op, I, opexc, opbom, opregular, idadegot 
+inicio
+limpar
+idadegot  =  0 
+opexc  =  0 
+opbom  =  0 
+opregular  =  0 
+para  I = 1  ate 15 
+  escrever " Digite idade: " 
+  ler idade 
+  escrever "Digite  opiniao: excelente - 3  bom - 2  regular - 1: " 
+  ler op  
+  se  op = 3 entao
+   opexc=opexc+1 
+   idadegot  =  idadegot + idade 
+  senao
+     se  op = 1 entao
+      opregular = opregular+1
+     senao
+         se  op =2 entao
+          opbom = opbom+1
+        fim_se
+    fim_se
+ fim_se
+proximo
+limpar
+posicionar 1,1
+se opexc <>0 entao
+escrever "Media de idade das pessoas que responderam excelente: ", idadegot/ opexc 
+senao
+escrever "Ninguem que tenha escolhido excelente" 
+fim_se
+posicionar 3,1
+se opregular<>0 entao
+escrever "Quantidade de pessoas que responderam regular: ", opregular  
+senao
+ escrever "Ninguem que tenha escolhido regular"
+fim_se
+posicionar 5,1
+se opbom<>0 entao
+ escrever "A porcentagem das pessoas que respondeu Bom: ",  opbom * 100 /15  
+senao
+ escrever "Ninguem que tenha escolhido bom" 
+fim_se
+fim

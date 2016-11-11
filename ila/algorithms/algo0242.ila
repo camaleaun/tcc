@@ -1,0 +1,19 @@
+//prog algoritmo242
+variaveis
+numerico  c, n 
+inicio
+limpar
+escrever "qual tabuada? "
+posicionar 1,15 
+ler n 
+posicionar 3,1
+se  n > 0  entao
+   escrever "TABUADA DO ", n  
+   para c=1  ate 10
+      posicionar c+5,1
+      escrever n, " x  ", c, " = ", n * c
+   proximo
+senao
+escrever "Nao existe tabuada"  
+fim_se  
+fim

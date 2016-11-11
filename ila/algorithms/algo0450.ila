@@ -1,0 +1,127 @@
+//prog  algoritmo450
+variaveis
+matriz numerico  tabela2[7,27]
+matriz numerico  tabela1[27,3]
+matriz numerico  tabela[7,3]
+numerico  L, c, m, op, tipo, mes, n, linha, col
+caracter resp
+inicio
+limpar
+para L=1 ate   7 
+   para c=1 ate  27  
+     escrever "tipo:",  L, "  estado: ",  c
+    ler n
+   tabela2[ L,c]=n
+  proximo
+proximo
+para  L =1 ate  27 
+   para c=1 ate  3  
+     escrever "estado: ",  L, "  mes : ",  c 
+    ler n
+    tabela1[ L,c]=n 
+  proximo
+proximo
+para L=1 ate 7 
+  para c = 1  ate  3
+      tabela[L,c] = 0 
+       para m = 1  ate  27 
+        tabela[L,c] = tabela[L,c]+ tabela2[ L,m]* tabela1[ m,c]
+       proximo
+   proximo
+proximo
+op=0
+faca enquanto op<>4
+  limpar
+  escrever " Escolha a impressao"
+   posicionar 3,1
+  escrever " 1 - Todos os dados"
+   posicionar 4,1
+  escrever " 2 - Um tipo mensalmente"
+   posicionar 5,1
+  escrever " 3 - Todos os tipos por mes"
+   posicionar 6,1
+  escrever " 4 - Sair"
+   posicionar 7,1
+  escrever "Opcao: "
+   posicionar 7,7
+  ler op
+  limpar
+  faca caso
+   caso op= 1:
+     posicionar 1, 1
+     escrever "TIPO"
+     posicionar 1, 8
+     escrever "JAN"
+     posicionar 1,18
+     escrever "FEV"
+     posicionar 1,28
+     escrever "MAR"
+     linha=3
+     para L=1 ate  7 
+       posicionar linha,1
+       escrever L 
+       col=8
+       para c = 1  ate  3
+         posicionar linha,col
+         escrever  tabela[L,c]
+         col=col+10
+       proximo
+       linha=linha+2
+    proximo
+
+    caso op=  2:
+     escrever " Digite tipo ( 1- 7): "
+     ler tipo 
+     faca enquanto ( tipo < 1  ) ou  (  tipo > 7)
+       escrever " TIPO INVALIDO. Digite tipo (1 -7) " 
+      ler tipo 
+     fim_enquanto
+     limpar
+     posicionar 1, 1
+     escrever "TIPO"
+     posicionar 1, 8
+     escrever "JAN"
+     posicionar 1,18
+     escrever "FEV"
+     posicionar 1,28
+     escrever "MAR"
+     posicionar 3, 1
+     escrever tipo
+     col=8
+     para c = 1  ate  3
+       posicionar 3,col
+       escrever tabela[tipo,c]
+       col=col+10
+     proximo
+       
+    caso op =  3:
+        escrever "Digite mes ( 1 Jan 2 Fev 3 Mar ) "
+        ler mes 
+        faca enquanto ( mes < 1 ) ou  ( mes > 3)
+            escrever " MES INVALIDO. Digite mes ( 1 Jan 2 Fev 3 Mar )" 
+            ler mes 
+     fim_enquanto
+        limpar
+        posicionar 1,1
+        escrever "TIPO"
+        posicionar 1,8
+        escrever "MES: ", mes
+        para L=1 ate 7
+          posicionar L+2,1
+          escrever  L  
+          posicionar L+2,8
+          escrever  tabela[L,mes]  
+       proximo
+
+      caso op= 4:
+       escrever " FIM"
+     	      
+     outro_caso:
+       escrever " Opcao Nao Disponivel"
+   fim_caso
+  posicionar 24,1
+    escrever "Pressione enter: "
+   posicionar 24,17
+   ler resp //  para dar uma pausa
+fim_enquanto
+fim

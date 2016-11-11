@@ -1,0 +1,26 @@
+//prog algoritmo288
+variaveis
+numerico num, dc, du, q
+caracter resp
+inicio
+limpar
+escrever "Entre com um numero de 4 algarismos: "
+ler num
+faca enquanto (num >= 1000 ) e ( num <=9999)
+  dc  = inteiro(num /   100)
+  du  = resto(num ,100)
+  q =  (dc + du)^ 2
+  se q = num  entao
+  escrever "Possui a caracteristica"
+  senao
+   escrever "Nao possui a caracteristica"
+fim_se
+posicionar 24,1
+ escrever "pressione enter:"
+ posicionar 24,17
+ ler resp
+ limpar
+ escrever "Entre com um numero de 4 algarismos: "
+ ler num
+fim_enquanto
+fim

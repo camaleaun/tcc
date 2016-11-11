@@ -1,0 +1,27 @@
+//prog algoritmo255
+variaveis
+numerico  L,c, cap, n, totalunos, media, somageral
+caracter resp
+inicio
+limpar
+somageral = 0 
+totalunos = 0 
+para L = 1 ate 5
+   cap = 0 
+   escrever "Quantos alunos tem a ", L, "¦ turma? " 
+   ler n
+   limpar
+   totalunos = totalunos + n 
+   para c = 1  ate n
+     escrever "Digite media do ", c, "§  aluno: " 
+     ler media 
+     se  media > 7  entao  
+        cap = cap + 1
+    fim_se
+    somageral = somageral + media
+   proximo
+   escrever "Total de alunos com media superior ou igual a 7: ",cap
+   ler resp
+  proximo
+  escrever "Media da escola: ", somageral / totalunos 
+fim

@@ -1,0 +1,13 @@
+//prog algoritmo69
+variaveis
+numerico num, denom 
+inicio
+limpar
+escrever "digite numerador: "
+posicionar 1,19
+ler num 
+escrever "digite denominador: "
+posicionar 2,21
+ler denom 
+escrever "decimal: ", num / denom 
+fim

@@ -1,0 +1,42 @@
+//prog algoritmo444
+variaveis
+matriz numerico m[4,4]
+matriz numerico n[4,4]
+numerico L, c,d, n1
+inicio
+limpar
+para  L = 1 ate 4
+  para  c = 1 ate 4
+   escrever "digite elemento ",L , "-", c
+   ler n1
+  m[L,c] = n1
+    se  L + c >= 5 entao
+      faca enquanto  m[L,c] = 0
+       escrever "NAO PODE SER ZERO. Digite elemento ",L , "-", c
+       ler n1
+     m[L,c] = n1    
+    fim_enquanto
+    senao
+      faca  enquanto m[L,c] <> 0 
+        escrever "SO PODE SER ZERO. Digite elemento ",L, "-", c
+     ler n1
+     m[L,c] = n1    
+    fim_enquanto
+    fim_se
+  proximo
+proximo
+limpar
+escrever "Toda a matriz" 
+para  L = 1 ate 4  
+  para  c = 1 ate 4
+    posicionar L+2, (c-1)*5 +1
+      escrever m[L,c]
+  proximo
+proximo
+d = 1
+para  L = 1 ate 4
+     d = d * m[L,5 -L]
+proximo
+posicionar 10,1
+escrever  "determinante:  ", d 
+fim

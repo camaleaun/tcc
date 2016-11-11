@@ -1,0 +1,51 @@
+//prog algoritmo313
+variaveis
+numerico peso, altura, soma1020, idade,c1020,c50,ct,c40
+inicio
+limpar
+soma1020  = 0
+ct  =  0
+c1020  =  0
+c50   =  0
+c40 = 0
+escrever "Entre a idade ou 0 para terminar: "
+ler idade
+faca enquanto idade > 0
+  ct = ct+1
+  escrever "Entre altura "
+  ler altura
+  escrever "Entre peso "
+  ler peso
+  se peso < 40 entao
+    c40 =c40 +1
+   fim_se
+   se idade > 50 entao
+    c50 = c50+1
+   senao
+     se (idade > 10 ) e ( idade < 20) entao
+       c1020= c1020 +1
+      soma1020 = soma1020 +  idade
+     fim_se
+   fim_se
+   escrever "Entre a idade ou 0 para terminar: "
+   ler idade
+fim_enquanto
+limpar
+se c40 > 0 entao
+ escrever "Total com mais de 50 anos: ", c50
+senao
+escrever "Ninguem com mais de 50 anos"
+fim_se
+posicionar 3,1
+se c1020 > 0 entao
+ escrever "Media entre de 10 ate 20: ", soma1020/c1020
+senao
+escrever "Ninguem dentro da faixa 10 ate 20"
+fim_se
+posicionar 5,1
+se c40 > 0 entao
+ escrever "Percentual com menos de 40 kg: ", c40 *100/ct,2
+senao
+escrever "Ninguem com menos de 40 kg"
+fim_se
+fim

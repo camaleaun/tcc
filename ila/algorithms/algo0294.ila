@@ -1,0 +1,20 @@
+//prog   algoritmo294 
+variaveis
+numerico i, num, cont
+inicio
+limpar
+cont = 0
+i = 1
+escrever "digite numero positivo ou negativo para terminar: "
+ler num
+faca enquanto num > 0
+  num = num - i 
+  i = i + 2 
+  cont= cont+1
+fim_enquanto
+se  num = 0 entao
+ escrever "a raiz quadrada e: ", cont
+senao
+  escrever "a raiz quadrada aproximada esta entre: ", cont -1, " e ", cont
+fim_se
+fim

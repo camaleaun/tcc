@@ -1,0 +1,41 @@
+//prog algoritmo377
+variaveis
+numerico L,n,linha
+caracter resp
+matriz numerico a[25]
+matriz numerico b[25]
+matriz numerico inter[50] 
+inicio
+limpar
+//25 elementos cada
+para L = 1 ate 25
+   escrever "digite ", L," elemento do vetor A :" 
+  ler n
+  a[L] =n
+proximo
+para L = 1 ate 25
+   escrever "digite ", L," elemento do vetor A :" 
+  ler n
+   b[L]=n 
+   //Gera o vetor intercalado
+   inter[2 * L -1] = a[L ]  
+   inter[2 * L] = b[L ]  
+proximo
+limpar
+escrever "Vetor Intercalado"
+linha=2
+para L = 1 ate 50
+   posicionar linha,1   
+  escrever inter[L]
+   linha=linha+1 
+se linha = 23 entao
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+   escrever "Vetor Intercalado"
+   linha=2
+  fim_se
+proximo
+fim

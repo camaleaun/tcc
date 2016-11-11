@@ -1,0 +1,26 @@
+//prog algoritmo308
+variaveis
+numerico vel, litros, soma, tempo,tempohora, tempomin
+caracter resp
+inicio
+limpar
+soma = 0
+escrever "Digite a velocidade(em Km/H) ou valor negativo para acabar: "
+ler vel
+faca enquanto vel >= 0
+  escrever "Entre com o total de horas da viagem: "
+  ler tempohora
+  escrever "Entre com o total de minutos da viagem: "
+  ler tempomin
+  tempo =tempohora + (tempomin/60)
+  litros = (vel * tempohora)/10
+  soma = soma + litros
+  escrever "Distancia: ", vel * tempo, "Km"
+  ler resp // so para descer cursor
+  escrever "Litros gastos no percurso: ", litros
+  ler resp // so para desecer cursor
+  escrever "Digite a velocidade ou valor negativo para acabar: "
+  ler vel
+fim_enquanto
+escrever "O total de litros gastos na viagem foi: ", soma, " litros"
+fim

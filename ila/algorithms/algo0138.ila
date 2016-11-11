@@ -1,0 +1,38 @@
+//prog algoritmo138
+variaveis
+numerico  num
+inicio
+limpar 
+escrever "digite um numero de 1 - 12: "
+posicionar 1,30 
+ler  num
+posicionar 3, 1
+faca caso
+  caso num = 1:
+    escrever "janeiro"  
+   caso num = 2:
+    escrever "fevereiro"  
+   caso num = 3:
+    escrever "mar‡o"   
+  caso num = 4:
+      escrever "abril"   
+   caso num = 5: 
+    escrever "maio"  
+  caso num = 6: 
+    escrever "junho"   
+  caso num =  7: 
+    escrever "julho"  
+  caso num =  8: 
+    escrever "agosto"  
+  caso num = 9:
+     escrever "setembro"  
+   caso num =  10: 
+    escrever "outubro"   
+   caso num =  11: 
+    escrever "novembro"  
+  caso num = 12: 
+    escrever "dezembro"   
+   outro_caso:
+  escrever "nao existe mes correspondente a este numero" 
+fim_caso
+fim

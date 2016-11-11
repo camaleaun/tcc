@@ -1,0 +1,28 @@
+//prog algoritmo480
+variaveis
+numerico n, x, soma, r, num 
+funcao reverso (num)
+inicio
+ soma = 0 
+ faca enquanto num <> 0
+     r = resto(num , 10) 
+    soma = soma * 10 + r 
+    num = inteiro(num / 10) 
+ fim_enquanto
+retornar( soma) 
+fim
+inicio
+limpar
+escrever "digite numero ate 99999( maior do que isto nao faz): "
+posicionar 1,54
+ler n 
+x = reverso(n)
+posicionar 3,1
+escrever n, " -  ",x
+posicionar 5,1
+se  x = n entao                                                                 
+  escrever "E um numero capicua"                                      
+senao                                                                       
+  escrever "Nao e um numero capicua"                                        
+fim_se
+fim

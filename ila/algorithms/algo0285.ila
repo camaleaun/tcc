@@ -1,0 +1,21 @@
+//prog algoritmo285
+variaveis
+numerico dividendo, divisor, aux, resto1
+inicio
+limpar
+escrever "digite dividendo: "
+ler dividendo
+escrever "digite divisor: "
+ler divisor
+se dividendo < divisor entao
+ aux  = dividendo
+ dividendo =  divisor
+ divisor =  aux
+fim_se
+resto1  = dividendo - divisor
+faca enquanto  resto1 > divisor
+  dividendo = resto1
+   resto1  = dividendo - divisor
+fim_enquanto
+escrever "Resto: ", resto1
+fim

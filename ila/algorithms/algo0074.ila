@@ -1,0 +1,14 @@
+//prog algoritmo74
+variaveis
+numerico salmin, salpe, num 
+inicio
+limpar
+escrever "entre com o sal rio minimo: "
+posicionar 1,29
+ler salmin 
+escrever "entre com o salario da pessoa: "
+posicionar 2,32
+ler salpe 
+num = salpe / salmin 
+escrever "a pessoa ganha ", num, " salarios minimos"
+fim

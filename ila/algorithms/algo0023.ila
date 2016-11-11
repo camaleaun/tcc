@@ -1,0 +1,11 @@
+//prog algoritmo23
+variaveis
+numerico a,d 
+inicio
+limpar
+escrever "Digite numero de tres casas: " 
+posicionar 1,30
+ler a
+d= inteiro( resto(a,100) / 10) 
+escrever "algarismo da casa das dezenas: ",d 
+fim

@@ -1,0 +1,24 @@
+//algoritmo algoritmo403 
+ variaveis
+   numerico L, c,m
+   matriz numerico N[10,10]
+   inicio
+   limpar
+   para L = 1 ate 10
+   para c = 1 ate 10   
+     escrever "elemento linha ", L, "  coluna ",c 
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+limpar
+escrever "Elementos fora da diagonal principal"
+para L = 1 ate 10   
+   para c = 1 ate 10   
+      posicionar L+1, (c-1)*5 +1
+       se L <> c  entao
+          escrever  N[L,c]
+       fim_se 
+    proximo
+  proximo
+fim

@@ -1,0 +1,17 @@
+//prog algoritmo103
+variaveis
+numerico  anon, anoa 
+inicio
+limpar
+escrever "Entre com ano atual: " 
+posicionar 1,22
+ler anoa 
+escrever "Entre com ano de nascimento: " 
+posicionar 2,30
+ler  anon 
+se anon > anoa  entao
+  escrever  "Ano de Nascimento Invalido"  
+senao
+  escrever  "Idade: " , anoa - anon  
+fim_se 
+fim

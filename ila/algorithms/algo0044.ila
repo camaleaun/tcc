@@ -1,0 +1,15 @@
+//prog algoritmo44
+variaveis
+numerico num, base, logaritmo
+inicio
+limpar
+escrever "entre com o logaritmando: "
+posicionar 1,27
+ler num 
+escrever "entre com a base: "
+posicionar 2,19 
+ler base 
+logaritmo = log(num) / log(base) 
+limpar
+escrever "o logaritmo de ", num, " na base ",base, " e : ", logaritmo 
+fim

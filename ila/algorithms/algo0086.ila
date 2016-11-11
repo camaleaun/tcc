@@ -1,0 +1,18 @@
+//prog algoritmo 86
+variaveis
+numerico num 
+inicio
+limpar
+escrever "Digite numero: "
+posicionar 1,16 
+ler num 
+se num > 0  entao
+escrever "POSITIVO" 
+senao
+ se num < 0 entao
+  escrever "NEGATIVO" 
+  senao
+  escrever "NULO" 
+  fim_se
+fim_se
+fim

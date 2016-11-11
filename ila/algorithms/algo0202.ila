@@ -1,0 +1,35 @@
+//prog algoritmo202
+variaveis
+numerico   i, num,linha ,col
+caracter resp
+inicio
+limpar
+escrever "Entre com um numero maior do que 15: "
+posicionar 1,38 
+ler num 
+limpar
+se num>=15 entao
+ linha = 1
+ col = 1
+ para  i = 15   ate  num   passo 15
+  posicionar linha,  col 
+  escrever i
+  col = col + 5
+  se col=76 entao
+  linha = linha +1
+  col = 1
+  fim_se
+  se linha = 23 entao
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+   linha=1
+   col=1
+  fim_se
+ proximo
+senao
+ escrever "NAO EXISTE" 
+fim_se
+fim

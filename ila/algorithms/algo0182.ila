@@ -1,0 +1,15 @@
+//prog algoritmo182
+variaveis
+numerico  a, numero, linha
+inicio
+limpar
+linha = 1 
+para a = 1 ate 10 
+  posicionar linha,1 
+  escrever "digite numero: " 
+  posicionar linha,16
+   ler numero 
+   escrever  "metade: ", numero / 2
+  linha = linha +2 
+proximo
+fim

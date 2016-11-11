@@ -1,0 +1,37 @@
+//prog algoritmo234
+variaveis
+numerico  i,  salario, ir, linha
+caracter nome,resp 
+inicio
+limpar
+linha=1
+para  i = 1   ate  20  
+  posicionar linha,1
+  escrever "digite nome: " 
+  posicionar linha,14
+  ler nome 
+  escrever "digite salario: " 
+  posicionar linha+1,17
+  ler salario 
+  se  salario <600 entao
+    ir= 0   
+  senao
+      se  salario <1500 entao
+       ir= salario * 0.1    
+    senao
+       ir= salario *0.15   
+    fim_se
+fim_se
+posicionar linha+2,1
+ escrever   nome, "  R$ ", salario, " R$ ", ir
+  linha = linha +3
+  se  linha=22 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+   fim_se
+proximo
+fim

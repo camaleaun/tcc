@@ -1,0 +1,14 @@
+//prog algoritmo71
+variaveis
+numerico hora, tminuto, minuto
+inicio
+limpar 
+escrever "entre com hora atual: "
+posicionar 1,23
+ler hora 
+escrever "entre com minutos: "
+posicionar 2,20
+ler minuto 
+tminuto = hora * 60 + minuto 
+escrever "At‚ agora se passaram: ", tminuto, " minutos"
+fim   

@@ -1,0 +1,68 @@
+//prog algoritmo428
+variaveis
+matriz numerico dados[10,4]
+numerico L, codigo, pos, n,aux, linha
+caracter resp
+inicio
+limpar 
+linha=1
+para L=1 ate 10
+ posicionar linha,1 
+ escrever "digite matricula no formato aascccnnn "
+ posicionar linha,41
+  ler n
+  dados[L,1]=n
+  aux=inteiro(n/1000000)
+  aux=n-aux*1000000
+  dados[L,3]=inteiro(aux/1000)
+  posicionar linha+1, 1
+    escrever "digite sexo (0 fem 1 masc) "
+   posicionar linha +1,28
+    ler n
+    dados[L,2] =n
+   posicionar linha +2,1
+    escrever "digite CR do aluno: "
+   posicionar linha +2,21
+    ler n
+    dados[L,4] =n
+    linha=linha+3
+    se linha =22 entao
+      posicionar 24,1
+      escrever "pressione enter:"
+      posicionar 24,17
+      ler resp
+      limpar
+     linha=1
+    fim_se
+proximo
+pos=0
+limpar
+escrever "digite codigo do curso: "
+posicionar 1,26
+ler codigo 
+para L=1 ate 10 
+  se (dados[L,3]=codigo ) e ( dados[L,2]=0 ) entao
+    se pos=0 entao 
+     pos = L
+    senao
+     se  dados[L,4]>dados[pos,4] entao
+      pos=L
+     fim_se
+   fim_se
+ fim_se
+proximo
+posicionar 3,1
+escrever "MATRICULA          SEXO      CURSO     CR" 
+para L= 1 ate 10
+ posicionar L+4,1
+ escrever dados[L,1]
+ posicionar L+4,20
+ escrever dados[L,2]
+ posicionar L+4,30
+ escrever dados[L,3]
+ posicionar L+4,40
+ escrever dados[L,4]
+proximo
+posicionar 18,1
+escrever "Aluna premiada tem matricula: ", dados[pos,1], "  e seu  CR: ",dados[pos,4]
+fim

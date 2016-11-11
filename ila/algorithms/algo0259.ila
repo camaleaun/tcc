@@ -1,0 +1,25 @@
+//prog algoritmo259
+variaveis
+numerico num, linha
+caracter resp
+inicio
+limpar
+linha = 2
+posicionar linha,1
+escrever "digite numero: "
+posicionar linha, 16
+ler num
+faca enquanto  num > 0
+ posicionar linha,1
+ escrever "dobro do numero: ", num * 2
+  linha = linha +1
+  se resto(linha,23) = 0 entao
+    posicionar 24,1
+    escrever "pressione enter ou ctrl C para interromper:"
+    posicionar 24,44
+    ler resp
+    limpar
+    linha =1
+   fim_se
+fim_enquanto
+fim

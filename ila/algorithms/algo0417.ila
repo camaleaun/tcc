@@ -1,0 +1,24 @@
+//algoritmo algoritmo417 
+ variaveis
+   numerico L, c,n
+   matriz numerico A[3,4]
+   matriz numerico B[3,4]
+   inicio
+   limpar
+   para L = 1 ate 3
+   para c = 1 ate 4   
+     escrever "elemento:", L, "-",c 
+     ler n    
+     A[L, c]=n
+     B[L,c]=n * 3
+    proximo
+  proximo
+limpar
+escrever "MATRIZ TRIPLO"
+para L = 1 ate 3   
+   para c = 1 ate 4   
+      posicionar L+1, (c-1)*6 +1
+        escrever  B[L,c]
+    proximo
+proximo
+fim

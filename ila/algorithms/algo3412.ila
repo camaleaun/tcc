@@ -1,0 +1,54 @@
+//prog algoritmo3412
+variaveis
+numerico op, n,  num, soma, prod
+caracter resp
+inicio
+op=0
+faca enquanto op <> 3
+ limpar
+ cor 1,7
+ janela 1,20,11,62
+ posicionar 2,22
+ posicionar 2,32
+ escrever "MAQUINA ESPERTA"
+ posicionar 4,22
+  escrever "1 - Soma varios numeros "
+ posicionar 6,22
+  escrever "2 - Multiplica varios numeros "
+ posicionar 8,22
+  escrever "3 - Sai do algoritmo "
+ posicionar 10,22
+  escrever "OPCAO: "
+ posicionar 10,30
+  ler  op
+  cor 15,0
+  limpar
+  faca caso
+    caso op = 1:
+     soma = 0
+      escrever "digite numero ou -0.0001  para finalizar:"
+      ler num
+      faca enquanto  num  <> -0.0001 
+         soma = soma + num
+          escrever "digite numero ou -0.0001  para finalizar:"
+          ler num
+      fim_enquanto
+      escrever "soma: ", soma
+   caso op = 2:
+    prod = 1
+      escrever "digite numero ou -0.0001  para finalizar: "
+      ler num
+      faca enquanto  num <> -0.0001 
+        prod = prod * num
+        escrever "digite numero ou -0.0001  para finalizar: "
+        ler num
+      fim_enquanto
+      escrever "produto: ", prod
+  caso op = 3:
+    escrever "Sai do algoritmo"
+   outro_caso:
+    escrever "Opcao nao disponivel"
+fim_caso
+ler resp // so para descer cursor
+fim_enquanto
+fim

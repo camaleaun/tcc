@@ -1,0 +1,15 @@
+//prog algoritmo236
+variaveis
+numerico  c, num, h 
+inicio
+limpar
+h = 0  
+escrever "digite numero: " 
+posicionar 1,16
+ler num 
+posicionar 4,1
+para  c= 1  ate  num  
+   h = h + 1 / c  
+proximo
+escrever "soma: ", h  
+fim

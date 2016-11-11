@@ -1,0 +1,18 @@
+//prog algoritmo53 
+variaveis
+numerico a, b, c, diagonal 
+inicio
+limpar
+escrever "entre com a base: "
+posicionar 1,19
+ler a 
+escrever "entre com a altura: "
+posicionar 2,21
+ler b 
+escrever "entre com a profundidade: "
+posicionar 3,27
+ler c 
+diagonal =raiz( a^2 + b^2 + c^2,2 ) 
+limpar
+escrever "diagonal : ", diagonal 
+fim

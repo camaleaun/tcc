@@ -1,0 +1,51 @@
+//prog algoritmo438
+variaveis
+numerico L, c, x, n, linha
+caracter resp
+matriz numerico M[50,50]
+matriz numerico A[1225]
+matriz numerico B[1225]
+matriz numerico DIF[1225] 
+inicio
+limpar
+para  L= 1 ate 50 
+  para  c= 1 ate 50
+     escrever "elemento: ", L, " - ", c
+     ler n
+    M[L,c] =n
+ proximo
+proximo
+x = 1
+para L=2 ate 50
+  para c=52 -L  ate 50
+      A[x] = M[L,c] 
+        x=x+1
+  proximo
+proximo
+x = 1
+para L= 1 ate 49
+ para c = L+1 ate 50
+      B[x ] = M[L,c]   
+      x=x+1
+  proximo
+proximo
+limpar
+linha=2
+escrever "VETOR DIFERENCA"
+// Gera - imprime o vetor diferenca
+para L= 1 ate  1225
+  DIF[ L ] = A[ L] - B[ L ] 
+  posicionar linha,1
+  escrever  DIF[ L]  
+ se linha =23 entao
+   posicionar 24,1
+     escrever "pressione enter:"
+     posicionar 24,17
+     ler resp
+     limpar
+     linha =1
+  senao
+      linha=linha+1
+  fim_se
+proximo
+fim

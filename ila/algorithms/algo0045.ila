@@ -1,0 +1,17 @@
+//prog algoritmo45
+variaveis
+numerico num, quad, raizquad 
+inicio
+limpar
+escrever "digite numero: "
+posicionar 1,16
+ler num 
+quad =num ^2 
+raizquad = raiz(num, 2) 
+limpar
+escrever "numero: ", num 
+posicionar 2,1  
+escrever "quadrado: ", quad 
+posicionar 3,1  
+escrever "raiz quadrada: ", raizquad 
+fim

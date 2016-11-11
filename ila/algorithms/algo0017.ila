@@ -1,0 +1,8 @@
+//prog algoritmo17
+variaveis
+numerico x
+inicio
+limpar
+x = 10 
+escrever  "Valor de x = ", x 
+fim

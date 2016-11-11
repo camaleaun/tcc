@@ -1,0 +1,23 @@
+//prog  algoritmo290
+variaveis
+numerico num, prod, soma
+inicio
+limpar
+soma = 0
+prod = 1
+escrever "digite numero positivo, zero ou negativo para terminar: "
+ler num
+faca enquanto num > 0
+   se resto(num , 2 )= 0 entao
+    soma = soma + num
+   senao
+    prod = prod * num 
+  fim_se
+   escrever "digite numero positivo, zero  ou negativo para terminar: "
+ ler num
+fim_enquanto
+limpar
+escrever  "produto dos numeros impares: ", prod
+posicionar 3,1
+escrever  "soma dos numeros pares: ", soma
+fim

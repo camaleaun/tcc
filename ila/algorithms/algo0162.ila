@@ -1,0 +1,10 @@
+//prog algoritmo162
+variaveis
+numerico  c
+inicio
+limpar 
+para c = 2 ate 10 passo 2
+ posicionar 1, c*4
+ escrever   c  
+proximo
+fim

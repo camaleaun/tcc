@@ -1,0 +1,30 @@
+//prog algoritmo380
+variaveis
+numerico L,n, linha
+matriz numerico num[30]
+caracter resp
+inicio
+limpar 
+para L = 1 ate 30
+ escrever "digite numero: "
+  ler n
+ num[L] =n 
+proximo
+limpar
+escrever "Vetor ao Contrario"
+linha=2
+para L = 30 ate 1 passo -1
+ posicionar linha,1
+ linha=linha+1
+ escrever num[L] 
+ se linha = 23 entao
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+   escrever "Vetor ao Contrario"
+   linha=2
+  fim_se
+proximo
+fim

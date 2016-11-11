@@ -1,0 +1,31 @@
+//prog algoritmo389
+variaveis
+numerico L, maiorM, menorM, n 
+matriz numerico temp[12]
+inicio
+limpar 
+maiorM = 1 
+menorM = 1 
+para L = 1 ate 12
+ escrever "temperatura do mes ", L 
+  ler n
+  temp[L] =n 
+   se   temp[L] > temp[maiorM]  entao
+        maiorM = L    
+   senao
+     se   temp[L] < temp[menorM] entao
+             menorM = L  
+     fim_se
+   fim_se
+proximo
+limpar
+escrever "Relacao  das temperaturas " 
+para L = 1  ate 12
+    posicionar L+2,1
+     escrever "mes: ", L, " -  temperatura ", temp[L] 
+proximo
+posicionar 16,1
+ escrever "MAIOR TEMPERATURA -  ", temp[maiorM], "  no mes: ", maiorM  
+posicionar 18,1
+escrever "MENOR TEMPERATURA -  ", temp[menorM], "  no mes: ", menorM 
+fim

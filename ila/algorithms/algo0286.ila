@@ -1,0 +1,20 @@
+//prog algoritmo286
+variaveis
+numerico a, b, aux, soma
+inicio
+limpar
+escrever "Entre com 1 numero: "
+ler a
+escrever "Entre com 2 numero: "
+ler b
+se a < b entao
+ aux  = a 
+ a  = b
+  b  =  aux
+fim_se
+soma  = a
+faca enquanto resto(soma , b) <> 0
+  soma  = soma + a
+fim_enquanto
+escrever "M.M.C: ",soma
+fim

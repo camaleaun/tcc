@@ -1,0 +1,52 @@
+//prog  algoritmo453
+variaveis
+matriz numerico m[5,5]
+numerico L, c, n, tsi, i
+inicio
+limpar
+para L = 1 ate 5  
+   para c = 1 ate 5  
+    escrever "Elemento: ", L, "-", c
+    ler n
+   m[L,c]=n
+    proximo
+proximo
+i = 1
+tsi = 1
+L = 1
+ faca enquanto ( L <= 5 ) e ( tsi = 1 ) e (  i = 1 )
+     c =1
+     faca enquanto( c <= 5 ) e ( tsi = 1 ) e (  i = 1)
+      se  L = c  entao
+           se ( m[L,c] = 1 ) e ( i = 1) entao
+	          i = 1 
+	       senao
+	         i = 0
+          fim_se
+        senao
+           se (m[L,c] = 0 ) e (  tsi = 1  ) entao
+	          tsi =1 
+	       senao
+	           tsi = 0
+          fim_se
+     fim_se
+        c=c+1
+     fim_enquanto
+    L=L+1 
+fim_enquanto
+limpar
+limpar
+escrever "Toda a Matriz"
+para L = 1 ate 5  
+   para c = 1 ate 5
+    posicionar L+1,(c-1)*6+1  
+      escrever m[L,c]  
+   proximo   
+proximo
+posicionar 10,1
+se ( tsi= 1  ) e (  i= 1 ) entao
+ escrever "Matriz Identidade"
+senao
+ escrever "Nao e Identidade "
+fim_se
+fim

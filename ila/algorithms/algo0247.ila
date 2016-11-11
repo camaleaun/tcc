@@ -1,0 +1,36 @@
+//prog algoritmo247
+variaveis
+numerico  i, x, id, somaid, totid , peso, totpeso, somapeso 
+caracter resp
+inicio
+limpar
+totpeso = 0 
+totid = 0 
+para  i = 1  ate 30  
+ somapeso = 0 
+ somaid = 0 
+ para  x = 1  ate 12  
+   escrever "Digite peso: " 
+   ler peso 
+   escrever "Digite idade: " 
+   ler id 
+   somapeso = somapeso + peso 
+   somaid = somaid + id 
+ proximo
+ limpar
+ posicionar 1,1
+ escrever "peso medio do time: ", somapeso/ 12
+ posicionar 3,1
+ escrever "idade media do time: ", somaid/ 12 
+ totpeso =  totpeso + somapeso 
+ totid = totid + somaid 
+ posicionar 24,1
+ escrever "pressione enter:"
+ posicionar 24,17
+ ler resp
+ limpar
+proximo
+escrever "peso medio de todos os times: ", totpeso / 360
+posicionar 3,1 
+escrever "idade media de todos os times: ", totid / 360 
+fim

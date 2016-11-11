@@ -1,0 +1,39 @@
+//prog algoritmo3141
+variaveis
+caracter op
+numerico valor1, totlimp, totalim, tothig
+inicio
+limpar
+totlimp = 0
+totalim = 0
+tothig =0
+escrever "Entre com valor ou 0 para terminar: "
+ler valor1
+faca enquanto valor1>0
+   escrever "Entre com H(higiene), A(alimentacao), L(limpeza) terminar: "
+   ler op
+   se  (op = "L") ou ( op = "l")entao
+    totlimp = totlimp + valor1
+  senao
+      se (op = "A") ou ( op = "a") entao
+        totalim =totalim + valor1
+      senao
+          se (op = "H") ou ( op = "h") entao
+            tothig =tothig + valor1
+          senao
+            escrever "opcao invalida"
+      fim_se
+    fim_se
+   fim_se
+  escrever "Entre com valor ou 0 para terminar: "
+  ler valor1
+fim_enquanto
+limpar
+escrever "total geral vendido: ", totlimp + totalim + tothig
+posicionar 3,1
+escrever "total limpeza: ", totlimp
+posicionar 5,1
+escrever "total alimentacao: ", totalim
+posicionar 7,1
+escrever "total higiene: ", tothig
+fim

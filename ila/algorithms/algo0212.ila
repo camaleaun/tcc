@@ -1,0 +1,65 @@
+//prog algoritmo212
+variaveis
+numerico  i,n,num, sfora, totfora, sdentro, totdentro,linha
+caracter resp 
+inicio
+limpar
+sfora = 0 
+totfora = 0 
+sdentro = 0 
+totdentro = 0 
+escrever "Entre com o valor de n: "
+posicionar 1,25 
+ler n
+limpar
+linha=1 
+para  i = 1  ate  n  
+  posicionar linha,1
+  escrever "Entre com o numero: "
+  posicionar linha,21 
+  ler num 
+  posicionar linha + 1,1
+  se (num >0 )  e  ( num < 16) entao
+   escrever num," esta  dentro do intervalo" 
+    sdentro = sdentro + num 
+    totdentro = totdentro + 1 
+  senao
+    escrever num," esta  fora do intervalo" 
+    sfora = sfora + num 
+    totfora = totfora + 1 
+ fim_se
+linha=linha+2
+se  linha=23 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+   fim_se
+proximo
+posicionar 24,1
+escrever "pressione enter:"
+posicionar 24,17
+ler resp
+limpar
+se totdentro <> 0 entao
+  posicionar 1,1
+  escrever   totdentro," valores dentro do intervalo" 
+  posicionar 3,1
+  escrever "soma= ", sdentro, " e media= ",sdentro / totdentro
+senao
+  posicionar 1,1
+  escrever " Nenhum valor dentro do intervalo"
+fim_se
+se totfora <> 0 entao
+ posicionar 5,1 
+ escrever totfora," valores fora do intervalo" 
+ posicionar 7,1
+ escrever "soma = ", sfora, " e media = ", sfora/ totfora
+senao
+  posicionar 5,1
+  escrever "Nenhum valor fora do intervalo"
+fim_se
+
+fim

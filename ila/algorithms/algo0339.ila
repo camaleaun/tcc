@@ -1,0 +1,45 @@
+//prog algoritmo339
+variaveis
+numerico num,p1,p2,c,c1, c2 
+caracter resp
+inicio
+limpar
+escrever "digite um numero maior do que 0 e par: "
+ler num
+faca enquanto  (resto(num , 2)=0 ) e ( num > 2)
+     p1=2
+     p2=2
+    faca enquanto p1<=num-p2
+       c1=0
+       c=2 
+      faca enquanto  (c1 = 0 ) e ( c <= inteiro(p1 / 2 ) )
+         se resto( p1 , c) =0 entao
+           c1=1
+          fim_se
+         c= c+1
+      fim_enquanto
+      se c1=0 entao
+          p2=2
+          faca enquanto p2<=num-p1
+            c2=0 
+            c=2
+             faca enquanto ( c2 = 0 ) e ( c <= inteiro(p2 / 2 ))
+               se  resto(p2 , c) =0 entao
+                 c2=1 
+               fim_se
+               c= c+1
+             fim_enquanto
+             se (c2=0  ) e ( p1+p2 = num) entao
+                escrever  p1, "+ ", p2,"= ", p1 + p2
+                ler resp
+             fim_se
+             p2= p2+1
+          fim_enquanto
+      fim_se
+      p1=p1+1
+      p2=2
+    fim_enquanto
+   escrever "digite um numero maior do que 0 e par: "
+   ler num
+fim_enquanto
+fim

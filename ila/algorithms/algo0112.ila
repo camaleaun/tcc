@@ -1,0 +1,17 @@
+//prog algoritmo112
+variaveis
+numerico a, b
+inicio
+limpar 
+escrever "digite 1§ numero: " 
+posicionar 1, 19 
+ler a 
+escrever "digite 2§numero: " 
+posicionar 2, 19   
+ler  b 
+se a < b  entao
+escrever "menor: ", a  
+senao
+escrever "menor: ", b  
+fim_se 
+fim

@@ -1,0 +1,10 @@
+//prog algoritmo32
+variaveis
+numerico num
+inicio
+limpar
+escrever  "entre com um numero: "
+posicionar 1,22
+ler num 
+escrever  "numero : ", num 
+fim 

@@ -1,0 +1,30 @@
+//prog algoritmo388
+variaveis
+numerico L, c,d,n
+matriz numerico a[10] 
+inicio
+limpar
+para L = 1  ate 10
+ a[L]=0
+proximo
+para L = 1  ate 10
+  escrever "elemento do vetor A[", L, "]" 
+  ler  n 
+  c=1 
+  faca enquanto n<=a[c]
+   c=c+1
+ fim_enquanto
+  se L>1 entao
+    para d=L ate c+1 passo -1
+      a[d]=a[d-1]
+    proximo
+  fim_se
+   a[c]=n 
+proximo
+limpar
+escrever "Vetor Ordenado"
+para L = 1  ate 10
+ posicionar L+3,1
+  escrever "a[",L , "] - ", a[L] 
+proximo
+fim

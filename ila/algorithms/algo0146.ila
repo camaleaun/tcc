@@ -1,0 +1,32 @@
+//prog algoritmo146
+variaveis
+numerico percurso, consumo 
+caracter tipo
+inicio
+limpar 
+escrever "digite tipo de carro( A / B / C): "  
+posicionar 1,35  
+ler  tipo 
+escrever "digite percurso: "
+posicionar 2,19     
+ler  percurso 
+se ( tipo = "C" ) ou ( tipo = "c")  entao
+  consumo = percurso / 12 
+senao
+  se ( tipo = "B" ) ou ( tipo = "b")  entao
+    consumo = percurso / 10   
+  senao
+   se ( tipo = "A" ) ou ( tipo = "a")  entao
+      consumo = percurso / 8   
+    senao 
+      consumo = 0   
+   fim_se
+ fim_se
+fim_se
+posicionar 5,1     
+se  consumo <> 0  entao 
+  escrever "Consumo estimado em litros: ", consumo 
+senao
+  escrever "Modelo inexistente" 
+fim_se 
+fim

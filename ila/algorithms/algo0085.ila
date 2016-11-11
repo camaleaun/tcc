@@ -1,0 +1,29 @@
+//prog algoritmo85
+variaveis
+numerico a, b, c, max 
+inicio
+limpar
+escrever "digite 1 numero: "
+posicionar 1, 18   
+ler a 
+escrever "digite 2 numero: "
+posicionar 2, 18      
+ler b 
+escrever "digite 3 numero: " 
+posicionar 3, 18     
+ler c 
+se a > b entao
+ se a > c entao
+   max = a    
+ senao
+    max = c   
+ fim_se
+senao
+  se  b > c  entao
+    max = b  
+  senao
+    max = c   
+  fim_se
+fim_se
+escrever max
+fim

@@ -1,0 +1,24 @@
+//algoritmo algoritmo423
+ variaveis
+  numerico L, c,n  
+  matriz numerico Ci[2, 3]
+  matriz numerico Ct[3, 2]
+inicio
+ limpar
+ para L = 1 ate 2  
+  para c = 1 ate 3   
+    escrever "elemento de Ci[", L, ",",c,"]" 
+    ler n
+    Ci[L,c]=n
+    Ct[ c, L ] = Ci[L, c ]
+  proximo
+proximo
+limpar
+escrever  " Matriz Transposta"
+ para L = 1 ate 3   
+    para c = 1 ate 2  
+      posicionar   L+2, (c-1)*5 +1
+       escrever  Ct[L,c]
+    proximo
+  proximo
+ fim

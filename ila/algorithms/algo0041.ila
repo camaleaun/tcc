@@ -1,0 +1,21 @@
+//prog algoritmo41 
+variaveis     
+numerico a, b, c,d, mp
+inicio
+limpar
+escrever "entre com 1 numero: "
+posicionar 1,21
+ler a 
+escrever "entre com 2 numero: "
+posicionar 2,21
+ler b 
+escrever "entre com 3 numero: "
+posicionar 3,21
+ler c 
+escrever "entre com 4 numero: "
+posicionar 4,21
+ler d 
+mp = (a*1 + b*2 + c*3 + d*4)/10 
+limpar
+escrever "media ponderada: ", mp 
+fim

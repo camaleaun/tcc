@@ -1,0 +1,35 @@
+//prog algoritmo442
+variaveis
+matriz numerico  consumo[10,12]
+numerico  soma,n, L, c, mes, ano, maiorvalor 
+inicio
+limpar
+para  L = 1 ate  10 
+  para  c = 1 ate  12 
+    escrever "entre com o consumo do ano:", 1990 + (L-1) , " mes: ", c 
+    ler n
+    consumo[L,c]=n
+   proximo
+proximo
+limpar
+para  c = 1 ate  12 
+    soma = 0
+   para  L = 1 ate 10 
+      soma = soma  +  consumo[L,c] 
+   proximo
+   posicionar c,1
+   escrever "consumo medio do mes: ", c, " no periodo 1990-1999: ", soma / 10
+proximo
+maiorvalor = 0
+para  L =  1 ate 10
+    para  c = 1 ate 12 
+        se  consumo[L,c] >  maiorvalor entao
+        maiorvalor = consumo[L,c]
+            mes = c
+            ano = L-1
+        fim_se
+    proximo
+proximo
+posicionar 15,1
+escrever "O maior consumo foi de  ",maiorvalor, "  no mes: ", mes, "  e no ano: ", ano  +  1990 
+fim

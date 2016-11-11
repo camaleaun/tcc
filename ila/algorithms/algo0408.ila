@@ -1,0 +1,22 @@
+//algoritmo algoritmo408
+ variaveis
+   numerico L, c,m,t
+   matriz numerico N[10,10]
+   inicio
+   limpar
+   para L = 1 ate 10 passo 1
+   para c = 1 ate 10 passo 1  
+     escrever "elemento linha ", L, "  coluna ",c  
+     ler m    
+     N[L, c]=m 
+    proximo
+  proximo
+limpar
+t=46
+escrever "Diagonal secundaria"
+para L = 1 ate 10 passo 1  
+  posicionar L+1, t
+      escrever  N[L, 11-L]
+      t=t-5
+  proximo
+fim

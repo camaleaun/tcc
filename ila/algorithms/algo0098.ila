@@ -1,0 +1,17 @@
+//prog algoritmo98
+variaveis
+numerico sb, vp
+inicio
+limpar 
+escrever "digite o salario: " 
+posicionar 1,19
+ler sb 
+escrever "digite o valor da prestacao: "
+posicionar 2,30 
+ler vp 
+se vp <= 0.3 * sb entao
+escrever "emprestimo concedido " 
+senao
+escrever "emprestimo negado " 
+fim_se 
+fim

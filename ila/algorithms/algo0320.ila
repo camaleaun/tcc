@@ -1,0 +1,24 @@
+//prog algoritmo320
+variaveis
+numerico cont, nota, snota, qsnota, media, qmedia, variancia
+inicio
+limpar
+cont = 0
+qsnota = 0
+snota = 0
+escrever "digite nota ( 0 - 10: "
+ler nota
+faca enquanto nota >= 0
+  cont= cont+1
+  snota = snota + nota
+  qsnota = qsnota + nota ^ 2
+  escrever "digite nota ( 0 - 10): "
+  ler nota
+fim_enquanto
+limpar
+media = snota / cont
+variancia = qsnota / cont - media ^2
+escrever "Media: ", media
+posicionar 3,1
+escrever "Variancia: ", variancia
+fim

@@ -1,0 +1,32 @@
+//prog algoritmo145
+variaveis
+caracter livro, tipo 
+numerico  dia 
+inicio
+limpar
+escrever "digite nome do livro: " 
+posicionar 1,23  
+ ler  livro 
+escrever "digite: professor / aluno: "
+posicionar 2,28   
+ler  tipo 
+se( tipo = "professor" ) ou (  tipo = "Professor" ) ou (  tipo = "PROFESSOR")  entao 
+   dia =10  
+ senao
+  se ( tipo = "aluno" ) ou (  tipo = "Aluno" ) ou (  tipo = "ALUNO")  entao 
+     dia =3  
+   senao
+    dia = 0 
+   fim_se
+fim_se
+posicionar 4,1  
+se  dia = 0  entao 
+  escrever "Tipo de usuario desconhecido" 
+senao
+  escrever "nome do livro: ", livro 
+  posicionar 6,1  
+  escrever "nome tipo de usu rio: ", tipo
+  posicionar 8,1   
+  escrever "total de dias: ", dia 
+fim_se
+fim

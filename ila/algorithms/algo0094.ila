@@ -1,0 +1,14 @@
+//prog algoritmo94
+variaveis
+numerico numero
+inicio
+limpar 
+escrever "digite 1 numero: "
+posicionar 1,18  
+ler numero 
+se resto(numero,3) = 0  entao
+escrever " m£ltiplo de 3 " 
+senao
+escrever "n∆o Ç multiplo de 3"  
+fim_se 
+fim

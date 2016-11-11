@@ -1,0 +1,47 @@
+//prog algoritmo382
+variaveis
+numerico L, c,n, aux
+matriz numerico vet[20]
+matriz numerico vet1[20] 
+caracter resp
+inicio
+limpar
+para L = 1 ate 20
+ escrever "numero: " 
+  ler n
+ vet[L]=n  
+proximo
+para L = 1 ate 19
+ para c = L+1 ate 20
+     se   vet[L] > vet[c] entao
+        aux = vet[L]
+        vet[L] = vet[c ]
+        vet[c] = aux 
+      fim_se
+   proximo
+ proximo
+limpar
+escrever "Relacao  dos numeros ordenados  " 
+para L = 1 ate 20
+  posicionar L+1,1
+  escrever  L , " - ", vet[L]
+proximo
+vet1[1]= vet[1] 
+c=2 
+para L =2  ate 20
+  se vet[L] <> vet1[c-1] entao
+      vet1[c] = vet[L]
+      c=c+1
+   fim_se
+ proximo
+posicionar 24,1
+escrever "pressione enter:"
+posicionar 24,17 
+ler resp
+limpar
+escrever "Relacao  dos numeros nao repetidos  "  
+para L= 1  ate  c-1 
+  posicionar L+1,1  
+     escrever L , " - ", vet1[L]
+proximo
+fim

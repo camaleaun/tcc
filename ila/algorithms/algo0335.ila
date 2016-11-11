@@ -1,0 +1,33 @@
+//prog  algoritmo335
+variaveis
+caracter olhos, cabelos, sexo
+numerico idade, maior, contf, cont
+inicio
+limpar
+maior = 0
+contf = 0
+cont = 0
+escrever "digite idade ou -1 para terminar: "
+ler idade
+faca enquanto idade <> -1
+  cont=cont+1
+  escrever "digite sexo ( M / F) "
+  ler sexo
+  escrever "digite cor dos olhos(azuis, verdes, castanhos)  "
+  ler olhos
+  escrever "digite cor dos cabelos (louros, castanhos, pretos) "
+  ler cabelos
+  se  idade > maior entao
+   maior = idade
+ fim_se
+  se (idade >= 18)e(idade<=35)e((cabelos="louros")ou(cabelos="LOUROS")ou(cabelos="Louros"))e((olhos="verdes")ou(olhos="VERDES")ou(olhos = "verdes") )entao
+   contf= contf + 1 
+ fim_se
+  escrever "digite idade ou -1 para terminar: "
+  ler idade
+fim_enquanto
+limpar
+escrever "maior idade entre os habitantes: ", maior
+posicionar 3,1
+escrever "porcentagem-sexo feminino idade 18-35 anos, olhos verdes,cabelos louros: ",contf*100/cont
+fim

@@ -1,0 +1,17 @@
+//prog algoritmo47
+variaveis
+numerico num, c, d, u, int,num1
+inicio
+limpar
+escrever "entre com um  numero de 3 digitos: "
+posicionar 1,36 
+ler num
+c = inteiro( num/ 100)
+d =  inteiro( resto(num,100)/10)
+u   = resto( num , 10)
+num1 = u*100 + d*10 + c 
+limpar
+escrever "numero:", num
+posicionar 2,1  
+escrever "invertido: ", num1
+fim

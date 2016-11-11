@@ -1,0 +1,17 @@
+//prog algoritmo237sol2
+variaveis
+numerico  c, num, h 
+inicio
+limpar
+h = 0  
+escrever "digite numero: " 
+posicionar 1,16
+ler num 
+posicionar 3,1
+escrever "Segunda Solucao " 
+para  c= 1  ate  num  
+    h = h + ( -1^(c+1) ) / c  
+proximo
+posicionar 4,1
+escrever "soma: ", h  
+fim

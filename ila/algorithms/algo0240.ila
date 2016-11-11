@@ -1,0 +1,26 @@
+//prog  algoritmo240
+variaveis
+numerico  c,d, expden, fat, x,seno 
+inicio
+limpar
+seno = 0 
+expden = 1 
+escrever "digite valor de x: " 
+posicionar 1,20
+ler x 
+x = x * pi/180 
+posicionar 3,1
+para  c = 1  ate  10 
+  fat = 1 
+  para d = 1  ate expden  
+    fat = fat * d
+  proximo
+    se resto(c , 2 )= 0 entao
+      seno = seno- x ^ expden / fat 
+    senao
+     seno = seno + x ^ expden / fat 
+    fim_se
+    expden = expden + 2
+proximo
+escrever "seno: ", seno 
+fim

@@ -1,0 +1,56 @@
+//prog algoritmo434
+variaveis
+matriz numerico n[5,5]
+numerico L, c,m, linha
+caracter resp
+inicio
+limpar
+para L=1 ate   5 
+  para c=1 ate   5 
+  escrever "digite elemento de N[" ,L, ",",  c,  "] "
+    ler m
+  n[L,c]=m
+ proximo
+proximo
+//Entra com o numero da linha
+limpar
+escrever "Digite numero da linha(1-5) ou -999 para acabar: "
+posicionar 1,50
+ler L 
+linha=2
+faca enquanto  L  <> -999  
+  faca enquanto (  L  < 1  ) ou  ( L  > 5  )
+    se linha = 23 entao
+     posicionar 24,1
+     escrever "pressione enter:"
+     posicionar 24,17
+     ler resp
+     limpar
+     linha=1
+    senao
+     linha = linha+1
+    fim_se
+   posicionar linha, 1
+   escrever "Digite numero da linha entre 1 - 5: "
+    posicionar linha, 37
+     ler  L 
+   fim_enquanto 
+   limpar 
+   escrever " Linha: ",L 
+   para c=1 ate   5 
+     posicionar 3,(c-1)*6+1
+     escrever n[L,c]
+   proximo
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+   linha=1
+   escrever "Digite numero da linha(1-5) ou -999 para acabar: "
+   posicionar 1,50
+   ler L 
+fim_enquanto
+fim
+
+

@@ -1,0 +1,26 @@
+//prog algoritmo282
+variaveis
+numerico conta, cneg, c, saldo
+caracter resp
+inicio
+limpar
+ c = 0
+ cneg = 0
+ escrever "digite conta ou numero negativo para terminar: "
+ ler conta
+ faca enquanto   conta > 0
+    c=c+1
+   escrever "saldo "
+   ler saldo
+   se  saldo < 0 entao
+      cneg= cneg+1
+      escrever conta, " ", saldo, "  negativo "
+   senao
+      escrever conta, "  ",saldo, "  positivo "   
+   fim_se
+   ler resp // so para descer cursor
+   escrever "digite conta ou numero negativo para terminar: "
+   ler conta
+fim_enquanto
+escrever  "percentual negativo: ", cneg * 100 / c,  "% "
+fim

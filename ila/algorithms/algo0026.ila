@@ -1,0 +1,22 @@
+//prog algoritmo26
+variaveis
+numerico data,r,dia,mes,ano, ndata
+inicio
+limpar
+escrever "Digite data no formato ddmmaa: "
+posicionar 1,32
+ler data 
+dia=inteiro(data / 10000)
+r = data - dia *10000
+// como o ILA nao consegue pegar o resto(data,10000), criamos r
+mes=inteiro(r/100) 
+ano=resto(r,100)
+ndata=mes *10000 +dia*100+ano
+limpar
+escrever "DATA: ",data
+posicionar 3,1
+escrever "DATA INVERTIDA: ",ndata
+posicionar 7,1
+escrever "O ILA tem uma limitacao com numeros inteiros por isso, transformou em real"
+
+fim

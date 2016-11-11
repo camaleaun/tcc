@@ -1,0 +1,21 @@
+//prog algoritmo35
+variaveis
+caracter nome, endereco, telefone 
+inicio
+limpar
+escrever "entre com nome: "
+posicionar 1,17
+ler nome 
+escrever "entre com endere‡o: "
+posicionar 2,21
+ler endereco 
+escrever "entre com telefone: "
+posicionar 3,21
+ler telefone 
+limpar
+escrever "Nome    : ",nome 
+posicionar  2,1
+escrever "Endereco: ",endereco
+posicionar  3,1  
+escrever "Telefone:  ",telefone 
+fim

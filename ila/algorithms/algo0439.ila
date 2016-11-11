@@ -1,0 +1,51 @@
+//prog algoritmo439
+variaveis
+numerico L, c, x,n,linha
+caracter resp
+matriz numerico M[60,60]
+matriz numerico A[1770]
+matriz numerico B[1770]
+matriz numerico SOMA[1770]
+inicio
+limpar
+para  L= 1 ate  60 
+   para  c= 1 ate  60
+      escrever "elemento: ", L, " - ", c
+     ler n
+     M[L,c] =n
+    proximo
+proximo
+x = 1
+para L=1 ate 59
+  para c=1 ate  60 - L 
+     A[x ] = M[L,c]
+        x=x+1
+   proximo
+proximo
+x = 1
+para L= 2 ate 60
+  para c =1 ate  L-1
+     B[x ] = M[L,c]
+      x=x+1
+   proximo
+proximo
+limpar
+linha=2
+escrever "VETOR SOMA"
+// Gera / imprime o vetor soma
+para L= 1 ate  1225
+  SOMA[ L ] = A[ L] + B[ L ] 
+  posicionar linha,1
+ escrever SOMA[L]  
+ se linha =23 entao
+   posicionar 24,1
+   escrever "pressione enter:"
+   posicionar 24,17
+   ler resp
+   limpar
+   linha =1
+   senao
+  linha=linha+1
+  fim_se
+  proximo
+fim

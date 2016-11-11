@@ -1,0 +1,38 @@
+//prog algoritmo358
+variaveis
+numerico A,n,lucro, totlucromenor10,totlucromenor20,totlucromaior20
+matriz numerico precocompra[100]
+matriz numerico precovenda[100] 
+caracter resp
+inicio
+limpar
+totlucromenor10 =  0 
+totlucromenor20 =  0 
+totlucromaior20 =  0 
+para A = 1 ate 100 
+   escrever "Preco de compra: " 
+    ler n
+   precocompra [A] =n
+    escrever "Preco de venda: "
+    ler n
+   precovenda [A]=n 
+ proximo
+para A = 1 ate 100
+  lucro = precovenda[A] - precocompra[A]  
+  se lucro<10 entao
+   totlucromenor10= totlucromenor10 +1
+  senao
+     se lucro <= 20 entao
+       totlucromenor20= totlucromenor20 +1
+     senao
+       totlucromaior20= totlucromaior20+1   
+   fim_se
+  fim_se
+ proximo
+limpar
+escrever "total de mercadorias com lucro < 10%: ",totlucromenor10
+posicionar 3,1 
+escrever "total de mercadorias com 10% <= lucro <= 20%: ",totlucromenor20 
+posicionar 5,1
+escrever "total de mercadorias com lucro > 20%: ",totlucromaior20 
+fim

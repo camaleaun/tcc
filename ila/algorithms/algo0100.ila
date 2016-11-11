@@ -1,0 +1,15 @@
+//prog algoritmo100
+variaveis
+numerico num, c
+inicio
+limpar 
+escrever "numero de 4 algarismos: "
+posicionar 1,25 
+ler num 
+c =inteiro( num  /  100) 
+se resto(c , 4)  = 0 entao
+ escrever "o numero e multiplo de 4: ",c 
+senao
+ escrever "o numero nao e  multiplo de 4: ",c 
+fim_se 
+fim

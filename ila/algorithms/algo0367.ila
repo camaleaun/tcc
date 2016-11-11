@@ -1,0 +1,41 @@
+//prog algoritmo367
+variaveis
+matriz numerico  v[100]
+numerico k,n, soma,maior,menor, pares 
+inicio
+limpar
+para K = 1 ate 100
+  escrever "digite elemento: "
+  ler  n
+  v[k]=n
+proximo
+maior = v[1] 
+menor = v[1] 
+soma =  v[1] 
+se resto(v[1] , 2) = 0 entao
+  pares = 1  
+senao
+  pares = 0  
+fim_se
+para K = 2 ate 100
+  se resto(v[k] , 2) = 0 entao
+    pares =pares + 1
+   soma = soma + v[k]
+  fim_se 
+  se v[k] > maior entao
+    maior =  v[k]  
+  senao
+    se v[k] < menor entao
+      menor =  v[k] 
+   fim_se
+   fim_se
+proximo
+limpar
+escrever "Maior: ", maior 
+posicionar 3,1
+escrever "Menor: ", menor 
+posicionar 5,1
+escrever "Percentual de pares: ", pares, "%"
+posicionar 7,1
+escrever "Media: ", soma / 100 
+fim

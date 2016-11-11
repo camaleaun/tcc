@@ -1,0 +1,15 @@
+//prog algoritmo39
+variaveis
+numerico nota1, nota2, media
+inicio
+limpar 
+escrever "digite 1¦ nota: "
+posicionar 1,17
+ler nota1 
+escrever "digite 2¦ nota: "
+posicionar 2,17
+ler nota2 
+media = ( nota1 + nota2)/2 
+limpar
+escrever "media: ", media
+fim

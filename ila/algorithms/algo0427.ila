@@ -1,0 +1,56 @@
+//prog  algoritmo427
+variaveis
+matriz numerico m[10,10]
+matriz numerico n[10,10]
+numerico L, c, n1, d
+caracter resp
+inicio
+limpar
+para  L=1  ate 10  
+  para  c=1  ate 10
+   escrever "digite elemento ", L," - ", c
+    ler n1
+    m[L,c]=n1
+    n[L,c] = m[L,c]  
+  proximo
+proximo
+para  c=1  ate 10
+  n[8,c] = m[2,c] 
+  n[2,c] = m[8,c] 
+proximo
+para  L=1  ate 10  
+   n[L,4] =m[L,10] 
+  n[L,10] = m[L,4] 
+proximo
+  d = 10 
+para  L=1  ate 10  
+   n[L,d] = m[L,L] 
+   n[L,L] = m[L,d] 
+   d=d-1
+proximo 
+limpar
+escrever "Matriz original"
+para  L=1  ate 10  
+  para  c=1  ate 10
+   posicionar L+1, (c-1) *4 +1
+     escrever m[L,c]
+ proximo
+proximo
+posicionar 12,1
+escrever "Nova matriz"
+para  L=1  ate 10  
+  para  c=1  ate 10
+  posicionar L+12, (c-1) *4 +1
+      escrever n[L,c]
+proximo
+proximo
+posicionar 24,1
+escrever "pressione enter:"
+posicionar 24,17
+ler resp
+fim
+
+
+
+
+

@@ -1,0 +1,27 @@
+//prog algoritmo127
+variaveis
+numerico nota1, nota2, media 
+caracter nome 
+inicio
+limpar
+escrever "digite nome: " 
+posicionar 1, 14 
+ler nome 
+escrever "digite 1¦ nota: " 
+posicionar 2, 17   
+ler nota1 
+escrever "digite 2¦ nota: "
+posicionar 3, 17    
+ler nota2 
+posicionar 6, 1    
+media =  (nota1 + nota2)/ 2 
+se media >=7 entao
+  escrever nome,"   ",  media, " AP"  
+senao
+ se media < 3 entao
+    escrever nome,"   ",  media, " RP"  
+ senao
+    escrever  nome,"   ",  media, " PF"
+ fim_se
+fim_se  
+fim

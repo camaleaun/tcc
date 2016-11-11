@@ -1,0 +1,26 @@
+//prog algoritmo250
+variaveis
+numerico L, c, linha
+caracter resp
+inicio
+limpar
+linha=1
+para L=1 ate 10 
+ posicionar linha,1 
+ escrever  "Tabuada do: ", L  
+ para c=1 ate 10 passo 1
+  linha=linha+1  
+  posicionar linha,1
+  escrever  L, " x  ", c, " = ", L *c  
+ proximo
+ linha=linha+2  
+ se linha = 25 entao
+    posicionar 24,1
+    escrever "pressione enter:"
+    posicionar 24,17
+    ler resp
+    limpar
+    linha =1
+  fim_se
+proximo
+fim

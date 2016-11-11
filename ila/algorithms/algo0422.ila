@@ -1,0 +1,28 @@
+//prog algoritmo422
+variaveis
+numerico L,c,n, soma
+matriz numerico A[3,5]
+matriz numerico s[5]
+inicio
+limpar
+para L= 1 ate 3
+ para c =1 ate 5
+  escrever "digite elemento de A[", L, "][",c,"] "
+   ler n
+  A[L,c]=n
+  proximo
+proximo
+// Gera o vetor soma-coluna
+para c =1 ate 5
+  s[c] = 0
+  para L= 1 ate 3
+  s[c] = s[c] + A[L,c]  
+ proximo
+proximo
+limpar
+escrever "Vetor Soma-Coluna"
+para c =1 ate 5
+  posicionar 2, (c-1)*6 +1
+  escrever s[c]
+proximo
+fim

@@ -1,0 +1,44 @@
+//prog algoritmo323
+variaveis
+caracter tipo
+numerico qtd, qtdsocio, qtdnaosocio, qtdtotal, percsoc, valtotal
+inicio
+limpar
+qtdsocio = 0
+qtdnaosocio = 0
+qtdtotal = 0
+escrever "Digite a quantidade ou -999 para terminar: "
+ler qtd
+faca enquanto  (qtd <> -999 ) e ( qtdtotal < 2000 )
+   escrever "Digite o tipo de ingresso S ou NS "
+   ler tipo
+   se (tipo = "S") ou ( tipo = "s") entao
+       qtdsocio = qtdsocio + qtd
+       qtdtotal = qtdtotal + qtd
+   senao
+      se (tipo = "NS") ou ( tipo = "ns") entao
+         qtdnaosocio = qtdnaosocio + qtd
+         qtdtotal = qtdtotal + qtd
+     senao
+       escrever "Tipo Invalido!"
+    fim_se
+  fim_se
+  escrever "Digite a quantidade ou -999 para terminar: "
+   ler qtd
+fim_enquanto
+limpar
+escrever "Socio = ", qtdsocio
+posicionar 3,1
+escrever "Nao Socio = ", qtdnaosocio
+posicionar 5,1
+percsoc = qtdsocio * 100/ qtdtotal
+posicionar 7,1
+escrever "Percentual Socio =", percsoc
+posicionar 9,1
+escrever "Valor Socio = ",qtdsocio * 10
+posicionar 11,1
+escrever "Valor Nao Socio = ",qtdnaosocio * 20
+valtotal = qtdsocio * 10 + qtdnaosocio * 20
+posicionar 13,1
+escrever "Valor total = ",valtotal
+fim
