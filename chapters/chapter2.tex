@@ -2,29 +2,6 @@
 
 Para o entendimento e desenvolvimento da proposta conforme explícita nos objetivos gerais e específicos, alguns conceitos teóricos devem ser dispostos. Algoritmos do conceito ao modelo utilizado, variações de modelos algorítmicos e outros ambientes de estudo, ensino ou prática.
 
-\section{Algoritmos}
-
-A última das notas de Ada Lovelace, que foram republicadas em 1953\nocite{1253887}, apresenta os
-primeiros conceitos sobre programação, descrevendo um algoritmo. Desde então
-estes foram difundidos, sendo utilizados até a atualidade
-\cite{santiago2003etal}.
-
-Conforme \citeonline{medina2006etal} algoritmo é um termo mais amplo, sendo inclusive destinado a outras áreas e finalidades além da programação. As encontradas na literatura são interpretativas porém todas chegam ao mesmo resultado, um {\bfseries conjunto de instruções para a resolução de uma situação}.
-
-%Alguns autores afirmam que estas instruções mas afirmações são determinam instruções são passos detalhadas para a solução ou mesmo que tipo de situação, se especificamente um problema ou tarefas em geral.
-
-% TODO Introduzir conceitos de algoritmo
-
-\begin{itemize}
-\item Estruturas de Controle: como desvio condicional, laços de repetição;
-\item Tipos de Dados: o tipo de valor que será inserido na variável;
-\item Atribuições: inserir um valor em uma variável.
-\item Operações aritméticas: utilizadas para cálculos entre números e variáveis;
-\item Operações relacionais: para estabelecerem relação entre duas comparações;
-\item Variáveis: para armazenar algo na memória principal;
-\item Vetores: conjunto de variáveis com o mesmo nome, contendo um índice para diferenciá-las;
-\end{itemize}
-
 \section{Linguagem Natural}
 
 Com menor rigidez do que se faz necessário para uma máquina, esses conjuntos também podem ser descritos em uma linguagem humanamente mais natural. Numa conversa ou em uma explicação de rota de um destino ou uma receita culinária o entendimento ocorrerá. Por depender de formalidade e buscando a aproximação com a rigidez das linguagens de programação utiliza-se o idioma estruturado. Em nosso caso o português estruturado, mas há também o inglês estruturado e certamente outras \ifdraft{\cite{citar}}{\cite{medina2006etal}}.
@@ -37,6 +14,35 @@ Sua estrutura é E$\,\to\,$P$\,\to\,$S (entrada-programa-saída), podendo não h
 \section{Pseudo código ou linguagem}
 
 Visando ser uma ponte entre a linguagem natural e as linguagens de programação temos as pseudo-linguagem. Notadamente Portugol é evidenciada como a solução, pois desde \citeonline{saliba1992} é confirmada sua ampla utilização. Porém não há uma padronização existindo inúmeras variações, no entanto com muitas semelhanças entre si \ifdraft{\cite{citar}}{\cite{medina2006etal}}.
+
+\section{Algoritmos}
+
+A última das notas de Ada Lovelace, que foram republicadas em 1953\nocite{1253887}, apresenta os
+primeiros conceitos sobre programação, descrevendo um algoritmo. Desde então
+estes foram difundidos, sendo utilizados até a atualidade
+\cite{santiago2003etal}.
+
+Conforme \citeonline{medina2006etal} algoritmo é um termo mais amplo, sendo inclusive destinado a outras áreas e finalidades além da programação. As encontradas na literatura são interpretativas porém todas chegam ao mesmo resultado, um {\bfseries conjunto de instruções para a resolução de uma situação}.
+
+Como algoritmo é um conjunto de instruções pode-se dizer então que ele é também um programa de computador, apresentando um conjunto de operações e instruções específicas para a saída que se pretende \cite{medina2006etal}.
+
+%Alguns autores afirmam que estas instruções mas afirmações são determinam instruções são passos detalhadas para a solução ou mesmo que tipo de situação, se especificamente um problema ou tarefas em geral.
+
+%Como podemos perceber, um programa nada mais é que um tipo de algoritmo. Sua particularidade é que suas operações são específicas para o computador e restritas ao conjunto de instruções que o processador pode executar. Podemos considerar esse conjunto de instruções como a primeira linguagem de programação do computador, também chamada de linguagem de máquina.
+
+Para \citeonline{santiago2003etal} a estruturação do algoritmo com suas representações é dada da seguinte forma:
+
+\begin{itemize}
+
+\item Tipos de Dados: tipo de valores inserido nas variáveis;
+\item Variáveis: armazenagem na memória principal;
+\item Atribuições: definir valor numa variável;
+\item Operações aritméticas: utilizadas em cálculos entre números e variáveis;
+\item Estruturas de Controle: para fluxo, com desvio condicional e laços de repetição;
+\item Operações relacionais: estabelecem relação entre comparações;
+\item Vetores: variáveis com único nome, contendo um índice de posições.
+
+\end{itemize}
 
 % Com base nos dois parágrafos abaixo, reescrever utilizado como referência de embasamento os autores \cite{santiagodazzi2003}
 
@@ -54,7 +60,8 @@ Visando ser uma ponte entre a linguagem natural e as linguagens de programação
 %apenas a comprovação do correto funcionamento, mas também detectar e corrigir
 %com facilidade eventuais erros.
 
-\section{Compiladores e Interpretadores}
+\section{Tradutores}
+%Compiladores e Interpretadores
 
 %Um compilador traduz um programa descrito em uma linguagem de alto nível, mais
 %adequada aos seres humanos, para os códigos em uma linguagem de máquina, que
@@ -62,7 +69,11 @@ Visando ser uma ponte entre a linguagem natural e as linguagens de programação
 %compilação pode ser descrito como contendo as seguintes etapas: análise léxica, análise
 %sintática, análise semântica e geração de código.\cite{barbosa2009etal}
 
-Passando por um processo de entendimento de elementos mínimos no código, ignorando outros e agrupando em símbolos especificados, a compilação se inicia. Além dessa análise também é necessária a verificação se esses grupos estão em ordem ou outros erros possíveis. \citeonline{citar} descreve que código fonte de entrada termina tendo como saída o programa objeto, o compilador converte a linguagem simples em uma linguagem entendida pela máquina
+Neste caso tradutor é um programa com capacidade de fazer leitura em uma linguagem e traduzir para outra equivalente. Conforme  \citeoline{aho2006etal} existem dois principais tipos de tradutores: compiladores (figura X)[p.~16]{medina2006etal} e interpretadores (figura X)[p.~17]{medina2006etal}. Ilustradas suas diferenças nas figuras referenciadas o interpretador é executado resultando na tradução direta das intruções passo a passo \cite{citar}
+
+Passando por um processo de entendimento de elementos mínimos no código, ignorando outros e agrupando em símbolos especificados, a compilação se inicia. Além dessa análise também é necessária a verificação se esses grupos estão em ordem ou outros erros possíveis. \citeonline{citar} descreve que código fonte de entrada termina tendo como saída o programa objeto, o compilador converte a linguagem simples em uma linguagem entendida pela máquina.
+
+Passando por um processo de entendimento de elementos mínimos no código, ignorando outros e agrupando em símbolos especificados, a compilação se inicia. Além dessa análise também é necessária a verificação se esses grupos estão em ordem ou outros erros possíveis. \citeonline{citar} descreve que código fonte de entrada termina tendo como saída o programa objeto, o compilador converte a linguagem simples em uma linguagem entendida pela máquina. Explicado o processo do compilador de maneira simples e objetiva é preciso ainda nomear tecnicamente além de expor sua etapas, sendo suas principais as análises: Léxica, Sintática e Semântica.
 
 \begin{figure}[h]
   \caption{\ifdraft{\color{green}}{}Etapas de um compilador}\label{fig:compilador}
@@ -73,26 +84,55 @@ Passando por um processo de entendimento de elementos mínimos no código, ignor
 
 %\subsection{Análise Morfológica}
 %
-%\subsection{Análise Léxica}
-%
+\subsection{Análise Léxica}
+
+Também denominada \textit{scanner} é onde elementos mínimos, \text{tokens}, são identificados. Cada letra, número e outros caracteres (como pontuação e demais símbolos)  além do espaço após reconhecidos são então agrupados com lexemas em: palavras reservadas, comandos, conjunto de texto, nome de variáveis, inícios e fins do algoritmos ou de blocos nele
+
 %\subsection{Tokenização e Parseamento}
-%
-%\subsection{Análise Sintática}
-%
+
+\subsection{Análise Sintática}
+
+Esses lexemas devem estar numa ordem que tenha sentido para sua execução correta.
+
 %\subsection{Análise Semantica}
 
-Explicado o processo do compilador de maneira simples e objetiva é preciso ainda nomear tecnicamente além de expor sua etapas. Os elementos mínimos são os tokens, numa instrução cada letra, número e outros caracteres (como pontuação e demais símbolos)  além do espaço são identificados, essa etapa é denominada {\bfseries Análise Léxica}.
+\section{Ferramentas Existentes}
+% Ferramentas para prática de algoritmos
 
-Esse elementos mínimos definidos na etapa anterior são então agrupados, em: palavras reservadas, comandos, conjunto de texto, nome de variáveis, inícios e fins do algoritmos ou de blocos nele, que juntamente com a análise anterior, denomina-se {\bfseries Análise Morfológica}. Por fim esse grupos devem estar numa ordem que tenha sentido para sua execução correta, sendo então a {\bfseries Análise Sintática}.
+\begin{itemize}
 
-\begin{figure}[h]
-  \ifdraft{\color{green}}{}\caption{\ifdraft{\color{green}}{}Interpretador proposto}\label{fig:analisador}
-  \centering
-\includegraphics[width=\textwidth,height=10cm,keepaspectratio]{figures/interpretador-proposto.pdf}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Autor, adaptado de \citeonline{esmin1998}.}
-\end{figure}
+\item \textbf{
 
-Tendo as mesmas primeiras etapas análoga ao compilador o interpretador não necessita a saída compilada, sendo imediatamente executado após a formação da árvore gramatical \cite{citar}
+\item \textbf{Construtor}: Desenvolvido pelo Centro Educacional de Informática Aplicada do SENAC (Rio de Janeiro), é a primeira ferramenta encontrada para uso em plataforma Windows e tem a vantagem acompanhar o livro ``Construção de Algoritmos`` de \citeonline{fernandes1999etal}.
+
+\item \textbf{VisuAlg}: Desenvolvida por Claudio Morgado de Souza profissional programador e analista bem como professor universitário, é utilizada tanto em cursos técnicos quanto em meio universitário. A facilidade de obtenção do seu executável para Windows (não necessária instalação), documentação e simplicidade, sem perder funções úteis para iniciantes, são grandes atrativos \cite{souza2013etal}.
+
+\item \textbf{Web Portugol}: Desenvolvida por pesquisadores na UNIVALI permite o acesso via navegadores que tenham integração com Java, desde que o mesmo também esteja instalado no computadors \cite{souza2013etal}.
+
+\end{itemize}
+
+Abaixo um comparativo de pontos que ressaltam como fatores determinantes em escolha da opção ao uso.
+
+\begin{quadro}[h]
+\centering
+  \caption{Comparativo das ferramentas}\label{qua:compare-tools}
+\begin{tabular}{| r | l | l | l | l |}\hline
+& VisuAlg & Web Portugol & Portugol/Plus & Contrutor \\ \hline
+Plataforma & Windows & Web (Java Applet) & DOS & Windows \\ \hline
+Licença & \textit{freeware} & \textit{open source} & \textit{open source} & \textit{open source} \\ \hline
+Instituição &  & UNIVALLI & UNOESC & SENAC \\ \hline
+Linguagem &  & Java &  &  \\ \hline
+\end{tabular}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+\end{quadro}
+
+Desenvolvida por \citeonline{esmin1998} quando vinculado a UNOESC o \textbf{Portugol/Plus} é a mais antiga opção encontrada no Brasil. Merecendo destaque por ser comumente referenciada por outros autores inclusive quando tratam sobre desenvolvimento de novas soluções. Porém por ser em plataforma \textit{Disk Operating System (DOS)}, inclusive com interface gráfica foi desconsiderada no levantamento acima.
+
+Ao delimitar a quantidade de itens outras também não foram listadas, alguns casos o acesso ao programa para testes não estava disponível ou menor relevância na literatura. No entanto  merecem menção: PascalX, por Athur Vargas Lopes da ULBRA; \textbf{Web-UNERJOL}\nocite{ferrandin2015}, utilizando UNERJOL os dois por acadêmico na UNERJ com colaboração.
+%PascalX\nocite{http://www.ulbra.tche.br/~avl/home.htm}
+
+Outras mais não foram consideradas por fugirem do escopo ao utilizar robótica, jogos, foco em estrutura de dados ou similares: Guido VanRobot, Robot Prog, Kids Ruby, Fut Code, TBC-AED. Eram pretendidas somente ferramentas com pseudo-linguagem algorítmica em português, preferencialmente Portugol, partindo novamente do Editor UAL como referencial.
+%TBC-AED: por pesquisadores da Universidade Federal de Lavras/Departamento de Ciências da Computação em Minas Gerais
 
 \section{UAL - Ensino com Livro Texto}
 
@@ -130,40 +170,7 @@ fim
 
 Todo o projeto está pautado neste algoritmo simplista, porém se nota a diferença nos blocos de início e fim do programa, além de somente em UAL ter o nome do mesmo (solucionado com uso de linha comentada) e o comando de limpeza somente necessário em ILA. As chamadas de escrita em tela também têm sua palavra reservada diferente. Nenhuma delas delimita o argumento por parênteses e UAL exige ponto e vírgula ao final. As duas não são sensíveis no uso de letras maiúsculas ou minúsculas nas palavras chaves \cite{citar}.
 
-\section{Ferramentas Existentes}
-% Ferramentas para prática de algoritmos
-
-\begin{itemize}
-
-\item \textbf{Portugol/Plus}: Desenvolvida por \citeonline{esmin1998} quando vinculado a UNOESC, é a mais antiga opção encontrada no Brasil. Utiliza ainda em plataforma Disk Operating System (DOS), inclusive com interface gráfica. Comumente referenciada por outros autores inclusive quando são sobre desenvolvimento de novas soluções.
-
-\item \textbf{Construtor}: Desenvolvido pelo Centro Educacional de Informática Aplicada do SENAC (Rio de Janeiro), é a primeira ferramenta encontrada para uso em plataforma Windows e tem a vantagem acompanhar o livro ``Construção de Algoritmos`` de \citeonline{fernandes1999etal}.
-
-\item \textbf{VisuAlg}: Desenvolvida por Claudio Morgado de Souza profissional programador e analista bem como professor universitário, é utilizada tanto em cursos técnicos quanto em meio universitário. A facilidade de obtenção do seu executável para Windows (não necessária instalação), documentação e simplicidade, sem perder funções úteis para iniciantes, são grandes atrativos \cite{souza2013etal}.
-
-\item \textbf{Web Portugol}: Desenvolvida por pesquisadores na UNIVALI permite o acesso via navegadores que tenham integração com Java, desde que o mesmo também esteja instalado no computadors \cite{souza2013etal}.
-
-\end{itemize}
-
-Abaixo um comparativo de pontos que ressaltam como fatores determinantes em escolha da opção ao uso.
-
-\begin{quadro}[h]
-\centering
-  \caption{Comparativo das ferramentas}\label{qua:compare-tools}
-\begin{tabular}{| r | l | l | l | l |}\hline
-& VisuAlg & Web Portugol & Portugol/Plus & Contrutor \\ \hline
-Plataforma & Windows & Web (Java Applet) & DOS & Windows \\ \hline
-Licença & \textit{freeware} & \textit{open source} & \textit{open source} & \textit{open source} \\ \hline
-Instituição &  & UNIVALLI & UNOESC & SENAC \\ \hline
-Linguagem &  & Java &  &  \\ \hline
-\end{tabular}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
-\end{quadro}
-
-Ao delimitar a quantidade de itens algumas não foram listadas mas também merecem menção: \textbf{AMBAP}, pelo Departamento de Tecnologia da Informação da Universidade Federal de Alagoas (TCI/UFAL); \textbf{TBC-AED}, por pesquisadores da Universidade Federal de Lavras/Departamento de Ciências da Computação em Minas Gerais; PascalX, por Athur Vargas Lopes da ULBRA; \textbf{Web-UNERJOL}\nocite{ferrandin2005etal}, por acadêmico na UNERJ.
-%PascalX\nocite{http://www.ulbra.tche.br/~avl/home.htm}
-
-Outras mais não foram consideradas por fugirem do escopo ao utilizar robótica, jogos ou similares: Guido VanRobot, Robot Prog, Kids Ruby, Fut Code. Eram pretendidas somente ferramentas com pseudo-linguagem algorítmica em português, preferencialmente Portugol, partindo novamente do Editor UAL como referencial.
+Sendo o escopo das apresentações na estruturas de um algoritmo o escopo da linguagem \cite[p.~22]{spallanzani2000etal}, há diferenças entre UAL e ILA também quando quanto sua abrangência. Não tendo a UAL estruturas como matrizes n-dimensionais, funções com ou sem passagem de parâmetros, novos comandos para tomada de decisões e controle de repetições, novos tipos de dados, conversores de tipos.
 
 \ifdraft{}{
 %\subsection{Ensino Aprendizagem}
