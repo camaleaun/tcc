@@ -191,3 +191,17 @@
 \def\ifdraft{\ifdim\overfullrule>\z@
   \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
 \makeatother
+
+% Novo list of (listings) para QUADROS
+
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space}
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
