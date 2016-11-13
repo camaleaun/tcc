@@ -109,13 +109,44 @@
 \lstdefinelanguage{portugol}
   {morekeywords={Algoritmo,Var,inteiro,Inicio,escreva,Fim}
 }
+\lstdefinelanguage{ual}
+{
+  morekeywords={
+    prog,
+    imprima,
+    fimprog
+  },
+  sensitive=false,
+  morecomment=[l]{\#},
+  morestring=[b]",
+}
+\lstdefinelanguage{ila}
+{
+  morekeywords={
+    inicio,
+    limpar,
+    escrever,
+    fim
+  },
+  sensitive=false,
+  morecomment=[l]{//},
+  morestring=[b]"
+}
 \lstset{
-  breakatwhitespace=false,
-  breaklines=true,
-  escapeinside={\%*}{*)},
+%  breakatwhitespace=false,
+%  escapeinside={\%*}{*)},
   keywordstyle=\bfseries\color{black},
-  language=portugol,
+%  language=portugol,
   showstringspaces=false,
+  commentstyle=\color{darkgrey},
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+%    breakatwhitespace=true,
+%    tabsize=1,
+  columns=fullflexible,
+  aboveskip=-0.5 \baselineskip,
+  belowskip=-0.8 \baselineskip,
+%  resetmargins=true,
 }
 % ---% ---
 
@@ -148,6 +179,7 @@ a obtenção do grau de Bacharel em Sistemas de Informação}
 \definecolor{blue}{rgb}{.16,.02,.77}
 \definecolor{green}{rgb}{0,.4,0}
 \definecolor{red}{rgb}{1,0,0}
+\definecolor{darkgrey}{rgb}{.25,.25,.25}
 
 % informações do PDF
 \makeatletter

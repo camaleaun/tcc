@@ -7,6 +7,13 @@ Nesse protótipo buscou-se eliminar algumas deficiências básica que existem em
 
 Inclusive há caso em que a ferramenta inicialmente utilizada não é capaz de executar alguns algoritmos mais avançados. E isto leva a necessidade do uso de outro software na mesma disciplina até com possivelmente uma nova linguagem (por exemplo a linguagem de programação C ou C++), devido a está necessidade alguns educadores optam por esta sendo a única ferramenta utilizada, ignorando linguagem Portugol. Espera-se que diferente o UAL essa limitação possa realmente ser concluída em trabalho futuros, conforme proposto nas conclusões.
 
+\begin{figure}[h]
+  \caption{\ifdraft{\color{green}}{}Caso de uso Aluno}\label{fig:usecase}
+  \centering
+\includegraphics[width=.8\textwidth,height=10cm,keepaspectratio]{figures/caso-de-uso.pdf}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+\end{figure}
+
 Essencialmente a aplicação foi desenvolvida em linguagens Web, o JavaScript sendo a linguagem de programação, HTML como linguagem de marcação e CSS como estilização. Nesse modelo já existem editores de código fonte de linguagens de programação,dos mais utilizados temos ACE\nocite{ace} e o CodeMirror\nocite{codemirror}, optado pelo primeiro pois em análise entendeu-se como sendo mais prático para o uso e criação do modelo da linguagem. Considerou-se a criação do modelo gramatical para destaque da sintaxe como dificuldade relativamente baixa.
 
 \begin{figure}[h]
@@ -28,10 +35,12 @@ Como saída o interpretada o JS-Interpreter\nocite{jsinterpreter} foi encontrado
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
 \fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-desktop.pdf}}
-  \caption*{\footnotesize Fonte: Autor}
+  \caption*{\footnotesize Fonte: Produção do autor.}
 \end{figure}
 
 Como interface gráfica foi mantido o mínimo necessário. Somente o editor de texto e um botão para executar. Foram visualizadas renderizações e tamanhos de telas variados, computadores (Figura \ref{fig:ui-pc}), tablets, smartphones (Figura \ref{fig:ui-phone}), etc. Seguindo conceitos do Google Material Design foi adicionada uma barra no topo como botão para menu o nome da aplicação, denominada Bizu, e um botão flutuante no canto inferior direito como ícone ``play'' para a execução do algoritmo.
+
+De acordo com o \citeonline{dicionarioinformal2016} a gíria ``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos. Os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo.
 
 \begin{figure}[h]
   \caption{Interface Smartphone}\label{fig:ui-phone}
