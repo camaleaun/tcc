@@ -29,15 +29,53 @@ Inclusive há caso em que a ferramenta inicialmente utilizada não é capaz de e
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
 \end{figure}
 
-\subsection{Editor de Código ACE}
+\section{Editor de Código ACE}
 
 No modelo para navegador já existem editores de código fonte de linguagens de programação,dos mais utilizados temos ACE\nocite{ace} e o CodeMirror\nocite{codemirror}, optado pelo primeiro pois em análise entendeu-se como sendo mais prático para o uso e criação do modelo da linguagem. Considerou-se a criação do modelo gramatical para destaque da sintaxe como dificuldade relativamente baixa.
 
-\subsection{Acorn}
+\section{Acorn}
 
 Para resultar na árvore sintática encontrou-se o ACORN\nocite{acorn} um parser já escrito em JavaScript. De modo trabalhoso foi necessário adaptar o código fonte para compreender a estrutura do algorítmos proposto, principalmente devido à não utilização de parênteses para o comando de impressão em tela na linguagem UAL.
 
-\subsection{JS-Interpreter}
+\begin{quadro}[h]
+\centering
+  \caption{Árvore sintática gerada pelo Acorn modificado}\label{qua:compare-tools}
+\begin{lstlisting}[style=json,frame=single]
+{
+  "type": "Program",
+  "start": 0,
+  "end": 61,
+  "body": [
+    {
+      "type": "PrintStatement",
+      "start": 19,
+      "end": 53,
+      "print": {
+        "type": "CallPrint",
+        "start": 27,
+        "end": 52,
+        "arguments": {
+          "type": "Literal",
+          "start": 27,
+          "end": 52,
+          "value": "Aprendendo Algoritmo!!!",
+          "raw": "\"Aprendendo Algoritmo!!!\""
+        }
+      }
+    }
+  ],
+  "id": {
+    "type": "Identifier",
+    "start": 5,
+    "end": 16,
+    "name": "algoritmo11"
+  }
+}
+\end{lstlisting}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+\end{quadro}
+
+\section{JS-Interpreter}
 
 Como saída o interpretada o JS-Interpreter\nocite{jsinterpreter} foi encontrado como a única opção. Ele já se utiliza do mesmo ACORN mencionado acima e interpreta a própria linguagem JavaScript. Pelo mesmo motivo citado acima, falta de parênteses no comando, se tornou uma tarefa um tanto dispendiosa fazer com que ele se adaptasse ao modelo.
 
@@ -49,6 +87,8 @@ Como saída o interpretada o JS-Interpreter\nocite{jsinterpreter} foi encontrado
 \fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-interpretador.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor.}
 \end{figure}
+
+\section{Interface Gráfica}
 
 Como interface gráfica foi mantido o mínimo necessário. Somente o editor de texto e um botão para executar. Foram visualizadas renderizações e tamanhos de telas variados, computadores (Figura \ref{fig:ui-pc}), tablets, smartphones (Figura \ref{fig:ui-phone}), etc. Seguindo conceitos do Google Material Design foi adicionada uma barra no topo como botão para menu o nome da aplicação, denominada Bizu, e um botão flutuante no canto inferior direito como ícone ``play'' para a execução do algoritmo.
 
@@ -71,8 +111,6 @@ De acordo com o \citeonline{dicionarioinformal2016} a gíria ``bizu'' teve orige
 \fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-smartphone.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor.}
 \end{figure}
-
-\section{Interface Gráfica}
 
 Facilitando a tarefa de construção da interface foi utilizada a biblioteca Material Design Lite (MDL)\nocite{mdl} disponibilizada oficialmente pelo Google. As cores foram escolhidas pela funcionalidade disponível no site da biblioteca.
 

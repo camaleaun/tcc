@@ -69,43 +69,75 @@ Para \citeonline{santiago2003etal} a estruturação do algoritmo com suas repres
 %compilação pode ser descrito como contendo as seguintes etapas: análise léxica, análise
 %sintática, análise semântica e geração de código.\cite{barbosa2009etal}
 
-Neste caso tradutor é um programa com capacidade de fazer leitura em uma linguagem e traduzir para outra equivalente. Conforme  \citeonline{aho2006etal} existem dois principais tipos de tradutores: compiladores (figura X)[p.~16]{medina2006etal} e interpretadores (figura X)[p.~17]{medina2006etal}. Ilustradas suas diferenças nas figuras referenciadas o interpretador é executado resultando na tradução direta das intruções passo a passo \cite{citar}
+Neste caso tradutor é um programa com capacidade de fazer leitura em uma linguagem e traduzir para outra equivalente. Conforme \citeonline{aho2007etal} existem dois principais tipos de tradutores: compiladores e interpretadores. Ilustrada a diferenciação entre elas na figura \ref{fig:versus}, a partir de uma mesma fonte o compilador à esquerda e o interpretador a direita demonstra que o interpretador tem sua execução traduzindo diretamente cada instruçao.
 
-Passando por um processo de entendimento de elementos mínimos no código, ignorando outros e agrupando em símbolos especificados, a compilação se inicia. Além dessa análise também é necessária a verificação se esses grupos estão em ordem ou outros erros possíveis. \citeonline{citar} descreve que código fonte de entrada termina tendo como saída o programa objeto, o compilador converte a linguagem simples em uma linguagem entendida pela máquina.
+\begin{figure}[h]
+  \caption{\ifdraft{\color{green}}{}Compilador \textit{versus} Interpretador}\label{fig:cversus}
+  \centering
+\includegraphics[width=\textwidth,height=10cm,keepaspectratio]{figures/compilador-interpretador.pdf}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, adaptado de \citeonline{medina2006etal}.}
+\end{figure}
 
-Passando por um processo de entendimento de elementos mínimos no código, ignorando outros e agrupando em símbolos especificados, a compilação se inicia. Além dessa análise também é necessária a verificação se esses grupos estão em ordem ou outros erros possíveis. \citeonline{citar} descreve que código fonte de entrada termina tendo como saída o programa objeto, o compilador converte a linguagem simples em uma linguagem entendida pela máquina. Explicado o processo do compilador de maneira simples e objetiva é preciso ainda nomear tecnicamente além de expor sua etapas, sendo suas principais as análises: Léxica, Sintática e Semântica.
+Passando por um processo de entendimento de elementos mínimos no código, ignorando outros e agrupando em símbolos especificados, a compilação se inicia. Além dessa análise também é necessária a verificação se esses grupos estão em ordem ou outros erros possíveis. \citeonline{delamaro2004} descreve que código fonte de entrada termina tendo como saída o programa objeto, o compilador converte a linguagem simples em uma linguagem entendida pela máquina. Explicado o processo do compilador de maneira simples e objetiva é preciso ainda nomear tecnicamente além de expor sua etapas, sendo suas principais as análises: Léxica, Sintática e Semântica.
 
 \begin{figure}[h]
   \caption{\ifdraft{\color{green}}{}Etapas de um compilador}\label{fig:compilador}
   \centering
 \includegraphics[width=\textwidth,height=10cm,keepaspectratio]{figures/etapas-compilador.pdf}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Autor, adaptado de \citeonline{ferrandin2005etal}.}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, adaptado de \citeonline{ferrandin2005etal}.}
 \end{figure}
 
 %\subsection{Análise Morfológica}
 %
 \subsection{Análise Léxica}
 
-Também denominada \textit{scanner} é onde elementos mínimos, \textit{tokens}, são identificados. Cada letra, número e outros caracteres (como pontuação e demais símbolos)  além do espaço após reconhecidos são então agrupados com lexemas em: palavras reservadas, comandos, conjunto de texto, nome de variáveis, inícios e fins do algoritmos ou de blocos nele
+Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo onde elementos mínimos, \textit{tokens}, são identificados. Cada letra, número e outros caracteres (como pontuação e demais símbolos)  além do espaço após reconhecidos são então agrupados com lexemas em: palavras reservadas, comandos, conjunto de texto, nome de variáveis, inícios e fins do algoritmos ou de blocos nele. No quadro \ref{qua:print} é dado uma linha de algoritmo para na tabela \ref{tab:lexemas} apresentar os lexemas indentificados.
 
-%\subsection{Tokenização e Parseamento}
+\begin{quadro}[h]
+\centering
+  \caption{Exemplo para entendimento de tradutor}\label{qua:print}
+\begin{lstlisting}[language=ual,frame=single]
+  imprima "Aprendendo Algoritmo";
+\end{lstlisting}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+\end{quadro}
+
+\begin{table}[h]
+\centering
+  \caption{Lexemas encontrados no exemplo preposto}\label{tab:lexemas}
+\begin{tabular}{ c | l }\hline
+\textbf{Lexema} & \textbf{Classificação} \\ \hline
+\texttt{imprima} & comando de impressão \\ \hline
+\texttt{"Aprendendo Algoritmo"} & conjunto literal de texto \\ \hline
+\texttt{;} & caractere de encerramento de expressão \\ \hline
+\end{tabular}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+\end{table}
 
 \subsection{Análise Sintática}
 
-Esses lexemas devem estar numa ordem que tenha sentido para sua execução correta.
+Ou \textit{scanner}, recebe a sequência de lexemas da análise anterior e determina se são elementos estruturais pertencentes à linguagem desejada, exposto por \citeonline{delamaro2004}. São essas estruturas: expressões aritméticas, comandos de atribuição ou declarações de procedimentos e as relações entre eles, garantindo que seja correto sintaticamente. Considerendo o mesmo exemplo do quadro X, a árvore que seria produzida é ilustrada na Figura X abaixo.
 
-%\subsection{Análise Semantica}
+\subsection{Análise Semântica}
+
+Esta análise verifica o ``significado'' de comandos, ao tratar de aspectos relacionados a sua ordem para que tenha sentido dentro do definidido pela gramática da linguagem para a correta execução. É possível que um programa esteje em acordo com a sintáxe gramatical, porém apresente erros quanto a semântica. Por exemplo se só for possível imprimir conjuntos literais de texto, variáveis, conjuntos dessas ou operações aritméticas entre parênteses e for criado como impressão direta de um número.
 
 \section{Ferramentas Existentes}
 % Ferramentas para prática de algoritmos
 
 \begin{itemize}
 
-\item \textbf{Construtor}: Desenvolvido pelo Centro Educacional de Informática Aplicada do SENAC (Rio de Janeiro), é a primeira ferramenta encontrada para uso em plataforma Windows e tem a vantagem acompanhar o livro ``Construção de Algoritmos`` de \citeonline{fernandes1999etal}.
+\item \textbf{ILA + AMBAP}: Desenvolvida por \citeonline{evaristo2000} o Interpretador de Linguagem Algorítmica (ILA) é um intepretador via linha de comando no qual o AMBAP - AMBiente para Aprenzidadeo e Programaçao utitilizou em seu editor \cite{citar}.
+
+\item \textbf{UAL + EditorUAL}: Desenvolvido em um trabalho na UNESA era basicamente compilador via linha de comando, desenvolvido em Haskel para linux. Ele foi posteriormente portado para Windows, e neste recebeu um editor próprio Editor UAL \cite{citar}.
+
+Todos os algoritmos propostos para execução computadorizada são impressos nesta sintaxe variante do Portugol. Porém para a desenvolvida por \citeonline{evaristo2000} o Interpretador de Linguagem Algorítmica (ILA) \cite{citar}.
 
 \item \textbf{VisuAlg}: Desenvolvida por Claudio Morgado de Souza profissional programador e analista bem como professor universitário, é utilizada tanto em cursos técnicos quanto em meio universitário. A facilidade de obtenção do seu executável para Windows (não necessária instalação), documentação e simplicidade, sem perder funções úteis para iniciantes, são grandes atrativos \cite{souza2013etal}.
 
 \item \textbf{Web Portugol}: Desenvolvida por pesquisadores na UNIVALI permite o acesso via navegadores que tenham integração com Java, desde que o mesmo também esteja instalado no computadors \cite{souza2013etal}.
+
+\item \textbf{Construtor}: Desenvolvido pelo Centro Educacional de Informática Aplicada do SENAC (Rio de Janeiro), é a primeira ferramenta encontrada para uso em plataforma Windows e tem a vantagem acompanhar o livro ``Construção de Algoritmos`` de \citeonline{fernandes1999etal}.
 
 \end{itemize}
 
@@ -124,9 +156,9 @@ Linguagem &  & Java &  &  \\ \hline
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
 \end{quadro}
 
-Desenvolvida por \citeonline{esmin1998} quando vinculado a UNOESC o \textbf{Portugol/Plus} é a mais antiga opção encontrada no Brasil. Merecendo destaque por ser comumente referenciada por outros autores inclusive quando tratam sobre desenvolvimento de novas soluções. Porém por ser em plataforma \textit{Disk Operating System (DOS)}, inclusive com interface gráfica foi desconsiderada no levantamento acima.
+Desenvolvida por \citeonline{esmin1998} quando vinculado a UNOESC o \textbf{Portugol/Plus} é a mais antiga opção encontrada no Brasil. Merecendo destaque por ser comumente referenciada por outros autores, inclusive quando tratam sobre desenvolvimento de novas soluções. Porém por ser em plataforma \textit{Disk Operating System (DOS)}, inclusive com interface gráfica foi desconsiderada no levantamento acima.
 
-Ao delimitar a quantidade de itens outras também não foram listadas, alguns casos o acesso ao programa para testes não estava disponível ou menor relevância na literatura. No entanto  merecem menção: PascalX, por Athur Vargas Lopes da ULBRA; \textbf{Web-UNERJOL}\nocite{ferrandin2015}, utilizando UNERJOL os dois por acadêmico na UNERJ com colaboração.
+Ao delimitar a quantidade de itens outras também não foram listadas, alguns casos o acesso ao programa para testes não estava disponível ou menor relevância na literatura. No entanto  merecem menção: \textbf{PascalX}, por Athur Vargas Lopes da ULBRA; \textbf{Web-UNERJOL}\nocite{ferrandin2015}, utilizando UNERJOL os dois por acadêmico na UNERJ com colaboração.
 %PascalX\nocite{http://www.ulbra.tche.br/~avl/home.htm}
 
 Outras mais não foram consideradas por fugirem do escopo ao utilizar robótica, jogos, foco em estrutura de dados ou similares: Guido VanRobot, Robot Prog, Kids Ruby, Fut Code, TBC-AED. Eram pretendidas somente ferramentas com pseudo-linguagem algorítmica em português, preferencialmente Portugol, partindo novamente do Editor UAL como referencial.
@@ -134,11 +166,7 @@ Outras mais não foram consideradas por fugirem do escopo ao utilizar robótica,
 
 \section{UAL - Ensino com Livro Texto}
 
-O livro ``Introdução à programação: 500 algoritmos resolvidos'' tem um grande apelo por seu elevado número resoluções como seu título deixa claro. Isso motiva os educadores utilizarem como livro texto base de disciplinas de ensino de Lógica da Programação \cite{citar}.
-
-Neste livro é relatado o desenvolvimento da Linguagem UAL em um trabalho desenvolvido na UNESA. Era basicamente compilador via linha de comando, desenvolvido em Haskel para linux. Ele foi posteriormente portado para sistema operacional proprietário mais popular, e para este recebeu um editor próprio Editor UAL \cite{citar}.
-
-Todos os algoritmos propostos para execução computadorizada são impressos nesta sintaxe variante do Portugol. Porém acompanha uma mídia ótica que contém os exercícios nesta e também para a desenvolvida por \citeonline{evaristo2000} o Interpretador de Linguagem Algorítmica (ILA) \cite{citar}.
+O livro ``Introdução à programação: 500 algoritmos resolvidos'' tem um grande apelo por seu elevado número resoluções como seu título deixa claro. Isso motiva os educadores utilizarem como livro texto base de disciplinas de ensino de Lógica da Programação \cite{citar}. Neste livro todos os algoritmos propostos para execução computadorizada estão impressos na sintexe UAL, variante do Portugol. acompanha uma mídia ótica que contém os exercícios nesta e também ILA.
 
 %\the\textwidth
 %455.0pt
@@ -152,14 +180,14 @@ Todos os algoritmos propostos para execução computadorizada são impressos nes
 \multicolumn{1}{|c|}{\textbf{Em UAL}} & \multicolumn{1}{|c|}{\textbf{Em ILA}} \\ \hline
 \begin{lstlisting}[language=ual]
 prog algoritmo11
-  imprima "Aprendendo prog!!!";
+  imprima "Aprendendo Algoritmo!!!";
 fimprog
 \end{lstlisting} &
 \begin{lstlisting}[language=ila]
 //prog algoritmo11
 inicio
   limpar
-  escrever "Aprendendo inicio!!!"
+  escrever "Aprendendo Algoritmo!!!"
 fim
 \end{lstlisting} \\ \hline
 \end{tabular}
