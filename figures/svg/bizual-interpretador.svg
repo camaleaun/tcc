@@ -107,11 +107,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7653836"
-     inkscape:cx="571.31527"
-     inkscape:cy="61.381644"
+     inkscape:zoom="1.5307672"
+     inkscape:cx="266.37112"
+     inkscape:cy="115.11557"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5760"
      showgrid="false"
      inkscape:window-width="1855"
      inkscape:window-height="1056"
@@ -132,7 +132,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -244,9 +244,9 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:111.00000143%;font-family:serif;-inkscape-font-specification:serif;text-align:center;letter-spacing:0.22606428px;text-anchor:middle;fill:#000000">Árvore</tspan><tspan
            id="tspan4918"
            sodipodi:role="line"
-           x="-16.820356"
+           x="-16.820354"
            y="42.979389"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:111.00000143%;font-family:serif;-inkscape-font-specification:serif;text-align:center;letter-spacing:0.22606428px;text-anchor:middle;fill:#000000">Gramatical</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:111.00000143%;font-family:serif;-inkscape-font-specification:serif;text-align:center;letter-spacing:0.22606428px;text-anchor:middle;fill:#000000">Sintática</tspan></text>
       <text
          sodipodi:linespacing="111%"
          id="text4906"

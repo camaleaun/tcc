@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         command: 'pdflatex paper && bibtex paper && pdflatex paper && pdflatex paper'
       },
       clean: {
-        command: 'rm *.aux *.bbl *.blg *.idx *.log *.toc *.lot *.lof'
+        command: 'rm *.aux *.bbl *.blg *.idx *.log *.toc *.lot *.lof *.loq'
       }
     },
 
