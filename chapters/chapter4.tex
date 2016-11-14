@@ -18,9 +18,35 @@ Inclusive há caso em que a ferramenta inicialmente utilizada não é capaz de e
 
 % NOTE Seguindo o modelo de \citeonline{silva2013} de um AVA
 
+O desenvolvimento de \textit{software} antes de iniciar a códificação algumas esta[as são esperadas e recomendadas para maior acertividade (qualidade, orçamento, prazos). Análise requisitos prioriza e classifica os pontos aos quais a aplicação se pretende solucionar.
+
 \subsection{Requisitos Funcionais}
 
+\begin{enumerate}
+
+\item Permitir ao aluno edição de código
+
+\item Permitir ao aluno abrir arquivos de texto
+
+\item Permitir salvar o arquivo alterado
+
+\item Permitir visualizar a simulação do programa
+
+\end{enumerate}
+
 \subsection{Requisitos Não Funcionais}
+
+\begin{enumerate}
+
+\item O programa deve prezar pelo menor tamanho possível nos arquivos
+
+\item O sistema deverá rodar em navegador (\textit{browser}) moderno
+
+\item Deverá ter interface minimalista, mas visualmente agradável
+
+\item Permitir visualizar a simulação do programa
+
+\end{enumerate}
 
 \begin{figure}[h]
   \caption{\ifdraft{\color{green}}{}Caso de uso Aluno}\label{fig:usecase}
@@ -32,6 +58,34 @@ Inclusive há caso em que a ferramenta inicialmente utilizada não é capaz de e
 \section{Editor de Código ACE}
 
 No modelo para navegador já existem editores de código fonte de linguagens de programação,dos mais utilizados temos ACE\nocite{ace} e o CodeMirror\nocite{codemirror}, optado pelo primeiro pois em análise entendeu-se como sendo mais prático para o uso e criação do modelo da linguagem. Considerou-se a criação do modelo gramatical para destaque da sintaxe como dificuldade relativamente baixa.
+
+Em tecnologia há os chamados \textit{playground} (área de lazer), que são chamadas áreas para experimentações com determinada ferramenta ou tecnologia. No caso do editor ACE é disponibilizado uma ``pia de cozinha'' (\textit{Kitchen Sink}\nocite{kitchensink}) conforme figura \ref{fig:ace-kitchensink}, onde o editor embutido pode ser modificado através de um menu lateral quanto a linguagem ou tema e outras de suas várias opções.
+
+\begin{figure}[h]
+  \caption{\ifdraft{\color{green}}{}Ace \textit{Kitchen Sink}}\label{fig:ace-kitchensink}
+  \centering
+\includegraphics[width=\textwidth,keepaspectratio]{figures/ace-kitchensink.pdf}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Captura de tela da parte visível no navegador.}
+\end{figure}
+
+Inicialmente as funcionalidades pretendidas são todas supridas e outra mais levam a esta ser uma opção útil para evolução da aplicação em trabalhos futuros. Ignorando as duas que dizem respeito ao destacamento de sintaxe em mais de 110 linguagens (porem custumizável, que permitiu adicionar UAL) e mais de 20 temas (também personalizado apra o preto com negrito nas palavras reservadas, como o Editor UAL), as outras seguem listadas:
+
+\begin{itemize}
+
+\item Identação automática;
+\item Permite documentos com muitas linhas;
+\item Atalhos de teclado personalizáveis;
+\item Localizar e substituir, podendo utilizar expressões regulares;
+\item Alternar entre tabulação suave (espaços) ou tabulação real;
+\item Exibir caracteres ocultos;
+\item Arrastar e soltar utilizando mouse;
+\item Limitação de colunas no texto, com quebra;
+\item Retrair ou expantir código/
+\item Cursores e seleção múltiplas;
+\item Checagem em tempo real para algumas linguagens/
+\item Funcionalidade de recortar, copiar e colar.
+
+\end{itemize}
 
 \section{Acorn}
 
@@ -120,7 +174,83 @@ Todo o código foi desenvolvido em repositório disponível no github e quando c
 
 \section{\textit{AppCache}}
 
-Desenvolvido pela consórcio criado para o desenvolvimento do HTML5 veio suprir a necessidade de armazenamento avançao de arquivos utilizados na aplicação web. Utiliza apenas um arquivo de texto onde lista todos os arquivos de imagem, estilização, scripts de programação, entre outros. Esse arquivo declarado manifesto deve ser desclarado como atributo no etiqueta de abertura do html.
+Desenvolvido pela consórcio criado para o desenvolvimento do HTML5 veio suprir a necessidade de armazenamento avançado de arquivos utilizados na aplicação web. Utiliza apenas um arquivo de texto onde lista todos os arquivos de imagem, estilização, scripts de programação, entre outros (ver quadro \ref{qua:html-root}). Esse arquivo declarado manifesto deve ser desclarado como atributo no etiqueta de abertura do html (veja quadro  \ref{qua:cache-appcache}).
+
+\let\origthelstnumber\thelstnumber
+\makeatletter
+\newcommand*\Suppressnumber{%
+  \lst@AddToHook{OnNewLine}{%
+    \let\thelstnumber\relax%
+     \advance\c@lstnumber-\@ne\relax%
+    }%
+}
+
+\newcommand*\Reactivatenumber[1]{%
+  \lst@AddToHook{OnNewLine}{%
+   \let\thelstnumber\origthelstnumber%
+   \setcounter{lstnumber}{\numexpr#1-1\relax}%
+   %\advance\c@lstnumber\@ne\relax%
+  }%
+}
+
+\makeatother
+
+\begin{quadro}[h]
+\centering
+  \caption{Código HTML ignorando cabeçalho e corpo}\label{qua:html-root}
+\begin{lstlisting}[numbers=left,escapeinside=\$\$,frame=single]
+<!DOCTYPE html>
+<html lang="pt-BR" manifest="cache.appcache">
+  <head>$\Suppressnumber$
+    (...)$\Reactivatenumber{16}$
+  </head>$\Reactivatenumber{17}$
+  <body>$\Suppressnumber$
+    (...)
+  </body>$\Reactivatenumber{51}$
+</html>
+
+\end{lstlisting}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+\end{quadro}
+
+\begin{quadro}[h]
+\centering
+  \caption{Arquivo de manifesto \textit{appcache}}\label{qua:cache-appcache}
+\begin{lstlisting}[numbers=left,frame=single]
+CACHE MANIFEST
+
+# Adds the ability to play the game offline.
+# The following comment needs to be updated whenever a change is made.
+# Run `rake appcache:update` to do so
+# Updated: 2016-11-90T01:27:00-02:00
+
+# Main page
+
+# CSS
+style/material.blue-orange.min.css
+style/main.css
+
+# Fonts
+style/fonts/material-icons.css
+style/fonts/MaterialIcons-Regular.eot
+style/fonts/MaterialIcons-Regular.woff
+style/fonts/MaterialIcons-Regular.woff2
+style/fonts/MaterialIcons-Regular.ttf
+
+# Other resources
+
+# JavaScript
+js/material.min.js
+js/aceual.js
+
+favicon.ico
+
+NETWORK:
+*
+
+\end{lstlisting}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+\end{quadro}
 
 \ifdraft{}{
 %\section{Ferramentas Utilizadas}
