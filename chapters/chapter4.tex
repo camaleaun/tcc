@@ -269,7 +269,7 @@ Todo o código foi desenvolvido em repositório disponível no github e quando c
 %  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
 %\end{quadro}
 
-Com auxílio de \textbf{\textit{Service Workers}} é possível resolver a navegação \textit{offline}. Está sendo desenvolvido, como explica \citeonline{swfirstdraft}, por um esforço colaborativo entre grandes empresas como Google, Mozilla e outras, sua implementação tem sido constante principalmente nos navegadores Chrome e Firefox. Realmente excitante para os interessados na competição entre \textit{web} e aplicações nativas nos sistemas operacionais.
+Com auxílio de \textbf{\textit{Service Workers}} (SW) é possível resolver a navegação \textit{offline}. Está sendo desenvolvido, como explica \citeonline{swfirstdraft}, por um esforço colaborativo entre grandes empresas como Google, Mozilla e outras, sua implementação tem sido constante principalmente nos navegadores Chrome e Firefox. Realmente excitante para os interessados na competição entre \textit{web} e aplicações nativas nos sistemas operacionais.
 
 \lstdefinestyle{swreg}
 {
@@ -280,7 +280,7 @@ Com auxílio de \textbf{\textit{Service Workers}} é possível resolver a navega
 
 \begin{quadro}[h]
 \centering
-  \caption{HTML destacando o registro do \textit{Service Worker}}\label{qua:swregister}
+  \caption{HTML destacando o registro do SW}\label{qua:swregister}
 \begin{lstlisting}[style=swreg,frame=single]
 <!DOCTYPE html>
 <html>
@@ -312,12 +312,11 @@ Sua implementação no modo mais básico em uma aplicação de página única po
 %style=swjs,
 \begin{quadro}[h]
 \centering
-  \caption{Conteúdo do arquivo \textit{service worker}}\label{qua:swjs}
+  \caption{Conteúdo do arquivo SW}\label{qua:swjs}
 \begin{lstlisting}[frame=single]
 self.oninstall = function (event) {
-  `use strict';
   event.waitUntil(
-    caches.open('bizual-static-v7').then(function (cache) {
+    caches.open(`bizual-static-v1').then(function (cache) {
       return cache.addAll([
         `./',
         `css/all.css',
@@ -328,6 +327,7 @@ self.oninstall = function (event) {
     })
   );
 };
+
 self.onfetch = function (event) {
   event.respondWith(
     caches.match(event.request)
@@ -344,7 +344,7 @@ Dentro do arquivo \texttt{sw.js}, notável em quadro \ref{qua:swjs}, constam doi
 \centering
   \caption{Suporte à \textit{ServiceWorkers} pelos navegadores}\label{tab:swcompatibility}
 \begin{tabular}{ C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} }\hline
-Edge & Firefox & Chrome & Safari & Opera & iPhone & Android \\ \hline
+Edge & Firefox & Chrome & Safari & Opera & iOS & Android \\ \hline
  & 49+ & 49+ &  & 41+ &  & 5.0+ \\ \hline
 \end{tabular}
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, baseando em \citeonline{swcaniuse}.}
