@@ -340,9 +340,11 @@ self.onfetch = function (event) {
 
 Dentro do arquivo \texttt{sw.js}, notável em quadro \ref{qua:swjs}, constam dois eventos: um de instalação para quando o navegador instala (\textbf{\textit{install}}) de acordo com o registro e outra para captura de ação de rede (\textbf{\textit{fetch}}), onde iria naturalmente requisitar determinado recurso. No evento de instalação lista os arquivos a serem armazenados e no de rede indica a utilizar os arquivos armazenados.
 
+Durante o trabalho tem utilizada a denominação ``navegador moderno'' para nosso estudo são navegadores que apostam em novas tecnologia que estejam surgindo. Normalmente podem ser considerados o Google Chrome, Mozilla Firefox e Opera. A Microsoft vêm flexibilizando essas adoções nas últimas versões e do seu subistituto o Edge, porém quando tecnologias ainda em rascunho ela opta por sua definição e maturidade. A tabela \ref{tab:swcompatibility} apresenta como está, mesmo que parcial, essa compatibilidade. Ressaltando o quão recente é essa adoção, as versões lançadas somente neste ano como estáveis entre 9 de setembro e 23 de outubro, são nesses navegadores a primeira implementação ocorrida. Apenas o Google Chrome para \textit{desktop} possui compabilidade nas versões anteriores, desde 2 de maio também deste ano.
+
 \begin{table}[h]
 \centering
-  \caption{Suporte à \textit{ServiceWorkers} pelos navegadores}\label{tab:swcompatibility}
+  \caption{Suporte à SW pelos navegadores}\label{tab:swcompatibility}
 \begin{tabular}{ C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} }\hline
 Edge & Firefox & Chrome & Safari & Opera & iOS & Android \\ \hline
  & 49+ & 49+ &  & 41+ &  & 5.0+ \\ \hline
@@ -350,9 +352,7 @@ Edge & Firefox & Chrome & Safari & Opera & iOS & Android \\ \hline
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, baseando em \citeonline{swcaniuse}.}
 \end{table}
 
-Durante o trabalho tem utilizada a denominação ``navegador moderno'' para nosso estudo são navegadores que apostam em novas tecnologia que estejam surgindo. Normalmente podem ser considerados o Google Chrome, Mozilla Firefox e Opera. A Microsoft vêm flexibilidade essas adoções nas últimas versões e do seu subistitudo Edge, porém em tecnologia ainda rascunho ela escolhe por aguardar maior definição e maturidade. A tabela \ref{tab:swcompatibility} apresenta como está, mesmo que parcial, essa compatibilidade. Resaltando o quão recente é essa adoção, as versões lançadas somente neste ano como estáveis entre 9 de setembro e 23 de outubro, são nesses navegadores a primeira implementação ocorrida. Apenas o Google Chrome para \textit{desktop} possui compabilidade nas versões anteriores, desde 2 de maio também deste ano.
-
-Algumas observações são necessárias sobre a \ref{tab:swcompatibility}, o Microsoft \textbf{Edge} está nessa compatibilidade como ``em desenvolvimento'', e o Internet Explorer (IE) foi intencionamente ignorado por certamente nunca receber essa implementação já que seu desenvolvimento foi descontinua em favor do Edge. O \textbf{Safari} da Apple utiliza motor Webkit e ele está com a situação, quanto essa compatibilidade, como ``sob consideração''. E o \textbf{Android} 4.4.4 já utilizava WebView do Chrome mas só na 5.0 veio nativa e independente, porém instalar a última versão do Google Chrome para esse sistema operacional \textit{mobile} tem o mesmo efeito, desde WebView ou navegador na versão 53.
+Algumas observações são necessárias sobre a tabela \ref{tab:swcompatibility}, o Microsoft \textbf{Edge} está nessa compatibilidade como ``em desenvolvimento'', e o Internet Explorer (IE) foi intencionamente ignorado por certamente nunca receber essa implementação já que seu desenvolvimento foi descontinua em favor do Edge. O \textbf{Safari} da Apple utiliza motor Webkit e ele está com a situação, quanto essa compatibilidade, como ``sob consideração''. E o \textbf{Android} 4.4.4 já utilizava WebView do Chrome mas só na 5.0 veio nativa e independente, porém instalar a última versão do Google Chrome para esse sistema operacional \textit{mobile} tem o mesmo efeito, desde WebView ou navegador na versão 53.
 
 \ifdraft{}{
 %\section{Ferramentas Utilizadas}
