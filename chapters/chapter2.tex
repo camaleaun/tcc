@@ -71,7 +71,7 @@ Para \citeonline{santiago2003etal} a estruturação do algoritmo com suas repres
 %compilação pode ser descrito como contendo as seguintes etapas: análise léxica, análise
 %sintática, análise semântica e geração de código.\cite{barbosa2009etal}
 
-Neste caso tradutor é um programa com capacidade de fazer leitura em uma linguagem e traduzir para outra equivalente. Conforme \citeonline{aho2007etal} existem dois principais tipos de tradutores: compiladores e interpretadores. Ilustrada a diferenciação entre elas na figura \ref{fig:versus}, a partir de uma mesma fonte o compilador à esquerda e o interpretador a direita demonstra que o interpretador tem sua execução traduzindo diretamente cada instrução.
+Neste caso tradutor é um programa com capacidade de fazer leitura em uma linguagem e traduzir para outra equivalente. Conforme \citeonline{aho2007etal} existem dois principais tipos de tradutores: compiladores e interpretadores. Ilustrada a diferenciação entre elas na Figura \ref{fig:versus}, a partir de uma mesma fonte o compilador à esquerda e o interpretador a direita demonstra que o interpretador tem sua execução traduzindo diretamente cada instrução.
 
 \begin{figure}[h]
   \caption{\ifdraft{\color{green}}{}Compilador \textit{versus} Interpretador}\label{fig:versus}
@@ -91,7 +91,7 @@ Passando por um processo de entendimento de elementos mínimos no código, ignor
 
 \subsection{Processo de compilação}
 
-Num compilador ideal, de acordo com \citeonline{aho2007etal} e visto na figura \ref{fig:fullcompiler}, pode-se indentificar além das etapas essenciais identificada como a parte de \textbf{análise} (ou \textit{front end}) também a parte final: \textbf{síntese} (ou \textit{back end}). Na síntese a partir da árvore sintática são geradas representações intermediárias até o programa alvo executável através de: geração de código intermediário, otimização de código e por fim o gerador de código. Durante todas as etapas paralelamente agem a tabela de símbolos, para guardar informação sobre nomes declarados e o tratamento de erros que agem na parte de análise por exemplo identificando erro e em qual linha.
+Num compilador ideal, de acordo com \citeonline{aho2007etal} e visto na Figura \ref{fig:fullcompiler}, pode-se indentificar além das etapas essenciais identificada como a parte de \textbf{análise} (ou \textit{front end}) também a parte final: \textbf{síntese} (ou \textit{back end}). Na síntese a partir da árvore sintática são geradas representações intermediárias até o programa alvo executável através de: geração de código intermediário, otimização de código e por fim o gerador de código. Durante todas as etapas paralelamente agem a tabela de símbolos, para guardar informação sobre nomes declarados e o tratamento de erros que agem na parte de análise por exemplo identificando erro e em qual linha.
 
 \begin{figure}[h]
   \caption{\ifdraft{\color{green}}{}Compilador completo}\label{fig:fullcompiler}
@@ -104,7 +104,7 @@ Num compilador ideal, de acordo com \citeonline{aho2007etal} e visto na figura \
 %
 \subsection{Análise Léxica}
 
-Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo onde elementos mínimos, \textit{tokens}, são identificados. Cada letra, número e outros caracteres (como pontuação e demais símbolos)  além do espaço após reconhecidos são então agrupados com lexemas em: identificadores, palavras-chave reservadas, comandos, operadores, constantes, conjunto de texto, nome de variáveis, inícios e fins do algoritmos ou de blocos nele. Também remove comentários e marcas de edição (tabulações, caracteres de avanço de linha e espaços). No quadro \ref{qua:print} é dado uma linha do algoritmo para na tabela \ref{tab:lexemas} apresentar os lexemas indentificados.
+Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo onde elementos mínimos, \textit{tokens}, são identificados. Cada letra, número e outros caracteres (como pontuação e demais símbolos)  além do espaço após reconhecidos são então agrupados com lexemas em: identificadores, palavras-chave reservadas, comandos, operadores, constantes, conjunto de texto, nome de variáveis, inícios e fins do algoritmos ou de blocos nele. Também remove comentários e marcas de edição (tabulações, caracteres de avanço de linha e espaços). No Quadro \ref{qua:print} é dado uma linha do algoritmo para na Tabela \ref{tab:lexemas} apresentar os lexemas indentificados.
 
 \begin{quadro}[h]
 \centering
@@ -120,7 +120,7 @@ Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo ond
   \caption{Lexemas encontrados no exemplo preposto}\label{tab:lexemas}
 \begin{tabular}{ c | l }\hline
 \textbf{Lexema} & \textbf{Classificação} \\ \hline
-\texttt{imprima} & comando de impressão \\ \hline
+\texttt{imprima} & identificador da expressão de impressão \\ \hline
 \texttt{"Aprendendo Algoritmo"} & conjunto literal de texto \\ \hline
 \texttt{;} & caractere de encerramento de expressão \\ \hline
 \end{tabular}
@@ -129,8 +129,14 @@ Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo ond
 
 \subsection{Análise Sintática}
 
-Ou \textit{scanner}, recebe a sequência de lexemas da análise anterior e determina se são elementos estruturais pertencentes à linguagem desejada, exposto por \citeonline{delamaro2004}. São essas estruturas: expressões aritméticas, comandos de atribuição ou declarações de procedimentos e as relações entre eles, garantindo que seja correto sintaticamente. Considerendo o mesmo exemplo do quadro {qua:print}, a árvore que seria produzida é ilustrada na figura X abaixo.
-% TODO Figura com os nós de árvore sintática
+Ou \textit{scanner}, recebe a sequência de lexemas da análise anterior e determina se são elementos estruturais pertencentes à linguagem desejada, exposto por \citeonline{delamaro2004}. São essas estruturas: expressões aritméticas, comandos de atribuição ou declarações de procedimentos e as relações entre eles, garantindo que seja correto sintaticamente. Considerendo o mesmo exemplo do Quadro \ref{qua:print}, a árvore que seria produzida é ilustrada na Figura \ref{fig:ast}.
+
+\begin{figure}[h]
+  \caption{\ifdraft{\color{green}}{}Exemplo de árvore sintática}\label{fig:ast}
+  \centering
+\includegraphics[width=.5\textwidth,height=10cm,keepaspectratio]{figures/ast.pdf}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+\end{figure}
 
 \subsection{Análise Semântica}
 
@@ -153,7 +159,7 @@ Esta análise verifica o ``significado'' de comandos, ao tratar de aspectos rela
 
 \end{itemize}
 
-Abaixo um comparativo de pontos que ressaltam como fatores determinantes em escolha da opção ao uso.
+Na Tabela \ref{qua:compare-tools} consta exposto um comparativo de pontos que ressaltam como fatores determinantes em escolha de qual opção utilizar pelo educador no ensino para que seus alunos pratiquem o conteúdo.
 
 \begin{table}[h]
 \centering
@@ -229,7 +235,7 @@ Todo o projeto está pautado neste algoritmo simplista, obtido em \citeonline[p.
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, baseado em \citeonline{spallanzani2000etal,evaristo2000}.}
 \end{table}
 
-Sendo as estruturas de um algoritmo o escopo da linguagem, há diferenças entre UAL e ILA também quando quanto sua abrangência, visto tabela \ref{tab:escopo-lang} sendo a primera estrutura única que o presente trabalho abrange. Não tendo a UAL estruturas como matrizes n-dimensionais, funções com ou sem passagem de parâmetros, novos comandos para tomada de decisões e controle de repetições, novos tipos de dados, conversores de tipos \cite{spallanzani2000etal}.
+Sendo as estruturas de um algoritmo o escopo da linguagem, há diferenças entre UAL e ILA também quando quanto sua abrangência, visto Tabela \ref{tab:escopo-lang} sendo a primera estrutura única que o presente trabalho abrange. Não tendo a UAL estruturas como matrizes n-dimensionais, funções com ou sem passagem de parâmetros, novos comandos para tomada de decisões e controle de repetições, novos tipos de dados, conversores de tipos \cite{spallanzani2000etal}.
 
 \ifdraft{}{
 %\subsection{Ensino Aprendizagem}
