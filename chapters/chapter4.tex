@@ -44,7 +44,7 @@ O desenvolvimento de \textit{software} antes de iniciar a códificação algumas
 
 \item Deverá ter interface minimalista, mas visualmente agradável
 
-\item Permitir visualizar a simulação do programa
+\item Ser acessível mesmo que desconectado da internet
 
 \end{enumerate}
 
@@ -172,9 +172,40 @@ Foi utilizado a funcionalidade \textit{app cache} a partir de um arquivo manifes
 
 Todo o código foi desenvolvido em repositório disponível no github e quando concluído em sua versão mínima movido para seu destino final e podendo ser acessado.\nocite{bizual}\color{black}
 
-\section{\textit{AppCache}}
+\section{Acesso \textit{Offline}}
 
-Desenvolvido pela consórcio criado para o desenvolvimento do HTML5 veio suprir a necessidade de armazenamento avançado de arquivos utilizados na aplicação web. Utiliza apenas um arquivo de texto onde lista todos os arquivos de imagem, estilização, scripts de programação, entre outros (ver quadro \ref{qua:html-root}). Esse arquivo declarado manifesto deve ser desclarado como atributo no etiqueta de abertura do html (veja quadro  \ref{qua:cache-appcache}).
+Ainda não há aderência dentre os desenvolvedores, bem porque ainda não foi finalizada sua especificação. Além de que a primeira tentativa de criar o \textit{AppCache} como solução solução teve um resultado ruim, mas agora com os \textit{Service Workers} a esperança foi renovada.
+
+\subsection{\textit{AppCache}}
+
+Desenvolvido pela consórcio criado para o desenvolvimento do HTML5 veio suprir a necessidade de armazenamento avançado de arquivos utilizados na aplicação web. Sua compatibilidade foi seu adicionada aos navegadores durante sua criação, na tabela \ref{tab:appcache-compatibility}  Porém apesar de simples sua específicação extensa e confusa além de muitas limitações conhecidas levou a criaçao de uma melhor solução. Essa fucionalidade permanece compatível mas é recomendado sua não utilização por motivo da futura remoção dela nos navegadores.
+
+%\newcolumntype{C}[1]{>{\centering}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\begin{table}[h]
+%\centering
+%  \caption{Suporte \textit{offline} via \textit{AppCache}}\label{tab:appcache-compatibility}
+%\begin{tabular}{ c{0.1\textwidth} | c{0.1\textwidth} | c{0.1\textwidth} | c{0.1\textwidth} | c{0.1\textwidth} | c{0.1\textwidth} | c{0.1\textwidth} }\hline
+%IE & Firefox & Safari & Chrome & Opera & iPhone & Android \\ \hline
+% & 3.5+ & 4.0+ & 5.0+ & 10.6+ & 2.1+ & 2.0+ \\ \hline
+%\end{tabular}
+%  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: \citeonline{diveintohtml5}.}
+%\end{table}
+
+\begin{table}[h]
+\centering
+  \caption{Suporte à \textit{AppCache} pelos navegadores}\label{tab:appcache-compatibility}
+\begin{tabular}{ C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} }\hline
+IE & Firefox & Safari & Chrome & Opera & iPhone & Android \\ \hline
+ & 3.5+ & 4.0+ & 5.0+ & 10.6+ & 2.1+ & 2.0+ \\ \hline
+\end{tabular}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: ``Aplicações Web Offline - Dive into HTML5'' por \citeonline{diveintohtml5}.}
+\end{table}
+
+Mesmo tento sido depreciada cabe, até por comparação, explicar seu funcionamento. Ela utiliza, como explica \citeonline{diveintohtml5}, apenas um arquivo de texto onde lista todos os arquivos de imagem, estilização, scripts de programação, entre outros (ver quadro \ref{qua:html-root}). Esse arquivo declarado manifesto deve ser desclarado como atributo no etiqueta de abertura do html (veja quadro  \ref{qua:cache-appcache}).
 
 \let\origthelstnumber\thelstnumber
 \makeatletter
@@ -219,9 +250,6 @@ Desenvolvido pela consórcio criado para o desenvolvimento do HTML5 veio suprir 
 \begin{lstlisting}[numbers=left,frame=single]
 CACHE MANIFEST
 
-# Adds the ability to play the game offline.
-# The following comment needs to be updated whenever a change is made.
-# Run `rake appcache:update` to do so
 # Updated: 2016-11-90T01:27:00-02:00
 
 # Main page
