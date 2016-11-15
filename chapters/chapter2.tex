@@ -76,7 +76,7 @@ Neste caso tradutor é um programa com capacidade de fazer leitura em uma lingua
 \begin{figure}[h]
   \caption{\ifdraft{\color{green}}{}Compilador \textit{versus} Interpretador}\label{fig:versus}
   \centering
-\includegraphics[width=\textwidth,height=10cm,keepaspectratio]{figures/compilador-interpretador.pdf}
+\includegraphics[width=\textwidth,keepaspectratio]{figures/compilador-interpretador.pdf}
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, adaptado de \citeonline{medina2006etal}.}
 \end{figure}
 
@@ -96,7 +96,7 @@ Num compilador ideal, de acordo com \citeonline{aho2007etal} e visto na Figura \
 \begin{figure}[h]
   \caption{\ifdraft{\color{green}}{}Compilador completo}\label{fig:fullcompiler}
   \centering
-\includegraphics[width=\textwidth,height=10cm,keepaspectratio]{figures/compilador-completo.pdf}
+\includegraphics[width=\textwidth,keepaspectratio]{figures/compilador-completo.pdf}
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, adaptado de \citeonline{aho2007etal}.}
 \end{figure}
 
@@ -134,7 +134,7 @@ Ou \textit{scanner}, recebe a sequência de lexemas da análise anterior e deter
 \begin{figure}[h]
   \caption{\ifdraft{\color{green}}{}Exemplo de árvore sintática}\label{fig:ast}
   \centering
-\includegraphics[width=.5\textwidth,height=10cm,keepaspectratio]{figures/ast.pdf}
+\includegraphics[width=.4\textwidth,height=10cm,keepaspectratio]{figures/ast.pdf}
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
 \end{figure}
 
@@ -155,7 +155,7 @@ Esta análise verifica o ``significado'' de comandos, ao tratar de aspectos rela
 
 \item \textbf{Web Portugol}: Desenvolvida por pesquisadores na UNIVALI permite o acesso via navegadores que tenham integração com Java, desde que o mesmo também esteja instalado no computadors \cite{souza2013etal}.
 
-\item \textbf{Construtor}: Desenvolvido pelo Centro Educacional de Informática Aplicada do SENAC (Rio de Janeiro), é a primeira ferramenta encontrada para uso em plataforma Windows e tem a vantagem acompanhar o livro ``Construção de Algoritmos'' de \citeonline{fernandes1999etal}.
+\item \textbf{Construtor}: Desenvolvido pelo Centro Educacional de Informática Aplicada do SENAC (Rio de Janeiro), é a primeira encontrada para uso em Windows e tem a vantagem acompanhar o livro ``Construção de Algoritmos'' de \citeonline{fernandes1999etal}.
 
 \end{itemize}
 
@@ -163,14 +163,16 @@ Na Tabela \ref{qua:compare-tools} consta exposto um comparativo de pontos que re
 
 \begin{table}[h]
 \centering
-  \caption{Comparativo das ferramentas}\label{qua:compare-tools}
+\caption{Comparativo das ferramentas}\label{qua:compare-tools}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{ r | l | l | l | l | l }\hline
 & UAL+Editor & ILA+AMBAP & VisuAlg & Web Portugol & Contrutor \\ \hline
 Plataforma & Linux e Windows & DOS/Windows & Windows & Web (Java Applet) & Windows \\ \hline
 Licença & \textit{open source} & \textit{freeware} & \textit{freeware} & \textit{open source} & \textit{open source} \\ \hline
 Instituição & UNESA & UFAL &  & UNIVALLI & SENAC \\ \hline
 Linguagem & Haskell & Java (editor) &  & Java & \\ \hline
-\end{tabular}
+\end{tabular}%
+}
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
 \end{table}
 
