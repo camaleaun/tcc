@@ -151,20 +151,20 @@ Como interface gráfica foi mantido o mínimo necessário. Somente o editor de t
   \centering
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-desktop.pdf}}
+\fbox{\includegraphics[width=.9\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor.}
 \end{figure}
 
 De acordo com o \citeonline{dicionarioinformal2016} a gíria ``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos. Os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo. A escolha do nome se deve a partir da palavra bizu adicionada a sigla da sintaxe: resultando em ``BizUAL'', nesta grafia.
 
-\begin{figure}[h]
-  \caption{Interface Smartphone}\label{fig:ui-phone}
-  \centering
-  \setlength{\fboxsep}{0pt}%
-\setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-smartphone.pdf}}
-  \caption*{\footnotesize Fonte: Produção do autor.}
-\end{figure}
+%\begin{figure}[h]
+%  \caption{Interface Smartphone}\label{fig:ui-phone}
+%  \centering
+%  \setlength{\fboxsep}{0pt}%
+%\setlength{\fboxrule}{1pt}%
+%\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-smartphone.pdf}}
+%  \caption*{\footnotesize Fonte: Produção do autor.}
+%\end{figure}
 
 Facilitando a tarefa de construção da interface foi utilizada a biblioteca Material Design Lite (MDL)\nocite{mdl} disponibilizada oficialmente pelo Google. As cores foram escolhidas pela funcionalidade disponível no site da biblioteca.
 
@@ -269,7 +269,7 @@ Todo o código foi desenvolvido em repositório disponível no github e quando c
 %  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
 %\end{quadro}
 
-Com auxílio de \textbf{\textit{Service Workers}} é possível resolver a navegação \textit{offline}. Está sendo desenvolvido, como explica \citeonline{swfirstdraft}, por um eforço colaborativo entre grandes empresas como Google, Mozilla e outras, sua implemantação tem sido constante principalmente nos navegadores Chrome e Firefox. Realmente excitante para os interesados na compitição entre \textit{web} e aplicações nativas nos sistemas operacionais.
+Com auxílio de \textbf{\textit{Service Workers}} é possível resolver a navegação \textit{offline}. Está sendo desenvolvido, como explica \citeonline{swfirstdraft}, por um esforço colaborativo entre grandes empresas como Google, Mozilla e outras, sua implementação tem sido constante principalmente nos navegadores Chrome e Firefox. Realmente excitante para os interessados na competição entre \textit{web} e aplicações nativas nos sistemas operacionais.
 
 \lstdefinestyle{swreg}
 {
@@ -299,24 +299,21 @@ Com auxílio de \textbf{\textit{Service Workers}} é possível resolver a navega
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
 \end{quadro}
 
-Sua implementação no modo mais básico em uma aplicação de página única pode ser considerada simples. Porém sua versatilidade e aplicabilidade é incrivelmente mais extensa. Inicialmente é necessário informar ao navegar o arquivo JavaScript que serão o controlador, se comportando como se fosse um \textit{proxy} local. Para isso utiliza-se o comando de registro (conforme quadro \ref{qua:swregister}, após testar se o navegador é compatível.
-
-Dentro do arquivo \texttt{sw.js}, notável em quadro \ref{qua:swjs}, constam dois eventos: um de instalação para quando o navegador instala (\textbf{\textit{install}}) de acordo com o registro e outra para captura de ação de rede (\textbf{\textit{fetch}}), onde iria naturalmente requisitar determinado recurso. No evento de instalação lista os arquivos a serem armazenados e no de rede indica a utilizar os arquivos armazenados.
-
-\lstdefinestyle{swjs}
-{
-  morestring  = [s]{`use}{strict';},
-  stringstyle = \color{darkgrey},
-  keywordstyle = \color{darkgrey},
-  commentstyle = \color{darkgrey},
-  morecomment  = [l]{/*},
-}
-
+Sua implementação no modo mais básico em uma aplicação de página única pode ser considerada simples. Porém sua versatilidade e aplicabilidade é incrivelmente mais extensa. Inicialmente é necessário informar ao navegar o arquivo JavaScript que serão o controlador, se comportando como se fosse um \textit{proxy} local. Para isso utiliza-se o comando de registro (conforme quadro \ref{qua:swregister}), após testar se o navegador é compatível.
+%
+%\lstdefinestyle{swjs}
+%{
+%  morestring  = [s]{`use}{strict';},
+%  stringstyle = \color{darkgrey},
+%  keywordstyle = \color{darkgrey},
+%  commentstyle = \color{darkgrey},
+%  morecomment  = [l]{/*},
+%}
+%style=swjs,
 \begin{quadro}[h]
 \centering
   \caption{Conteúdo do arquivo \textit{service worker}}\label{qua:swjs}
-\begin{lstlisting}[style=swjs,frame=single]
-/*global self,caches*/
+\begin{lstlisting}[frame=single]
 self.oninstall = function (event) {
   `use strict';
   event.waitUntil(
@@ -324,11 +321,6 @@ self.oninstall = function (event) {
       return cache.addAll([
         `./',
         `css/all.css',
-        `css/fonts/MaterialIcons-Regular.eot',
-        `css/fonts/MaterialIcons-Regular.woff',
-        `css/fonts/MaterialIcons-Regular.woff2',
-        `css/fonts/MaterialIcons-Regular.ttf',
-        `js/page.js',
         `js/material.min.js',
         `js/aceual.js',
         `imgs/icon.png'
@@ -336,9 +328,7 @@ self.oninstall = function (event) {
     })
   );
 };
-
 self.onfetch = function (event) {
-  `use strict';
   event.respondWith(
     caches.match(event.request)
   );
@@ -348,19 +338,21 @@ self.onfetch = function (event) {
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
 \end{quadro}
 
+Dentro do arquivo \texttt{sw.js}, notável em quadro \ref{qua:swjs}, constam dois eventos: um de instalação para quando o navegador instala (\textbf{\textit{install}}) de acordo com o registro e outra para captura de ação de rede (\textbf{\textit{fetch}}), onde iria naturalmente requisitar determinado recurso. No evento de instalação lista os arquivos a serem armazenados e no de rede indica a utilizar os arquivos armazenados.
+
 \begin{table}[h]
 \centering
   \caption{Suporte à \textit{ServiceWorkers} pelos navegadores}\label{tab:swcompatibility}
 \begin{tabular}{ C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} | C{46pt} }\hline
-Edge & Firefox & Chrome & Safari\footnote{O.} & Opera & iPhone & Android \\ \hline
+Edge & Firefox & Chrome & Safari & Opera & iPhone & Android \\ \hline
  & 49+ & 49+ &  & 41+ &  & 5.0+ \\ \hline
 \end{tabular}
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, baseando em \citeonline{swcaniuse}.}
 \end{table}
 
-Durante o trabalho tem utilizada a denominação ``navegador moderno'' para nosso estudo são navegadores que apostam em novas tecnologia que estejam surgindo. Normalmente podem ser considerados o Google Chrome, Mozilla Firefox e Opera. A Microsoft vêm flexibilidade essas adoções nas últimas versões e do seu subistitudo Edge, porém em tecnologia ainda rascunho ela escolhe por aguardar maior definição e maturidade. A tabela \ref{tab:swcompatibility} apresenta como está, mesmo que parcial, essa compatibilidade.
+Durante o trabalho tem utilizada a denominação ``navegador moderno'' para nosso estudo são navegadores que apostam em novas tecnologia que estejam surgindo. Normalmente podem ser considerados o Google Chrome, Mozilla Firefox e Opera. A Microsoft vêm flexibilidade essas adoções nas últimas versões e do seu subistitudo Edge, porém em tecnologia ainda rascunho ela escolhe por aguardar maior definição e maturidade. A tabela \ref{tab:swcompatibility} apresenta como está, mesmo que parcial, essa compatibilidade. Resaltando o quão recente é essa adoção, as versões lançadas somente neste ano como estáveis entre 9 de setembro e 23 de outubro, são nesses navegadores a primeira implementação ocorrida. Apenas o Google Chrome para \textit{desktop} possui compabilidade nas versões anteriores, desde 2 de maio também deste ano.
 
-Algumas observações são necessárias sobre a \ref{tab:swcompatibility}, o Microsoft \textbf{Edge} está nessa compatibilidade como ``em desenvolvimento'', e o Internet Explorer (IE) foi intencionamento ignorado por certamente nunca receber essa implementação já que seu desenvolvimento foi descontinua em favor do Edge. O \textbf{Safari} da Apple utiliza motor Webkit e ele está com a situação, quanto essa compatibilidade, como ``sob consideração''. E o \textbf{Android} 4.4.4 já utilizava WebView do Chrome mas só na 5.0 veio nativa e independente, porém instalar a última versão do Google Chrome para esse sistema operacional \textit{mobile} tem o mesmo efeito, desde WebView ou navegador na versão 53.
+Algumas observações são necessárias sobre a \ref{tab:swcompatibility}, o Microsoft \textbf{Edge} está nessa compatibilidade como ``em desenvolvimento'', e o Internet Explorer (IE) foi intencionamente ignorado por certamente nunca receber essa implementação já que seu desenvolvimento foi descontinua em favor do Edge. O \textbf{Safari} da Apple utiliza motor Webkit e ele está com a situação, quanto essa compatibilidade, como ``sob consideração''. E o \textbf{Android} 4.4.4 já utilizava WebView do Chrome mas só na 5.0 veio nativa e independente, porém instalar a última versão do Google Chrome para esse sistema operacional \textit{mobile} tem o mesmo efeito, desde WebView ou navegador na versão 53.
 
 \ifdraft{}{
 %\section{Ferramentas Utilizadas}
