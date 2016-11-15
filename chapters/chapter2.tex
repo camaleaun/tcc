@@ -38,9 +38,11 @@ Para \citeonline{santiago2003etal} a estruturação do algoritmo com suas repres
 \item Variáveis: armazenagem na memória principal;
 \item Atribuições: definir valor numa variável;
 \item Operações aritméticas: utilizadas em cálculos entre números e variáveis;
-\item Estruturas de Controle: para fluxo, com desvio condicional e laços de repetição;
 \item Operações relacionais: estabelecem relação entre comparações;
-\item Vetores: variáveis com único nome, contendo um índice de posições.
+\item Estruturas de Controle: para fluxo, com desvio condicional e laços de repetição;
+\item Vetores: variáveis com único nome, contendo um índice de posições;
+\item Matrizes: semelhante a vetores, porém de dimensão dupla;
+\item Funções: sub-programas com ou sem passagem de parâmetro.
 
 \end{itemize}
 
@@ -201,12 +203,33 @@ inicio
 fim
 \end{lstlisting} \\ \hline
 \end{tabular}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Autor, a partir dos exemplos de \citeonline{lopes2002etal}.}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, a partir dos exemplos de \citeonline{lopes2002etal}.}
 \end{table}
 
 Todo o projeto está pautado neste algoritmo simplista, obtido em \citeonline[p.~26]{lopes2002etal} e na mídia que acompanha o livro destes autores. Facilmente se nota a diferença nos blocos de início e fim do programa, além de somente em UAL ter o nome do mesmo (solucionado com uso de linha comentada) e o comando de limpeza somente necessário em ILA. As chamadas de escrita em tela também têm sua palavra reservada diferente. Nenhuma delas delimita o argumento por parênteses e UAL exige ponto e vírgula ao final. As duas não são sensíveis no uso de letras maiúsculas ou minúsculas nas palavras chaves .
 
-Sendo o escopo das apresentações na estruturas de um algoritmo o escopo da linguagem \cite[p.~22]{spallanzani2000etal}, há diferenças entre UAL e ILA também quando quanto sua abrangência. Não tendo a UAL estruturas como matrizes n-dimensionais, funções com ou sem passagem de parâmetros, novos comandos para tomada de decisões e controle de repetições, novos tipos de dados, conversores de tipos.
+\begin{table}[h]
+\centering
+  \caption{Escopo das linguagens UAL e ILA}\label{tab:escopo-lang}
+\begin{tabular}{lC{40pt}|C{40pt}}
+\cline{2-3}
+ & \textbf{UAL} & \textbf{ILA} \\ \hline
+\multicolumn{1}{l|}{Saída em tela} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Entrada de argumentos} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Tipos de dados} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Variáveis} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Atribuições} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Operações aritiméticas} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Operações relacionais} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Estruturas de controle} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Vetores} & \textbf{s}im & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Matrizes} & \textbf{n}ão & \textbf{s}im \\ \hline
+\multicolumn{1}{l|}{Funções} & \textbf{n}ão & \textbf{s}im \\ \hline
+\end{tabular}
+  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, baseado em \citeonline{spallanzani2000etal,evaristo2000}.}
+\end{table}
+
+Sendo as estruturas de um algoritmo o escopo da linguagem \cite[p.~22]{spallanzani2000etal}, há diferenças entre UAL e ILA também quando quanto sua abrangência, visto tabela \ref{tab:escopo-lang} sendo a primera estrutura única que o presente trabalho abrange. Não tendo a UAL estruturas como matrizes n-dimensionais, funções com ou sem passagem de parâmetros, novos comandos para tomada de decisões e controle de repetições, novos tipos de dados, conversores de tipos \cite{spallanzani2000etal}.
 
 \ifdraft{}{
 %\subsection{Ensino Aprendizagem}
