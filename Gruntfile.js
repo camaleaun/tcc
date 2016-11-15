@@ -13,11 +13,14 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     shell: {
-      pdflatex: {
+      latex: {
         command: 'pdflatex paper && bibtex paper && pdflatex paper && pdflatex paper'
       },
       clean: {
         command: 'rm *.aux *.bbl *.blg *.idx *.log *.toc *.lot *.lof *.loq'
+      },
+      pdf: {
+        command: 'mv paper.pdf ../ && git checkout gh-pages && rm paper.pdf && mv ../paper.pdf ./ && git add paper.pdf && git commit -m "New papper pdf" && git push && git checkout paper'
       }
     },
 
@@ -29,7 +32,7 @@ module.exports = function (grunt) {
           '*.cls',
           '*.bib'
         ],
-        tasks: ['pdflatex']
+        tasks: ['latex']
       }
     }
 
@@ -39,7 +42,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('pdflatex', ['shell:pdflatex', 'shell:clean']);
+  grunt.registerTask('latex', ['shell:latex', 'shell:clean']);
+  grunt.registerTask('clean', ['shell:clean']);
+  grunt.registerTask('pdf', ['shell:pdf']);
 
   grunt.registerTask('default', ['watch']);
 
