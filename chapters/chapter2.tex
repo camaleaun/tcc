@@ -4,16 +4,16 @@ Para o entendimento e desenvolvimento da proposta conforme explícita nos objeti
 
 \section{Linguagem Natural}
 
-Com menor rigidez do que se faz necessário para uma máquina, esses conjuntos também podem ser descritos em uma linguagem humanamente mais natural. Numa conversa ou em uma explicação de rota de um destino ou uma receita culinária o entendimento ocorrerá. Por depender de formalidade e buscando a aproximação com a rigidez das linguagens de programação utiliza-se o idioma estruturado. Em nosso caso o português estruturado, mas há também o inglês estruturado e certamente outras \ifdraft{\cite{citar}}{\cite{medina2006etal}}.
+Com menor rigidez do que se faz necessário para uma máquina, esses conjuntos também podem ser descritos em uma linguagem humanamente mais natural. Numa conversa ou em uma explicação de rota de um destino ou uma receita culinária o entendimento ocorrerá. Por depender de formalidade e buscando a aproximação com a rigidez das linguagens de programação utiliza-se o idioma estruturado. Em nosso caso o português estruturado, mas há também o inglês estruturado e certamente outras \cite{medina2006etal}.
 
 \section{Programas de Computador}
 
 %\textrightarrow
-Sua estrutura é E$\,\to\,$P$\,\to\,$S (entrada-programa-saída), podendo não haver argumentos de entrada. Exemplo, um programa após compilado pode receber em sua execução como argumento um número inteiro para resultar em sua raiz quadrada, ou outro sem receber argumento já tenha a raiz quadrada de um número pré definido \ifdraft{\cite{citar}}{\cite{medina2006etal}}.
+Sua estrutura é E$\,\to\,$P$\,\to\,$S (entrada-programa-saída), podendo não haver argumentos de entrada. Exemplo, um programa após compilado pode receber em sua execução como argumento um número inteiro para resultar em sua raiz quadrada, ou outro sem receber argumento já tenha a raiz quadrada de um número pré definido \cite{medina2006etal}.
 
 \section{Pseudo código ou linguagem}
 
-Visando ser uma ponte entre a linguagem natural e as linguagens de programação temos as pseudo-linguagem. Notadamente Portugol é evidenciada como a solução, pois desde \citeonline{saliba1992} é confirmada sua ampla utilização. Porém não há uma padronização existindo inúmeras variações, no entanto com muitas semelhanças entre si \ifdraft{\cite{citar}}{\cite{medina2006etal}}.
+Visando ser uma ponte entre a linguagem natural e as linguagens de programação temos as pseudo-linguagem. Notadamente Portugol é evidenciada como a solução, pois desde \citeonline{saliba1992} é confirmada sua ampla utilização. Porém não há uma padronização existindo inúmeras variações, no entanto com muitas semelhanças entre si.
 
 \section{Algoritmos}
 
@@ -127,7 +127,8 @@ Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo ond
 
 \subsection{Análise Sintática}
 
-Ou \textit{scanner}, recebe a sequência de lexemas da análise anterior e determina se são elementos estruturais pertencentes à linguagem desejada, exposto por \citeonline{delamaro2004}. São essas estruturas: expressões aritméticas, comandos de atribuição ou declarações de procedimentos e as relações entre eles, garantindo que seja correto sintaticamente. Considerendo o mesmo exemplo do quadro X, a árvore que seria produzida é ilustrada na Figura X abaixo.
+Ou \textit{scanner}, recebe a sequência de lexemas da análise anterior e determina se são elementos estruturais pertencentes à linguagem desejada, exposto por \citeonline{delamaro2004}. São essas estruturas: expressões aritméticas, comandos de atribuição ou declarações de procedimentos e as relações entre eles, garantindo que seja correto sintaticamente. Considerendo o mesmo exemplo do quadro {qua:print}, a árvore que seria produzida é ilustrada na figura X abaixo.
+% TODO Figura com os nós de árvore sintática
 
 \subsection{Análise Semântica}
 
@@ -138,11 +139,9 @@ Esta análise verifica o ``significado'' de comandos, ao tratar de aspectos rela
 
 \begin{itemize}
 
-\item \textbf{ILA + AMBAP}: Desenvolvida por \citeonline{evaristo2000} o Interpretador de Linguagem Algorítmica (ILA) é um intepretador via linha de comando no qual o AMBAP - AMBiente para Aprenzidadeo e Programaçao utitilizou em seu editor \cite{citar}.
+\item \textbf{ILA + AMBAP}: Desenvolvida por \citeonline{evaristo2000} o Interpretador de Linguagem Algorítmica (ILA) é um intepretador via linha de comando no qual o AMBAP - AMBiente para Aprenzidadeo e Programaçao utitilizou em seu editor.
 
-\item \textbf{UAL + EditorUAL}: Desenvolvido em um trabalho na UNESA era basicamente compilador via linha de comando, desenvolvido em Haskel para linux. Ele foi posteriormente portado para Windows, e neste recebeu um editor próprio Editor UAL \cite{citar}.
-
-Todos os algoritmos propostos para execução computadorizada são impressos nesta sintaxe variante do Portugol. Porém para a desenvolvida por \citeonline{evaristo2000} o Interpretador de Linguagem Algorítmica (ILA) \cite{citar}.
+\item \textbf{UAL + EditorUAL}: Desenvolvido por \citeonline{spallanzani2000etal} na UNESA era basicamente compilador via linha de comando, desenvolvido em Haskel para linux. Ele foi posteriormente portado para Windows, e neste recebeu um editor próprio.
 
 \item \textbf{VisuAlg}: Desenvolvida por Claudio Morgado de Souza profissional programador e analista bem como professor universitário, é utilizada tanto em cursos técnicos quanto em meio universitário. A facilidade de obtenção do seu executável para Windows (não necessária instalação), documentação e simplicidade, sem perder funções úteis para iniciantes, são grandes atrativos \cite{souza2013etal}.
 
@@ -169,26 +168,26 @@ Linguagem & Haskell & Java (editor) &  & Java & \\ \hline
 
 Desenvolvida por \citeonline{esmin1998} quando vinculado a UNOESC o \textbf{Portugol/Plus} é a mais antiga opção encontrada no Brasil. Merecendo destaque por ser comumente referenciada por outros autores, inclusive quando tratam sobre desenvolvimento de novas soluções. Porém por ser em plataforma \textit{Disk Operating System (DOS)}, inclusive com interface gráfica foi desconsiderada no levantamento acima.
 
-Ao delimitar a quantidade de itens outras também não foram listadas, alguns casos o acesso ao programa para testes não estava disponível ou menor relevância na literatura. No entanto  merecem menção: \textbf{PascalX}, por Athur Vargas Lopes da ULBRA; \textbf{Web-UNERJOL}\nocite{ferrandin2015}, utilizando UNERJOL os dois pelo mesmo acadêmico na UNERJ com colaborações distintas.
+Ao delimitar a quantidade de itens outras também não foram listadas, alguns casos o acesso ao programa para testes não estava disponível ou menor relevância na literatura. No entanto  merecem menção: \textbf{PascalX}, por Athur Vargas Lopes da ULBRA; \textbf{Web-UNERJOL}\nocite{ferrandin2005etal}, utilizando UNERJOL os dois pelo mesmo acadêmico na UNERJ com colaborações distintas.
 %PascalX\nocite{http://www.ulbra.tche.br/~avl/home.htm}
 
 Outras mais não foram consideradas por fugirem do escopo ao utilizar robótica, jogos, foco em estrutura de dados ou similares: Guido VanRobot, Robot Prog, Kids Ruby, Fut Code, TBC-AED. Eram pretendidas somente ferramentas com pseudo-linguagem algorítmica em português, preferencialmente Portugol, partindo novamente do Editor UAL como referencial.
 %TBC-AED: por pesquisadores da Universidade Federal de Lavras/Departamento de Ciências da Computação em Minas Gerais
 
-\section{UAL - Ensino com Livro Texto}
+\section{Caso de Ensino com Livro e Ferramenta}
 
-O livro ``Introdução à programação: 500 algoritmos resolvidos'' tem um grande apelo por seu elevado número resoluções como seu título deixa claro. Isso motiva os educadores utilizarem como livro texto base de disciplinas de ensino de Lógica da Programação \cite{citar}. Neste livro todos os algoritmos propostos para execução computadorizada estão impressos na sintexe UAL, variante do Portugol. acompanha uma mídia ótica que contém os exercícios nesta e também ILA.
+O livro ``Introdução à programação: 500 algoritmos resolvidos'' de \citeonline{lopes2002etal} tem um grande apelo por seu elevado número resoluções como seu título deixa claro. Isso motiva os educadores utilizarem como livro texto base de disciplinas de ensino de Lógica da Programação. Neste livro todos os algoritmos propostos para execução computadorizada estão impressos na sintexe UAL, variante do Portugol. acompanha uma mídia ótica que contém os exercícios nesta e também ILA.
 
 %\the\textwidth
 %455.0pt
 %\halftextwidth
 %227.7pt
 %\noindent
-\begin{quadro}[h]
+\begin{table}[h]
 \centering
-  \caption{Comparativo UAL e ILA}\label{qua:compare-ualila}
-\begin{tabular}{| p{75mm} | p{75mm} |}\hline
-\multicolumn{1}{|c|}{\textbf{Em UAL}} & \multicolumn{1}{|c|}{\textbf{Em ILA}} \\ \hline
+  \caption{Comparação entre UAL e ILA}\label{tabela:compare-ualila}
+\begin{tabular}{p{75mm} | p{75mm}}\hline
+\multicolumn{1}{c|}{\textbf{Em UAL}} & \multicolumn{1}{c}{\textbf{Em ILA}} \\ \hline
 \begin{lstlisting}[language=ual,style=table]
 prog algoritmo11
   imprima "Aprendendo Algoritmo!!!";
@@ -203,9 +202,9 @@ fim
 \end{lstlisting} \\ \hline
 \end{tabular}
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Autor, a partir dos exemplos de \citeonline{lopes2002etal}.}
-\end{quadro}
+\end{table}
 
-Todo o projeto está pautado neste algoritmo simplista, porém se nota a diferença nos blocos de início e fim do programa, além de somente em UAL ter o nome do mesmo (solucionado com uso de linha comentada) e o comando de limpeza somente necessário em ILA. As chamadas de escrita em tela também têm sua palavra reservada diferente. Nenhuma delas delimita o argumento por parênteses e UAL exige ponto e vírgula ao final. As duas não são sensíveis no uso de letras maiúsculas ou minúsculas nas palavras chaves \cite{citar}.
+Todo o projeto está pautado neste algoritmo simplista, obtido em \citeonline[p.~26]{lopes2002etal} e na mídia que acompanha o livro destes autores. Facilmente se nota a diferença nos blocos de início e fim do programa, além de somente em UAL ter o nome do mesmo (solucionado com uso de linha comentada) e o comando de limpeza somente necessário em ILA. As chamadas de escrita em tela também têm sua palavra reservada diferente. Nenhuma delas delimita o argumento por parênteses e UAL exige ponto e vírgula ao final. As duas não são sensíveis no uso de letras maiúsculas ou minúsculas nas palavras chaves .
 
 Sendo o escopo das apresentações na estruturas de um algoritmo o escopo da linguagem \cite[p.~22]{spallanzani2000etal}, há diferenças entre UAL e ILA também quando quanto sua abrangência. Não tendo a UAL estruturas como matrizes n-dimensionais, funções com ou sem passagem de parâmetros, novos comandos para tomada de decisões e controle de repetições, novos tipos de dados, conversores de tipos.
 
