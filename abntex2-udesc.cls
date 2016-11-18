@@ -79,7 +79,10 @@
 
     \bfseries\MakeTextUppercase{\inserecurso}
 
-    \vfill
+    \vspace*{4cm}
+    {\bfseries\MakeTextUppercase{\imprimirautor}}
+
+    \vspace*{4cm}
     \begin{center}
     \bfseries\Large\MakeTextUppercase{\imprimirtitulo}
     \end{center}
@@ -111,10 +114,11 @@
       	\SingleSpacing
          \imprimirpreambulo
        \end{minipage}%
-       \vspace*{\fill}
     }%
 
-    %{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
+    \vspace{\onelineskip}
+
+    \vspace{\onelineskip}
 
     \hspace{.45\textwidth}
     \abntex@ifnotempty{\imprimirorientador}{%
@@ -209,3 +213,8 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\setlength\afterchapskip{\lineskip}
+
+\setlength\aftersecskip{\lineskip}
+\setlength\aftersubsecskip{\lineskip}
