@@ -1,0 +1,337 @@
+\documentclass[
+	12pt,
+	openright,
+	oneside, % oposto a twoside
+	a4paper,
+	chapter=TITLE,
+	section=TITLE,
+	english,
+	brazil % o último idioma é o principal do documento
+	]{abntex2-udesc}
+
+\usepackage{mathptmx} % Usa a fonte Times New Roman
+\usepackage[T1]{fontenc} % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc} % Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst} % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color} % Controle das cores
+\usepackage{graphicx} % Inclusão de gráficos
+\usepackage{microtype} % para melhorias de justificação
+\usepackage[singlelinecheck=false]{caption}
+
+\usepackage[alf,abnt-emphasize=bf,abnt-full-initials=yes,abnt-etal-cite=2]{abntex2cite}
+
+\setlist[itemize]{noitemsep,topsep=-12pt}
+
+\instituicao{Universidade do Estado de Santa Catarina - UDESC}
+\centro{Centro de Educação do Planalto Norte - CEPLAN}
+
+\curso{Engenharia de Produção - Habilitação Mecânica}
+
+\cidade{São Bento do Sul}
+\uf{SC}
+\local{\inserecidade, \insereuf}
+
+\data{2016}
+
+\titulo{Proposta de Redução de Retrabalho em uma Empresa de Chicotes Elétricos por Meio de Equipes de Alta Performance}
+\autor{Joseli T. de Souza}
+
+\orientadora{Prof.\textsuperscript{a} Fernanda Hänsch Beuren, Dra.}
+
+\tipotrabalho{Trabalho de Conclusão de Curso}
+
+\preambulo{Trabalho de Conclusão apresentado ao Curso de Engenharia de Produção - Habilitação Mecânica, da Universidade do Estado de Santa Catarina, como requisito para a obtenção do grau de Bacharel em Engenharia de Produção - Habilitação Mecânica}
+
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={Redução de Retrabalho com Equipes de Alta Performance},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={Equipes de alta performance,} {Retrabalho,} {Comunicação.},
+		colorlinks=false,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+\makeindex
+
+\begin{document}
+\frenchspacing
+
+\imprimircapa
+
+\imprimirfolhaderosto
+
+\begin{folhadeaprovacao}
+
+  \begin{center}
+    {\bfseries\MakeTextUppercase{\imprimirautor}}
+
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \bfseries\MakeTextUppercase{\imprimirtitulo}
+    \end{center}
+    \vspace*{\fill}
+
+   \end{center}
+
+  \noindent
+  \imprimirpreambulo
+
+  \vspace*{\fill}
+
+  \noindent
+  {\bfseries Banca Examinadora}
+
+  \vspace*{\ABNTEXsignskip}
+
+  \setlist[description]{font=\normalfont}
+
+  \begin{description}[labelindent=0pt,labelwidth=4cm]
+    \item[Orientadora:]
+    \assinaturaorientador{\textbf{Prof.\textsuperscript{a} Dra. Fernanda Hänsch Beuren \\ \insereinstituicao}}
+  \end{description}
+
+  \setlist[description]{font=\bfseries}
+
+  \begin{description}[labelindent=0pt,labelwidth=4cm]
+    \item[Membros:]
+    \vspace*{\ABNTEXsignskip}
+    \assinaturaorientador{\textbf{Prof. Dr. Alexandre Borges Fagundes \\ \insereinstituicao}}
+    \item[]
+    \vspace*{\ABNTEXsignskip}
+    \assinaturaorientador{\textbf{Prof. Dr. Delcio Pereira \\ \insereinstituicao}}
+  \end{description}
+
+   \begin{center}
+    \vspace*{0.5cm}
+    \inserecidade, 28/11/2016
+    \vspace*{1cm}
+  \end{center}
+
+\end{folhadeaprovacao}
+
+\begin{dedicatoria}
+   \vspace*{\fill}
+   \hspace{.45\textwidth}
+   \begin{minipage}{.5\textwidth}
+      \SingleSpacing
+À minha filha, pela paciência e compreensão diante da minha ausência durante todos os anos de curso.
+   \end{minipage}
+	\vspace*{\fill}
+\end{dedicatoria}
+
+\begin{agradecimentos}
+À Deus por ter me dado saúde, força e animo para enfrentar os desafios.
+
+À esta universidade, seu corpo docente, direção e administração que oportunizaram a construção de meu futuro profissional e crescimento pessoal.
+
+À minha orientadora, pelo suporte, pelas suas correções e incentivos.
+
+Aos meus pais pelo apoio.
+
+E a todos que direta ou indiretamente fizeram parte da minha formação, muito obrigada.
+\end{agradecimentos}
+
+\begin{epigrafe}
+    \vspace*{\fill}
+   \hspace{.45\textwidth}
+   \begin{minipage}{.5\textwidth}
+      \SingleSpacing
+
+{\small``Quando pensamos em como as pessoas trabalham, a
+intuição ingênua que temos é que as pessoas são como
+ratos em um labirinto - que tudo com que as pessoas se
+preocupam é dinheiro, e, no momento em que damos
+dinheiro às pessoas, podemos direcioná-las para o
+trabalho de qualquer maneira.''
+
+\vspace{\onelineskip}
+
+Dan Ariely}
+   \end{minipage}
+	\vspace*{\fill}
+\end{epigrafe}
+
+\begin{resumo}
+A presente pesquisa propõe a redução de retrabalho em um setor de uma empresa
+multinacional do ramo automotivo, dedicada a produção de componentes elétricos (chicotes
+elétricos) para caminhões, ônibus, tratores, colheitadeiras e carros de passeio, através da
+metodologia de equipes de alta performance. Para tal, o referencial teórico desta pesquisa
+compreende o estudo do trabalho em equipes de alta performance, essas equipes diferenciamse
+através dos resultados alcançados. A justificativa para a formação de equipes de alta
+performance inclui melhoraria na produtividade, qualidade, satisfação no trabalho e
+comprometimento organizacional. A implementação destas equipes depende de métodos e
+precisa ser realizada de maneira sistematizada. O objetivo deste trabalho é evidenciar as
+vantagens em se trabalhar neste modelo, apresentando a metodologia aplicada para o êxito na
+criação de equipes de alta performance, na gestão da equipe de trabalho no contexto geral da
+empresa, tendo como principal propósito a identificação de retrabalho no processo produtivo
+em uma equipe específica, buscando sua redução. Foram definidas funções, métodos de
+trabalho, estabelecidos controles, criadas estratégias de solução de problemas, tornando a
+empresa mais sinérgica. A partir daí a empresa pôde visualizar com maior clareza todos os
+problemas que estavam afetando sua performance. Como resultado, a metodologia aplicada
+permite medir e controlar os problemas operacionais, obtendo uma melhoria significativa nos
+campos de qualidade, custo, prazo, comunicação e desenvolvimento pessoal.
+
+\vspace{\onelineskip}
+\textbf{Palavras-chaves}: Equipes de alta performance. Retrabalho. Comunicação.
+\end{resumo}
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+\pdfbookmark[0]{\listofquadrosname}{loq}
+\listofquadros*
+\cleardoublepage
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+
+\textual
+\pagestyle{simple}
+
+\chapter{Introdução}
+
+O objetivo da indústria é produzir mais e melhor, sendo assim, buscam ferramentas
+para alcançar este objetivo. Ao longo da história, diversas formas de otimizar o processo
+produtivo já foram estudadas, e com o decorrer do tempo, a valorização do capital humano
+vem aumentando. As empresas vêm buscando formas para que seus funcionários trabalhem
+mais motivados, rendendo sua máxima produtividade, alcançando a excelência operacional
+\cite{guelbert2009etal}.
+
+Excelência operacional é o desenvolvimento de facilitadores para gerar benefícios
+competitivos em um ambiente dinâmico com base nos recursos de uma organização. A
+composição e expansão dos facilitadores é a base para a melhoria contínua, mudança e a
+otimização dos processos de negócios. Portanto, é a capacidade dinâmica para realizar
+processos centrais eficazes e eficientes na cadeia de criação de valor, utilizando os fatores
+tecnológicos, culturais e organizacionais de forma integrada e com base na respectiva
+estratégia \cite{jaeger2014etal}.
+
+Segundo \citeonline{jaeger2014etal}, o primeiro passo para a excelência é a realização sistemática
+ao invés de melhorias intuitivas. Excelência nas operações inclui um desempenho superior nas
+pessoas relacionadas. As pessoas tem um papel muito importante dentro da cultura de
+excelência, onde todos são capazes de inovar e poderão propor melhorias. O alinhamento das
+decisões de gestão, estabelecimento da cultura, recursos de operações, competências e
+capacidades está ligada através de estratégia de operações, o que constitui um elemento
+central dos facilitadores de operações.
+
+Existem três níveis para o alcance da excelência operacional. O primeiro nível:
+Estratégia, a qual determina o que deve ser feito rumo as melhores práticas. O segundo nível:
+Melhoria de desempenho, a qual abrange repensar vetores de desempenho e alavancas
+competitivas, tais como estruturas de custos e produtividade de ativos \cite{jaeger2014etal}. As
+preocupações de terceiro nível: Capacitadores é medir e controlar todos os problemas
+operacionais tais como organização, processos, com valores tangíveis para a empresa
+\cite{jaeger2014etal}.
+
+Diante do exposto anteriormente, este trabalho tem o propósito de pesquisar e analisar
+a busca pela excelência operacional, o impacto da aplicação de ferramentas que buscam
+melhoria na eficiência produtiva, bem como, identificar práticas que levem a possíveis falhas
+no processo, estudando formas de reduzir o retrabalho nas etapas da manufatura.
+
+\section{Objetivos do Trabalho}
+\subsection{Objetivo Geral}
+
+Propor a redução de retrabalho na produção de uma empresa multinacional do ramo
+automotivo, dedicada a produção de componentes elétricos (chicotes elétricos) para
+caminhões, ônibus, tratores, colheitadeiras e carros de passeio, através de uma melhoria na
+comunicação interna da empresa a partir da metodologia de equipes de alta performance.
+
+\subsection{Objetivos específicos}
+
+Na busca para alcançar o objetivo geral, os seguintes objetivos específicos são
+propostos:
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Mapear a situação atual da empresa, com foco no setor, visando identificar os
+retrabalhos no processo de chicotes elétricos;
+\item Aplicar a metodologia de equipes de alta performance;
+\item Analisar os dados obtidos, comparando os resultados da situação atual com
+aplicação da metodologia;
+\item Mapear a situação proposta depois de aplicada a metodologia, apresentando
+sugestões de melhorias.
+\end{itemize}
+
+\section{Justificativa do Trabalho}
+Faz parte do sucesso e crescimento das organizações a busca pela excelência em suas
+atividades, saber se está no caminho certo depende da avaliação de desempenho dos seus
+processos. Para mensurar os problemas identificados, é necessário monitorar o que está
+acontecendo no processo \cite{jaeger2014etal}.
+
+Devido à dinâmica do ambiente em que as organizações competem, desenvolveu-se
+um interesse considerável para a medição de desempenho. O principal papel da medição de
+desempenho é avaliar a posição atual da organização e também ajudar os gestores a criar e
+implementar uma estratégia melhor \cite{ivanov2014etal}.
+
+Para \citeonline{katzenbach1999}, equipe e bom desempenho são duas coisas inseparáveis.
+Dessa maneira, equipe de trabalho está se tornando cada vez mais importante nas
+organizações modernas devido aos seus resultados e benefícios.
+
+Em primeiro lugar, é necessário estabelecer o que se entende por desempenho da
+equipe. Existem três variáveis-chave de desempenho: a qualidade dos resultados de uma
+equipe, a quantidade de tempo necessário para entregar esta saída, e o custo de fazê-lo
+\cite{crowder2012etal}.
+
+Hoje em dia alcançar a excelência no desenvolvimento de produtos é considerado um
+dos principais diferenciais estratégicos, ainda mais do que a capacidade de fabricação. Esta
+alteração baseia-se no fato de que o desenvolvimento de novos produtos mais rapidamente do
+que os concorrentes fazem é uma arma estratégica eficaz para ter sucesso em mercados cada
+vez mais turbulentos \cite{tsiotras2014}.
+
+Só quando se mede a situação atual do programa, na verdade, é possível direcionar os
+esforços de melhoria \cite{tsiotras2014}. Desta forma, qualidade e abordagens de melhoria
+de produtividade têm o trabalho em equipe como um dos seus pilares centrais. O
+envolvimento dos trabalhadores afeta cinco principais determinantes da eficácia
+organizacional: a motivação, satisfação, aceitação da mudança, resolução de problemas, e
+comunicação. Sendo assim, a inclusão dos trabalhadores na definição de métodos e
+procedimentos é uma forma eficaz de abordagem de melhoria, e pode motivar os funcionários
+a produzirem um trabalho com melhor qualidade \cite{taveira2008}.
+
+Outro fator importante a ser observado é que as equipes são sistemas sociais, e a
+comunicação é fundamental para alto desempenho devido ao seu papel no intercâmbio de
+informações e coordenar os esforços dos membros da equipe que permitam um trabalho
+integrado. Devido à natureza multidisciplinar da equipe de alta performance, a comunicação
+pode desempenhar um papel bastante crítico, e como tal, a comunicação deve ser entendida
+como uma importante característica do modelo de equipe de alta performance. Dentro de
+comunicação, um comportamento fundamental é a busca da informação \cite{crowder2012etal}.
+
+Esta pesquisa justifica-se pelo empenho em aliar a performance da equipe à sua
+eficiência, buscando criar o clima adequado para que a equipe possa trabalhar em seu
+potencial máximo.
+
+\section{Estrutura do Trabalho}
+
+O trabalho está organizado em cinco capítulos. O Capitulo 1 apresenta a introdução
+sobre o tema estudado, bem como o objetivo do trabalho destacando a importância da
+pesquisa.
+
+No Capítulo 2 foi realizada a revisão bibliográfica definindo o que são equipes de
+trabalho, destacando as características das equipes de alta performance, discorrendo ainda
+sobre retrabalho e a comunicação interna.
+
+O Capítulo 3 detalha os métodos de pesquisa adotados, classificando o tipo de pesquisa
+aplicado, o universo da pesquisa e as etapas seguidas.
+
+O Capítulo 4 apresenta o estudo de caso, onde é efetivamente aplicada a pesquisa
+planejada, apresentando coleta e análise de dados.
+
+No Capítulo 5 são apresentadas as considerações finais, destacando-se pela análise dos
+objetivos atingidos, descrevendo as limitações da pesquisa e sugestões para trabalhos futuros.
+
+\postextual
+
+\bibliographystyle{abntex2-alf}
+\bibliography{references}
+
+\end{document}
