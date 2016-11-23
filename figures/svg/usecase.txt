@@ -1,0 +1,14 @@
+@startuml
+
+skinparam monochrome true
+skinparam usecaseBackgroundColor WhiteSmoke|White
+
+left to right direction
+actor aluno
+rectangle Ferramenta {
+  aluno --- (edita)
+  aluno --- (visualiza)
+  aluno --- (executa)
+}
+
+@enduml
