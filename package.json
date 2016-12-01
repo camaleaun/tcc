@@ -22,7 +22,8 @@
   },
   "scripts": {
     "install": "grunt",
-    "tex": "grunt latex",
+    "watch": "grunt watch",
+    "tex": "grunt tex",
     "pdf": "grunt pdf"
   }
 }
