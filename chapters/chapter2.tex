@@ -1,54 +1,48 @@
 \chapter{Fundamentação Teórica}
 
-Para o entendimento e desenvolvimento de trabalho, alguns conceitos teóricos devem ser dispostos. Por exemplo o \textbf{Processamento de Linguagem Natural} (PLN) que tem menor rigidez do que se faz necessário para uma máquina, onde conjuntos de instruções podem ser descritos de modo humanamente mais natural \cite{medina2006etal}. Exemplificando esse processamento de linguagem tem-se um conversa explicando uma rota para determinado destino ou uma receita culinária. Dentre os demais conceitos presentes neste capítulo estão os algoritmos da conceituação à sintaxe utilizada, variações de portugol e algumas ferramentas com a mesma proposta.
+Para o entendimento e desenvolvimento de trabalho, alguns conceitos teóricos devem ser dispostos. Por exemplo o \textbf{Processamento de Linguagem Natural} (PLN) que tem menor rigidez do que se faz necessário para uma máquina, onde conjuntos de instruções podem ser descritos de modo humanamente mais natural \cite{medina2006etal}. Exemplificando esse processamento de linguagem tem-se um conversa explicando uma rota para determinado destino ou uma receita culinária. Os demais conceitos presentes neste capítulo são algoritmos, tradutores e algumas ferramentas com proposta de prática computacional de algoritmos, no aprendizado de lógica da programação.
 
 \section{Programa de Computador}
 
 %\textrightarrow
-Como explica \citeonline{Santana2016} programas de computador \textit{Command-Line Interface} (CLI), tem sua interação através de um \textit{Shell} (BASH, DOS, entre outros). Este tipo de programa é contrário à \textit{Graphical User Interface} (GUI), que possui interação visual. A estrutura de um programa CLI é E$\,\to\,$P$\,\to\,$S (entrada-programa-saída), podendo não haver argumentos de entrada. Como exemplo um programa pode receber em sua execução, como argumento, um número inteiro para resultar em sua raiz quadrada. Outro programa já ter em seu código um número pré definido para o mesmo cálculo.
+Como explica \citeonline{Santana2016} programas de computador \textit{Command-Line Interface} (CLI), tem sua interação através de um \textit{Shell} (BASH, DOS, entre outros). Este tipo de programa é contrário à \textit{Graphical User Interface} (GUI), que possui interação visual. A estrutura de um programa de computador de tipo CLI é E$\,\to\,$P$\,\to\,$S (entrada-programa-saída), podendo não haver argumentos de entrada. Por exemplo, um programa pode receber em sua execução, como argumento, um número inteiro para resultar em sua raiz quadrada. Outro programa já ter em seu código um número pré definido para o mesmo cálculo.
 
 \section{Pseudo código ou linguagem}
 
-Visando ser uma ponte entre a linguagem natural e as linguagens de programação temos as pseudo-linguagem. Notadamente Portugol é evidenciada como a solução, pois desde \citeonline{saliba1992} é confirmada sua ampla utilização. Porém não há uma padronização existindo inúmeras variações, no entanto com muitas semelhanças entre si.
+Pseudocódigos são estruturados a partir de um idioma e utilizados como \textit{Program Design Language} (PDL), que permite descrição escrita de algoritmos com flexibilidade na estrutura. No entanto com utilização de pseudocódigo, menos alternativas são possíveis em um mesmo algoritmo. Portugol é um pseudocódigo que tem aplicabilidade no ensino de lógica da programação, desde \citeonline{saliba1992} confirma-se sua utilização para este fim. Buscando aproximar de linguagens de programação, criaram-se a partir do Portugol algumas variação de pseudolinguagem. Não há contudo um consenso na padronização, porém sensíveis são as semelhanças entre as variações. Para formalidade nos pseudo códigos ou linguagens, foi criado o inglês estruturado, que tem sua origem na linguagem de programação Pascal. Certamente outros idiomas tem suas versões, mas no caso de Portugal, Brasil e outros países de mesma origem utilizam o português estruturado denominado Portugol.
 
 \section{Algoritmos}
 
-A última das notas de Ada Lovelace, que foram republicadas em 1953\nocite{1253887}, apresenta os
-primeiros conceitos sobre programação, descrevendo um algoritmo. Desde então
-estes foram difundidos, sendo utilizados até a atualidade
-\cite{santiago2003etal}.
+A última das notas de Ada Lovelace, que foram republicadas em 1953\nocite{1253887}, apresenta os primeiros conceitos sobre programação, descrevendo um algoritmo. Desde então estes foram difundidos, sendo utilizados até a atualidade. Algoritmo é um termo mais amplo, sendo inclusive destinado a outras áreas e finalidades além da programação \cite{medina2006etal}.
 
-Conforme \citeonline{medina2006etal} algoritmo é um termo mais amplo, sendo inclusive destinado a outras áreas e finalidades além da programação. As encontradas na literatura são interpretativas porém todas chegam ao mesmo resultado, um {\bfseries conjunto de instruções para a resolução de uma situação}.
-
-Como algoritmo é um conjunto de instruções pode-se dizer então que ele é também um programa de computador, apresentando um conjunto de operações e instruções específicas para a saída que se pretende \cite{medina2006etal}.
+As definições de algoritmo encontradas na literatura são interpretativas, porém todas chegam ao mesmo resultado, um \textbf{conjunto de instruções para a resolução de uma situação}. Sendo esta a definição de algoritmo, pode então ele representar um programa de computador, apresentando operações e instruções específicas para a saída que se pretende. A Tabela \ref{tab:structsalgo} apresenta as estruturas representáveis em um algoritmo, de acordo com \citeonline{santiago2003etal}.
 
 %Alguns autores afirmam que estas instruções mas afirmações são determinam instruções são passos detalhadas para a solução ou mesmo que tipo de situação, se especificamente um problema ou tarefas em geral.
-
 %Como podemos perceber, um programa nada mais é que um tipo de algoritmo. Sua particularidade é que suas operações são específicas para o computador e restritas ao conjunto de instruções que o processador pode executar. Podemos considerar esse conjunto de instruções como a primeira linguagem de programação do computador, também chamada de linguagem de máquina.
 
-Para \citeonline{santiago2003etal} a estruturação do algoritmo com suas representações é dada da seguinte forma:
-
-\begin{itemize}
-
-\item Tipos de Dados: tipo de valores inserido nas variáveis;
-\item Variáveis: armazenagem na memória principal;
-\item Atribuições: definir valor numa variável;
-\item Operações aritméticas: utilizadas em cálculos entre números e variáveis;
-\item Operações relacionais: estabelecem relação entre comparações;
-\item Estruturas de Controle: para fluxo, com desvio condicional e laços de repetição;
-\item Vetores: variáveis com único nome, contendo um índice de posições;
-\item Matrizes: semelhante a vetores, porém de dimensão dupla;
-\item Funções: sub-programas com ou sem passagem de parâmetro.
-
-\end{itemize}
+\begin{table}[ht]
+\centering
+  \caption{Estruturas representáveis em algoritmos}\label{tab:structsalgo}
+\begin{tabular}{ l | l }\hline
+\textbf{Estrutura} & \textbf{Descrição} \\ \hline
+Tipos de dados & Tipo de valores inserido nas variáveis. \\ \hline
+Variáveis & Armazenagem na memória principal. \\ \hline
+Atribuições & Definir valor numa variável. \\ \hline
+Operações aritméticas & Utilizadas em cálculos entre números e variáveis. \\ \hline
+Operações relacionais & Estabelecem relação entre comparações. \\ \hline
+Estruturas de controle & Para fluxo, com desvio condicional e laços de repetição. \\ \hline
+Vetores & Variáveis com único nome, contendo um índice de posições. \\ \hline
+Matrizes & Semelhante a vetores, porém de dimensão dupla. \\ \hline
+Funções & Subprogramas com ou sem passagem de parâmetro.
+\end{tabular}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{table}
 
 % Com base nos dois parágrafos abaixo, reescrever utilizado como referência de embasamento os autores \cite{santiagodazzi2003}
-
 %Um algoritmo consiste em um procedimento, composto por uma série de passos
 %utilizados para resolver problemas computacionais específicos, que a partir do
 %processamento comdados de entradas irá gerar dados de saídas (CORMEN et al,
 %1999).
-
 %Para efetuar funcionalidade em um algoritmo e verificar a integridade deste é
 %necessário testar o algoritmo verificando o conteúdo das variáveis passo a
 %passo. Para efetuar esta tarefa costuma-se utilizar o Teste de Mesa. Também
@@ -67,33 +61,33 @@ Para \citeonline{santiago2003etal} a estruturação do algoritmo com suas repres
 %compilação pode ser descrito como contendo as seguintes etapas: análise léxica, análise
 %sintática, análise semântica e geração de código.\cite{barbosa2009etal}
 
-Neste caso tradutor é um programa com capacidade de fazer leitura em uma linguagem e traduzir para outra equivalente. Conforme \citeonline{aho2007etal} existem dois principais tipos de tradutores: compiladores e interpretadores. Ilustrada a diferenciação entre elas na Figura \ref{fig:versus}, a partir de uma mesma fonte o compilador à esquerda e o interpretador a direita demonstra que o interpretador tem sua execução traduzindo diretamente cada instrução.
+No âmbito da computação, tradutor é um programa que traduz uma linguagem de programação para outra equivalente. Conforme \citeonline{aho2007etal} existem dois principais tipos de tradutores: compiladores e interpretadores. A diferença entre Compilador e Interpretador pode ser compreendida na Figura \ref{fig:versus}, o interpretador na execução traduz diretamente cada instrução, partindo os dois de um mesmo código fonte.
 
 \begin{figure}[h]
-  \caption{\ifdraft{\color{green}}{}Compilador \textit{versus} Interpretador}\label{fig:versus}
+  \caption{Diferença de Compilador e Interpretador}\label{fig:versus}
   \centering
-\includegraphics[width=\textwidth,keepaspectratio]{figures/compilador-interpretador.pdf}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, adaptado de \citeonline{medina2006etal}.}
+\includegraphics[width=.75\textwidth,keepaspectratio]{figures/compilador-interpretador.pdf}
+  \caption*{\footnotesize Fonte: Produção do autor, adaptado de \citeonline{medina2006etal}.}
 \end{figure}
 
-Passando por um processo de entendimento de elementos mínimos no código, ignorando outros e agrupando em símbolos especificados, a compilação se inicia. Além dessa análise também é necessária a verificação se esses grupos estão em ordem ou outros erros possíveis. \citeonline{delamaro2004} descreve que código fonte de entrada termina tendo como saída o programa objeto, o compilador converte a linguagem simples em uma linguagem entendida pela máquina. Explicado o processo do compilador de maneira simples e objetiva é preciso ainda nomear tecnicamente além de expor sua etapas, sendo suas principais as análises: Léxica, Sintática e Semântica.
+Passando por um processo de entendimento de elementos mínimos no código, ignorando outros e agrupando em símbolos especificados, a compilação se inicia. Além dessa análise também é necessária a verificação se esses grupos estão em ordem ou outros erros possíveis. \citeonline{delamaro2004} descreve que código fonte de entrada termina tendo como saída o programa objeto, o compilador converte a linguagem simples em uma linguagem entendida pela máquina. Na Figura \ref{fig:compilador} é possível visualizar um compilador, somente com a principal etapa e dela as análises: Léxica, Sintática e Semântica.
 
 \begin{figure}[h]
-  \caption{\ifdraft{\color{green}}{}Etapas de um compilador}\label{fig:compilador}
+  \caption{Análises de um compilador}\label{fig:compilador}
   \centering
-\includegraphics[width=\textwidth,height=10cm,keepaspectratio]{figures/etapas-compilador.pdf}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, adaptado de \citeonline{ferrandin2005etal}.}
+\includegraphics[width=.98\textwidth,height=10cm,keepaspectratio]{figures/etapas-compilador.pdf}
+  \caption*{\footnotesize Fonte: Produção do autor, adaptado de \citeonline{ferrandin2005etal}.}
 \end{figure}
 
 \subsection{Processo de compilação}
 
-Num compilador ideal, de acordo com \citeonline{aho2007etal} e visto na Figura \ref{fig:fullcompiler}, pode-se indentificar além das etapas essenciais identificada como a parte de \textbf{análise} (ou \textit{front end}) também a parte final: \textbf{síntese} (ou \textit{back end}). Na síntese a partir da árvore sintática são geradas representações intermediárias até o programa alvo executável através de: geração de código intermediário, otimização de código e por fim o gerador de código. Durante todas as etapas paralelamente agem a tabela de símbolos, para guardar informação sobre nomes declarados e o tratamento de erros que agem na parte de análise por exemplo identificando erro e em qual linha.
+Num compilador ideal, de acordo com \citeonline{aho2007etal} e visto na Figura \ref{fig:fullcompiler}, pode-se identificar a etapa de \textbf{análise} (\textit{front end}) e a etapa de \textbf{síntese} (\textit{back end}). Na síntese a partir da árvore sintática são geradas representações intermediárias até o programa alvo executável através de: geração de código intermediário, otimização de código e por fim o gerador de código. Durante todo o processo a tabela de símbolos guarda informação sobre nomes declarados e o tratamento de erros que age na etapa de análise, por exemplo, identificando erro e em qual linha.
 
 \begin{figure}[h]
-  \caption{\ifdraft{\color{green}}{}Compilador completo}\label{fig:fullcompiler}
+  \caption{Compilador completo}\label{fig:fullcompiler}
   \centering
-\includegraphics[width=\textwidth,keepaspectratio]{figures/compilador-completo.pdf}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, adaptado de \citeonline{aho2007etal}.}
+\includegraphics[width=.5\textwidth,keepaspectratio]{figures/compilador-completo.pdf}
+  \caption*{\footnotesize Fonte: Produção do autor, adaptado de \citeonline{aho2007etal}.}
 \end{figure}
 
 %\subsection{Análise Morfológica}

@@ -214,7 +214,17 @@
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\setlength\afterchapskip{\lineskip}
+\setlength\beforechapskip{0pt}
+\setlength\beforesecskip{0pt}
+\setlength\beforesubsecskip{0pt}
 
+\setlength\afterchapskip{\lineskip}
 \setlength\aftersecskip{\lineskip}
 \setlength\aftersubsecskip{\lineskip}
+
+%\setlength{\floatsep}{\lineskip}
+\setlength{\textfloatsep}{-10pt}
+%\setlength{\intextsep}{\lineskip}
+%
+%\setlength{\abovecaptionskip}{0cm}
+%\setlength{\belowcaptionskip}{0cm}
