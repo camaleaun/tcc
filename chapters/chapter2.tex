@@ -86,7 +86,7 @@ Num compilador ideal, de acordo com \citeonline{aho2007etal} e visto na Figura \
 \begin{figure}[h]
   \caption{Compilador completo}\label{fig:fullcompiler}
   \centering
-\includegraphics[width=.5\textwidth,keepaspectratio]{figures/compilador-completo.pdf}
+\includegraphics[width=\textwidth,keepaspectratio]{figures/compilador-completo.pdf}
   \caption*{\footnotesize Fonte: Produção do autor, adaptado de \citeonline{aho2007etal}.}
 \end{figure}
 
@@ -94,7 +94,7 @@ Num compilador ideal, de acordo com \citeonline{aho2007etal} e visto na Figura \
 %
 \subsection{Análise Léxica}
 
-Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo onde elementos mínimos, \textit{tokens}, são identificados. Cada letra, número e outros caracteres (como pontuação e demais símbolos)  além do espaço após reconhecidos são então agrupados com lexemas em: identificadores, palavras-chave reservadas, comandos, operadores, constantes, conjunto de texto, nome de variáveis, inícios e fins do algoritmos ou de blocos nele. Também remove comentários e marcas de edição (tabulações, caracteres de avanço de linha e espaços). No Quadro \ref{qua:print} é dado uma linha do algoritmo para na Tabela \ref{tab:lexemas} apresentar os lexemas indentificados.
+A análise léxica (\textit{scanner}) é citada por \citeonline{aho2007etal} como sendo onde elementos mínimos (\textit{tokens}) são identificados, cada letra, número e outros caracteres (como pontuação e demais símbolos), além do espaço. Após reconhecidos, esses \textit{tokens} são então agrupados em lexemas: identificadores, palavras-chave reservadas, comandos, operadores, constantes, conjunto de texto, nome de variáveis, início e fim do algoritmo ou de blocos. Essa análise também ignora comentários e marcas de edição (tabulações, caracteres de avanço de linha e espaços). No Quadro \ref{qua:print} é dado uma linha do algoritmo para na Tabela \ref{tab:lexemas} apresenta os lexemas identificados.
 
 \begin{quadro}[h]
 \centering
@@ -102,7 +102,7 @@ Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo ond
 \begin{lstlisting}[language=ual,frame=single]
   imprima "Aprendendo Algoritmo";
 \end{lstlisting}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{quadro}
 
 \begin{table}[h]
@@ -114,23 +114,23 @@ Também denominada \textit{scanner} cita \citeonline{aho2007etal} como sendo ond
 \texttt{"Aprendendo Algoritmo"} & conjunto literal de texto \\ \hline
 \texttt{;} & caractere de encerramento de expressão \\ \hline
 \end{tabular}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{table}
 
 \subsection{Análise Sintática}
 
-Ou \textit{scanner}, recebe a sequência de lexemas da análise anterior e determina se são elementos estruturais pertencentes à linguagem desejada, exposto por \citeonline{delamaro2004}. São essas estruturas: expressões aritméticas, comandos de atribuição ou declarações de procedimentos e as relações entre eles, garantindo que seja correto sintaticamente. Considerendo o mesmo exemplo do Quadro \ref{qua:print}, a árvore que seria produzida é ilustrada na Figura \ref{fig:ast}.
+Análise sintática (\textit{parser}), recebe a sequência de lexemas da análise anterior e determina se são elementos estruturais pertencentes à linguagem desejada, exposto por \citeonline{delamaro2004}. Esses elementos são estruturados de modo ramificado (Figura \ref{fig:ast}), dando origem ao termo árvore sintática. São essas estruturas: expressões aritméticas, comandos de atribuição ou declarações de procedimentos e as relações entre eles, garantindo que seja correto sintaticamente.
 
 \begin{figure}[h]
-  \caption{\ifdraft{\color{green}}{}Exemplo de árvore sintática}\label{fig:ast}
+  \caption{Exemplo de árvore sintática}\label{fig:ast}
   \centering
 \includegraphics[width=.4\textwidth,height=10cm,keepaspectratio]{figures/ast.pdf}
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
 
 \subsection{Análise Semântica}
 
-Esta análise verifica o ``significado'' de comandos, ao tratar de aspectos relacionados a sua ordem para que tenha sentido dentro do definidido pela gramática da linguagem para a correta execução. É possível que um programa esteje em acordo com a sintáxe gramatical, porém apresente erros quanto a semântica. A gramática da linguagem é definida por uma árvore gramatical (\textit{tree grammar}) é utilizada nesta etapa. Por exemplo se só for possível imprimir conjuntos literais de texto, variáveis, conjuntos dessas ou operações aritméticas entre parênteses e for criado como impressão direta de um número.
+A análise semântica verifica o ``significado'' de comandos, ao tratar de aspectos relacionados a sua ordem para que tenha sentido dentro do definidido pela gramática da linguagem para a correta execução. É possível que um programa esteje em acordo com a sintáxe gramatical, porém apresente erros quanto a semântica. A gramática da linguagem é definida por uma árvore gramatical (\textit{tree grammar}), é utilizada nesta etapa. Por exemplo se só for possível imprimir conjuntos literais de texto, variáveis, conjuntos dessas ou operações aritméticas entre parênteses e for criado como impressão direta de um número.
 
 \section{Ferramentas Existentes}
 % Ferramentas para prática de algoritmos
