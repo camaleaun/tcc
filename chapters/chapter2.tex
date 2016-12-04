@@ -107,7 +107,7 @@ A análise léxica (\textit{scanner}) é citada por \citeonline{aho2007etal} com
 
 \begin{table}[h]
 \centering
-  \caption{Lexemas encontrados no exemplo preposto}\label{tab:lexemas}
+  \caption{Lexemas encontrados no exemplo}\label{tab:lexemas}
 \begin{tabular}{ c | l }\hline
 \textbf{Lexema} & \textbf{Classificação} \\ \hline
 \texttt{imprima} & identificador da expressão de impressão \\ \hline
@@ -124,13 +124,13 @@ Análise sintática (\textit{parser}), recebe a sequência de lexemas da anális
 \begin{figure}[h]
   \caption{Exemplo de árvore sintática}\label{fig:ast}
   \centering
-\includegraphics[width=.4\textwidth,height=10cm,keepaspectratio]{figures/ast.pdf}
+\includegraphics[width=.65\textwidth,height=10cm,keepaspectratio]{figures/ast.pdf}
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
 
 \subsection{Análise Semântica}
 
-A análise semântica verifica o ``significado'' de comandos, ao tratar de aspectos relacionados a sua ordem para que tenha sentido dentro do definidido pela gramática da linguagem para a correta execução. É possível que um programa esteje em acordo com a sintáxe gramatical, porém apresente erros quanto a semântica. A gramática da linguagem é definida por uma árvore gramatical (\textit{tree grammar}), é utilizada nesta etapa. Por exemplo se só for possível imprimir conjuntos literais de texto, variáveis, conjuntos dessas ou operações aritméticas entre parênteses e for criado como impressão direta de um número.
+A análise semântica verifica o ``significado'' das instruções, ao tratar de aspectos relacionados à sua ordem. Esta análise confere se há sentido de acordo com a gramática definida pela linguagem, para a correta execução. É possível que um programa esteja em acordo com a sintaxe gramatical, porém apresente erros quanto a semântica. A gramática da linguagem é utilizada nesta etapa, ela pode ser representada em uma árvore gramatical (\textit{tree grammar}). Por exemplo se só for possível imprimir conjuntos literais de texto, variáveis, conjuntos dessas ou operações aritméticas entre parênteses e for criado como impressão direta de um número.
 
 \section{Ferramentas Existentes}
 % Ferramentas para prática de algoritmos
