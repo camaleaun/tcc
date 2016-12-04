@@ -139,7 +139,7 @@ Ferramentas computacionais para prática de algoritmos são utilizadas no proces
 
 \begin{itemize}
 
-\item \textbf{ILA + AMBAP}: Desenvolvida por \citeonline{evaristo2000} o Interpretador de Linguagem Algorítmica (ILA) é do um tradutor do tipo CLI e foi utilizado para simulação dos algoritmos no editor gráfico AMBAP (AMBiente para Aprendizado e Programação);
+\item \textbf{ILA + AMBAP}: Desenvolvida por \citeonline{evaristo2000} o Interpretador de Linguagem Algorítmica (ILA) é um tradutor do tipo CLI e foi utilizado para simulação dos algoritmos no editor gráfico AMBAP (AMBiente para Aprendizado e Programação);
 
 \item \textbf{UAL + EditorUAL}: Desenvolvido por \citeonline{spallanzani2000etal} na UNESA é basicamente um tradutor do tipo CLI, desenvolvido para linux. Ele foi posteriormente portado para Windows, e neste sistema operacional foi criado o EditorUAL do tipo GUI;
 
@@ -151,11 +151,11 @@ Ferramentas computacionais para prática de algoritmos são utilizadas no proces
 
 \end{itemize}
 
-Na Tabela \ref{qua:compare-tools} consta um comparativo de pontos que ressaltam como fatores determinantes em escolha de qual opção utilizar pelo educador no ensino, para que seus alunos pratiquem o conteúdo.
+Na Tabela \ref{tab:comparetools} consta um comparativo de fatores que podem ser determinantes na escolha pelo educador, para que seus alunos pratiquem o conteúdo.
 
 \begin{table}[h]
 \centering
-\caption{Comparativo das ferramentas}\label{qua:compare-tools}
+\caption{Comparativo das ferramentas}\label{tab:comparetools}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{ r | l | l | l | l | l }\hline
 & UAL+Editor & ILA+AMBAP & VisuAlg & Web Portugol & Contrutor \\ \hline
@@ -165,20 +165,20 @@ Instituição & UNESA & UFAL &  & UNIVALLI & SENAC \\ \hline
 Linguagem & Haskell & Java (editor) &  & Java & \\ \hline
 \end{tabular}%
 }
-  \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor.}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{table}
 
-Desenvolvida por \citeonline{esmin1998} quando vinculado a UNOESC o \textbf{Portugol/Plus} é a mais antiga opção encontrada no Brasil. Merecendo destaque por ser comumente referenciada por outros autores, inclusive quando tratam sobre desenvolvimento de novas soluções. Porém por ser em plataforma \textit{Disk Operating System (DOS)}, inclusive com interface gráfica foi desconsiderada no levantamento acima.
+Desenvolvida por \citeonline{esmin1998} quando vinculado à UNOESC, o Portugol/Plus é a mais antiga opção de ferramenta computadorizada encontrada no Brasil. Comumente é referenciada por outros autores, inclusive quando tratam sobre desenvolvimento de novas soluções. Porém por ser em plataforma \textit{Disk Operating System} (DOS), mesmo tendo interface gráfica foi desconsiderada no levantamento da Tabela \ref{tab:comparetools}.
 
-Ao delimitar a quantidade de itens outras também não foram listadas, alguns casos o acesso ao programa para testes não estava disponível ou menor relevância na literatura. No entanto  merecem menção: \textbf{PascalX}, por Athur Vargas Lopes da ULBRA; \textbf{Web-UNERJOL}\nocite{ferrandin2005etal}, utilizando UNERJOL os dois pelo mesmo acadêmico na UNERJ com colaborações distintas.
+Ao delimitar a quantidade de ferramentas computacionais para prática de algoritmos, algumas foram desconsideradas, por motivo de que o acesso ao programa para testes não estava disponível: PascalX, por Arthur Vargas Lopes da ULBRA; Web-UNERJOL\nocite{ferrandin2005etal}, utilizando UNERJOL os dois pelo mesmo acadêmico na UNERJ com colaborações distintas.
 %PascalX\nocite{http://www.ulbra.tche.br/~avl/home.htm}
-
-Outras mais não foram consideradas por fugirem do escopo ao utilizar robótica, jogos, foco em estrutura de dados ou similares: Guido VanRobot, Robot Prog, Kids Ruby, Fut Code, TBC-AED. Eram pretendidas somente ferramentas com pseudo-linguagem algorítmica em português, preferencialmente Portugol, partindo novamente do Editor UAL como referencial.
+Outros softwares não foram considerados por fugirem do escopo, ao utilizar robótica, jogos, foco em estrutura de dados ou similares. Nesta pesquisa eram pretendidas somente ferramentas com pseudo-linguagem algorítmica em português.
+%Guido VanRobot, Robot Prog, Kids Ruby, Fut Code, TBC-AED
 %TBC-AED: por pesquisadores da Universidade Federal de Lavras/Departamento de Ciências da Computação em Minas Gerais
 
 \section{Caso de Ensino com Livro e Ferramenta}
 
-O livro ``Introdução à programação: 500 algoritmos resolvidos'' de \citeonline{lopes2002etal} tem um grande apelo por seu elevado número resoluções como seu título deixa claro. Isso motiva os educadores utilizarem como livro texto base de disciplinas de ensino de Lógica da Programação. Neste livro todos os algoritmos propostos para execução computadorizada estão impressos na sintexe UAL - variante do Portugol - acompanha mídia ótica que contém os exercícios nesta e também em ILA. Na Tabela \ref{tab:compare-ualila} é visto a comparação entre elas.
+O livro ``Introdução à programação: 500 algoritmos resolvidos'' de \citeonline{lopes2002etal} tem como atrativo a grande quantidade de algoritmos resolvidos, que seu título deixa claro. Isto leva os educadores utilizarem como livro texto base de disciplinas de ensino de Lógica da Programação. Neste livro todos os algoritmos propostos para execução computadorizada estão impressos na sintaxe UAL - variante do Portugol - acompanha mídia ótica que contém os exercícios nesta e também em ILA. Na Tabela \ref{tab:compare-ualila} é visto a comparação entre essas sintaxes.
 
 %\the\textwidth
 %455.0pt
@@ -206,7 +206,7 @@ fim
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, a partir dos exemplos de \citeonline{lopes2002etal}.}
 \end{table}
 
-Todo o projeto está pautado neste algoritmo simplista, obtido em \citeonline[p.~26]{lopes2002etal} e na mídia que acompanha o livro destes autores. Facilmente se nota a diferença nos blocos de início e fim do programa, além de somente em UAL ter o nome do mesmo (solucionado com uso de linha comentada) e o comando de limpeza somente necessário em ILA. As chamadas de escrita em tela também têm sua palavra reservada diferente. Nenhuma delas delimita o argumento por parênteses e UAL exige ponto e vírgula ao final. As duas não são sensíveis no uso de letras maiúsculas ou minúsculas nas palavras chaves .
+O presente projeto está pautado neste algoritmo simplista, obtido em \citeonline[p.~26]{lopes2002etal} e na mídia que acompanha o livro desses autores. Facilmente se nota a diferença nos blocos de início e fim do programa, além de somente em UAL ter o nome do mesmo (solucionado com uso de linha comentada) e o comando de limpeza somente necessário em ILA. As chamadas de escrita em tela também têm sua palavra reservada diferente. Nenhuma delas delimita o argumento por parênteses e UAL exige ponto e vírgula ao final. As duas não são sensíveis no uso de letras maiúsculas ou minúsculas nas palavras chaves.
 
 \begin{table}[h]
 \centering
@@ -229,7 +229,7 @@ Todo o projeto está pautado neste algoritmo simplista, obtido em \citeonline[p.
   \caption*{\ifdraft{\color{green}}{}\footnotesize Fonte: Produção do autor, baseado em \citeonline{spallanzani2000etal,evaristo2000}.}
 \end{table}
 
-Sendo as estruturas de um algoritmo o escopo da linguagem, há diferenças entre UAL e ILA também quando quanto sua abrangência, visto Tabela \ref{tab:escopo-lang} sendo a primera estrutura única que o presente trabalho abrange. Não tendo a UAL estruturas como matrizes n-dimensionais, funções com ou sem passagem de parâmetros, novos comandos para tomada de decisões e controle de repetições, novos tipos de dados, conversores de tipos \cite{spallanzani2000etal}.
+Sendo as estruturas de um algoritmo o escopo da linguagem, há diferenças entre UAL e ILA também quanto sua abrangência, visto Tabela \ref{tab:escopo-lang}. Não tendo a UAL estruturas como matrizes n-dimensionais, funções com ou sem passagem de parâmetros, novos comandos para tomada de decisões e controle de repetições, novos tipos de dados, conversores de tipos \cite{spallanzani2000etal}. O presente trabalho somente abrange a ``Saída em tela''.
 
 \ifdraft{}{
 %\subsection{Ensino Aprendizagem}
