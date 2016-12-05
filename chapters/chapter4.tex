@@ -253,7 +253,7 @@ Como interface gráfica foi mantido o mínimo necessário. Somente o editor de t
   \centering
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
+\fbox{\includegraphics[width=.85\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor.}
 \end{figure}
 
@@ -415,25 +415,19 @@ Dentro do arquivo \texttt{sw.js}, notável em Quadro \ref{qua:swjs}, constam doi
   \caption{Conteúdo do arquivo SW}\label{qua:swjs}
 \begin{lstlisting}[frame=single]
 self.oninstall = function (event) {
-  event.waitUntil(
-    caches.open(`bizual-static-v1').then(function (cache) {
-      return cache.addAll([
-        `./',
-        `css/all.css',
-        `js/material.min.js',
-        `js/aceual.js',
-        `imgs/icon.png'
-      ]);
-    })
-  );
+  event.waitUntil(caches.open(`bizual-static-v1').then(function (cache) {
+    return cache.addAll([
+      `./',
+      `css/all.css',
+      `js/material.min.js',
+      `js/aceual.js',
+      `imgs/icon.png'
+    ]);
+  }));
 };
-
 self.onfetch = function (event) {
-  event.respondWith(
-    caches.match(event.request)
-  );
+  event.respondWith(caches.match(event.request));
 };
-
 \end{lstlisting}
   \caption*{\footnotesize Fonte: Produção do autor.}
 \end{quadro}
