@@ -154,9 +154,10 @@ De acordo com \citeonline{guedes2011} este é o diagrama mais geral da UML, seu 
 
 \section{Editor de Código ACE}
 
-No modelo em que é possível embutir nas páginas web ou aplicações via navegador. já existem editores de código fonte de linguagens de programação. Dentre esses editores de código em texto, os mais utilizados tem-se o ACE\nocite{ace} e o CodeMirror\nocite{codemirror}. Foi optado pelo ACE, pois em análise entendeu-se como sendo mais prático para o uso e criação do modelo da linguagem. A criação do modelo gramatical para destaque da sintaxe, foi considerado como dificuldade relativamente baixa.
+%No modelo em que é possível embutir nas páginas web ou aplicações via navegador, já existem editores de código fonte de linguagens de programação. Dentre esses editores de código em texto, os mais utilizados tem-se o ACE\nocite{ace} e o CodeMirror\nocite{codemirror}. Foi optado pelo ACE, pois em análise entendeu-se como sendo mais prático para o uso e criação do modelo da linguagem. A criação do modelo gramatical para destaque da sintaxe, foi considerado como dificuldade relativamente baixa.
+No modelo em que é possível embutir nas páginas web ou aplicações via navegador, já existem editores de código fonte de linguagens de programação. Dentre esses editores de código em texto, os mais utilizados tem-se o ACE\nocite{ace} e o CodeMirror\nocite{codemirror}. Foi optado pelo ACE, pela praticidade de sua adição no protótipo e fácil criação do modelo gramatical para destaque de palavras reservadas da linguagem.
 
-Em tecnologia há os chamados \textit{playground}, que são chamadas áreas para experimentações com determinada ferramenta ou tecnologia. No caso do editor ACE é disponibilizado uma ``pia de cozinha'' (\textit{Kitchen Sink}\nocite{kitchensink}) conforme Figura \ref{fig:ace-kitchensink}, onde o editor embutido pode ser modificado através de um menu lateral quanto a linguagem ou tema e outras de suas várias opções.
+Em tecnologia há áreas para experimentações com determinada ferramenta ou tecnologia (\textit{playground}). No caso do editor ACE é disponibilizado uma ``pia de cozinha'' (\textit{Kitchen Sink}\nocite{kitchensink}) conforme Figura \ref{fig:ace-kitchensink}, onde o editor embutido pode ser modificado através de um menu lateral, quanto a linguagem ou tema e outras de suas várias opções.
 
 \begin{figure}[h]
   \caption{Ace \textit{Kitchen Sink}}\label{fig:ace-kitchensink}
@@ -165,7 +166,7 @@ Em tecnologia há os chamados \textit{playground}, que são chamadas áreas para
   \caption*{\footnotesize Fonte: Captura de tela da parte visível no navegador.}
 \end{figure}
 
-Inicialmente as funcionalidades pretendidas são todas supridas e outra mais levam a esta ser uma opção útil para evolução da aplicação em trabalhos futuros. Ignorando as duas que dizem respeito ao destacamento de sintaxe em mais de 110 linguagens (porem customizável, que permitiu adicionar UAL) e mais de 20 temas (também personalizado apra o preto com negrito nas palavras reservadas, como o Editor UAL), as outras expostas no Quadro \ref{qua:acefunctions}:
+Inicialmente as funcionalidades pretendidas são todas supridas e outra mais levam a esta ser uma opção útil para evolução da aplicação em trabalhos futuros. Ignorando as duas que dizem respeito ao destacamento de sintaxe em mais de 110 linguagens (customizável, o que permitiu adicionar UAL) e mais de 20 temas (também personalizado para o mesmo estilo encontrado no Editor UAL), as demais funcionalidade estão expostas no Quadro \ref{qua:acefunctions}.
 
 \begin{quadro}[h]
 \centering
@@ -190,71 +191,73 @@ Funcionalidade de recortar, copiar e colar \\ \hline
 
 \section{Módulos para Tradução}
 
-Para resultar na árvore sintática encontrou-se o \textbf{ACORN}\nocite{acorn} um parser já escrito em JavaScript. De modo trabalhoso foi necessário adaptar o código fonte para compreender a estrutura do algorítmos proposto, principalmente devido à não utilização de parênteses para o comando de impressão em tela na linguagem UAL.
+Para resultar na árvore sintática encontrou-se o \textbf{ACORN}\nocite{acorn}, um parser já escrito em JavaScript. De modo trabalhoso foi necessário adaptar o código fonte para compreender a estrutura do algoritmos proposto. Principalmente devido à não utilização de parênteses para o comando de impressão em tela, em Javascript \texttt{document.write("Olá!");} e UAL \texttt{imprima "Olá!";}
 
-\begin{quadro}[h]
-\centering
-  \caption{Árvore sintática gerada pelo Acorn modificado}\label{qua:compare-tools}
-\begin{lstlisting}[style=json,frame=single]
-{
-  "type": "Program",
-  "start": 0,
-  "end": 61,
-  "body": [
-    {
-      "type": "PrintStatement",
-      "start": 19,
-      "end": 53,
-      "print": {
-        "type": "CallPrint",
-        "start": 27,
-        "end": 52,
-        "arguments": {
-          "type": "Literal",
-          "start": 27,
-          "end": 52,
-          "value": "Aprendendo Algoritmo!!!",
-          "raw": "\"Aprendendo Algoritmo!!!\""
-        }
-      }
-    }
-  ],
-  "id": {
-    "type": "Identifier",
-    "start": 5,
-    "end": 16,
-    "name": "algoritmo11"
-  }
-}
-\end{lstlisting}
-  \caption*{\footnotesize Fonte: Produção do autor.}
-\end{quadro}
+%\begin{quadro}[h]
+%\centering
+%  \caption{Árvore sintática gerada pelo Acorn modificado}\label{qua:compare-tools}
+%\begin{lstlisting}[style=json,frame=single]
+%{
+%  "type": "Program",
+%  "start": 0,
+%  "end": 61,
+%  "body": [
+%    {
+%      "type": "PrintStatement",
+%      "start": 19,
+%      "end": 53,
+%      "print": {
+%        "type": "CallPrint",
+%        "start": 27,
+%        "end": 52,
+%        "arguments": {
+%          "type": "Literal",
+%          "start": 27,
+%          "end": 52,
+%          "value": "Aprendendo Algoritmo!!!",
+%          "raw": "\"Aprendendo Algoritmo!!!\""
+%        }
+%      }
+%    }
+%  ],
+%  "id": {
+%    "type": "Identifier",
+%    "start": 5,
+%    "end": 16,
+%    "name": "algoritmo11"
+%  }
+%}
+%\end{lstlisting}
+%  \caption*{\footnotesize Fonte: Produção do autor.}
+%\end{quadro}
 
-Como saída o interpretada o \textbf{JS-Interpreter}\nocite{jsinterpreter} foi encontrado como a única opção. Ele já se utiliza do mesmo ACORN mencionado acima e interpreta a própria linguagem JavaScript. Pelo mesmo motivo citado acima, falta de parênteses no comando, se tornou uma tarefa um tanto dispendiosa fazer com que ele se adaptasse ao modelo.
+Para a saída simulando o algoritmo o \textbf{JS-Interpreter}\nocite{jsinterpreter} foi encontrado como opção. Ele já se utiliza do mesmo ACORN mencionado acima e interpreta a própria linguagem Javascript. Pelo mesmo motivo citado no parágrafo anterior, quanto às diferenças de sintaxe entre Javascript e UAL, se tornou uma tarefa um tanto dispendiosa fazer com que ele fosse adaptado ao protótipo.
+
+Em conjunto o Acorn e o JS-Interpreter podem ser vistos na área central da Figura \ref{fig:flux}, funcionando como tradutor para sintaxe UAL resultando na saída em tela simulada, processo indicado como Interpretador. Também é possível verificar na figura outros elementos do software: navegador web, editor de texto.
 
 \begin{figure}[h]
   \caption{Esquemático do Interpretador}\label{fig:flux}
   \centering
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-interpretador.pdf}}
+\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/bizual-interpretador.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
 
 \section{Interface Gráfica}
 
-Como interface gráfica foi mantido o mínimo necessário. Somente o editor de texto e um botão para executar. Foram visualizadas renderizações e tamanhos de telas variados, computadores (Figura \ref{fig:ui-pc}), tablets, smartphones, etc. Seguindo conceitos do Google Material Design foi adicionada uma barra no topo como botão para menu o nome da aplicação, denominada Bizu, e um botão flutuante no canto inferior direito como ícone ``play'' para a execução do algoritmo.
+Como interface gráfica foi mantido o mínimo necessário. Somente o editor de texto e um botão para executar. Foram visualizadas renderizações e tamanhos de telas variados, computadores (Figura \ref{fig:ui-pc}), tablets, smartphones, etc. Seguindo conceitos do Google Material Design foi adicionada uma barra no topo como botão para menu o nome da aplicação, denominada Bizu, e um botão de ação flutuante no canto inferior direito como ícone ``play'' para a execução do algoritmo.
 
 \begin{figure}[h]
   \caption{Interface Desktop}\label{fig:ui-pc}
   \centering
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=.9\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
+\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor.}
 \end{figure}
 
-De acordo com o \citeonline{dicionarioinformal2016} a gíria ``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos. Os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo. A escolha do nome se deve a partir da palavra bizu adicionada a sigla da sintaxe: resultando em ``BizUAL'', nesta grafia.
+Também na Figura \ref{fig:ui-pc} pode ser notado o nome ``bizUAL'', este foi utilizado para facilitar a identificação do software entre alunos e professores. A escolha do nome surgiu a partir da palavra bizu adicionada a sigla da sintaxe UAL. A gíria \nocite{dicionarioinformal2016}``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos, os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo.
 
 %\begin{figure}[h]
 %  \caption{Interface Smartphone}\label{fig:ui-phone}
@@ -265,11 +268,11 @@ De acordo com o \citeonline{dicionarioinformal2016} a gíria ``bizu'' teve orige
 %  \caption*{\footnotesize Fonte: Produção do autor.}
 %\end{figure}
 
-Facilitando a tarefa de construção da interface foi utilizada a biblioteca Material Design Lite (MDL)\nocite{mdl} disponibilizada oficialmente pelo Google. As cores foram escolhidas pela funcionalidade disponível no site da biblioteca.
+Facilitando a tarefa de construção da interface foi utilizada a biblioteca Material Design Lite (MDL)\nocite{mdl} disponibilizada oficialmente pelo Google. Essa biblioteca possui em seu site uma funcionalidade, na qual cores foram escolhidas.
 
-Foi utilizado a funcionalidade \textit{app cache} a partir de um arquivo manifesto listando o conteúdo que o navegador deve guardar cópia local. Podendo assim ter a internet desconectada após o primeiro acesso que a aplicação continuará acessível.
+%Foi utilizada a funcionalidade \textit{Service Worker} a partir de um arquivo manifesto listando o conteúdo que o navegador deve guardar cópia local. Podendo assim ter a internet desconectada após o primeiro acesso que a aplicação continuará acessível.
 
-Todo o código foi desenvolvido em repositório disponível no github e quando concluído em sua versão mínima movido para seu destino final e podendo ser acessado.\nocite{bizual}
+%Todo o código foi desenvolvido em repositório disponível no github e quando concluído em sua versão mínima movido para seu destino final e podendo ser acessado.\nocite{bizual}
 
 \section{Acesso \textit{Offline}}
 
@@ -366,6 +369,8 @@ Todo o código foi desenvolvido em repositório disponível no github e quando c
 
 Com auxílio de \textbf{\textit{Service Workers}} (SW) é possível resolver a navegação \textit{offline}. Está sendo desenvolvido, como explica \citeonline{swfirstdraft}, por um esforço colaborativo entre grandes empresas como Google, Mozilla e outras, sua implementação tem sido constante principalmente nos navegadores Chrome e Firefox. Realmente excitante para os interessados na competição entre \textit{web} e aplicações nativas nos sistemas operacionais.
 
+Sua implementação no modo mais básico em uma aplicação de página única pode ser considerada simples. Porém sua versatilidade e aplicabilidade é incrivelmente mais extensa. Inicialmente é necessário informar ao navegador o arquivo JavaScript que será o controlador, se comportando como se fosse um \textit{proxy} local. Para isso utiliza-se o comando de registro (presente no Quadro \ref{qua:swregister}), após testar se o navegador é compatível.
+
 \lstdefinestyle{swreg}
 {
   morestring  = [s]{<script}{script>},
@@ -394,7 +399,7 @@ Com auxílio de \textbf{\textit{Service Workers}} (SW) é possível resolver a n
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{quadro}
 
-Sua implementação no modo mais básico em uma aplicação de página única pode ser considerada simples. Porém sua versatilidade e aplicabilidade é incrivelmente mais extensa. Inicialmente é necessário informar ao navegar o arquivo JavaScript que será o controlador, se comportando como se fosse um \textit{proxy} local. Para isso utiliza-se o comando de registro (conforme Quadro \ref{qua:swregister}), após testar se o navegador é compatível.
+Dentro do arquivo \texttt{sw.js}, notável em Quadro \ref{qua:swjs}, constam dois eventos: um de instalação para quando o navegador realiza a instalação (\textbf{\textit{install}}) de acordo com o registro e outra para captura de ação de rede (\textbf{\textit{fetch}}), onde iria naturalmente requisitar determinado recurso. O evento de instalação lista os arquivos a serem armazenados e o de rede manipula a utilização os arquivos armazenados.
 %
 %\lstdefinestyle{swjs}
 %{
@@ -433,9 +438,7 @@ self.onfetch = function (event) {
   \caption*{\footnotesize Fonte: Produção do autor.}
 \end{quadro}
 
-Dentro do arquivo \texttt{sw.js}, notável em Quadro \ref{qua:swjs}, constam dois eventos: um de instalação para quando o navegador instala (\textbf{\textit{install}}) de acordo com o registro e outra para captura de ação de rede (\textbf{\textit{fetch}}), onde iria naturalmente requisitar determinado recurso. No evento de instalação lista os arquivos a serem armazenados e no de rede indica a utilizar os arquivos armazenados.
-
-Durante o trabalho tem utilizada a denominação ``navegador moderno'' para nosso estudo são navegadores que apostam em novas tecnologia que estejam surgindo. Normalmente podem ser considerados o Google Chrome, Mozilla Firefox e Opera. A Microsoft vêm flexibilizando essas adoções nas últimas versões e do seu subistituto o Edge, porém quando tecnologias ainda em rascunho ela opta por sua definição e maturidade. A Tabela \ref{tab:swcompatibility} apresenta como está, mesmo que parcial, essa compatibilidade. Ressaltando o quão recente é essa adoção, as versões lançadas somente neste ano como estáveis entre 9 de setembro e 23 de outubro, são nesses navegadores a primeira implementação ocorrida. Apenas o Google Chrome para \textit{desktop} possui compabilidade nas versões anteriores, desde 2 de maio também deste ano.
+Durante o trabalho tem sido utilizada a denominação ``navegador moderno'', para nosso estudo são navegadores que apostam em novas tecnologia que estejam surgindo. Normalmente podem ser considerados o Google Chrome, Mozilla Firefox e Opera. A Microsoft vêm flexibilizando essas adoções nas últimas versões e do seu substituto o Edge, porém quando tecnologias ainda em rascunho ela opta por sua definição e maturidade. A Tabela \ref{tab:swcompatibility} apresenta como está, mesmo que parcial, essa compatibilidade. Ressaltando o quão recente é essa adoção, as versões lançadas somente neste ano como estáveis entre 9 de setembro e 23 de outubro, são nesses navegadores a primeira implementação ocorrida. Apenas o Google Chrome para desktop possui compatibilidade nas versões anteriores, desde 2 de maio também de 2016.
 
 \begin{table}[h]
 \centering
@@ -447,7 +450,7 @@ Edge & Firefox & Chrome & Safari & Opera & iOS & Android \\ \hline
   \caption*{\footnotesize Fonte: Produção do autor, baseado em \citeonline{swcaniuse}.}
 \end{table}
 
-Algumas observações são necessárias sobre a Tabela \ref{tab:swcompatibility}, o Microsoft \textbf{Edge} está nessa compatibilidade como ``em desenvolvimento'', e o Internet Explorer (IE) foi intencionamente ignorado por certamente nunca receber essa implementação já que seu desenvolvimento foi descontinuado em favor do Edge. O \textbf{Safari} da Apple utiliza motor Webkit e ele está com a situação, quanto essa compatibilidade, como ``sob consideração''. E o \textbf{Android} 4.4.4 já utilizava WebView do Chrome mas só na 5.0 veio nativa e independente, porém instalar a última versão do Google Chrome para esse sistema operacional \textit{mobile} tem o mesmo efeito, desde WebView ou navegador na versão 53.
+Algumas observações são necessárias sobre a Tabela \ref{tab:swcompatibility}, o Microsoft \textbf{Edge} está nessa compatibilidade como ``em desenvolvimento'', e o Internet Explorer (IE) foi intencionalmente ignorado por certamente nunca receber essa implementação já que seu desenvolvimento foi descontinuado em favor do Edge. O \textbf{Safari} da Apple utiliza motor Webkit e ele está com a situação, quanto essa compatibilidade, como ``sob consideração''. E o \textbf{Android} 4.4.4 já utilizava WebView do Chrome mas só na 5.0 veio nativa e independente, porém instalar a última versão do Google Chrome para esse sistema operacional \textit{mobile} tem o mesmo efeito, desde WebView ou o navegador Google Chrome para Android na versão 53.
 
 \ifdraft{}{
 %\section{Ferramentas Utilizadas}
