@@ -1,0 +1,28 @@
+@startuml
+
+skinparam monochrome true
+skinparam componentBackgroundColor WhiteSmoke|White
+
+package "Front End" {
+    component [Graphic User\nInterface] as GUI
+    component [Service Worker\nCache] as Cache
+}
+
+cloud "Internet\n(primeiro acesso)" as Internet {
+}
+
+database "Hospedagem" as Host {
+    [Arquivos] as Files
+}
+
+GUI - Cache
+Cache -left- Internet
+Internet ..> HTTPS : use
+Internet -down- Files : "html,\ncss,\njs,\n..."
+
+note right of [Files]
+  Armazenamento estático
+  no Github pages.
+end note
+
+@enduml

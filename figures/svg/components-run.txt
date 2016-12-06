@@ -1,0 +1,21 @@
+@startuml
+
+skinparam monochrome true
+skinparam componentBackgroundColor WhiteSmoke|White
+
+component [Graphic User\nInterface] as GUI
+package "GUI" {
+    component [Editor\nde texto] as Editor
+    component [Saída\nem tela] as Output
+}
+
+package "Front End Engine" {
+    component [Parser]
+    component [Executor]
+}
+
+Editor -right-> Parser : código
+Parser -right-> Executor : "árvore\nsintática"
+Executor -right-> Output
+
+@enduml

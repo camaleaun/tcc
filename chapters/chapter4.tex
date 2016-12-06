@@ -254,7 +254,7 @@ Como interface gráfica foi mantido o mínimo necessário. Somente o editor de t
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
 \fbox{\includegraphics[width=.85\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
-  \caption*{\footnotesize Fonte: Produção do autor.}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
 
 Também na Figura \ref{fig:ui-pc} pode ser notado o nome ``bizUAL'', este foi utilizado para facilitar a identificação do software entre alunos e professores. A escolha do nome surgiu a partir da palavra bizu adicionada a sigla da sintaxe UAL. A gíria \nocite{dicionarioinformal2016}``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos, os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo.
@@ -389,9 +389,7 @@ Sua implementação no modo mais básico em uma aplicação de página única po
   <body>
     (...)a
     <script>
-      if (navigator.serviceWorker !== undefined) {
-        navigator.serviceWorker.register('sw.js');
-      }
+      if (navigator.serviceWorker !== undefined) { navigator.serviceWorker.register('sw.js'); }
     </script>
 </html>
 
@@ -399,7 +397,7 @@ Sua implementação no modo mais básico em uma aplicação de página única po
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{quadro}
 
-Dentro do arquivo \texttt{sw.js}, notável em Quadro \ref{qua:swjs}, constam dois eventos: um de instalação para quando o navegador realiza a instalação (\textbf{\textit{install}}) de acordo com o registro e outra para captura de ação de rede (\textbf{\textit{fetch}}), onde iria naturalmente requisitar determinado recurso. O evento de instalação lista os arquivos a serem armazenados e o de rede manipula a utilização os arquivos armazenados.
+Dentro do arquivo \texttt{sw.js}, notável em Quadro \ref{qua:swjs}, constam três eventos: um de instalação para quando o navegador realiza a instalação (\textbf{\textit{install}}) de acordo com o registro, um quando ativar (\textbf{\textit{activate}}) o serviço e outro para captura de ação de rede (\textbf{\textit{fetch}}), onde iria naturalmente requisitar determinado recurso. O evento de instalação lista os arquivos a serem armazenados e o de rede manipula a utilização os arquivos armazenados.
 %
 %\lstdefinestyle{swjs}
 %{
@@ -414,16 +412,12 @@ Dentro do arquivo \texttt{sw.js}, notável em Quadro \ref{qua:swjs}, constam doi
 \centering
   \caption{Conteúdo do arquivo SW}\label{qua:swjs}
 \begin{lstlisting}[frame=single]
+var cacheFiles = [`./', 'css/all.css', 'js/page.js', 'js/material.min.js', 'js/aceual.js', 'js/parser.js', 'js/intepreter.js', 'imgs/icon.png'];
 self.oninstall = function (event) {
-  event.waitUntil(caches.open(`bizual-static-v1').then(function (cache) {
-    return cache.addAll([
-      `./',
-      `css/all.css',
-      `js/material.min.js',
-      `js/aceual.js',
-      `imgs/icon.png'
-    ]);
-  }));
+  event.waitUntil(caches.open(`bizual-static-v1').then(function (cache) { return cache.addAll(cacheFiles); }));
+};
+self.onactivate = function (event) {
+  event.waitUntil(caches.keys().then(function (keys) { return Promise.all(keys.map(function (key) { if (key !== cacheName) { return caches.delete(key); } })); }));
 };
 self.onfetch = function (event) {
   event.respondWith(caches.match(event.request));
