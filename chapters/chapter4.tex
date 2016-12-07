@@ -154,23 +154,52 @@ De acordo com \citeonline{guedes2011} este é o diagrama mais geral da UML, seu 
 
 \subsection{Diagrama de Componentes}
 
-Para o entendimento do processo de funcionamento online na primeira visita e offline por cache nas necessidades posteriores foi desenvolvido o diagrama de componentes que pode ser visto na Figura \ref{fig:componentssw}.
+Para o entendimento do processo de funcionamento online na primeira visita e offline por cache nas necessidades posteriores foi desenvolvido o diagrama de componentes que pode ser visto na Figura .
+O diagrama de componentes representa, quando implementado, o sistema com seus componentes. Esse diagrama determina a estruturação destes componentes e a interação entre eles, para funcionamento adequado do sistema (GUEDES, 2011). Os componentes do armazenamento local pode ser visto na Figura \ref{fig:componentssw} e na Figura \label{fig:componentsrun} constam os componentes da execução do algoritmo.
 
 \begin{figure}[h]
   \caption{Componentes do processo SW}\label{fig:componentssw}
   \centering
-\includegraphics[width=.8\textwidth,keepaspectratio]{figures/components-sw.pdf}
+\includegraphics[width=.75\textwidth,keepaspectratio]{figures/components-sw.pdf}
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
-
-Quanto ao processo de execução no código do algoritmos, a Figura \ref{fig:componentsrun} apresenta estes processo de tradução.
 
 \begin{figure}[h]
   \caption{Componentes da tradução}\label{fig:componentsrun}
   \centering
-\includegraphics[width=.45\textwidth,keepaspectratio]{figures/components-run.pdf}
+\includegraphics[width=.4\textwidth,keepaspectratio]{figures/components-run.pdf}
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
+
+\section{Interface Gráfica}
+
+Como interface gráfica foi mantido o mínimo necessário. Somente o editor de texto e um botão para executar. Foram visualizadas renderizações e tamanhos de telas variados, computadores (Figura \ref{fig:ui-pc}), tablets, smartphones, etc. Seguindo conceitos do Google Material Design foi adicionada uma barra no topo como botão para menu o nome da aplicação, denominada Bizu, e um botão de ação flutuante no canto inferior direito como ícone ``play'' para a execução do algoritmo.
+
+\begin{figure}[h]
+  \caption{Interface Desktop}\label{fig:ui-pc}
+  \centering
+  \setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
+Também na Figura \ref{fig:ui-pc} pode ser notado o nome ``bizUAL'', este foi utilizado para facilitar a identificação do software entre alunos e professores. A escolha do nome surgiu a partir da palavra bizu adicionada a sigla da sintaxe UAL. A gíria \nocite{dicionarioinformal2016}``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos, os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo.
+
+%\begin{figure}[h]
+%  \caption{Interface Smartphone}\label{fig:ui-phone}
+%  \centering
+%  \setlength{\fboxsep}{0pt}%
+%\setlength{\fboxrule}{1pt}%
+%\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-smartphone.pdf}}
+%  \caption*{\footnotesize Fonte: Produção do autor.}
+%\end{figure}
+
+Facilitando a tarefa de construção da interface foi utilizada a biblioteca Material Design Lite (MDL)\nocite{mdl} disponibilizada oficialmente pelo Google. Essa biblioteca possui em seu site uma funcionalidade, na qual cores foram escolhidas.
+
+%Foi utilizada a funcionalidade \textit{Service Worker} a partir de um arquivo manifesto listando o conteúdo que o navegador deve guardar cópia local. Podendo assim ter a internet desconectada após o primeiro acesso que a aplicação continuará acessível.
+
+%Todo o código foi desenvolvido em repositório disponível no github e quando concluído em sua versão mínima movido para seu destino final e podendo ser acessado.\nocite{bizual}
 
 \section{Editor de Código ACE}
 
@@ -185,7 +214,7 @@ Em tecnologia há áreas para experimentações com determinada ferramenta ou te
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
 \fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/ace-kitchensink.pdf}}
-  \caption*{\footnotesize Fonte: Captura de tela da parte visível no navegador.}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
 
 Inicialmente as funcionalidades pretendidas são todas supridas e outra mais levam a esta ser uma opção útil para evolução da aplicação em trabalhos futuros. Ignorando as duas que dizem respeito ao destacamento de sintaxe em mais de 110 linguagens (customizável, o que permitiu adicionar UAL) e mais de 20 temas (também personalizado para o mesmo estilo encontrado no Editor UAL), as demais funcionalidade estão expostas no Quadro \ref{qua:acefunctions}.
@@ -213,47 +242,67 @@ Funcionalidade de recortar, copiar e colar \\ \hline
 
 \section{Módulos para Tradução}
 
-Para resultar na árvore sintática encontrou-se o \textbf{ACORN}\nocite{acorn}, um parser já escrito em JavaScript. De modo trabalhoso foi necessário adaptar o código fonte para compreender a estrutura do algoritmo proposto. Principalmente devido à não utilização de parênteses para o comando de impressão em tela, em Javascript \texttt{document.write("Olá!");} e UAL \texttt{imprima "Olá!";}
+Para resultar na árvore sintática encontrou-se o \textbf{ACORN}\nocite{acorn}, um parser já escrito em JavaScript. A árvore sintática gerada pelo Acorn e representada em JSON está no Quadro \ref{qua:sintaxtree}. Opcionalmente pode ser apresentada, nessa árvore sintática, em cada nó a posição de seu caracter de início e fim.
 
-%\begin{quadro}[h]
-%\centering
-%  \caption{Árvore sintática gerada pelo Acorn modificado}\label{qua:compare-tools}
-%\begin{lstlisting}[style=json,frame=single]
-%{
-%  "type": "Program",
-%  "start": 0,
-%  "end": 61,
-%  "body": [
-%    {
-%      "type": "PrintStatement",
-%      "start": 19,
-%      "end": 53,
-%      "print": {
-%        "type": "CallPrint",
-%        "start": 27,
-%        "end": 52,
-%        "arguments": {
-%          "type": "Literal",
-%          "start": 27,
-%          "end": 52,
-%          "value": "Aprendendo Algoritmo!!!",
-%          "raw": "\"Aprendendo Algoritmo!!!\""
-%        }
-%      }
-%    }
-%  ],
-%  "id": {
-%    "type": "Identifier",
-%    "start": 5,
-%    "end": 16,
-%    "name": "algoritmo11"
-%  }
-%}
-%\end{lstlisting}
-%  \caption*{\footnotesize Fonte: Produção do autor.}
-%\end{quadro}
+\begin{quadro}[h]
+\centering
+  \caption{Árvore sintática gerada pelo Acorn modificado}\label{qua:sintaxtree}
+\begin{lstlisting}[style=json,frame=single]
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "PrintStatement",
+      "print": {
+        "type": "CallPrint",
+        "arguments": {
+          "type": "Literal",
+          "value": "Aprendendo Algoritmo!!!",
+          "raw": "\"Aprendendo Algoritmo!!!\""
+        }
+      }
+    }
+  ],
+  "id": {
+    "type": "Identifier",
+    "name": "algoritmo11"
+  }
+}
+\end{lstlisting}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{quadro}
 
-Para a saída simulando o algoritmo o \textbf{JS-Interpreter}\nocite{jsinterpreter} foi encontrado como opção. Ele já se utiliza do mesmo ACORN mencionado acima e interpreta a própria linguagem Javascript. Pelo mesmo motivo citado no parágrafo anterior, devido às diferenças de sintaxe entre Javascript e UAL, se tornou uma tarefa um tanto dispendiosa fazer com que ele fosse adaptado ao protótipo.
+Para a saída, simulando o algoritmo, o \textbf{JS-Interpreter}\nocite{jsinterpreter} foi encontrado como opção. Ele se utiliza do ACORN, recebendo a árvore sintática para poder apresentar a execução de cada instrução.
+
+Tanto no Acorn quanto no JS-Interpreter foi necessário adaptar o código fonte para compreender a estrutura do algoritmo proposto, pois esse foram criados para a própria linguagem em qual foram construídos, Javascript. Foi necessário um processo de engenharia reversa através da reescrita do código para fazer com que eles fossem adaptados ao protótipo. Principalmente devido à não utilização de parênteses para o comando de impressão em tela, diferença que pode ser compreendida no Quadro \ref{qua:comparejsual}.
+
+\lstdefinelanguage{javascript}
+{
+  morekeywords={
+    prog,
+    imprima,
+    fimprog
+  },
+  sensitive=true,
+  morecomment=[l]{\#},
+  morestring=[b]",
+}
+
+\begin{quadro}[h]
+\centering
+  \caption{Diferença de sintaxe Javascript e UAL}\label{qua:comparejsual}
+\begin{tabular}{| p{100mm} |}\hline
+\multicolumn{1}{|c|}{\textbf{Javascript}} \\ \hline
+\begin{lstlisting}[language=javascript,style=table]
+document.write("Aprendendo Algoritmo!!!");
+\end{lstlisting} \\ \hline
+\multicolumn{1}{|c|}{\textbf{UAL}} \\ \hline
+\begin{lstlisting}[language=ual,style=table]
+imprima "Aprendendo Algoritmo!!!";
+\end{lstlisting} \\ \hline
+\end{tabular}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{quadro}
 
 Em conjunto o Acorn e o JS-Interpreter podem ser vistos na área central da Figura \ref{fig:flux}, funcionando como tradutor para sintaxe UAL resultando na saída em tela simulada, processo indicado como Interpretador. Também é possível verificar na Figura \ref{fig:flux} outros elementos do software: navegador web, editor de texto.
 
@@ -265,36 +314,6 @@ Em conjunto o Acorn e o JS-Interpreter podem ser vistos na área central da Figu
 \fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/bizual-interpretador.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
-
-\section{Interface Gráfica}
-
-Como interface gráfica foi mantido o mínimo necessário. Somente o editor de texto e um botão para executar. Foram visualizadas renderizações e tamanhos de telas variados, computadores (Figura \ref{fig:ui-pc}), tablets, smartphones, etc. Seguindo conceitos do Google Material Design foi adicionada uma barra no topo como botão para menu o nome da aplicação, denominada Bizu, e um botão de ação flutuante no canto inferior direito como ícone ``play'' para a execução do algoritmo.
-
-\begin{figure}[h]
-  \caption{Interface Desktop}\label{fig:ui-pc}
-  \centering
-  \setlength{\fboxsep}{0pt}%
-\setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=.85\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
-  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
-\end{figure}
-
-Também na Figura \ref{fig:ui-pc} pode ser notado o nome ``bizUAL'', este foi utilizado para facilitar a identificação do software entre alunos e professores. A escolha do nome surgiu a partir da palavra bizu adicionada a sigla da sintaxe UAL. A gíria \nocite{dicionarioinformal2016}``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos, os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo.
-
-%\begin{figure}[h]
-%  \caption{Interface Smartphone}\label{fig:ui-phone}
-%  \centering
-%  \setlength{\fboxsep}{0pt}%
-%\setlength{\fboxrule}{1pt}%
-%\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/bizual-smartphone.pdf}}
-%  \caption*{\footnotesize Fonte: Produção do autor.}
-%\end{figure}
-
-Facilitando a tarefa de construção da interface foi utilizada a biblioteca Material Design Lite (MDL)\nocite{mdl} disponibilizada oficialmente pelo Google. Essa biblioteca possui em seu site uma funcionalidade, na qual cores foram escolhidas.
-
-%Foi utilizada a funcionalidade \textit{Service Worker} a partir de um arquivo manifesto listando o conteúdo que o navegador deve guardar cópia local. Podendo assim ter a internet desconectada após o primeiro acesso que a aplicação continuará acessível.
-
-%Todo o código foi desenvolvido em repositório disponível no github e quando concluído em sua versão mínima movido para seu destino final e podendo ser acessado.\nocite{bizual}
 
 \section{Acesso \textit{Offline}}
 

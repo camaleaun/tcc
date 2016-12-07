@@ -223,7 +223,7 @@
 \setlength\aftersubsecskip{\lineskip}
 
 %\setlength{\floatsep}{\lineskip}
-\setlength{\textfloatsep}{-10pt}
+\setlength{\textfloatsep}{\lineskip}
 %\setlength{\intextsep}{\lineskip}
 %
 %\setlength{\abovecaptionskip}{0cm}
