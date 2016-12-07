@@ -54,7 +54,7 @@ $[$RNF004$]$ & Ser acessível mesmo que desconectado da internet \\ \hline
 
 \section{Diagramas UML}
 
-Na etapa de \textbf{Projeto Lógico} tem-se a elaboração de documentos do projeto, fase importante para melhor entendimento do sistema em desenvolvimento. Inclui-se nas seguintes subseções os diagramas UML, foi desenvolvido o diagrama de casos de uso.
+Na etapa de \textbf{Projeto Lógico} tem-se a elaboração de documentos do projeto, fase importante para melhor entendimento do sistema em desenvolvimento. Inclui-se nas seguintes subseções os diagramas UML, foi desenvolvido os diagramas de casos de uso e componentes.
 
 %\begin{center}
 %\begin{longtable}{|l|l|l|}
@@ -152,6 +152,26 @@ De acordo com \citeonline{guedes2011} este é o diagrama mais geral da UML, seu 
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
 
+\subsection{Diagrama de Componentes}
+
+Para o entendimento do processo de funcionamento online na primeira visita e offline por cache nas necessidades posteriores foi desenvolvido o diagrama de componentes que pode ser visto na Figura \ref{fig:componentssw}.
+
+\begin{figure}[h]
+  \caption{Componentes do processo SW}\label{fig:componentssw}
+  \centering
+\includegraphics[width=.8\textwidth,keepaspectratio]{figures/components-sw.pdf}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
+Quanto ao processo de execução no código do algoritmos, a Figura \ref{fig:componentsrun} apresenta estes processo de tradução.
+
+\begin{figure}[h]
+  \caption{Componentes da tradução}\label{fig:componentsrun}
+  \centering
+\includegraphics[width=.45\textwidth,keepaspectratio]{figures/components-run.pdf}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
 \section{Editor de Código ACE}
 
 %No modelo em que é possível embutir nas páginas web ou aplicações via navegador, já existem editores de código fonte de linguagens de programação. Dentre esses editores de código em texto, os mais utilizados tem-se o ACE\nocite{ace} e o CodeMirror\nocite{codemirror}. Foi optado pelo ACE, pois em análise entendeu-se como sendo mais prático para o uso e criação do modelo da linguagem. A criação do modelo gramatical para destaque da sintaxe, foi considerado como dificuldade relativamente baixa.
@@ -162,7 +182,9 @@ Em tecnologia há áreas para experimentações com determinada ferramenta ou te
 \begin{figure}[h]
   \caption{Ace \textit{Kitchen Sink}}\label{fig:ace-kitchensink}
   \centering
-\includegraphics[width=\textwidth,keepaspectratio]{figures/ace-kitchensink.pdf}
+  \setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/ace-kitchensink.pdf}}
   \caption*{\footnotesize Fonte: Captura de tela da parte visível no navegador.}
 \end{figure}
 
