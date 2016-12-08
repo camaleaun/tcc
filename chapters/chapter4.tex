@@ -173,18 +173,36 @@ O diagrama de componentes representa, quando implementado, o sistema com seus co
 
 \section{Interface Gráfica}
 
-Como interface gráfica foi mantido o mínimo necessário. Somente o editor de texto e um botão para executar. Foram visualizadas renderizações e tamanhos de telas variados, computadores (Figura \ref{fig:ui-pc}), tablets, smartphones, etc. Seguindo conceitos do Google Material Design foi adicionada uma barra no topo como botão para menu o nome da aplicação, denominada Bizu, e um botão de ação flutuante no canto inferior direito como ícone ``play'' para a execução do algoritmo.
+Como interface gráfica foi mantido o mínimo necessário. Somente o editor de texto e um botão para executar. Foram visualizadas renderizações em tamanhos de telas variadas: smartphone (Figura {fig:interfacesmartphone}), smartphone na horizontal (Figura \ref{fig:interfacesmartphoneh}), desktop (Figura \ref{fig:interfacedesktop}), etc. Seguindo conceitos do Google Material Design foi adicionada uma barra no topo como botão para menu o nome da aplicação, denominada Bizu, e um botão de ação flutuante no canto inferior direito como ícone ``play'' para a execução do algoritmo.
 
 \begin{figure}[h]
-  \caption{Interface Desktop}\label{fig:ui-pc}
+  \caption{Interface Smartphone}\label{fig:interfacesmartphone}
   \centering
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
+\fbox{\includegraphics[width=.33\textwidth,keepaspectratio]{figures/bizual-smartphone.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
 
-Também na Figura \ref{fig:ui-pc} pode ser notado o nome ``bizUAL'', este foi utilizado para facilitar a identificação do software entre alunos e professores. A escolha do nome surgiu a partir da palavra bizu adicionada a sigla da sintaxe UAL. A gíria \nocite{dicionarioinformal2016}``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos, os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo.
+\begin{figure}[h]
+  \caption{Interface Smartphone na Horizontal}\label{fig:interfacesmartphoneh}
+  \centering
+  \setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=.55\textwidth,keepaspectratio]{figures/interface-mobile-h.pdf}}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{Interface Desktop}\label{fig:interfacedesktop}
+  \centering
+  \setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=.85\textwidth,keepaspectratio]{figures/bizual-desktop.pdf}}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
+Também nas Figuras \ref{fig:interfacesmartphone}, \ref{fig:interfacedesktop} e \ref{fig:interfacesmartphoneh} pode ser notado o nome ``bizUAL'', este foi utilizado para facilitar a identificação do software entre alunos e professores. A escolha do nome surgiu a partir da palavra bizu adicionada a sigla da sintaxe UAL. A gíria \nocite{dicionarioinformal2016}``bizu'' teve origem em quartéis militares, onde os experientes sussurravam dicas para os novatos, os superiores de longe ouviam aquela onomatopéia característica de cochicho ``bzbzbzu'', dando origem ao termo.
 
 %\begin{figure}[h]
 %  \caption{Interface Smartphone}\label{fig:ui-phone}
@@ -206,24 +224,15 @@ Facilitando a tarefa de construção da interface foi utilizada a biblioteca Mat
 %No modelo em que é possível embutir nas páginas web ou aplicações via navegador, já existem editores de código fonte de linguagens de programação. Dentre esses editores de código em texto, os mais utilizados tem-se o ACE\nocite{ace} e o CodeMirror\nocite{codemirror}. Foi optado pelo ACE, pois em análise entendeu-se como sendo mais prático para o uso e criação do modelo da linguagem. A criação do modelo gramatical para destaque da sintaxe, foi considerado como dificuldade relativamente baixa.
 No modelo em que é possível embutir nas páginas web ou aplicações via navegador, já existem editores de código fonte de linguagens de programação. Dentre esses editores de código em texto, os mais utilizados tem-se o ACE\nocite{ace} e o CodeMirror\nocite{codemirror}. Foi optado pelo ACE, pela praticidade de sua adição no protótipo e fácil criação do modelo gramatical para destaque de palavras reservadas da linguagem.
 
-Em tecnologia há áreas para experimentações com determinada ferramenta ou tecnologia (\textit{playground}). No caso do editor ACE é disponibilizado uma ``pia de cozinha'' (\textit{Kitchen Sink}\nocite{kitchensink}) conforme Figura \ref{fig:ace-kitchensink}, onde o editor embutido pode ser modificado através de um menu lateral, quanto a linguagem ou tema e outras de suas várias opções.
-
-\begin{figure}[h]
-  \caption{Ace \textit{Kitchen Sink}}\label{fig:ace-kitchensink}
-  \centering
-  \setlength{\fboxsep}{0pt}%
-\setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/ace-kitchensink.pdf}}
-  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
-\end{figure}
-
-Inicialmente as funcionalidades pretendidas são todas supridas e outra mais levam a esta ser uma opção útil para evolução da aplicação em trabalhos futuros. Ignorando as duas que dizem respeito ao destacamento de sintaxe em mais de 110 linguagens (customizável, o que permitiu adicionar UAL) e mais de 20 temas (também personalizado para o mesmo estilo encontrado no Editor UAL), as demais funcionalidade estão expostas no Quadro \ref{qua:acefunctions}.
+Inicialmente as funcionalidades pretendidas são todas supridas e outra mais levam a esta ser uma opção útil para evolução da aplicação em trabalhos futuros. As principais funções são o destacamento de sintaxe em mais de 110 linguagens e mais de 20 temas, todas as funcionalidade estão expostas no Quadro \ref{qua:acefunctions}. O destacamento de sintaxe é customizável, o que permitiu adicionar UAL, com definição da gramática para o destacamento de palavras chaves. O tema também foi personalizado para o mesmo estilo encontrado no Editor UAL, apenas com carateres na cor preta e em negrito as palavras reservadas.
 
 \begin{quadro}[h]
 \centering
-  \caption{Demais Funcionalidade do Editor ACE}\label{qua:acefunctions}
+  \caption{Funcionalidade do Editor ACE}\label{qua:acefunctions}
 \begin{tabular}{| l |}\hline
 \textbf{Descrição} \\ \hline
+Destacamento de sintaxe em 110 linguagens \\ \hline
+Temas de estilo com 20 variações \\ \hline
 Identação automática \\ \hline
 Permite documentos com muitas linhas \\ \hline
 Atalhos de teclado personalizáveis \\ \hline
@@ -240,9 +249,20 @@ Funcionalidade de recortar, copiar e colar \\ \hline
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{quadro}
 
+Em tecnologia há áreas para experimentações com determinada ferramenta ou tecnologia (\textit{playground}). No caso do editor ACE é disponibilizado uma ``pia de cozinha'' (\textit{Kitchen Sink}\nocite{kitchensink}) conforme Figura \ref{fig:ace-kitchensink}, onde o editor embutido pode ser modificado através de um menu lateral, quanto a linguagem ou tema e outras de suas várias opções.
+
+\begin{figure}[h]
+  \caption{Ace \textit{Kitchen Sink}}\label{fig:ace-kitchensink}
+  \centering
+  \setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=.85\textwidth,keepaspectratio]{figures/ace-kitchensink.pdf}}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
 \section{Módulos para Tradução}
 
-Para resultar na árvore sintática encontrou-se o \textbf{ACORN}\nocite{acorn}, um parser já escrito em JavaScript. A árvore sintática gerada pelo Acorn e representada em JSON está no Quadro \ref{qua:sintaxtree}. Opcionalmente pode ser apresentada, nessa árvore sintática, em cada nó a posição de seu caracter de início e fim.
+Para resultar na árvore sintática encontrou-se o \textbf{ACORN}\nocite{acorn}, um parser já escrito em JavaScript. A árvore sintática gerada pelo Acorn e representada em JSON está no Quadro \ref{qua:sintaxtree}. Pode definir para o Acorn, nessa árvore sintática, que em cada nó não apresente a posição de seu caracter de início (\textit{start}) e fim (\textit{end}).
 
 \begin{quadro}[h]
 \centering
@@ -250,13 +270,21 @@ Para resultar na árvore sintática encontrou-se o \textbf{ACORN}\nocite{acorn},
 \begin{lstlisting}[style=json,frame=single]
 {
   "type": "Program",
+  "start": 0,
+  "end": 61,
   "body": [
     {
       "type": "PrintStatement",
+      "start": 19,
+      "end": 53,
       "print": {
         "type": "CallPrint",
+        "start": 27,
+        "end": 52,
         "arguments": {
           "type": "Literal",
+          "start": 27,
+          "end": 52,
           "value": "Aprendendo Algoritmo!!!",
           "raw": "\"Aprendendo Algoritmo!!!\""
         }
@@ -265,16 +293,72 @@ Para resultar na árvore sintática encontrou-se o \textbf{ACORN}\nocite{acorn},
   ],
   "id": {
     "type": "Identifier",
+    "start": 5,
+    "end": 16,
     "name": "algoritmo11"
   }
 }
 \end{lstlisting}
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{quadro}
+%\begin{quadro}[h]
+%\centering
+%  \caption{Árvore sintática gerada pelo Acorn modificado}\label{qua:sintaxtree}
+%\begin{lstlisting}[style=json,frame=single]
+%{
+%  "type": "Program",
+%  "body": [
+%    {
+%      "type": "PrintStatement",
+%      "print": {
+%        "type": "CallPrint",
+%        "arguments": {
+%          "type": "Literal",
+%          "value": "Aprendendo Algoritmo!!!",
+%          "raw": "\"Aprendendo Algoritmo!!!\""
+%        }
+%      }
+%    }
+%  ],
+%  "id": {
+%    "type": "Identifier",
+%    "name": "algoritmo11"
+%  }
+%}
+%\end{lstlisting}
+%  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+%\end{quadro}
 
-Para a saída, simulando o algoritmo, o \textbf{JS-Interpreter}\nocite{jsinterpreter} foi encontrado como opção. Ele se utiliza do ACORN, recebendo a árvore sintática para poder apresentar a execução de cada instrução.
+Para a saída, simulando o algoritmo, o \textbf{JS-Interpreter}\nocite{jsinterpreter} foi encontrado como opção. Ele se utiliza do ACORN, recebendo a árvore sintática para poder apresentar a execução de cada instrução. Essa execução para saída em tela é realizada em uma área alusiva ao \textit{Bash} de sistema operacional, como pode ser visto nas Figuras \ref{fig:executionsmartphone}, \ref{fig:executiondesktop} e \ref{fig:executionsmartphoneh}, respectivamente para smartphone, desktop e smartphone na horizontal.
 
-Tanto no Acorn quanto no JS-Interpreter foi necessário adaptar o código fonte para compreender a estrutura do algoritmo proposto, pois esse foram criados para a própria linguagem em qual foram construídos, Javascript. Foi necessário um processo de engenharia reversa através da reescrita do código para fazer com que eles fossem adaptados ao protótipo. Principalmente devido à não utilização de parênteses para o comando de impressão em tela, diferença que pode ser compreendida no Quadro \ref{qua:comparejsual}.
+\begin{figure}[ht!]
+  \caption{Execução em Smartphone}\label{fig:executionsmartphone}
+  \centering
+  \setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=.42\textwidth,keepaspectratio]{figures/execution-mobile-v.pdf}}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
+\begin{figure}[ht!]
+  \caption{Execução em Desktop}\label{fig:executiondesktop}
+  \centering
+  \setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=.93\textwidth,keepaspectratio]{figures/execucao-desktop.pdf}}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
+\begin{figure}[ht!]
+  \caption{Execução em Smartphone na Horizontal}\label{fig:executionsmartphoneh}
+  \centering
+  \setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=.5\textwidth,keepaspectratio]{figures/execution-mobile-h.pdf}}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{figure}
+
+Tanto no Acorn quanto no JS-Interpreter foi necessário adaptar o código fonte para compreender a estrutura do algoritmo proposto, pois esse foram criados para a própria linguagem em qual foram construídos, Javascript. Foi necessário um processo de engenharia reversa através da reescrita do código, para fazer com que eles fossem adaptados ao protótipo. Principalmente devido à não utilização de parênteses para o comando de impressão em tela, diferença que pode ser compreendida no Quadro \ref{qua:comparejsual}.
 
 \lstdefinelanguage{javascript}
 {
@@ -311,7 +395,7 @@ Em conjunto o Acorn e o JS-Interpreter podem ser vistos na área central da Figu
   \centering
   \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
-\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/bizual-interpretador.pdf}}
+\fbox{\includegraphics[width=.85\textwidth,keepaspectratio]{figures/bizual-interpretador.pdf}}
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{figure}
 
@@ -438,7 +522,7 @@ Sua implementação no modo mais básico em uma aplicação de página única po
   \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{quadro}
 
-Dentro do arquivo \texttt{sw.js}, notável em Quadro \ref{qua:swjs}, constam três eventos: um de instalação para quando o navegador realiza a instalação (\textbf{\textit{install}}) de acordo com o registro, um quando ativar (\textbf{\textit{activate}}) o serviço e outro para captura de ação de rede (\textbf{\textit{fetch}}), onde iria naturalmente requisitar determinado recurso. O evento de instalação lista os arquivos a serem armazenados e o de rede manipula a utilização os arquivos armazenados.
+Dentro do arquivo \texttt{sw.js} constam três eventos: um de instalação para quando o navegador realiza a instalação (\textbf{\textit{install}}, Quadro \ref{qua:swjsinstall}) de acordo com o registro, um quando ativar (\textbf{\textit{activate}}, Quadro \ref{qua:swjsactivate}) o serviço e outro para captura de ação de rede (\textbf{\textit{fetch}}, Quadro \ref{qua:swjsfetch}), onde iria naturalmente requisitar determinado recurso. O evento de instalação lista os arquivos a serem armazenados, o de ativação remove cache antigo e o de rede manipula a utilização os arquivos armazenados.
 %
 %\lstdefinestyle{swjs}
 %{
@@ -449,22 +533,48 @@ Dentro do arquivo \texttt{sw.js}, notável em Quadro \ref{qua:swjs}, constam tr�
 %  morecomment  = [l]{/*},
 %}
 %style=swjs,
+
 \begin{quadro}[h]
 \centering
-  \caption{Conteúdo do arquivo SW}\label{qua:swjs}
+  \caption{Evento instalação no arquivo SW}\label{qua:swjsinstall}
 \begin{lstlisting}[frame=single]
 var cacheFiles = [`./', 'css/all.css', 'js/page.js', 'js/material.min.js', 'js/aceual.js', 'js/parser.js', 'js/intepreter.js', 'imgs/icon.png'];
 self.oninstall = function (event) {
-  event.waitUntil(caches.open(`bizual-static-v1').then(function (cache) { return cache.addAll(cacheFiles); }));
-};
-self.onactivate = function (event) {
-  event.waitUntil(caches.keys().then(function (keys) { return Promise.all(keys.map(function (key) { if (key !== cacheName) { return caches.delete(key); } })); }));
-};
-self.onfetch = function (event) {
-  event.respondWith(caches.match(event.request));
+  event.waitUntil(caches.open(`bizual-static-v1').then(function (cache) {
+    return cache.addAll(cacheFiles);
+  }));
 };
 \end{lstlisting}
-  \caption*{\footnotesize Fonte: Produção do autor.}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{quadro}
+
+\begin{quadro}[h]
+\centering
+  \caption{Evento ativação no arquivo SW}\label{qua:swjsactivate}
+\begin{lstlisting}[frame=single]
+self.onactivate = function (event) {
+  event.waitUntil(caches.keys().then(function (keys) {
+    return Promise.all(keys.map(function (key) {
+      if (key !== `bizual-static-v1') {
+        return caches.delete(key);
+    }
+    }));
+  }));
+};
+\end{lstlisting}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
+\end{quadro}
+\begin{quadro}[h]
+\centering
+  \caption{Evento de red no arquivo SW}\label{qua:swjsfetch}
+\begin{lstlisting}[frame=single]
+self.onfetch = function (event) {
+  event.respondWith(
+    caches.match(event.request)
+  );
+};
+\end{lstlisting}
+  \caption*{\footnotesize Fonte: Produção do autor, 2016.}
 \end{quadro}
 
 Durante o trabalho tem sido utilizada a denominação ``navegador moderno'', para nosso estudo são navegadores que apostam em novas tecnologia que estejam surgindo. Normalmente podem ser considerados o Google Chrome, Mozilla Firefox e Opera. A Microsoft vêm flexibilizando essas adoções nas últimas versões e do seu substituto o Edge, porém quando tecnologias ainda em rascunho ela opta por sua definição e maturidade. A Tabela \ref{tab:swcompatibility} apresenta como está, mesmo que parcial, essa compatibilidade. Ressaltando o quão recente é essa adoção, as versões lançadas somente neste ano como estáveis entre 9 de setembro e 23 de outubro, são nesses navegadores a primeira implementação ocorrida. Apenas o Google Chrome para desktop possui compatibilidade nas versões anteriores, desde 2 de maio também de 2016.
