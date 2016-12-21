@@ -86,6 +86,8 @@
 % ---
 \usepackage{pifont}
 
+\usepackage{pdfpages}
+
 % ---
 % CONFIGURAÇÕES DE PACOTES
 % ---
@@ -297,7 +299,8 @@ a obtenção do grau de Bacharel em Sistemas de Informação}
 % ---
 
 % Folha de Aprovação
-\ifdraft{}{\input{pretextuals/approval-sheet.tex}}
+%\ifdraft{}{\input{pretextuals/approval-sheet.tex}}
+\includepdf{ata.pdf}
 
 % Dedicatória, Agradecimentos, Epígrafe - Elementos Pré textuais opcionais
 \ifdraft{}{\input{pretextuals/optionals/pretextuals-optionals.tex}}
